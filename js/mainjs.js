@@ -3,4 +3,8 @@ function toggleHighlight(className) {
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].style.backgroundColor === 'gray') {
       elements[i].style.backgroundColor = '';
+    } else {
+      elements[i].style.backgroundColor = 'gray';
     }
+  }
+}
