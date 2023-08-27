@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progetto Storia dell'Arte</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <div id="map"></div>
+    <button id="toggle-sidebar" onclick="toggleSidebar()">Apri Sidebar</button>
+    <div id="sidebar">
+      <div id="filters">
+        <h3>Filtri</h3>
+        <label for="filter-people">People:</label>
+        <input type="text" id="filter-people" oninput="filterArticles()" />
+        <br>
+        <label for="filter-places">Places:</label>
+        <input type="text" id="filter-places" oninput="filterArticles()" />
+        <br>
+   
+      </div>
+      <h2>Articoli</h2>
+      <ul id="article-list"></ul>
+    </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Struttura dei dati degli articoli
+    var articles = [
+      {
+        title: "Titolo dell'articolo 1",
+        content: "Testo dell'articolo 1...",
+        people: [
+          {name: "Verrocchio", birthplace: [43.7695604, 11.2558136] /* Latitudine e longitudine della città di nascita */ },
+          { name: "Leonardo Da Vinci", birthplace: [44.494887, 11.3426163] /* Latitudine e longitudine della città di nascita */ }
+        ],
+        places: [
+          { name: "Roma", location: [41.9027835, 12.4963655] /* Latitudine e longitudine del luogo */ },
+          { name: "Firenze", location: [43.7695604, 11.2558136] /* Latitudine e longitudine del luogo */ }
+          ],
+        location: [41.9027835, 12.4963655] /* Latitudine e longitudine del posto di pubblicazione dell'articolo 1 */
+      },
+      {
+        title: "Titolo dell'articolo 2",
+        content: "Testo dell'articolo 2...",
+        people: [
+          { name: "Donatello", birthplace: [43.7695604, 11.2558136] /* Latitudine e longitudine della città di nascita */ },
+          { name: "Vasari", birthplace: [45.4654219, 9.1859243] /* Latitudine e longitudine della città di nascita */ }
+        ],
+        places: [
+          { name: "Bologna", location: [44.494887, 11.3426163] /* Latitudine e longitudine del luogo */ },
+          { name: "Milano", location: [45.4654219, 9.1859243] /* Latitudine e longitudine del luogo */ }
+        ],
+        location: [45.4654219, 9.1859243] /* Latitudine e longitudine del posto di pubblicazione dell'articolo 1 */
+
+      },
+      // Aggiungi altri articoli qui...
+    ];
+
+    // Inizializza la mappa
+    var map = L.map('map').setView([41.87194, 12.56738], 6); // Coordinate centrare Italia (Latitudine: 41.87194, Longitudine: 12.56738), livello di zoom 6
+
+ // Aggiungi un tile layer per la mappa
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
+// Aggiungi marcatori sulla mappa per i luoghi degli articoli e delle persone
+for (var i = 0; i < articles.length; i++) {
+  var article = articles[i];
+
+  // Marcatori per luoghi degli articoli
+  for (var j = 0; j < article.places.length; j++) {
+    var place = article.places[j];
+    var popupContent = "<b>" + article.title + "</b><br>" + place.name;
+    var marker = L.marker(place.location).addTo(map);
+
+    // Aggiungi il popup al marker e imposta la proprietà autoClose a false
+    marker.bindPopup(popupContent, { autoClose: false });
+  }
+
+  // Marcatori per luoghi di nascita delle persone
+  for (var k = 0; k < article.people.length; k++) {
+    var person = article.people[k];
+    var popupContent = "<b>" + person.name + "'s Birthplace</b><br>" + "Birthplace: " + person.birthplace[0] + ", " + person.birthplace[1];
+    var marker = L.marker(person.birthplace).addTo(map);
+
+    // Aggiungi il popup al marker e imposta la proprietà autoClose a false
+    marker.bindPopup(popupContent, { autoClose: false });
+  }
+
+  // Marcatori per gli articoli
+  var articleMarker = L.marker(article.location).addTo(map);
+  var popupContent = "<b>" + article.title + "</b><br>" + "Pubblicato a: " + article.location[0] + ", " + article.location[1] +
+    "<br><a href='link_per_articolo.html'>Leggi l'articolo</a>";
+
+  // Aggiungi il popup al marker e imposta la proprietà autoClose a false
+  articleMarker.bindPopup(popupContent, { autoClose: false });
+
+  // Aggiungi l'evento click al marker degli articoli per aprire il popup
+  articleMarker.on('click', function () {
+    this.openPopup();
+  });
+}
+
+
+
+    // Popola il pannello laterale con la lista degli articoli
+    var articleList = document.getElementById('article-list');
+    for (var i = 0; i < articles.length; i++) {
+      var article = articles[i];
+      var listItem = document.createElement('li');
+      listItem.innerHTML = '<a href="#" onclick="showArticle(' + i + ')">' + article.title + '</a>';
+      articleList.appendChild(listItem);
+    }
+
+    // Funzione per visualizzare l'articolo selezionato nel pannello laterale
+    function showArticle(index) {
+      var article = articles[index];
+      var sidebar = document.getElementById('sidebar');
+      sidebar.innerHTML = '<h2>' + article.title + '</h2><p>' + article.content + '</p>';
+      sidebar.innerHTML += '<h3>People:</h3><p>' + article.people.join(', ') + '</p>';
+      sidebar.innerHTML += '<h3>Places:</h3><p>' + article.places.join(', ') + '</p>';
+      sidebar.innerHTML += '<h3>Evidences:</h3><p>' + article.evidences.join(', ') + '</p>';
+    }
+
+
+    // Funzione per filtrare gli articoli in base ai metadata
+    function filterArticles() {
+      var filterPeople = document.getElementById('filter-people').value.toLowerCase();
+      var filterPlaces = document.getElementById('filter-places').value.toLowerCase();
+      var filterEvidences = document.getElementById('filter-evidences').value.toLowerCase();
+
+      var filteredArticles = articles.filter(function(article) {
+        var peopleMatch = article.people.some(function(person) {
+          return person.toLowerCase().includes(filterPeople);
+        });
+        var placesMatch = article.places.some(function(place) {
+          return place.toLowerCase().includes(filterPlaces);
+        });
+        var evidencesMatch = article.evidences.some(function(evidence) {
+          return evidence.toLowerCase().includes(filterEvidences);
+        });
+        return peopleMatch || placesMatch || evidencesMatch;
+      });
+
+      
+
+      // Aggiorna la lista degli articoli nel pannello laterale
+      var articleList = document.getElementById('article-list');
+      articleList.innerHTML = "";
+      for (var i = 0; i < filteredArticles.length; i++) {
+        var article = filteredArticles[i];
+        var listItem = document.createElement('li');
+        listItem.innerHTML = '<a href="#" onclick="showArticle(' + articles.indexOf(article) + ')">' + article.title + '</a>';
+        articleList.appendChild(listItem);
+      }
+    }
+
+    function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+  }
+  </script>
+</body>
+</html>
