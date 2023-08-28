@@ -53,3 +53,13 @@ a:hover {
 .futuristic-img:hover {
   filter: hue-rotate(90deg) contrast(150%);
 }
+
+@keyframes floatImage {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+img {
+  animation: floatImage 2s infinite;
+}
