@@ -1,0 +1,55 @@
+/* 2030.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+h1, h2, h3 {
+  text-shadow: 0 0 5px #00ffff;
+}
+
+h3, p b {
+  font-family: 'Bauhaus 93', 'Arial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  /* additional styling */
+}
+
+a {
+  color: #00ffff;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* Add more styles as needed */
+
+.hoverEffect {
+  text-decoration: underline;
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.png), auto !important;} /* End https://www.cursors-4u.com */
+
+.personName:hover, h3:hover {
+  color: #00ffff; /* Change text color */
+  text-shadow: 0 0 5px #ffffff; /* Add text shadow */
+  transition: all 0.3s ease-in-out;
+
+}
+
+.personName, h3 {
+  transition: all 0.3s ease-in-out;
+}
+
+.futuristic-img {
+  transition: all 0.5s ease-in-out;
+}
+
+.futuristic-img:hover {
+  filter: hue-rotate(90deg) contrast(150%);
+}

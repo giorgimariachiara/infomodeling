@@ -8,3 +8,12 @@ function toggleHighlight(className) {
     }
   }
 }
+
+$(document).ready(function(){
+  $("a").hover(function(){
+    $(this).addClass("hoverEffect");
+  }, function(){
+    $(this).removeClass("hoverEffect");
+  });
+});
+
