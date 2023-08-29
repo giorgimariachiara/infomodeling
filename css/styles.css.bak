@@ -7702,7 +7702,6 @@ textarea.form-control-lg {
 
 .ms-auto {
   margin-left: auto !important;
-  margin-right: auto !important;
 }
 
 .p-0 {

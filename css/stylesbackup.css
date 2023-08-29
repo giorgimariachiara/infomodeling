@@ -7644,7 +7644,6 @@ textarea.form-control-lg {
 }
 
 .me-auto {
-	margin-left: auto !important;
   margin-right: auto !important;
 }
 
@@ -7702,7 +7701,6 @@ textarea.form-control-lg {
 
 .ms-auto {
   margin-left: auto !important;
-  margin-right: auto !important;
 }
 
 .p-0 {
@@ -10875,7 +10873,7 @@ p {
 }
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 100;
 }
 
