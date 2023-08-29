@@ -29,16 +29,17 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
-                        <li class="nav-item px-lg-4 dropdown">
-                            <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Issues
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="leonardo.html">Da Vinci</a></li>
-                                <li><a class="dropdown-item" href="verrocchio.html">Verrocchio</a></li>
-                                <li><a class="dropdown-item" href="donatello.html">Donatello</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item dropdown">
+				                    <a class="dropdown-toggle nav-text" href="issues.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Issues</a>
+				                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+				                        <li><a class="ddm-nav-text" href="./leonardo.html">da vinci</a></li>
+				                        <li><a class="ddm-nav-text disabled-nav-text">verrocchio</a></li>
+				                        <li><a class="ddm-nav-text disabled-nav-text">donatello</a></li>
+				                        <hr class="dropdown-divider">
+				                        <!-- <li><a class="ddm-nav-text" href="./disclaimer.html">Disclaimer</a></li> -->
+				                    </ul>
+				                </li>
+                        <!--<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Issues</a></li>-->
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Store</a></li>
                     </ul>
                 </div>
