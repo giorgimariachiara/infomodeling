@@ -10881,6 +10881,7 @@ p {
 
 .bg-faded {
   background-color: #f6e1c5;
+
 }
 
 .btn-xl {
@@ -10990,8 +10991,8 @@ p {
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
-    z-index: 1;
-    margin-bottom: -3rem;
+    z-index: 2;
+    margin-bottom: -1rem;
   }
   .product-item .product-item-img {
     position: relative;
@@ -11000,7 +11001,7 @@ p {
   }
   .product-item .product-item-description {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     margin-top: -3rem;
     max-width: 50vw;
   }
@@ -11028,4 +11029,24 @@ p {
 
 .address strong {
   font-size: 1.2rem;
+}
+
+
+.sticky-accordion {
+    position: sticky;
+    top: 15px;  /* Adjust as needed */
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    z-index: 1;
+    min-width: 100px; /* Minimum width */
+    max-width: 100%;  /* Maximum width relative to the parent element */
+    width: auto;     /* Auto width */
+}
+
+.sticky-container {
+    display: flex;
+    position: sticky;
+    top: 15px;
+    width: 100%;
+    z-index: 1;
 }

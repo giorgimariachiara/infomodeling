@@ -11028,3 +11028,19 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+.sticky-accordion {
+    position: sticky;
+    top: 15px;  /* Adjust as needed */
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    z-index: 0;
+}
+
+.sticky-container {
+    display: flex;
+    position: sticky;
+    top: 15px;
+    width: 100%;
+    z-index: 1;
+}
