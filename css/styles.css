@@ -11050,3 +11050,43 @@ p {
     width: 100%;
     z-index: 1;
 }
+
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 3;  /* Takes 3/4 of the container width */
+}
+
+
+.sticky-button {
+    position: sticky;
+    top: 20px; /* Adjust this value as needed */
+    z-index: 10;
+}
+
+
+.toggle-btn {
+    position: sticky;  /* Use absolute positioning */
+    top: 150px;
+    right: auto;  /* Align it to the right */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+#mainNav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;  /* To ensure it stays above other elements */
+}
+
+
+
+
+

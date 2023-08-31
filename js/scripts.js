@@ -48,3 +48,100 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 */
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const applyButton = document.querySelector(".modal-footer .btn-primary");
+  applyButton.addEventListener("click", function () {
+    const placeNamesCheckbox = document.getElementById("placeNames");
+    const personNamesCheckbox = document.getElementById("personNames");
+    
+    toggleHighlight("placeName", placeNamesCheckbox.checked);
+    toggleHighlight("personName", personNamesCheckbox.checked);
+
+    // Close the modal
+    const modalElement = document.getElementById('metadataModal'); // Replace 'yourModalId' with the actual ID of your modal
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+});
+
+/*!
+
+function toggleHighlight(className, isChecked) {
+  const elements = document.getElementsByClassName(className);
+  for (let i = 0; i < elements.length; i++) {
+    if (isChecked) {
+      elements[i].style.backgroundColor = '#0f5132';
+    } else {
+      elements[i].style.backgroundColor = '';
+    }
+  }
+}
+*/
+
+
+function toggleHighlight(className, isChecked) {
+  const elements = document.getElementsByClassName(className);
+  const colorMap = {
+    'placeName': '#6caedf',
+    'personName': '#a1d490'
+  };
+  for (let i = 0; i < elements.length; i++) {
+    if (isChecked) {
+      elements[i].style.backgroundColor = colorMap[className];
+    } else {
+      elements[i].style.backgroundColor = '';
+    }
+  }
+}
+
+
+/*!
+// Styler Button
+document.addEventListener("DOMContentLoaded", function () {
+  const applyStyleButton = document.querySelector(".apply-style");
+  applyStyleButton.addEventListener("click", function () {
+    const darkModeCheckbox = document.getElementById("darkMode");
+    
+    toggleDarkMode(darkModeCheckbox.checked);
+
+    // Close the modal
+    const modalElement = document.getElementById('styleModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+});
+
+function toggleDarkMode(isChecked) {
+  const bodyElement = document.body;
+  if (isChecked) {
+    bodyElement.classList.add('dark-mode');
+  } else {
+    bodyElement.classList.remove('dark-mode');
+  }
+}
+*/
+
+
+
+// FAB Button
+/*!
+var modal = document.getElementById("metadataModal");
+var fabButton = document.getElementById("fabButton");
+
+fabButton.onclick = function() {
+  modal.style.display = "block";
+}
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+*/
