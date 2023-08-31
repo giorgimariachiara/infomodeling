@@ -95,3 +95,53 @@ function toggleHighlight(className, isChecked) {
     }
   }
 }
+
+
+/*!
+// Styler Button
+document.addEventListener("DOMContentLoaded", function () {
+  const applyStyleButton = document.querySelector(".apply-style");
+  applyStyleButton.addEventListener("click", function () {
+    const darkModeCheckbox = document.getElementById("darkMode");
+    
+    toggleDarkMode(darkModeCheckbox.checked);
+
+    // Close the modal
+    const modalElement = document.getElementById('styleModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+  });
+});
+
+function toggleDarkMode(isChecked) {
+  const bodyElement = document.body;
+  if (isChecked) {
+    bodyElement.classList.add('dark-mode');
+  } else {
+    bodyElement.classList.remove('dark-mode');
+  }
+}
+*/
+
+
+
+// FAB Button
+/*!
+var modal = document.getElementById("metadataModal");
+var fabButton = document.getElementById("fabButton");
+
+fabButton.onclick = function() {
+  modal.style.display = "block";
+}
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+*/
