@@ -10992,7 +10992,7 @@ p {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
   }
   .product-item .product-item-img {
     position: relative;
