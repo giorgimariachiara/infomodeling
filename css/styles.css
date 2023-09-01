@@ -7644,6 +7644,7 @@ textarea.form-control-lg {
 }
 
 .me-auto {
+	margin-left: auto !important;
   margin-right: auto !important;
 }
 
@@ -7701,6 +7702,7 @@ textarea.form-control-lg {
 
 .ms-auto {
   margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .p-0 {
@@ -10873,12 +10875,13 @@ p {
 }
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 
 .bg-faded {
   background-color: #f6e1c5;
+
 }
 
 .btn-xl {
@@ -10988,8 +10991,8 @@ p {
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
-    z-index: 1;
-    margin-bottom: -3rem;
+    z-index: 2;
+    margin-bottom: -2rem;
   }
   .product-item .product-item-img {
     position: relative;
@@ -10998,7 +11001,7 @@ p {
   }
   .product-item .product-item-description {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     margin-top: -3rem;
     max-width: 50vw;
   }
@@ -11027,3 +11030,63 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+
+.sticky-accordion {
+    position: sticky;
+    top: 15px;  /* Adjust as needed */
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    z-index: 1;
+    min-width: 100px; /* Minimum width */
+    max-width: 100%;  /* Maximum width relative to the parent element */
+    width: auto;     /* Auto width */
+}
+
+.sticky-container {
+    display: flex;
+    position: sticky;
+    top: 15px;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 3;  /* Takes 3/4 of the container width */
+}
+
+
+.sticky-button {
+    position: sticky;
+    top: 20px; /* Adjust this value as needed */
+    z-index: 10;
+}
+
+
+.toggle-btn {
+    position: sticky;  /* Use absolute positioning */
+    top: 150px;
+    right: auto;  /* Align it to the right */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+#mainNav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;  /* To ensure it stays above other elements */
+}
+
+
+
+
+
