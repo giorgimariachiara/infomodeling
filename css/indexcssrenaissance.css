@@ -2549,7 +2549,6 @@ textarea.form-control-lg {
 .input-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0.5rem;
 }
 
 .input-group-sm > .form-control,
@@ -2558,7 +2557,6 @@ textarea.form-control-lg {
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.25rem;
 }
 
 .input-group-lg > .form-select,
@@ -3229,9 +3227,9 @@ textarea.form-control-lg {
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: #212529;
   --bs-dropdown-bg: #fff;
-  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-border-color: #a3852d;
   --bs-dropdown-border-radius: 0.375rem;
-  --bs-dropdown-border-width: 1px;
+  --bs-dropdown-border-width: 2px;
   --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
@@ -3257,10 +3255,10 @@ textarea.form-control-lg {
   color: var(--bs-dropdown-color);
   text-align: left;
   list-style: none;
-  background-color: var(--bs-dropdown-bg);
+  background-color: rgba(213, 206, 189, 0.7);
   background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  border-radius: var(--bs-dropdown-border-radius);
+  
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -10873,12 +10871,12 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 100;
 }
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 
@@ -10893,20 +10891,22 @@ p {
   padding-bottom: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+
 }
 
 #mainNav {
   background-color: rgba(213, 206, 189, 0.7);
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Cinzel";
   position:relative;
 
 }
+
 
 #mainNav .navbar-brand {
   color: #e6a756;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(79, 63, 39, 0.9);
+  color: rgba(28, 65, 40, 0.9);
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -10951,14 +10951,13 @@ p {
   margin: 0.5rem;
 }
 .cta .cta-inner:before {
-  border-radius: 0.5rem;
+  
   content: "";
   position: absolute;
   top: -0.5rem;
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
   z-index: -1;
 }
 
@@ -11037,16 +11036,100 @@ p {
   font-size: 1.2rem;
 }
 
-.renaissance-style{
-  background-color: #1d2b4d; 
-  border: 5px solid #a3852d; 
-  box-shadow: 0 0 0 5px #1d2b4d, 0 0 0 10px #a3852d;
+.renaissance-style {
+  background-color: #92302b;
+  border: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
+  font-family: 'TrajanPro';
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
+
+.renaissance-stylebt {
+  background-color: #92302b;
+  border: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
+  font-family: 'TrajanPro';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+
+
+
+
+.trajan {
+  font-family: "TrajanPro";
+}
+
+.aquiline{
+  font-family: 'AquilineTwo', serif;
+}
+
+.cinzel{
+  font-family: "Cinzel", serif;
+}
+
+.justify{
+  text-align: justify;
+}
 .gold-text {
   color: #a3852d;
 }
 
+.red-text{
+  color: #92302b;
+}
+.blue-text{
+  color: #536ba4;
+}
 .nav-text{
   color:#4f3f27;
+}
+
+
+/* Stile base per effetto libro */
+.book-style {
+  font-family: 'AquilineTwo', serif; /* o qualsiasi altro font che ti piace */
+  background-color: #f3e5c0; /* un colore beige pallido per un effetto di pagina invecchiata */
+  background-image: url('assets\img\sfondolibro.png'); /* opzionale: un'immagine texture di carta antica */
+  background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  border: 1px solid #d1bfa3; /* un colore leggermente più scuro per il bordo */
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* Una leggera ombra per dare profondità al testo e renderlo più leggibile sullo sfondo */
+.book-style h2, .book-style p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilizza il bottone per adattarsi al tema */
+.book-style .btn-primary {
+  background-color: #d4af37; 
+  border: none;
+  font-family: 'Cinzel', serif; 
+  border-radius: 0;
+  font-size: 14px;
+}
+
+
+.section-heading-upper.trajan::before {
+  content: "\f269"; /* Codice Unicode per l'icona "fleur-de-lis" in Font Awesome */
+  font-family: "Font Awesome 5 Free"; 
+  padding-right: 8px; /* Aggiunge spazio tra l'icona e "Disclaimer" */
+}
+
+.section-heading-upper.trajan::after {
+  content: "\f269";
+  font-family: "Font Awesome 5 Free"; 
+  padding-left: 8px; /* Aggiunge spazio tra "Disclaimer" e l'icona */
 }
