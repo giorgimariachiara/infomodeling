@@ -102,9 +102,8 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  cursor: url('assets/img/uomopng.png') ,auto;
+  cursor: url("png-clipart-vitruvian-man-drawing-man-angle-people-thumbnail.cur"), pointer
 }
-
 
 hr {
   margin: 1rem 0;
@@ -114,29 +113,22 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
   line-height: 1.2;
 }
-/* Stile per H1 con il font "Cinzel" e dimensioni specificate */
+
 h1, .h1 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-family: "Lora", sans-serif; /* Utilizza il font "Cinzel" o quello che preferisci */
-    font-weight: 500;
-    line-height: 1.2;
-    font-size: calc(1.375rem + 1.5vw); /* Imposta la dimensione del carattere per H1 */
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 2.5rem;
   }
-  
-  @media (min-width: 1200px) {
-    h1, .h1 {
-      font-size: 2.5rem; /* Adatta la dimensione del carattere alle tue preferenze per schermi più grandi */
-    }
-  }
-  
+}
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
@@ -375,7 +367,7 @@ select {
 }
 
 [role=button] {
-  cursor: url('assets/img/uomopng.png') ,auto;
+  cursor: pointer;
 }
 
 select {
@@ -399,7 +391,7 @@ button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
 }
 
 ::-moz-focus-inner {
@@ -485,7 +477,7 @@ iframe {
 
 summary {
   display: list-item;
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
 }
 
 progress {
@@ -598,6 +590,8 @@ progress {
 }
 
 .blockquote-footer {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
 }
@@ -2024,7 +2018,7 @@ progress {
   overflow: hidden;
 }
 .form-control[type=file]:not(:disabled):not([readonly]) {
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
 }
 .form-control:focus {
   color: #212529;
@@ -2133,7 +2127,7 @@ textarea.form-control-lg {
   padding: 0.375rem;
 }
 .form-control-color:not(:disabled):not([readonly]) {
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
 }
 .form-control-color::-moz-color-swatch {
   border: 0 !important;
@@ -2281,7 +2275,7 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: default;
   opacity: 0.5;
 }
 
@@ -2379,7 +2373,7 @@ textarea.form-control-lg {
   width: 100%;
   height: 0.5rem;
   color: transparent;
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
@@ -2408,7 +2402,7 @@ textarea.form-control-lg {
   width: 100%;
   height: 0.5rem;
   color: transparent;
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
@@ -2551,6 +2545,7 @@ textarea.form-control-lg {
 .input-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
+  border-radius: 0.5rem;
 }
 
 .input-group-sm > .form-control,
@@ -2559,6 +2554,7 @@ textarea.form-control-lg {
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
+  border-radius: 0.25rem;
 }
 
 .input-group-lg > .form-select,
@@ -2797,7 +2793,7 @@ textarea.form-control-lg {
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -2851,8 +2847,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #e6a756;
-  --bs-btn-border-color: #e6a756;
+  --bs-btn-bg: #536ba4;
+  --bs-btn-border-color: 2px, solid #a3852d;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #eab46f;
   --bs-btn-hover-border-color: #e9b067;
@@ -3644,7 +3640,7 @@ textarea.form-control-lg {
 .nav-link.disabled {
   color: var(--bs-nav-link-disabled-color);
   pointer-events: none;
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: default;
 }
 
 .nav-tabs {
@@ -5954,7 +5950,7 @@ textarea.form-control-lg {
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;
+  cursor: pointer;
   background-color: #fff;
   background-clip: padding-box;
   border: 0;
@@ -6610,7 +6606,7 @@ textarea.form-control-lg {
   display: inline-block;
   min-height: 1em;
   vertical-align: middle;
-  cursor: url('assets/img/cursorrenaissance.png') ,auto;;
+  cursor: wait;
   background-color: currentcolor;
   opacity: 0.5;
 }
@@ -7649,6 +7645,7 @@ textarea.form-control-lg {
 }
 
 .me-auto {
+	margin-left: auto !important;
   margin-right: auto !important;
 }
 
@@ -7706,6 +7703,7 @@ textarea.form-control-lg {
 
 .ms-auto {
   margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .p-0 {
@@ -10873,17 +10871,22 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 2rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 .section-heading .section-heading-lower {
   display: block;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 .bg-faded {
-  background-color: #e3e8cc;
+  
+  background-image: url('/assets/img/bgbg.jpg');
+  background-position: center center;
+  background-size: cover; 
+  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout */
+ 
+
 }
 
 .btn-xl {
@@ -10893,7 +10896,6 @@ p {
   padding-bottom: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-
 }
 
 #mainNav {
@@ -10901,13 +10903,10 @@ p {
   font-family: "Cinzel";
   font-size: 20px;
   position:relative;
-  border: 4px solid #a3852d; /* bordo dorato esterno */
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
+  border-top: 3px solid #a3852d;
+  border-bottom: 3px solid #a3852d;
+
 }
-
-
 #mainNav .navbar-brand {
   color: #e6a756;
 }
@@ -10949,7 +10948,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  
+  background-color: rgba(230, 167, 86, 0.9);
 }
 .cta .cta-inner {
   position: relative;
@@ -10957,16 +10956,16 @@ p {
   margin: 0.5rem;
 }
 .cta .cta-inner:before {
-  
+  border-radius: 0.5rem;
   content: "";
   position: absolute;
   top: -0.5rem;
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.85);
   z-index: -1;
 }
-
 
 .footer {
   background-color: rgba(101, 38, 32, 0.8);
@@ -11002,8 +11001,8 @@ p {
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
-    z-index: 1;
-    margin-bottom: -3rem;
+    z-index: 2;
+    margin-bottom: -2rem;
   }
   .product-item .product-item-img {
     position: relative;
@@ -11012,7 +11011,7 @@ p {
   }
   .product-item .product-item-description {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     margin-top: -3rem;
     max-width: 50vw;
   }
@@ -11042,34 +11041,62 @@ p {
   font-size: 1.2rem;
 }
 
-.renaissance-style {
-  background-color: #92302b;
-  border: 4px solid #a3852d; /* bordo dorato esterno */
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
-  font-family: 'TrajanPro';
-  font-size: 20px;
-  text-transform: uppercase;
+
+.sticky-accordion {
+    position: sticky;
+    top: 15px;  /* Adjust as needed */
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    z-index: 1;
+    min-width: 100px; /* Minimum width */
+    max-width: 100%;  /* Maximum width relative to the parent element */
+    width: auto;     /* Auto width */
+}
+
+.sticky-container {
+    display: flex;
+    position: sticky;
+    top: 15px;
+    width: 100%;
+    z-index: 1;
 }
 
 
-.renaissance-stylebt {
-  background-color: #92302b;
-  border: 4px solid #a3852d; /* bordo dorato esterno */
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
-  font-family: 'TrajanPro';
-  font-size: 20px;
-  text-transform: uppercase;
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
+
+.main-content {
+  flex: 3;  /* Takes 3/4 of the container width */
+}
+
+
+.sticky-button {
+    position: sticky;
+    top: 20px; /* Adjust this value as needed */
+    z-index: 10;
+}
+
+
+.toggle-btn {
+    position: sticky;  /* Use absolute positioning */
+    top: 150px;
+    right: auto;  /* Align it to the right */
+    width: 40px;
+    height: 40px;
+    border: #a3852d;
+    z-index: 10;
+}
+
 
 #mainNav {
   position: sticky;
   top: 0;
   z-index: 1000;  /* To ensure it stays above other elements */
 }
+
+
 
 .trajan {
   font-family: "TrajanPro";
@@ -11078,9 +11105,23 @@ p {
 .aquiline{
   font-family: 'AquilineTwo', serif;
 }
+.aquilineta{
+  font-family: 'AquilineTwo', serif;
+  text-align: justify;
+  font-size: 20px;
+  margin-right: 80px;
+  margin-left: 34px;
+}
 
 .cinzel{
   font-family: "Cinzel", serif;
+}
+
+.goudy{
+  font-family: "Goudy Initialen";
+  font-size: 150px;
+  color:red;
+
 }
 
 .justify{
@@ -11100,46 +11141,16 @@ p {
   color:#4f3f27;
 }
 
-
-/* Stile base per effetto libro */
-.book-style {
-  font-family: 'AquilineTwo', serif; /* o qualsiasi altro font che ti piace */
-  background-color: #f3e5c0; /* un colore beige pallido per un effetto di pagina invecchiata */
-  background-image: url('assets/img/sfondolibro.png'); /* opzionale: un'immagine texture di carta antica */
-  background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-  border: 1px solid #d1bfa3; /* un colore leggermente più scuro per il bordo */
-  padding: 20px;
-  text-align: center;
+.renaissance-style {
+  background-color: #92302b;
+  border: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
+      padding:0;
 }
 
-
-/* Una leggera ombra per dare profondità al testo e renderlo più leggibile sullo sfondo */
-.book-style h2, .book-style p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+#miaLettera {
+  width: 100px;
+  height: auto; /* Mantieni questo su 'auto' per conservare il rapporto d'aspetto dell'immagine */
 }
-
-/* Stilizza il bottone per adattarsi al tema */
-.book-style .btn-primary {
-  background-color: #d4af37; 
-  border: none;
-  font-family: 'Cinzel', serif; 
-  border-radius: 0;
-  font-size: 14px;
-}
-
-
-.section-heading-upper.trajan::before {
-  content: "\f269"; /* Codice Unicode per l'icona "fleur-de-lis" in Font Awesome */
-  font-family: "Font Awesome 5 Free"; 
-  padding-right: 8px; /* Aggiunge spazio tra l'icona e "Disclaimer" */
-}
-
-.section-heading-upper.trajan::after {
-  content: "\f269";
-  font-family: "Font Awesome 5 Free"; 
-  padding-left: 8px; /* Aggiunge spazio tra "Disclaimer" e l'icona */
-}
-
-
