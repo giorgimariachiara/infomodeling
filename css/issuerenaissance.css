@@ -2846,21 +2846,70 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #536ba4;
-  --bs-btn-border-color: 2px, solid #a3852d;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #eab46f;
-  --bs-btn-hover-border-color: #e9b067;
-  --bs-btn-focus-shadow-rgb: 196, 142, 73;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ebb978;
-  --bs-btn-active-border-color: #e9b067;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #e6a756;
-  --bs-btn-disabled-border-color: #e6a756;
+  color: #000;
+  background-color: #92302b;
+  border: 4px solid #a3852d;
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
+}
+
+.btn-primary:active {
+  color: #000;
+  background-color: #ebb978;
+  border-color: #e9b067;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-primary:disabled {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+}
+
+.btn-primary2 {
+  color: #000;
+  background-color: #92302b;
+  border: 4px solid #a3852d;
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
+}
+
+.btn-primary2:hover {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+}
+
+.btn-primary2:focus {
+  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
+}
+
+.btn-primary2:active {
+  color: #000;
+  background-color: #ebb978;
+  border-color: #e9b067;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-primary2:disabled {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+}
+
+
 
 .btn-secondary {
   --bs-btn-color: #fff;
@@ -10880,12 +10929,12 @@ p {
 }
 
 .bg-faded {
+  background-color: #dfd9c8;
   
-  background-image: url('/assets/img/bgbg.jpg');
   background-position: center center;
   background-size: cover; 
-  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout */
- 
+  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout background-image: url('/assets/img/bgbg.jpg'); */
+  
 
 }
 
@@ -10911,7 +10960,7 @@ p {
   color: #e6a756;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(28, 65, 40, 0.9);
+  color: #a3852d;
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -11083,10 +11132,24 @@ p {
     position: sticky;  /* Use absolute positioning */
     top: 150px;
     right: auto;  /* Align it to the right */
-    width: 40px;
+    width: 50px;
     height: 40px;
     border: #a3852d;
     z-index: 10;
+    font-family: "TrajanPro";
+    color:#a3852d;
+}
+
+.toggle-btn2 {
+  position: sticky;  /* Use absolute positioning */
+  top: 150px;
+  right: auto;  /* Align it to the right */
+  width: 50px;
+  height: 40px;
+  border: #a3852d;
+  z-index: 10;
+  font-family: "TrajanPro";
+  color:#a3852d;
 }
 
 
@@ -11151,6 +11214,31 @@ p {
 }
 
 #miaLettera {
-  width: 100px;
-  height: auto; /* Mantieni questo su 'auto' per conservare il rapporto d'aspetto dell'immagine */
+  width: 150px;
+  height: auto; 
+}
+
+.decorated-container {
+  position: relative; 
+  margin-top: 50px;
+  padding-left: calc(20px + 15px);
+  margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
+}
+
+.decorative-img {
+  position: absolute;
+  left: 0;
+  top: -50px; 
+  left:-50px;/* Questo alzerà l'immagine di 10 pixel verso l'alto. Puoi regolare il valore come preferisci. */
+  height: auto; 
+  width: 90px;
+}
+
+.decorated-paragraph {
+  margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
+}
+
+
+.mb-0.aquilineta {
+  margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
