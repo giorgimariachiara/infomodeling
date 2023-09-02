@@ -10880,11 +10880,11 @@ p {
 }
 
 .bg-faded {
+  background-color: #dfd9c8;
   
-  background-image: url('/assets/img/bgbg.jpg');
   background-position: center center;
   background-size: cover; 
-  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout */
+  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout background-image: url('/assets/img/bgbg.jpg'); */
  
 
 }
@@ -11152,5 +11152,30 @@ p {
 
 #miaLettera {
   width: 100px;
-  height: auto; /* Mantieni questo su 'auto' per conservare il rapporto d'aspetto dell'immagine */
+  height: auto; 
+}
+
+.decorated-container {
+  position: relative; 
+  
+  padding-left: calc(20px + 15px);
+  margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
+}
+
+.decorative-img {
+  position: absolute;
+  left: 0;
+  top: -130px; 
+  left:-50px;/* Questo alzerà l'immagine di 10 pixel verso l'alto. Puoi regolare il valore come preferisci. */
+  height: auto; 
+  width: 90px;
+}
+
+.decorated-paragraph {
+  margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
+}
+
+
+.mb-0.aquilineta {
+  margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
