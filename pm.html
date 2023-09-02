@@ -48,7 +48,7 @@
         <section class="page-section clearfix">
             <div class="container">
                 <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." />
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/pmbg2.svg" alt="..." id="svg-contain"/>
                     <!--<video class="intro-img img-fluid mb-3 mb-lg-0 rounded" controls>
                       <source src="assets/img/intro.mp4" type="video/mp4">
                       Your browser does not support the video tag.
@@ -86,10 +86,36 @@
         <script src="js/jquery.min.js"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="js/mainjs.js"></script>
-
+        <script>
+            // Funzione per creare un'animazione di scorrimento su una figura
+            function animateFigure(figure, startX, endX, duration) {
+              figure.animate([
+                { transform: `translate(${startX}px, 0)` },
+                { transform: `translate(${endX}px, 0)` }
+              ], {
+                duration: duration,
+                iterations: Infinity
+              });
+            }
+            
+            // Seleziona l'elemento SVG utilizzando l'ID
+            const svg = document.getElementById('svg-contain');
+            
+            // Seleziona le figure all'interno dell'immagine SVG (modifica i selettori in base alle tue necessità)
+            const figure1 = svg.querySelector('.st0');
+            const figure2 = svg.querySelector('.st1');
+            
+            // Crea animazioni di scorrimento per le figure
+            animateFigure(figure1, 0, 100, 2000); // Sposta la figura1 da 0 a 100 lungo l'asse X in 2 secondi
+            animateFigure(figure2, 0, -100, 1500); // Sposta la figura2 da 0 a -100 lungo l'asse X in 1.5 secondi
+            
+            // Puoi aggiungere altre animazioni o figure secondo necessità
+            </script>
 
     </body>
 </html>
