@@ -10879,8 +10879,12 @@ p {
 }
 
 .bg-faded {
-  background-color: #f6e1c5;
-  background-image: url('assets/img/sfondolibro.png');
+  
+  background-image: url('/assets/img/bgbg.jpg');
+  background-position: center center;
+  background-size: cover; 
+  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout */
+ 
 
 }
 
@@ -11104,7 +11108,8 @@ p {
   font-family: 'AquilineTwo', serif;
   text-align: justify;
   font-size: 20px;
-  margin-right: 60px;
+  margin-right: 80px;
+  margin-left: 34px;
 }
 
 .cinzel{
