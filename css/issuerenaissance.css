@@ -10896,6 +10896,7 @@ p {
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
   font-family: "Cinzel";
+  font-size: 20px;
   position:relative;
   border-top: 3px solid #a3852d;
   border-bottom: 3px solid #a3852d;
