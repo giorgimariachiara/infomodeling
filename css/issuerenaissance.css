@@ -11,7 +11,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #536ba4;
+  --bs-renred:#92302b;
+  --bs-gold:#a3852d;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -10930,10 +10932,9 @@ p {
 
 .bg-faded {
   background-color: #dfd9c8;
-  
   background-position: center center;
   background-size: cover; 
-  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout background-image: url('/assets/img/bgbg.jpg'); */
+  position: relative;  
   
 
 }
@@ -10950,12 +10951,12 @@ p {
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
   font-family: "Cinzel";
-  font-size: 20px;
-  position:relative;
-  border-top: 3px solid #a3852d;
-  border-bottom: 3px solid #a3852d;
-
+  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+  position: relative;
+  border-top: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
+  border-bottom: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
 }
+
 #mainNav .navbar-brand {
   color: #e6a756;
 }
@@ -11134,10 +11135,10 @@ p {
     right: auto;  /* Align it to the right */
     width: 50px;
     height: 40px;
-    border: #a3852d;
+    border: var(--bs-gold);
     z-index: 10;
     font-family: "TrajanPro";
-    color:#a3852d;
+    color:var(--bs-gold);
 }
 
 .toggle-btn2 {
@@ -11146,10 +11147,10 @@ p {
   right: auto;  /* Align it to the right */
   width: 50px;
   height: 40px;
-  border: #a3852d;
+  border:var(--bs-gold);
   z-index: 10;
   font-family: "TrajanPro";
-  color:#a3852d;
+  color:var(--bs-gold);
 }
 
 
@@ -11168,13 +11169,14 @@ p {
 .aquiline{
   font-family: 'AquilineTwo', serif;
 }
-.aquilineta{
+.aquilineta {
   font-family: 'AquilineTwo', serif;
   text-align: justify;
-  font-size: 20px;
-  margin-right: 80px;
-  margin-left: 34px;
+  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+  margin-right: 5rem; /* 80px / 16 = 5rem */
+  margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
 }
+
 
 .cinzel{
   font-family: "Cinzel", serif;
@@ -11188,24 +11190,24 @@ p {
   text-align: justify;
 }
 .gold-text {
-  color: #a3852d;
+  color: var(--bs-gold);
 }
 .red-text{
-  color: #92302b;
+  color: var( --bs-renred);
 }
 .blue-text{
-  color: #536ba4;
+  color: var(--bs-blue);
 }
 .nav-text{
   color:#4f3f27;
 }
 
 .renaissance-style {
-  background-color: #92302b;
-  border: 4px solid #a3852d; /* bordo dorato esterno */
+  background-color: var( --bs-renred);
+  border: 4px solid var(--bs-gold); /* bordo dorato esterno */
   box-shadow: 
       0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
+      0 0 0 9px var(--bs-gold); /* bordo dorato interno */
       padding:0;
 }
 
