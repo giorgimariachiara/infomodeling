@@ -11179,21 +11179,17 @@ p {
 .cinzel{
   font-family: "Cinzel", serif;
 }
-
 .goudy{
   font-family: "Goudy Initialen";
   font-size: 150px;
   color:red;
-
 }
-
 .justify{
   text-align: justify;
 }
 .gold-text {
   color: #a3852d;
 }
-
 .red-text{
   color: #92302b;
 }
@@ -11214,7 +11210,7 @@ p {
 }
 
 #miaLettera {
-  width: 150px;
+  width: 9.375rem; /* 150px / 16 = 9.375rem */
   height: auto; 
 }
 
@@ -11228,10 +11224,10 @@ p {
 .decorative-img {
   position: absolute;
   left: 0;
-  top: -50px; 
-  left:-50px;/* Questo alzerà l'immagine di 10 pixel verso l'alto. Puoi regolare il valore come preferisci. */
+  top: -3.125rem; /* -50px / 16 = -3.125rem */
+  left: -3.125rem; /* -50px / 16 = -3.125rem */
   height: auto; 
-  width: 90px;
+  width: 5.625rem; /* 90px / 16 = 5.625rem */
 }
 
 .decorated-paragraph {
