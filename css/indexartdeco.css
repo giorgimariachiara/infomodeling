@@ -11,9 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #536ba4;
-  --bs-renred:#92302b;
-  --bs-gold:#a3852d;
+  --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -104,7 +102,6 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  cursor: url("png-clipart-vitruvian-man-drawing-man-angle-people-thumbnail.cur"), pointer
 }
 
 hr {
@@ -2848,70 +2845,21 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #000;
-  background-color: #92302b;
-  border: 4px solid #a3852d;
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
+  --bs-btn-color: #000;
+  --bs-btn-bg: #e6a756;
+  --bs-btn-border-color: #e6a756;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #eab46f;
+  --bs-btn-hover-border-color: #e9b067;
+  --bs-btn-focus-shadow-rgb: 196, 142, 73;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #ebb978;
+  --bs-btn-active-border-color: #e9b067;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #e6a756;
+  --bs-btn-disabled-border-color: #e6a756;
 }
-
-.btn-primary:hover {
-  color: #000;
-  background-color: #eab46f;
-  border-color: #e9b067;
-}
-
-.btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
-}
-
-.btn-primary:active {
-  color: #000;
-  background-color: #ebb978;
-  border-color: #e9b067;
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-.btn-primary:disabled {
-  color: #000;
-  background-color: #e6a756;
-  border-color: #e6a756;
-}
-
-.btn-primary2 {
-  color: #000;
-  background-color: #92302b;
-  border: 4px solid #a3852d;
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
-}
-
-.btn-primary2:hover {
-  color: #000;
-  background-color: #eab46f;
-  border-color: #e9b067;
-}
-
-.btn-primary2:focus {
-  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
-}
-
-.btn-primary2:active {
-  color: #000;
-  background-color: #ebb978;
-  border-color: #e9b067;
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-.btn-primary2:disabled {
-  color: #000;
-  background-color: #e6a756;
-  border-color: #e6a756;
-}
-
-
 
 .btn-secondary {
   --bs-btn-color: #fff;
@@ -3276,9 +3224,9 @@ textarea.form-control-lg {
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: #212529;
   --bs-dropdown-bg: #fff;
-  --bs-dropdown-border-color: #a3852d;
+  --bs-dropdown-border-color: var(--bs-border-color-translucent);
   --bs-dropdown-border-radius: 0.375rem;
-  --bs-dropdown-border-width: 2px;
+  --bs-dropdown-border-width: 1px;
   --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
@@ -3304,10 +3252,10 @@ textarea.form-control-lg {
   color: var(--bs-dropdown-color);
   text-align: left;
   list-style: none;
-  background-color: rgba(213, 206, 189, 0.7);
+  background-color: var(--bs-dropdown-bg);
   background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  
+  border-radius: var(--bs-dropdown-border-radius);
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -10880,7 +10828,9 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentook.png");
+  background-color: black;
+  
+  /* background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/futurism.jpg"); */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10922,20 +10872,17 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 800;
 }
 .section-heading .section-heading-lower {
   display: block;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 100;
 }
 
 .bg-faded {
-  background-color: #dfd9c8;
-  background-position: center center;
-  background-size: cover; 
-  position: relative;  
-  
+  background-color: #f6e1c5;
 
 }
 
@@ -10949,19 +10896,14 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(213, 206, 189, 0.8);
-  font-family: "Cinzel";
-  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
-  position: relative;
-  border-top: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
-  border-bottom: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
+  background-color: white;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
 #mainNav .navbar-brand {
   color: #e6a756;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #a3852d;
+  color: black;
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -10978,7 +10920,45 @@ p {
     color: #e6a756;
   }
 }
+/* Effetto di movimento sui link del menu */
+#mainNav .navbar-nav .nav-item:nth-child(odd) .nav-link {
+  transform: translateY(-8px);
+}
 
+#mainNav .navbar-nav .nav-item:nth-child(even) .nav-link {
+  transform: translateY(7px);
+}
+
+/* Aumentiamo l'altezza della riga per evitare che i link sovrapposti si tocchino */
+#mainNav .navbar-nav .nav-item {
+  line-height: 1.8;
+}
+
+/* Responsiveness: quando la dimensione dello schermo diminuisce, annulliamo la trasformazione per una migliore leggibilità */
+@media (max-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+      transform: translateY(0);
+  }
+}
+
+/* Aggiungi ombra alle lettere specificate dall'attributo data-shadow dei link del menu */
+#mainNav .navbar-nav .nav-item .nav-link[data-shadow]::before {
+  content: attr(data-shadow);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+#mainNav .navbar-nav .nav-item:nth-child(2) .nav-link {
+  transform: rotate(4deg);
+}
+
+/* Ruota la quarta voce del menu verso sinistra (ad esempio di -10 gradi) */
+#mainNav .navbar-nav .nav-item:nth-child(4) .nav-link {
+  transform: rotate(-14deg);
+}
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
@@ -11018,7 +10998,7 @@ p {
 }
 
 .footer {
-  background-color: rgba(101, 38, 32, 0.8);
+  background-color: rgba(47, 23, 15, 0.9);
 }
 
 .intro {
@@ -11133,24 +11113,10 @@ p {
     position: sticky;  /* Use absolute positioning */
     top: 150px;
     right: auto;  /* Align it to the right */
-    width: 50px;
+    width: 40px;
     height: 40px;
-    border: var(--bs-gold);
+    border-radius: 50%;
     z-index: 10;
-    font-family: "TrajanPro";
-    color:var(--bs-gold);
-}
-
-.toggle-btn2 {
-  position: sticky;  /* Use absolute positioning */
-  top: 150px;
-  right: auto;  /* Align it to the right */
-  width: 50px;
-  height: 40px;
-  border:var(--bs-gold);
-  z-index: 10;
-  font-family: "TrajanPro";
-  color:var(--bs-gold);
 }
 
 
@@ -11161,82 +11127,174 @@ p {
 }
 
 
+ /* titolo stile futurista */
 
-.trajan {
-  font-family: "TrajanPro";
-}
-
-.aquiline{
-  font-family: 'AquilineTwo', serif;
-}
-.aquilineta {
-  font-family: 'AquilineTwo', serif;
-  text-align: justify;
-  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
-  margin-right: 5rem; /* 80px / 16 = 5rem */
-  margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
+ body {
+  font-family: 'Arial', sans-serif;
+  
+  color: #FFF;
 }
 
-
-.cinzel{
-  font-family: "Cinzel", serif;
-}
-.goudy{
-  font-family: "Goudy Initialen";
-  font-size: 150px;
-  color:red;
-}
-.justify{
-  text-align: justify;
-}
-.gold-text {
-  color: var(--bs-gold);
-}
-.red-text{
-  color: var( --bs-renred);
-}
-.blue-text{
-  color: var(--bs-blue);
-}
-.nav-text{
-  color:#4f3f27;
+header {
+  text-align: center;
+  padding: 5rem 0;
 }
 
-.renaissance-style {
-  background-color: var( --bs-renred);
-  border: 4px solid var(--bs-gold); /* bordo dorato esterno */
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px var(--bs-gold); /* bordo dorato interno */
-      padding:0;
+.site-heading {
+  position: relative;
+  display: inline-block;
+  transform: skewX(15deg) rotate(-10deg);
 }
 
-#miaLettera {
-  width: 9.375rem; /* 150px / 16 = 9.375rem */
-  height: auto; 
+.text-faded {
+  letter-spacing: 3px;
+  word-spacing: 8px;
+  color: #aaa;
 }
 
-.decorated-container {
-  position: relative; 
-  margin-top: 50px;
-  padding-left: calc(20px + 15px);
-  margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
+.mb-3 {
+  margin-bottom: 1.5rem;
 }
 
-.decorative-img {
+.site-heading-lower {
+  font-size: 2.5rem;
+  display: block;
+  transform: rotate(15deg) translateY(-20px);
+  box-shadow: 2px 2px 0px red;
+  padding: 0.2rem 1rem;
+  margin-top: -3rem;
+  letter-spacing: 3px;
+  margin-top: 7rem;
+}
+.d-none {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .d-lg-block {
+      display: block;
+  }
+}
+
+.text-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+}
+
+.text-primary span {
+  margin: 0 2px;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.text-primary span:nth-child(1) {
+  font-size: 1.1em;
+  transform: rotate(-20deg);
+}
+
+.text-primary span:nth-child(2) {
+  font-size: 1.4em;
+  transform: rotate(-10deg);
+}
+
+.text-primary span:nth-child(3) {
+  font-size: 1.6em;
+  transform: rotate(0deg);
+}
+
+.text-primary span:nth-child(4) {
+  font-size: 1.2em;
+  transform: rotate(10deg);
+}
+
+.text-primary span:nth-child(5) {
+  font-size: 1em;
+  transform: rotate(20deg);
+}
+
+.text-primary span:nth-child(6) {
+  font-size: 1.5em;
+  transform: rotate(-25deg);
+}
+
+.text-primary span:nth-child(7) {
+  font-size: 1.3em;
+  transform: rotate(-5deg);
+}
+
+.text-primary span:nth-child(8) {
+  font-size: 1.7em;
+  transform: rotate(5deg);
+}
+
+.text-primary span:nth-child(9) {
+  font-size: 1.2em;
+  transform: rotate(15deg);
+}
+
+.text-primary span:nth-child(10) {
+  font-size: 1.1em;
+  transform: rotate(-30deg);
+}
+
+.text-primary span:nth-child(11) {
+  font-size: 1.4em;
+  transform: rotate(0deg);
+}
+
+.text-primary span:nth-child(12) {
+  font-size: 1.3em;
+  transform: rotate(20deg);
+}
+
+.text-primary span:nth-child(13) {
+  font-size: 1.6em;
+  transform: rotate(-15deg);
+}
+
+.text-primary span:nth-child(14) {
+  font-size: 1.5em;
+  transform: rotate(10deg);
+}
+
+.text-primary span:nth-child(15) {
+  font-size: 1.2em;
+  transform: rotate(-10deg);
+}
+
+@media (max-width: 768px) {
+  .text-primary {
+      font-size: 1.2em;
+  }
+  
+  .text-primary span {
+      margin: 0 1px;  /* riduzione dello spazio tra le lettere */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-primary {
+      font-size: 1em;
+  }
+  
+  .text-primary span {
+      margin: 0 0.5px;  /* ulteriore riduzione dello spazio tra le lettere */
+  }
+}
+
+.overlap {
+  position: relative;
+  z-index: 1;
+  left: -2px;  /* Questo valore determina quanto le lettere si sovrappongono */
+}
+
+.overlap::before {
+  content: attr(data-overlap);
   position: absolute;
+  top: 0;
   left: 0;
-  top: -3.125rem; /* -50px / 16 = -3.125rem */
-  left: -3.125rem; /* -50px / 16 = -3.125rem */
-  height: auto; 
-  width: 5.625rem; /* 90px / 16 = 5.625rem */
-}
-
-.decorated-paragraph {
-  margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
-}
-
-
-.mb-0.aquilineta {
-  margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
+  color: [colore di sovrapposizione];  /* Ad esempio #FFD700 per oro */
+  z-index: -1;
 }
