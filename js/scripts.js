@@ -9,46 +9,6 @@ window.addEventListener('DOMContentLoaded', event => {
     listHoursArray[new Date().getDay()].classList.add(('today'));
 })
 
-/*!
-document.addEventListener("DOMContentLoaded", function() {
-    // Get references to the button and the accordion
-    const toggleAccordionButton = document.getElementById("toggleAccordionButton");
-    const accordionExample = document.getElementById("accordionExample");
-
-    // Initially hide the accordion
-    accordionExample.style.display = "none";
-
-    // Add click event listener to the button
-    toggleAccordionButton.addEventListener("click", function() {
-        if (accordionExample.style.display === "none") {
-            accordionExample.style.display = "block";
-        } else {
-            accordionExample.style.display = "none";
-        }
-    });
-});
-*/
-
-/*!
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleAccordionButton = document.getElementById("toggleAccordionButton");
-    const accordionExample = document.getElementById("accordionExample");
-
-    accordionExample.style.display = "none";
-
-    toggleAccordionButton.addEventListener("click", function() {
-        if (accordionExample.style.display === "none") {
-            accordionExample.style.display = "block";
-        } else {
-            accordionExample.style.display = "none";
-        }
-
-        // Scroll to the accordion
-        accordionExample.scrollIntoView({behavior: "smooth"});
-    });
-});
-*/
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const applyButton = document.querySelector(".modal-footer .btn-primary");
@@ -65,20 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     modalInstance.hide();
   });
 });
-
-/*!
-
-function toggleHighlight(className, isChecked) {
-  const elements = document.getElementsByClassName(className);
-  for (let i = 0; i < elements.length; i++) {
-    if (isChecked) {
-      elements[i].style.backgroundColor = '#0f5132';
-    } else {
-      elements[i].style.backgroundColor = '';
-    }
-  }
-}
-*/
 
 
 function toggleHighlight(className, isChecked) {
@@ -97,51 +43,25 @@ function toggleHighlight(className, isChecked) {
 }
 
 
-/*!
-// Styler Button
 document.addEventListener("DOMContentLoaded", function () {
-  const applyStyleButton = document.querySelector(".apply-style");
-  applyStyleButton.addEventListener("click", function () {
-    const darkModeCheckbox = document.getElementById("darkMode");
-    
-    toggleDarkMode(darkModeCheckbox.checked);
+  const applyThemeButton = document.getElementById("applyTheme");
+  const themeStylesheet = document.getElementById("themeStylesheet");
+
+  applyThemeButton.addEventListener("click", function () {
+    const theme1Radio = document.getElementById("theme1");
+    const theme2Radio = document.getElementById("theme2");
+
+    if (theme1Radio.checked) {
+      themeStylesheet.setAttribute('href', 'css/styles.css');
+    } else if (theme2Radio.checked) {
+      themeStylesheet.setAttribute('href', 'css/XXI.css');
+    }
 
     // Close the modal
-    const modalElement = document.getElementById('styleModal');
+    const modalElement = document.getElementById('themeModal');
     const modalInstance = bootstrap.Modal.getInstance(modalElement);
     modalInstance.hide();
   });
 });
 
-function toggleDarkMode(isChecked) {
-  const bodyElement = document.body;
-  if (isChecked) {
-    bodyElement.classList.add('dark-mode');
-  } else {
-    bodyElement.classList.remove('dark-mode');
-  }
-}
-*/
 
-
-
-// FAB Button
-/*!
-var modal = document.getElementById("metadataModal");
-var fabButton = document.getElementById("fabButton");
-
-fabButton.onclick = function() {
-  modal.style.display = "block";
-}
-
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-*/
