@@ -10860,6 +10860,7 @@ p {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+  font-family: "Roboto";
 }
 
 .page-section {
@@ -10896,14 +10897,14 @@ p {
 }
 
 #mainNav {
-  background-color: white;
+  background-color: #587bb1;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand {
   color: #e6a756;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: black;
+  color:#fb8200;
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -10953,11 +10954,13 @@ p {
 }
 #mainNav .navbar-nav .nav-item:nth-child(2) .nav-link {
   transform: rotate(4deg);
+  color:white;
 }
 
 /* Ruota la quarta voce del menu verso sinistra (ad esempio di -10 gradi) */
 #mainNav .navbar-nav .nav-item:nth-child(4) .nav-link {
   transform: rotate(-14deg);
+  color:white;
 }
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
