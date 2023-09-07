@@ -11034,7 +11034,7 @@ p {
 
 .sticky-accordion {
     position: sticky;
-    top: 15px;  /* Adjust as needed */
+    top: 100px;  /* Adjust as needed */
     max-height: calc(100vh - 30px);
     overflow-y: auto;
     z-index: 1;
@@ -11156,5 +11156,11 @@ p {
 
 
 
+.highlight-place {
+    background-color: #6caedf;
+}
+.highlight-person {
+    background-color: #a1d490;
+}
 
 

@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', event => {
 })
 
 
+/*!
 document.addEventListener("DOMContentLoaded", function () {
   const applyButton = document.querySelector(".modal-footer .btn-primary");
   applyButton.addEventListener("click", function () {
@@ -41,6 +42,7 @@ function toggleHighlight(className, isChecked) {
     }
   }
 }
+*/
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -65,3 +67,44 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+$(document).ready(function() {
+    function appendToMetadataList(className, listId, titleId) {
+        var elements = $(className);
+        var names = [];
+        elements.each(function() {
+            names.push($(this).text());
+        });
+        var uniqueNames = Array.from(new Set(names));
+        if (uniqueNames.length > 0) {
+            $(titleId).show();
+        } else {
+            $(titleId).hide();
+        }
+        var listHtml = uniqueNames.map(function(name) {
+            return "<li>" + name + "</li>";
+        }).join("");
+        $(listId).append(listHtml);
+    }
+
+    $("#placeNames").change(function() {
+        $("#placeNameList").empty();
+        if(this.checked) {
+            $(".placeName").addClass("highlight-place");
+            appendToMetadataList(".highlight-place", "#placeNameList", "#placeNameTitle");
+        } else {
+            $(".placeName").removeClass("highlight-place");
+            $("#placeNameTitle").hide();
+        }
+    });
+
+    $("#personNames").change(function() {
+        $("#personNameList").empty();
+        if(this.checked) {
+            $(".personName").addClass("highlight-person");
+            appendToMetadataList(".highlight-person", "#personNameList", "#personNameTitle");
+        } else {
+            $(".personName").removeClass("highlight-person");
+            $("#personNameTitle").hide();
+        }
+    });
+});
