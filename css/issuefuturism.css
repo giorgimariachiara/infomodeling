@@ -10949,8 +10949,45 @@ p {
     margin-bottom:70px;
     transform: rotate(-5deg); 
 }
+.bg-faded .p3 {
+    font-family: 'Sitka';
+    text-align: right;         /* Sposta il testo a sinistra */
+    border-top: 4px solid #000; /* Aggiunge un bordo a destra */
+    border-left: 12px solid #000; /* Aggiunge un bordo in basso */    /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    margin-top:52px;
+    margin-bottom:70px;
+    transform: rotate(5deg); 
+}
+.bg-faded .p4 {
+    font-family: 'Sitka';
+    text-align: left;         /* Sposta il testo a sinistra */
+    border-right: 10px solid #000; /* Aggiunge un bordo a destra */
+    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
+    margin-right: 200px; 
+    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    padding-bottom: 15px;
+}
 
+.bg-faded .p5 {
+    font-family: 'Sitka';
+    text-align: center;         /* Sposta il testo a sinistra */
+    border-top: 10px solid #000; /* Aggiunge un bordo a destra */
+    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
+    margin-top: 20px;
+    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    padding-bottom: 15px;
+}
 
+.bg-faded .p6 {
+    font-family: 'Sitka';
+    text-align: left;         /* Sposta il testo a sinistra */
+    border-left: 10px solid #000; /* Aggiunge un bordo a destra */
+    border-right: 3px solid #000; /* Aggiunge un bordo in basso */
+    margin-left: 230px;
+    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    padding-left: 120px;
+    margin-top:20px;
+}
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -11073,27 +11110,6 @@ p {
     max-width: 50vw;
   }
 }
-
-
-.figure {
-    display: inline-block;
-    position: relative;
-    padding: 20px;
-}
-
-.figure::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0; /* fa in modo che l'elemento sia sotto l'immagine */
-    background: linear-gradient(90deg, #f2a365 50%, #a3d9ff 50%);
-    clip-path: polygon(70% 100%, 100% 100%, 100% 100%); /* Modifica questa forma come preferisci */
-}
-
-
 
 
 .list-hours {
