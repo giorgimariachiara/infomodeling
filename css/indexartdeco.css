@@ -11232,40 +11232,6 @@ header {
   transform: rotate(5deg);
 }
 
-.text-primary span:nth-child(9) {
-  font-size: 1.2em;
-  transform: rotate(15deg);
-}
-
-.text-primary span:nth-child(10) {
-  font-size: 1.1em;
-  transform: rotate(-30deg);
-}
-
-.text-primary span:nth-child(11) {
-  font-size: 1.4em;
-  transform: rotate(0deg);
-}
-
-.text-primary span:nth-child(12) {
-  font-size: 1.3em;
-  transform: rotate(20deg);
-}
-
-.text-primary span:nth-child(13) {
-  font-size: 1.6em;
-  transform: rotate(-15deg);
-}
-
-.text-primary span:nth-child(14) {
-  font-size: 1.5em;
-  transform: rotate(10deg);
-}
-
-.text-primary span:nth-child(15) {
-  font-size: 1.2em;
-  transform: rotate(-10deg);
-}
 
 @media (max-width: 768px) {
   .text-primary {
