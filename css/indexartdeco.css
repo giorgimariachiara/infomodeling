@@ -10829,7 +10829,7 @@ textarea.form-control-lg {
 body {
   background-color: black;
   
-  /* background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/futurism.jpg"); */
+  background-image: url("../assets/img/futurism.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10843,25 +10843,6 @@ p {
   color: #f6e1c5;
 }
 
-.site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.site-heading .site-heading-upper {
-  display: block;
-  font-size: 2rem;
-  font-weight: 800;
-}
-.site-heading .site-heading-lower {
-  font-size: 5rem;
-  font-weight: 100;
-  line-height: 4rem;
-  font-family: "Roboto";
-}
-
 .page-section {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -10872,7 +10853,7 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 800;
   color:black;
 }
@@ -11137,32 +11118,11 @@ header {
   padding: 5rem 0;
 }
 
-.site-heading {
-  position: relative;
-  display: inline-block;
-  transform: skewX(15deg) rotate(-10deg);
-}
-
-.text-faded {
-  letter-spacing: 3px;
-  word-spacing: 8px;
-  color: #aaa;
-}
-
 .mb-3 {
   margin-bottom: 1.5rem;
 }
 
-.site-heading-lower {
-  font-size: 2.5rem;
-  display: block;
-  transform: rotate(15deg) translateY(-20px);
-  box-shadow: 2px 2px 0px red;
-  padding: 0.2rem 1rem;
-  margin-top: -3rem;
-  letter-spacing: 3px;
-  margin-top: 7rem;
-}
+
 .d-none {
   display: none;
 }
@@ -11172,6 +11132,8 @@ header {
       display: block;
   }
 }
+
+/*titolo*/
 
 .text-primary {
   display: flex;
@@ -11187,7 +11149,7 @@ header {
 }
 
 .text-primary span:nth-child(1) {
-  font-size: 1.1em;
+  font-size: 2em;
   transform: rotate(-20deg);
 }
 
@@ -11212,7 +11174,7 @@ header {
 }
 
 .text-primary span:nth-child(6) {
-  font-size: 1.5em;
+  font-size: 1.9em;
   transform: rotate(-25deg);
 }
 
@@ -11247,17 +11209,91 @@ header {
   }
 }
 
+
+/* ombra dietro al titolo */
+
+.text-primary span {
+  position:relative;
+  transform-origin: bottom left;
+  text-shadow: 
+      2px 0 rgba(255,255,255,0.4),
+      4px 0 rgba(255,255,255,0.3),
+      6px 0 rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.text-primary span::before {
+  content: attr(data-shadow);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: rgba(0, 0, 0, 0.3);
+  transform: scaleY(0.5);
+  z-index: -1;
+}
+
+/* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
+.text-primary span:nth-child(1) {
+  transform: rotate(-20deg) skewY(-10deg);
+}
+
+/* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Roboto";
+  color: #f6e1c5;
+}
+
+
+
+.site-heading-lower {
+  font-family:"Roboto";
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-align: center; /* Cambia da flex a text-align per centrare il testo */
+  padding: 0.5em 0;
+  word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
+  margin-left: 18%;
+  margin-right: 10%;
+  
+}
+
+.site-heading-lower::before, .site-heading-lower::after {
+  content: "";
+  width: 20%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+}
+
+.site-heading-lower::before {
+  left: -25%;
+}
+
+.site-heading-lower::after {
+  right: -25%;
+}
+
 .overlap {
   position: relative;
   z-index: 1;
-  left: -2px;  /* Questo valore determina quanto le lettere si sovrappongono */
+  background: white;
+  padding: 0 0.1em;
+  display: inline-block; /* Questo fa sì che ogni elemento .overlap si comporti come un blocco inline */
 }
 
 .overlap::before {
   content: attr(data-overlap);
   position: absolute;
   top: 0;
-  left: 0;
-  color: [colore di sovrapposizione];  /* Ad esempio #FFD700 per oro */
+  left: 0.1em;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.3em; 
   z-index: -1;
 }
+

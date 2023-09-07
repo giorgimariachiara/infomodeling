@@ -10829,7 +10829,7 @@ textarea.form-control-lg {
 }
 body {
     background-color: black;
-  /*background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");*/
+  background-image: url("../assets/img/futurism.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10839,16 +10839,13 @@ p {
   line-height: 1.75;
 }
 
-.text-faded {
-  color: #f6e1c5;
-}
-
 .site-heading {
   margin-top: 5rem;
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto";
+  color: #f6e1c5;
 }
 
 
@@ -11266,6 +11263,173 @@ p {
 }
 .highlight-person {
     background-color: #a1d490;
+}
+
+
+/*titolo*/
+
+.text-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+}
+
+.text-primary span {
+  margin: 0 2px;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.text-primary span:nth-child(1) {
+  font-size: 2em;
+  transform: rotate(-20deg);
+}
+
+.text-primary span:nth-child(2) {
+  font-size: 1.4em;
+  transform: rotate(-10deg);
+}
+
+.text-primary span:nth-child(3) {
+  font-size: 1.6em;
+  transform: rotate(0deg);
+}
+
+.text-primary span:nth-child(4) {
+  font-size: 1.2em;
+  transform: rotate(10deg);
+}
+
+.text-primary span:nth-child(5) {
+  font-size: 1em;
+  transform: rotate(20deg);
+}
+
+.text-primary span:nth-child(6) {
+  font-size: 1.9em;
+  transform: rotate(-25deg);
+}
+
+.text-primary span:nth-child(7) {
+  font-size: 1.3em;
+  transform: rotate(-5deg);
+}
+
+.text-primary span:nth-child(8) {
+  font-size: 1.7em;
+  transform: rotate(5deg);
+}
+
+
+@media (max-width: 768px) {
+  .text-primary {
+      font-size: 1.2em;
+  }
+  
+  .text-primary span {
+      margin: 0 1px;  /* riduzione dello spazio tra le lettere */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-primary {
+      font-size: 1em;
+  }
+  
+  .text-primary span {
+      margin: 0 0.5px;  /* ulteriore riduzione dello spazio tra le lettere */
+  }
+}
+
+
+/* ombra dietro la nav */
+#mainNav .navbar-nav .nav-item .nav-link[data-shadow]::before {
+  content: attr(data-shadow);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+
+/* ombra dietro al titolo */
+
+.text-primary span {
+  position:relative;
+  transform-origin: bottom left;
+  text-shadow: 
+      2px 0 rgba(255,255,255,0.4),
+      4px 0 rgba(255,255,255,0.3),
+      6px 0 rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.text-primary span::before {
+  content: attr(data-shadow);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: rgba(0, 0, 0, 0.3);
+  transform: scaleY(0.5);
+  z-index: -1;
+}
+
+/* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
+.text-primary span:nth-child(1) {
+  transform: rotate(-20deg) skewY(-10deg);
+}
+
+/* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
+
+
+.site-heading-lower {
+  font-family:"Roboto";
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-align: center; /* Cambia da flex a text-align per centrare il testo */
+  padding: 0.5em 0;
+  word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
+  margin-left: 18%;
+  margin-right: 10%;
+  
+}
+
+.site-heading-lower::before, .site-heading-lower::after {
+  content: "";
+  width: 20%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+}
+
+.site-heading-lower::before {
+  left: -25%;
+}
+
+.site-heading-lower::after {
+  right: -25%;
+}
+
+.overlap {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 0 0.1em;
+  display: inline-block; /* Questo fa sì che ogni elemento .overlap si comporti come un blocco inline */
+}
+
+.overlap::before {
+  content: attr(data-overlap);
+  position: absolute;
+  top: 0;
+  left: 0.1em;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.3em; 
+  z-index: -1;
 }
 
 

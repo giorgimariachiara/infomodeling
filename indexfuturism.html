@@ -15,20 +15,23 @@
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <h1 class="site-heading text-center d-none d-lg-block">
                 <span class="site-heading-upper text-primary mb-3">
-                    <span>T</span> 
-                    <span>h</span> 
-                    <span>e</span> 
-                    <span>L</span> 
-                    <span>i</span> 
-                    <span>v</span> 
-                    <span>e</span> 
-                    <span>s</span> 
+                    <span data-shadow="T">T</span> 
+                    <span data-shadow="h">h</span> 
+                    <span data-shadow="e">e</span> 
+                    <span data-shadow="L">L</span> 
+                    <span data-shadow="i" >i</span> 
+                    <span data-shadow="v">v</span> 
+                    <span data-shadow="e">e</span> 
+                    <span data-shadow="s">s</span> 
                 </span>
-                <span class="site-heading-lower">
-                    of the <span class="overlap" data-overlap="M">M</span>ost Exc<span class="overlap" data-overlap="e">e </span>llent Painters, Scu<span class="overlap" data-overlap="l">l</span>ptors, and Architects 
-            </h1>
+                <div class="overlap-container">
+                    <span class="site-heading-lower">
+                        of the Most Excellent Painters, <br> Sculptors, and Architects
+                    </span>
+                </div>
+                </h1>
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -89,6 +92,23 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            const siteHeadingLower = document.querySelector(".site-heading-lower");
+  const text = siteHeadingLower.textContent.trim();
+  let newText = "";
+  
+  for (let letter of text) {
+      if (letter === " ") {
+          newText += letter; // non avvolgere gli spazi
+      } else {
+          newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
+      }
+  }
+  
+  siteHeadingLower.innerHTML = newText;
+  
+          </script>
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
         </footer>
