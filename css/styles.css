@@ -10992,7 +10992,7 @@ p {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
-    margin-bottom: -2rem;
+    margin-bottom: -1rem;
   }
   .product-item .product-item-img {
     position: relative;
@@ -11002,7 +11002,7 @@ p {
   .product-item .product-item-description {
     position: relative;
     z-index: 0;
-    margin-top: -3rem;
+    margin-top: 3rem;
     max-width: 50vw;
   }
 }
@@ -11034,7 +11034,7 @@ p {
 
 .sticky-accordion {
     position: sticky;
-    top: 15px;  /* Adjust as needed */
+    top: 100px;  /* Adjust as needed */
     max-height: calc(100vh - 30px);
     overflow-y: auto;
     z-index: 1;
@@ -11044,6 +11044,7 @@ p {
 }
 
 .sticky-container {
+    text-align: center; 
     display: flex;
     position: sticky;
     top: 15px;
@@ -11063,20 +11064,87 @@ p {
 
 
 .sticky-button {
+
     position: sticky;
-    top: 20px; /* Adjust this value as needed */
+    top: 120px; /* Adjust this value as needed */
     z-index: 10;
 }
 
+.sticky-button-2 {
 
+    position: sticky;
+    top: 160px; /* Adjust this value as needed */
+    z-index: 10;
+}
+
+/*
 .toggle-btn {
-    position: sticky;  /* Use absolute positioning */
-    top: 150px;
-    right: auto;  /* Align it to the right */
+    position: absolute;  
+    top: 0;  
+    left: 50%; 
+    transform: translate(-50%, -50%);  
     width: 40px;
     height: 40px;
     border-radius: 50%;
     z-index: 10;
+}  */
+
+
+/* Change from sticky to absolute positioning */
+/* Align to the top */
+/* Align to the left at 50% of the container width */
+/* Center the element */
+/*
+.toggle-btn {
+    position: sticky;  
+    top: 15%;  
+    left: 100%;  
+    transform: translate(-50%, -50%);  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+*/
+
+ /* Use absolute positioning */
+ /* Align it to the right */
+ /*
+.toggle-btn {
+    position: sticky; 
+    top: 150px;
+    right: auto;  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+.toggle-btn-2 {
+    position: sticky;  
+    top: 15%;  
+    left: 100%;  
+    transform: translate(-50%, -50%);  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+*/
+
+.button-container {
+  position: sticky;
+  top: 150px;
+  z-index: 10;
+}
+
+.toggle-btn, .toggle-btn-2 {
+  width: 40px;
+  height: 40px;
+  /*transform: translate(-50%, -50%) */
+  border-radius: 50%;
+  margin-bottom: 10px;  /* Spacing between the buttons */
 }
 
 
@@ -11088,5 +11156,11 @@ p {
 
 
 
+.highlight-place {
+    background-color: #6caedf;
+}
+.highlight-person {
+    background-color: #a1d490;
+}
 
 

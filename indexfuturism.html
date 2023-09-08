@@ -15,28 +15,23 @@
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <h1 class="site-heading text-center d-none d-lg-block">
                 <span class="site-heading-upper text-primary mb-3">
-                    <span>A</span> 
-                    <span>F</span> 
-                    <span>r</span> 
-                    <span>e</span> 
-                    <span>e</span> 
-                    <span>D</span> 
-                    <span>i</span> 
-                    <span>g</span> 
-                    <span>i</span> 
-                    <span>t</span> 
-                    <span>a</span> 
-                    <span>l</span> 
-                    <span>M</span> 
-                    <span>A</span> 
-                    <span>G</span> 
-
+                    <span data-shadow="T">T</span> 
+                    <span data-shadow="h">h</span> 
+                    <span data-shadow="e">e</span> 
+                    <span data-shadow="L">L</span> 
+                    <span data-shadow="i" >i</span> 
+                    <span data-shadow="v">v</span> 
+                    <span data-shadow="e">e</span> 
+                    <span data-shadow="s">s</span> 
                 </span>
-                <span class="site-heading-lower">
-                    O<span class="overlap" data-overlap="u">u</span>r <span class="overlap" data-overlap="P">P</span> Project Title</span>
-            </h1>
+                <div class="overlap-container">
+                    <span class="site-heading-lower">
+                        of the Most Excellent Painters, <br> Sculptors, and Architects
+                    </span>
+                </div>
+                </h1>
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -45,7 +40,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html" data-shadow="H">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
                         <li class="nav-item px-lg-4 dropdown">
                             <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Issues
@@ -55,10 +50,9 @@
                                 <li><a class="dropdown-item" href="issue-verrocchio.html">Verrocchio</a></li>
                                 <li><a class="dropdown-item" href="issue-donatello.html">Donatello</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
+                        </li>     
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="disclaimer.html">Disclaimer</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -66,7 +60,7 @@
         <section class="page-section clearfix">
             <div class="container">
                 <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 " src="assets/img/intro.jpg" alt="..." />
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 " src="assets/img/vasaripaint.jpg" alt="..." />
                     <!--<video class="intro-img img-fluid mb-3 mb-lg-0 rounded" controls>
                       <source src="assets/img/intro.mp4" type="video/mp4">
                       Your browser does not support the video tag.
@@ -98,6 +92,23 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            const siteHeadingLower = document.querySelector(".site-heading-lower");
+  const text = siteHeadingLower.textContent.trim();
+  let newText = "";
+  
+  for (let letter of text) {
+      if (letter === " ") {
+          newText += letter; // non avvolgere gli spazi
+      } else {
+          newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
+      }
+  }
+  
+  siteHeadingLower.innerHTML = newText;
+  
+          </script>
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
         </footer>
