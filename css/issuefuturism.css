@@ -3223,7 +3223,7 @@ textarea.form-control-lg {
   --bs-dropdown-spacer: 0.125rem;
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: #212529;
-  --bs-dropdown-bg: #fff;
+  --bs-dropdown-bg: rgba(247,230,186, 0.8);
   --bs-dropdown-border-color: var(--bs-border-color-translucent);
   --bs-dropdown-border-radius: 0.375rem;
   --bs-dropdown-border-width: 1px;
@@ -10860,12 +10860,12 @@ p {
 }
 .section-heading .section-heading-upper {
     display: inline-block; 
-    transform: rotate(-15deg);  
-    font-size: 1rem;
-    font-weight: 800;
+    transform: rotate(-10deg);  
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 60px;
     font-family: "Cinzel";
-    color:red;
+    color:black;
 }
 
 
@@ -10898,8 +10898,9 @@ p {
     text-transform: uppercase; /* Maiuscolo può dare una sensazione più meccanica */
     letter-spacing: 5px; /* Distanza tra le lettere */
     transform: skewX(-10deg); /* Inclinazione per un senso di movimento */
-    font-size: 24px;
-    color:pink;
+    font-size: 2rem;
+    color:#f07e02;
+    font-weight: 800;
   }
 
 .bg-fadedtitle{
@@ -10912,7 +10913,7 @@ p {
     left: 0;
     width: 90%; /* Questo determina dove inizia la seconda parte del colore */
     height: 100%;
-    background: #f5f5f5; /* O qualsiasi altro colore tu voglia per la parte sinistra */
+    background: #5a7db3; /* O qualsiasi altro colore tu voglia per la parte sinistra */
     clip-path: polygon(0 0, 100% 0, 0 100%); 
     z-index: -1; /* Assicurati che sia dietro al testo */
 }
@@ -10924,7 +10925,7 @@ p {
     }
 }
 .bg-faded{
-    background-color: white;
+    background-color: #f7e6ba;
 }
 
 .bg-faded .p1 {
@@ -10995,15 +10996,16 @@ p {
 }
 
 #mainNav {
-  background-color: #ee7b00;
-  font-family: "Roboto";
+  background-color: rgba(247,230,186, 0.8);
+  font-family: "SquareFont";
 }
 #mainNav .navbar-brand {
-  color: #587bb1;
+  color: #f27a0a;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color:black;
   font-weight: 800;
+  
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
@@ -11013,13 +11015,12 @@ p {
     font-size: 0.9rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
+    color: #f27a0a;
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #f27a0a;
   }
 }
-
 
 
 .btn {
@@ -11419,6 +11420,26 @@ p {
   font-size: 1.5em; /* Puoi modificare questo valore a tuo piacimento */
 }
 
+.bigger-text1 {
+  font-size: 1.4rem; /* Puoi modificare questo valore a tuo piacimento */
+}
 .bigger-text2 {
-  font-size: 2em; /* Puoi modificare questo valore a tuo piacimento */
+  font-size: 1.5rem !important; /* Puoi modificare questo valore a tuo piacimento */
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.bigger-text3{
+  font-size: 2rem !important;
+  margin-left:20px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.white{
+  color:white;
+}
+
+.purple{
+  color:#663d86;
 }
