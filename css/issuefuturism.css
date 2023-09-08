@@ -301,9 +301,41 @@ kbd kbd {
 }
 
 figure {
-  margin: 0 0 1rem;
+  display: inline-block;
+  position: relative;
+  margin: 50px 0 1rem;
+ 
+
 }
 
+figcaption {
+  position: relative; /* o "absolute", dipende dalla tua struttura */
+  z-index: 2; /* un valore più alto di qualsiasi altro z-index che potresti avere */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+figure::before {
+  content: "";
+  position: absolute;
+  top: -10%; /* Decidi quanto vuoi che sia distante dall'immagine. */
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background-color: #00b37c; /* O qualsiasi altro colore desideri. */
+  z-index: 0;
+  animation: rotate 20s linear infinite;
+  
+  /* Questo crea un esagono come sfondo. Puoi modificare la forma come preferisci. */
+  clip-path: polygon(50% 0%, 100% 15%, 100% 75%, 50% 100%, 0% 75%, 0% 17%);
+}
 img,
 svg {
   vertical-align: middle;
@@ -612,19 +644,8 @@ progress {
   height: auto;
 }
 
-.figure {
-  display: inline-block;
-}
 
-.figure-img {
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
 
-.figure-caption {
-  font-size: 0.875em;
-  color: #6c757d;
-}
 
 .container,
 .container-fluid,
@@ -10865,7 +10886,7 @@ p {
     font-weight: 600;
     margin-bottom: 60px;
     font-family: "Cinzel";
-    color:black;
+    color:#f07e02;
 }
 
 
@@ -10891,6 +10912,7 @@ p {
   font-weight: 100;
   margin-bottom: 100px;
   font-family: "Cinzel";
+  color:white;
 }
 
 .section-heading-lower span {
@@ -11364,6 +11386,11 @@ p {
   transform: rotate(-20deg) skewY(-10deg);
 }
 
+.text-primary span:hover {
+  transform: scale(1.4) rotate(10deg);
+  transition: transform 0.3s ease;
+}
+
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
 
 
@@ -11420,6 +11447,9 @@ p {
   font-size: 1.5em; /* Puoi modificare questo valore a tuo piacimento */
 }
 
+.bigger-text4 {
+  font-size:2.2rem; /* Puoi modificare questo valore a tuo piacimento */
+}
 .bigger-text1 {
   font-size: 1.4rem; /* Puoi modificare questo valore a tuo piacimento */
 }
