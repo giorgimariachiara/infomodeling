@@ -11189,15 +11189,6 @@ header {
   position: relative;
 }
 
-.text-primary span::before {
-  content: attr(data-shadow);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  color: rgba(0, 0, 0, 0.3);
-  transform: scaleY(0.5);
-  z-index: -1;
-}
 
 /* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
 .text-primary span:nth-child(1) {
@@ -11211,7 +11202,7 @@ header {
   text-transform: uppercase;
   line-height: 1;
   font-family: "Roboto";
-  color: #f6e1c5;
+  color: black;
 }
 
 
