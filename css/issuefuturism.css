@@ -10956,7 +10956,7 @@ p {
     border-right: 10px solid #000; /* Aggiunge un bordo a destra */
     border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
     margin-right: 100px; 
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    padding-right:20px;     
     padding-bottom: 15px; 
 }
 
@@ -10964,7 +10964,7 @@ p {
     font-family: 'Sitka';
     text-align: center;         /* Sposta il testo a sinistra */
     border-top: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */    /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */    
     margin-top:60px;
     margin-bottom:70px;
     transform: rotate(-5deg); 
@@ -10973,7 +10973,7 @@ p {
     font-family: 'Sitka';
     text-align: right;         /* Sposta il testo a sinistra */
     border-top: 4px solid #000; /* Aggiunge un bordo a destra */
-    border-left: 12px solid #000; /* Aggiunge un bordo in basso */    /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    border-left: 12px solid #000; /* Aggiunge un bordo in basso */  
     margin-top:52px;
     margin-bottom:70px;
     transform: rotate(5deg); 
