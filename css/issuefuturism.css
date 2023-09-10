@@ -304,8 +304,14 @@ figure {
   display: inline-block;
   position: relative;
   margin: 50px 0 1rem;
- 
+  overflow: hidden; 
+}
 
+img {
+  max-width: 100%; /* L'immagine si ridurrà al massimo alla larghezza del contenitore */
+  
+height:auto;
+  z-index: 1; /* Assicura che l'immagine sia sopra lo sfondo */
 }
 
 figcaption {
@@ -336,6 +342,12 @@ figure::before {
   /* Questo crea un esagono come sfondo. Puoi modificare la forma come preferisci. */
   clip-path: polygon(50% 0%, 100% 15%, 100% 75%, 50% 100%, 0% 75%, 0% 17%);
 }
+
+
+
+
+
+
 img,
 svg {
   vertical-align: middle;
