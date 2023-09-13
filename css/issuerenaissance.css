@@ -7723,6 +7723,9 @@ textarea.form-control-lg {
 .mb-5 {
   margin-bottom: 3rem !important;
 }
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
 
 .mb-auto {
   margin-bottom: auto !important;
@@ -7750,6 +7753,9 @@ textarea.form-control-lg {
 
 .ms-5 {
   margin-left: 3rem !important;
+}
+.ms-6 {
+  margin-left: 4rem !important;
 }
 
 .ms-auto {
@@ -10922,12 +10928,10 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-weight: 400;
-}
-.section-heading .section-heading-lower {
-  display: block;
-  font-size: 2rem;
   font-weight: 500;
+  font-size: 1.5rem;
+  
+  
 }
 
 .bg-faded {
@@ -10935,8 +10939,6 @@ p {
   background-position: center center;
   background-size: cover; 
   position: relative;  
-  
-  
 
 }
 
@@ -11047,6 +11049,10 @@ p {
   .intro .intro-text {
     width: 45%;
   }
+}
+.product-item-img{
+  margin-top: 50px;
+  margin-bottom:  30px;
 }
 
 @media (min-width: 992px) {
@@ -11219,7 +11225,7 @@ p {
 
 .decorated-container {
   position: relative; 
-  margin-top: 50px;
+  margin-top: 80px;
   padding-left: calc(20px + 15px);
   margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
 }
@@ -11227,8 +11233,8 @@ p {
 .decorative-img {
   position: absolute;
   left: 0;
-  top: -3.125rem; /* -50px / 16 = -3.125rem */
-  left: -3.125rem; /* -50px / 16 = -3.125rem */
+  top: -6rem; /* -50px / 16 = -3.125rem */
+  left: -3rem; /* -50px / 16 = -3.125rem */
   height: auto; 
   width: 5.625rem; /* 90px / 16 = 5.625rem */
 }

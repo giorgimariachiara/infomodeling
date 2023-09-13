@@ -11484,4 +11484,5 @@ p {
 
 .purple{
   color:#663d86;
+  transform: skewX(-40deg); 
 }
