@@ -10886,7 +10886,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentook.png");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentookk.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10954,12 +10954,14 @@ p {
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
   font-family: "Cinzel";
-  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
-  position: relative;
-  border-top: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
-  border-bottom: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
+  font-size: 20px;
+  position:relative;
+  border-top: 4px solid #a3852d; /* doppio spessore per il bordo destro */
+  border-bottom: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
-
 #mainNav .navbar-brand {
   color: #e6a756;
 }
@@ -10978,7 +10980,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #a3852d;
   }
 }
 
@@ -11183,6 +11185,20 @@ p {
   margin-right: 5rem; /* 80px / 16 = 5rem */
   margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
 }
+.figcaption {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #385393; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+}
 
 
 .cinzel{
@@ -11219,8 +11235,11 @@ p {
 }
 
 #miaLettera {
-  width: 9.375rem; /* 150px / 16 = 9.375rem */
+  width:20rem; /* 150px / 16 = 9.375rem */
   height: auto; 
+  float: left;
+  margin-right: 20px; /* aggiusta questo valore come necessario */
+  margin-bottom: 5px;
 }
 
 .decorated-container {
@@ -11247,3 +11266,5 @@ p {
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
+
+
