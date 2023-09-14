@@ -11044,3 +11044,39 @@ p {
     width: 100%;
     z-index: 1;
 }
+
+.color-box {
+  display: inline-block;   /* Per renderlo inline con il testo */
+  width: 16px;            /* Larghezza del quadratino */
+  height: 16px;           /* Altezza del quadratino */
+  background-color: #a3852d; /* Colore del quadratino */
+  margin-right: 5px;      /* Spazio tra il quadratino e la parola */
+  vertical-align: middle; /* Centra verticalmente rispetto al testo circostante */
+}
+
+.color-box2 {
+  display: inline-block;   /* Per renderlo inline con il testo */
+  width: 16px;            /* Larghezza del quadratino */
+  height: 16px;           /* Altezza del quadratino */
+  background-color: #536ba4; /* Colore del quadratino */
+  margin-right: 5px;      /* Spazio tra il quadratino e la parola */
+  vertical-align: middle; /* Centra verticalmente rispetto al testo circostante */
+}
+
+.color-box3 {
+  display: inline-block;   /* Per renderlo inline con il testo */
+  width: 16px;            /* Larghezza del quadratino */
+  height: 16px;           /* Altezza del quadratino */
+  background-color: #92302b; /* Colore del quadratino */
+  margin-right: 5px;      /* Spazio tra il quadratino e la parola */
+  vertical-align: middle; /* Centra verticalmente rispetto al testo circostante */
+}
+
+.color-box4 {
+  display: inline-block;   /* Per renderlo inline con il testo */
+  width: 16px;            /* Larghezza del quadratino */
+  height: 16px;           /* Altezza del quadratino */
+  background-color: #a3852d; /* Colore del quadratino */
+  margin-right: 5px;      /* Spazio tra il quadratino e la parola */
+  vertical-align: middle; /* Centra verticalmente rispetto al testo circostante */
+}

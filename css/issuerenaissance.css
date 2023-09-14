@@ -7694,6 +7694,9 @@ textarea.form-control-lg {
 .me-5 {
   margin-right: 3rem !important;
 }
+.me-5 {
+  margin-right: 5rem !important;
+}
 
 .me-auto {
 	margin-left: auto !important;
@@ -10963,14 +10966,14 @@ p {
       0 0 0 9px #a3852d; /* bordo dorato interno */
 }
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #a3852d;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #a3852d;
+  color: rgba(163, 133, 45, 0.9);
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #a3852d;
 }
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -11169,8 +11172,6 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-
-
 .trajan {
   font-family: "TrajanPro";
 }
@@ -11199,7 +11200,6 @@ p {
   border: 3px solid var(--bs-gold); /* Bordo interno dorato */
   box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 }
-
 
 .cinzel{
   font-family: "Cinzel", serif;
@@ -11261,7 +11261,6 @@ p {
 .decorated-paragraph {
   margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
 }
-
 
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */

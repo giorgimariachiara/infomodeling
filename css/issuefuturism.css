@@ -10928,14 +10928,12 @@ p {
 }
 
 .section-heading-lower span {
-    font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
-    text-transform: uppercase; /* Maiuscolo può dare una sensazione più meccanica */
-    letter-spacing: 5px; /* Distanza tra le lettere */
-    transform: skewX(-10deg); /* Inclinazione per un senso di movimento */
-    font-size: 2rem;
-    color:#f07e02;
-    font-weight: 800;
-  }
+  font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
+  letter-spacing: 5px; /* Distanza tra le lettere */
+  font-size: 2rem;
+  color:#f07e02;
+  font-weight: 800;
+}
 
 .bg-fadedtitle{
     position:relative;
@@ -11485,4 +11483,81 @@ p {
 .purple{
   color:#663d86;
   transform: skewX(-40deg); 
+}
+.parent-of-image-container {
+  display: flex;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  align-items: center; /* Centra il contenuto verticalmente */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Ridimensiona il contenitore intorno ai suoi contenuti */
+}
+
+.product-item-img {
+  display: block;
+  margin: 0 auto; /* Centra l'immagine orizzontalmente */
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.product-item-img:hover {
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  left: -90px; /* Potresti dover regolare questi valori */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 70px;
+  background-color: #f2bd2f;
+  z-index: 2;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px; /* Potresti dover regolare questi valori */
+  width: 30px;
+  height: 100%;
+  background-color: #e95c0c;
+  z-index: 1;
+  transform: translateY(-40%) rotate(-10deg);
+}
+@media (max-width: 768px) {
+  .image-container::before {
+      left: -60px; /* Riduci questa distanza per avvicinarlo all'immagine */
+  }
+
+  .image-container::after {
+      right: 20px; /* Riduci questa distanza per avvicinarlo all'immagine */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-item-img:hover {
+    transform: scale(1.05); /* Zoom minore per schermi più piccoli */
+  }
+}
+
+.responsive-text {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Quando lo schermo si rimpicciolisce (ad esempio sotto i 768px), sposta il testo su due righe */
+@media (max-width: 768px) {
+  .responsive-text {
+      flex-direction: column;
+  }
+
+  .break-on-mobile {
+      margin-top: 10px;  /* aggiungi un po' di spazio tra le righe */
+  }
 }
