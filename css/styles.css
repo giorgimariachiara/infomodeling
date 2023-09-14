@@ -11056,6 +11056,8 @@ p {
 .content-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .main-content {
