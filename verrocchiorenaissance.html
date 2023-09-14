@@ -16,14 +16,14 @@
     <body>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3  aquiline">A Free Digital Mag</span>
-                <span class="site-heading-lower trajan">Our Project Title</span>
+                <span class="site-heading-lower trajan"> The Lives</span>
+                <span class="site-heading-upper text-primary mb-3 aquiline">of the Most Excellent Painters, Sculptors, and Architects</span>
             </h1>
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">THE LIVES</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
@@ -40,7 +40,6 @@
                         </li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="disclaimer.html">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,49 +47,93 @@
         <section class="page-section">
         <!-- Wrapping starts here -->
         <div class="content-wrapper">
-                <!-- Sidebar for Metadata
-                <div class="sidebar">
-                  
-                </div>  -->
+            <div class="accordion ms-5 sticky-accordion" id="accordionExample">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Metadata
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        
+                            <!-- Nested Accordion Starts Here -->
+                            <div class="accordion" id="nestedAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            Highlight Metadata in the text
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                        <div class="accordion-body">
+                                            <!-- Content for 'Highlight Metadata in the text' -->
+                                            <div>
+                                                <input type="checkbox" id="placeNames" name="highlight" value="PlaceNames">
+                                                <label for="placeNames">Place Names</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="personNames" name="highlight" value="PersonNames">
+                                                <label for="personNames">Person Names</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            List Metadata Below
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
+                                        <div class="accordion-body">
+                                            <!-- Content for 'List Metadata Below' -->
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                            <div class="accordion-body">
+                                                <!-- Content for 'List Metadata Below' -->
+                                                <div id="placeNameTitle" style="display:none;">Place Names List:</div>
+                                                <ul id="placeNameList"></ul>
+                                                <div id="personNameTitle" style="display:none;">Person Names List:</div>
+                                                <ul id="personNameList"></ul>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nested Accordion Ends Here -->
+
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
 
             <!-- Main Content -->
             <div class="main-content">
 
             <div class="container">
                 <div class="product-item">
-                    <div class="product-item-title d-flex">
-                        <div class="p-5 d-flex ms-auto text-center renaissance-style">
-                            <h2 class="section-heading mb-0">
-                                <span class="section-heading-upper trajan gold-text">LIFE OF ANDREA VERROCCHIO
-                                PAINTER,<br>SCVLPTOR, AND ARCHITECT OF FLORENCE</span>
-                            </h2>
-                        </div>
-                    </div>
-
-                    <img class="product-item-img mx-auto d-flex img-fluid mb-3 mb-lg-0" src="assets/img/verrocchio2.jpg" alt="..." />
-
-
                     <div class="product-item-description d-flex me-auto">
-                        <div class="sticky-container">
-                            <!--<button id="toggleAccordionButton" class="btn btn-primary toggle-btn">Toggle Accordion</button>-->
-                            <!--<button id="toggleAccordionButton" class="btn btn-primary toggle-btn">▶</button>-->
-
-                            <button type="button" class=" btn-primary toggle-btn sticky-button" data-bs-toggle="modal" data-bs-target="#metadataModal">
-                            METADATA </button>
-                            <button type="button" class=" btn-primary2 toggle-btn2 sticky-button" data-bs-toggle="modal" data-bs-target="#metadataModal">
-                                METADATA</button>
-    
-
-                            
-                        </div>
-                        <div class="bg-faded">
-                        <div class="p-5">
-                            
-                        	<div class="decorated-container">
+                        <div class="bg-faded mt-2">
+                        <div class="p-5">    
+                 	<div class="decorated-container">
+                        
                                 <img src="assets\img\barrarinascimento.svg" alt="Lettera colorata" class="decorative-img">
+                                
+                                    <div class="p-3 d-flex  text-center ms-2 mb-6 me-5 renaissance-style">
+                                        <h2 class="section-heading ">
+                                            <span class="section-heading-upper trajan gold-text">LIFE OF ANDREA VERROCCHIO
+                                            PAINTER,<br>SCVLPTOR, AND ARCHITECT OF FLORENCE</span>
+                                        </h2>
+                                    </div>
+
+                                    
+                                
                                 <p class="mb-0 aquilineta decorated-paragraph">
                                     <span class="personName" data-person-id="andrea">
-                                        <img src="assets\img\AA.svg" alt="Lettera colorata" id="miaLettera">ndrea del Verrocchio
+                                        <img src="assets\img\LetteraAVerrocchio.svg" alt="Lettera colorata" id="miaLettera">ndrea del Verrocchio
                                     </span>, 
                         		a <span class="placeName" data-place-id="florence">Florentine</span>, was in his day a goldsmith,
 				                    a master of perspective, a sculptor, a wood-carver, a painter, and a musician; but in the arts of sculpture and painting,
@@ -101,10 +144,10 @@
 				                    and thus <span class="personName" data-person-id="andrea">Andrea</span>, who had it in greater abundance than any other craftsman whatsoever, is counted among
 				                    the rare and excellent masters of our arts.</p>
                                     <figure>
-                                        <img class="product-item-img mx-auto d-flex img-fluid mb-3 mb-lg-0" src="assets/img/verrocchio/david.jpg" class="futuristic-img" alt="DAVID
+                                        <img class="product-item-img d-flex img-fluid mb-3 mb-lg-4 renaissance-style" src="assets\img\pic.png" alt="DAVID
                                                     (After the bronze by Andrea Verrocchio. Florence: Bargello) Anderson"
                                              style="width:5.34cm; height:8.21cm";/>
-                                        <figcaption class="mb-0"><span class="personName" data-person-id="sculpture">DAVID</span>
+                                        <figcaption class="mb-0 figcaption me-5"><span class="personName" data-person-id="sculpture">DAVID</span>
                                             (After the bronze by <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
                                             <span class="placeName" data-place-id="florence">Florence: Bargello</span>) <span class="personName" data-person-id="">Anderson</span>
                                         </figcaption>
@@ -209,15 +252,18 @@
 
                                 
                                      <figure>
-                                        <img class="product-item-img mx-auto d-flex  img-fluid mb-3 mb-lg-0" src="assets/img/verrocchio/sarcophagus.jpg" class="futuristic-img" alt="CORNER AND FOOT OF THE MEDICI SARCOPHAGUS
+                                        <img class="product-item-img mx-auto d-flex  img-fluid mb-3 mb-lg-4 renaissance-style" src="assets/img/verrocchio/sarcophagusrenaissance.png" class="futuristic-img" alt="CORNER AND FOOT OF THE MEDICI SARCOPHAGUS
                                                     (Detail, after Andrea Verrocchio. Florence: S. Lorenzo) Alinari"
                                              style="width:16.19cm; height:21.17cm";/>
-                                        <figcaption>CORNER AND FOOT OF THE <span class="personName" data-person-id="medici">MEDICI</span> SARCOPHAGUS
+                                        <figcaption class="mb-0 figcaption me-5">CORNER AND FOOT OF THE <span class="personName" data-person-id="medici">MEDICI</span> SARCOPHAGUS
                                             (Detail, after <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
                                             <span class="placeName" data-place-id="florence">Florence: S. Lorenzo</span>) <span class="personName" data-person-id="">Alinari</span>
                                         </figcaption>
                                     </figure>
+
+                                   
                         </div>
+                       
                         </div>
                     
 

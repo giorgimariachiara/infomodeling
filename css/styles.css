@@ -4354,6 +4354,7 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  flex:1;
 }
 
 .accordion-button {
@@ -10992,7 +10993,7 @@ p {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
-    margin-bottom: -2rem;
+    margin-bottom: -1rem;
   }
   .product-item .product-item-img {
     position: relative;
@@ -11002,7 +11003,7 @@ p {
   .product-item .product-item-description {
     position: relative;
     z-index: 0;
-    margin-top: -3rem;
+    margin-top: 3rem;
     max-width: 50vw;
   }
 }
@@ -11033,17 +11034,18 @@ p {
 
 
 .sticky-accordion {
-    position: sticky;
-    top: 15px;  /* Adjust as needed */
-    max-height: calc(100vh - 30px);
-    overflow-y: auto;
-    z-index: 1;
-    min-width: 100px; /* Minimum width */
-    max-width: 100%;  /* Maximum width relative to the parent element */
-    width: auto;     /* Auto width */
+  position: sticky;
+  top: 200px;  
+  max-height: calc(100vh - 30px);
+  overflow-y: auto;
+  z-index: 1;
+  min-width: 100px; 
+  max-width: 100%;  
+  width: auto;   
 }
 
 .sticky-container {
+    text-align: center; 
     display: flex;
     position: sticky;
     top: 15px;
@@ -11054,29 +11056,103 @@ p {
 
 .content-wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .main-content {
   flex: 3;  /* Takes 3/4 of the container width */
 }
 
+@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+  .content-wrapper {
+      flex-direction: column;
+  }
 
-.sticky-button {
-    position: sticky;
-    top: 20px; /* Adjust this value as needed */
-    z-index: 10;
+  .accordion {
+      position: sticky;
+      top: 60px;
+      z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+      margin-bottom: 20px;
+      margin-right:10px;
+  }
+
+  .main-content {
+      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+  }
 }
 
 
+/*
 .toggle-btn {
-    position: sticky;  /* Use absolute positioning */
-    top: 150px;
-    right: auto;  /* Align it to the right */
+    position: absolute;  
+    top: 0;  
+    left: 50%; 
+    transform: translate(-50%, -50%);  
     width: 40px;
     height: 40px;
     border-radius: 50%;
     z-index: 10;
+}  */
+
+
+/* Change from sticky to absolute positioning */
+/* Align to the top */
+/* Align to the left at 50% of the container width */
+/* Center the element */
+/*
+.toggle-btn {
+    position: sticky;  
+    top: 15%;  
+    left: 100%;  
+    transform: translate(-50%, -50%);  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+*/
+
+ /* Use absolute positioning */
+ /* Align it to the right */
+ /*
+.toggle-btn {
+    position: sticky; 
+    top: 150px;
+    right: auto;  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+.toggle-btn-2 {
+    position: sticky;  
+    top: 15%;  
+    left: 100%;  
+    transform: translate(-50%, -50%);  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+*/
+
+.button-container {
+  position: sticky;
+  top: 150px;
+  z-index: 10;
+}
+
+.toggle-btn, .toggle-btn-2 {
+  width: 40px;
+  height: 40px;
+  /*transform: translate(-50%, -50%) */
+  border-radius: 50%;
+  margin-bottom: 10px;  /* Spacing between the buttons */
 }
 
 
@@ -11088,5 +11164,11 @@ p {
 
 
 
+.highlight-place {
+    background-color: #6caedf;
+}
+.highlight-person {
+    background-color: #a1d490;
+}
 
 

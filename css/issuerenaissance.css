@@ -11,7 +11,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #536ba4;
+  --bs-renred:#92302b;
+  --bs-gold:#a3852d;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -600,8 +602,8 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 70%;
+  height: 70%;
 }
 
 .img-thumbnail {
@@ -4404,6 +4406,7 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  flex:1;
 }
 
 .accordion-button {
@@ -6850,6 +6853,7 @@ textarea.form-control-lg {
   z-index: 1030;
 }
 
+
 .sticky-top {
   position: sticky;
   top: 0;
@@ -7692,6 +7696,9 @@ textarea.form-control-lg {
 .me-5 {
   margin-right: 3rem !important;
 }
+.me-5 {
+  margin-right: 5rem !important;
+}
 
 .me-auto {
 	margin-left: auto !important;
@@ -7721,6 +7728,9 @@ textarea.form-control-lg {
 .mb-5 {
   margin-bottom: 3rem !important;
 }
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
 
 .mb-auto {
   margin-bottom: auto !important;
@@ -7748,6 +7758,9 @@ textarea.form-control-lg {
 
 .ms-5 {
   margin-left: 3rem !important;
+}
+.ms-6 {
+  margin-left: 4rem !important;
 }
 
 .ms-auto {
@@ -10878,7 +10891,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentook.png");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentookk.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10920,21 +10933,17 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-weight: 400;
-}
-.section-heading .section-heading-lower {
-  display: block;
-  font-size: 2rem;
   font-weight: 500;
+  font-size: 1.5rem;
+  
+  
 }
 
 .bg-faded {
   background-color: #dfd9c8;
-  
   background-position: center center;
   background-size: cover; 
-  position: relative;  /* o 'absolute' o 'fixed' a seconda del tuo layout background-image: url('/assets/img/bgbg.jpg'); */
-  
+  position: relative;  
 
 }
 
@@ -10952,19 +10961,21 @@ p {
   font-family: "Cinzel";
   font-size: 20px;
   position:relative;
-  border-top: 3px solid #a3852d;
-  border-bottom: 3px solid #a3852d;
-
+  border-top: 4px solid #a3852d; /* doppio spessore per il bordo destro */
+  border-bottom: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #a3852d;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #a3852d;
+  color: rgba(163, 133, 45, 0.9);
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #a3852d;
 }
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -10974,7 +10985,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #a3852d;
   }
 }
 
@@ -11023,6 +11034,7 @@ p {
 .intro {
   position: relative;
 }
+
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
@@ -11045,6 +11057,10 @@ p {
   .intro .intro-text {
     width: 45%;
   }
+}
+.product-item-img{
+  margin-top: 50px;
+  margin-bottom:  30px;
 }
 
 @media (min-width: 992px) {
@@ -11093,7 +11109,7 @@ p {
 
 .sticky-accordion {
     position: sticky;
-    top: 15px;  /* Adjust as needed */
+    top: 200px;  /* Adjust as needed */
     max-height: calc(100vh - 30px);
     overflow-y: auto;
     z-index: 1;
@@ -11113,7 +11129,9 @@ p {
 
 .content-wrapper {
   display: flex;
+  flex-direction: row; 
   justify-content: space-between;
+
 }
 
 .main-content {
@@ -11134,10 +11152,10 @@ p {
     right: auto;  /* Align it to the right */
     width: 50px;
     height: 40px;
-    border: #a3852d;
+    border: var(--bs-gold);
     z-index: 10;
     font-family: "TrajanPro";
-    color:#a3852d;
+    color:var(--bs-gold);
 }
 
 .toggle-btn2 {
@@ -11146,10 +11164,10 @@ p {
   right: auto;  /* Align it to the right */
   width: 50px;
   height: 40px;
-  border: #a3852d;
+  border:var(--bs-gold);
   z-index: 10;
   font-family: "TrajanPro";
-  color:#a3852d;
+  color:var(--bs-gold);
 }
 
 
@@ -11159,8 +11177,6 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-
-
 .trajan {
   font-family: "TrajanPro";
 }
@@ -11168,59 +11184,72 @@ p {
 .aquiline{
   font-family: 'AquilineTwo', serif;
 }
-.aquilineta{
+.aquilineta {
   font-family: 'AquilineTwo', serif;
   text-align: justify;
-  font-size: 20px;
-  margin-right: 80px;
-  margin-left: 34px;
+  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+  margin-right: 5rem; /* 80px / 16 = 5rem */
+  margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
+}
+.figcaption {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #385393; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 }
 
 .cinzel{
   font-family: "Cinzel", serif;
 }
-
 .goudy{
   font-family: "Goudy Initialen";
   font-size: 150px;
   color:red;
-
 }
-
 .justify{
   text-align: justify;
 }
 .gold-text {
-  color: #a3852d;
+  color: var(--bs-gold);
 }
-
 .red-text{
-  color: #92302b;
+  color: var( --bs-renred);
 }
 .blue-text{
-  color: #536ba4;
+  color: var(--bs-blue);
 }
 .nav-text{
   color:#4f3f27;
 }
 
 .renaissance-style {
-  background-color: #92302b;
-  border: 4px solid #a3852d; /* bordo dorato esterno */
+  background-color: var( --bs-renred);
+  border: 4px solid var(--bs-gold); /* bordo dorato esterno */
   box-shadow: 
       0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
+      0 0 0 9px var(--bs-gold); /* bordo dorato interno */
       padding:0;
 }
 
 #miaLettera {
-  width: 150px;
+  width:20rem; /* 150px / 16 = 9.375rem */
   height: auto; 
+  float: left;
+  margin-right: 20px; /* aggiusta questo valore come necessario */
+  margin-bottom: 5px;
 }
 
 .decorated-container {
   position: relative; 
-  margin-top: 50px;
+  margin-top: 80px;
   padding-left: calc(20px + 15px);
   margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
 }
@@ -11228,17 +11257,18 @@ p {
 .decorative-img {
   position: absolute;
   left: 0;
-  top: -50px; 
-  left:-50px;/* Questo alzerà l'immagine di 10 pixel verso l'alto. Puoi regolare il valore come preferisci. */
+  top: -6rem; /* -50px / 16 = -3.125rem */
+  left: -3rem; /* -50px / 16 = -3.125rem */
   height: auto; 
-  width: 90px;
+  width: 5.625rem; /* 90px / 16 = 5.625rem */
 }
 
 .decorated-paragraph {
   margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
 }
 
-
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
+
+
