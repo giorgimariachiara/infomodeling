@@ -25,7 +25,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">The Lives</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
@@ -50,10 +50,68 @@
         <section class="page-section">
         <!-- Wrapping starts here -->
         <div class="content-wrapper">
-                <!-- Sidebar for Metadata
-                <div class="sidebar">
-                  
-                </div>  -->
+            <div class="accordion ms-5 sticky-accordion" id="accordionExample">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Metadata
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        
+                            <!-- Nested Accordion Starts Here -->
+                            <div class="accordion" id="nestedAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            Highlight Metadata in the text
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                        <div class="accordion-body">
+                                            <!-- Content for 'Highlight Metadata in the text' -->
+                                            <div>
+                                                <input type="checkbox" id="placeNames" name="highlight" value="PlaceNames">
+                                                <label for="placeNames">Place Names</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="personNames" name="highlight" value="PersonNames">
+                                                <label for="personNames">Person Names</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            List Metadata Below
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
+                                        <div class="accordion-body">
+                                            <!-- Content for 'List Metadata Below' -->
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                            <div class="accordion-body">
+                                                <!-- Content for 'List Metadata Below' -->
+                                                <div id="placeNameTitle" style="display:none;">Place Names List:</div>
+                                                <ul id="placeNameList"></ul>
+                                                <div id="personNameTitle" style="display:none;">Person Names List:</div>
+                                                <ul id="personNameList"></ul>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nested Accordion Ends Here -->
+
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
 
             <!-- Main Content -->
             <div class="main-content">
@@ -73,16 +131,7 @@
 
 
                     <div class="product-item-description d-flex me-auto">
-                        <div class="sticky-container">
-                            <!--<button id="toggleAccordionButton" class="btn btn-primary toggle-btn">Toggle Accordion</button>-->
-                            <!--<button id="toggleAccordionButton" class="btn btn-primary toggle-btn">▶</button>-->
-
-                            <button type="button" class="btn btn-primary toggle-btn sticky-button" data-bs-toggle="modal" data-bs-target="#metadataModal">
-                            Metadata</button>
-
-
-                            
-                        </div>
+                        
                         <div class="bg-faded p-5 rounded">
                             <figure>
                                 <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/verrocchio/david.jpg" class="futuristic-img" alt="DAVID
