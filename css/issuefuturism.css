@@ -300,9 +300,14 @@ kbd kbd {
   font-size: 1em;
 }
 
-figure {
-  margin: 0 0 1rem;
+
+figcaption {
+  position: relative; /* o "absolute", dipende dalla tua struttura */
+  z-index: 2; /* un valore più alto di qualsiasi altro z-index che potresti avere */
 }
+
+
+
 
 img,
 svg {
@@ -610,20 +615,6 @@ progress {
   border-radius: 0.375rem;
   max-width: 100%;
   height: auto;
-}
-
-.figure {
-  display: inline-block;
-}
-
-.figure-img {
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.figure-caption {
-  font-size: 0.875em;
-  color: #6c757d;
 }
 
 .container,
@@ -3223,7 +3214,7 @@ textarea.form-control-lg {
   --bs-dropdown-spacer: 0.125rem;
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: #212529;
-  --bs-dropdown-bg: #fff;
+  --bs-dropdown-bg: rgba(247,230,186, 0.8);
   --bs-dropdown-border-color: var(--bs-border-color-translucent);
   --bs-dropdown-border-radius: 0.375rem;
   --bs-dropdown-border-width: 1px;
@@ -10860,12 +10851,12 @@ p {
 }
 .section-heading .section-heading-upper {
     display: inline-block; 
-    transform: rotate(-15deg);  
-    font-size: 1rem;
-    font-weight: 800;
+    transform: rotate(-10deg);  
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 60px;
     font-family: "Cinzel";
-    color:red;
+    color:#f07e02;
 }
 
 
@@ -10891,16 +10882,16 @@ p {
   font-weight: 100;
   margin-bottom: 100px;
   font-family: "Cinzel";
+  color:white;
 }
 
 .section-heading-lower span {
-    font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
-    text-transform: uppercase; /* Maiuscolo può dare una sensazione più meccanica */
-    letter-spacing: 5px; /* Distanza tra le lettere */
-    transform: skewX(-10deg); /* Inclinazione per un senso di movimento */
-    font-size: 24px;
-    color:pink;
-  }
+  font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
+  letter-spacing: 5px; /* Distanza tra le lettere */
+  font-size: 2rem;
+  color:#f07e02;
+  font-weight: 800;
+}
 
 .bg-fadedtitle{
     position:relative;
@@ -10912,7 +10903,7 @@ p {
     left: 0;
     width: 90%; /* Questo determina dove inizia la seconda parte del colore */
     height: 100%;
-    background: #f5f5f5; /* O qualsiasi altro colore tu voglia per la parte sinistra */
+    background: #5a7db3; /* O qualsiasi altro colore tu voglia per la parte sinistra */
     clip-path: polygon(0 0, 100% 0, 0 100%); 
     z-index: -1; /* Assicurati che sia dietro al testo */
 }
@@ -10924,7 +10915,7 @@ p {
     }
 }
 .bg-faded{
-    background-color: white;
+    background-color: #f7e6ba;
 }
 
 .bg-faded .p1 {
@@ -10933,7 +10924,7 @@ p {
     border-right: 10px solid #000; /* Aggiunge un bordo a destra */
     border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
     margin-right: 100px; 
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    padding-right:20px;     
     padding-bottom: 15px; 
 }
 
@@ -10941,7 +10932,7 @@ p {
     font-family: 'Sitka';
     text-align: center;         /* Sposta il testo a sinistra */
     border-top: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */    /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
+    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */    
     margin-top:60px;
     margin-bottom:70px;
     transform: rotate(-5deg); 
@@ -10950,8 +10941,8 @@ p {
     font-family: 'Sitka';
     text-align: right;         /* Sposta il testo a sinistra */
     border-top: 4px solid #000; /* Aggiunge un bordo a destra */
-    border-left: 12px solid #000; /* Aggiunge un bordo in basso */    /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
-    margin-top:52px;
+    border-left: 12px solid #000; /* Aggiunge un bordo in basso */  
+    margin-top:60px;
     margin-bottom:70px;
     transform: rotate(5deg); 
 }
@@ -10995,15 +10986,16 @@ p {
 }
 
 #mainNav {
-  background-color: #ee7b00;
-  font-family: "Roboto";
+  background-color: rgba(247,230,186, 0.8);
+  font-family: "SquareFont";
 }
 #mainNav .navbar-brand {
-  color: #587bb1;
+  color: #f27a0a;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color:black;
   font-weight: 800;
+  
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
@@ -11013,13 +11005,12 @@ p {
     font-size: 0.9rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
+    color: #f27a0a;
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #f27a0a;
   }
 }
-
 
 
 .btn {
@@ -11038,27 +11029,6 @@ p {
   }
 }
 
-.cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
-}
-.cta .cta-inner {
-  position: relative;
-  padding: 3rem;
-  margin: 0.5rem;
-}
-.cta .cta-inner:before {
-  border-radius: 0.5rem;
-  content: "";
-  position: absolute;
-  top: -0.5rem;
-  bottom: -0.5rem;
-  left: -0.5rem;
-  right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
-  z-index: -1;
-}
 
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
@@ -11110,6 +11080,15 @@ p {
   }
 }
 
+.product-item-img{
+  border-top: 2px solid black;
+  border-left: 8px solid black;
+} 
+
+.product-item-img3{
+  border-bottom: 4px solid black;
+  border-right: 8px solid black;
+} 
 
 .list-hours {
   font-size: 0.9rem;
@@ -11258,8 +11237,6 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-
-
 .highlight-place {
     background-color: #6caedf;
 }
@@ -11356,11 +11333,14 @@ p {
   position: relative;
 }
 
-
-
 /* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
 .text-primary span:nth-child(1) {
   transform: rotate(-20deg) skewY(-10deg);
+}
+
+.text-primary span:hover {
+  transform: scale(1.4) rotate(10deg);
+  transition: transform 0.3s ease;
 }
 
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
@@ -11419,6 +11399,115 @@ p {
   font-size: 1.5em; /* Puoi modificare questo valore a tuo piacimento */
 }
 
+.bigger-text4 {
+  font-size:2.2rem; /* Puoi modificare questo valore a tuo piacimento */
+}
+.bigger-text1 {
+  font-size: 1.4rem; /* Puoi modificare questo valore a tuo piacimento */
+}
 .bigger-text2 {
-  font-size: 2em; /* Puoi modificare questo valore a tuo piacimento */
+  font-size: 1.5rem !important; /* Puoi modificare questo valore a tuo piacimento */
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.bigger-text3{
+  font-size: 2rem !important;
+  margin-left:20px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.white{
+  color:white;
+}
+
+.purple{
+  color:#663d86;
+  transform: skewX(-40deg); 
+}
+.parent-of-image-container {
+  display: flex;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  align-items: center; /* Centra il contenuto verticalmente */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Ridimensiona il contenitore intorno ai suoi contenuti */
+}
+
+.product-item-img2 {
+  display: block;
+  margin: 0 auto; /* Centra l'immagine orizzontalmente */
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.product-item-img2:hover {
+  transform: scale(1.4);
+  z-index: 3s;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  left: -90px; /* Potresti dover regolare questi valori */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 70px;
+  background-color: #f2bd2f;
+  z-index: 2;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px; /* Potresti dover regolare questi valori */
+  width: 30px;
+  height: 100%;
+  background-color: #e95c0c;
+  z-index: 1;
+  transform: translateY(-40%) rotate(-10deg);
+}
+@media (max-width: 768px) {
+  .image-container::before {
+      left: -60px; /* Riduci questa distanza per avvicinarlo all'immagine */
+  }
+
+  .image-container::after {
+      right: 20px; /* Riduci questa distanza per avvicinarlo all'immagine */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-item-img2:hover {
+    transform: scale(1.05); /* Zoom minore per schermi più piccoli */
+  }
+}
+
+.responsive-text {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Quando lo schermo si rimpicciolisce (ad esempio sotto i 768px), sposta il testo su due righe */
+@media (max-width: 768px) {
+  .responsive-text {
+      flex-direction: column;
+  }
+
+  .break-on-mobile {
+      margin-top: 10px;  /* aggiungi un po' di spazio tra le righe */
+  }
+}
+
+
+
+.figcaption{
+  font-family: 'Sitka';
+  transform: rotate(180deg);
+    display: inline-block;
 }

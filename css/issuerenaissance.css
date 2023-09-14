@@ -602,8 +602,8 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 70%;
+  height: 70%;
 }
 
 .img-thumbnail {
@@ -7694,6 +7694,9 @@ textarea.form-control-lg {
 .me-5 {
   margin-right: 3rem !important;
 }
+.me-5 {
+  margin-right: 5rem !important;
+}
 
 .me-auto {
 	margin-left: auto !important;
@@ -7723,6 +7726,9 @@ textarea.form-control-lg {
 .mb-5 {
   margin-bottom: 3rem !important;
 }
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
 
 .mb-auto {
   margin-bottom: auto !important;
@@ -7750,6 +7756,9 @@ textarea.form-control-lg {
 
 .ms-5 {
   margin-left: 3rem !important;
+}
+.ms-6 {
+  margin-left: 4rem !important;
 }
 
 .ms-auto {
@@ -10880,7 +10889,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentook.png");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentookk.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10922,12 +10931,10 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-weight: 400;
-}
-.section-heading .section-heading-lower {
-  display: block;
-  font-size: 2rem;
   font-weight: 500;
+  font-size: 1.5rem;
+  
+  
 }
 
 .bg-faded {
@@ -10935,7 +10942,6 @@ p {
   background-position: center center;
   background-size: cover; 
   position: relative;  
-  
 
 }
 
@@ -10951,21 +10957,23 @@ p {
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
   font-family: "Cinzel";
-  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
-  position: relative;
-  border-top: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
-  border-bottom: 0.1875rem solid #a3852d; /* 3px / 16 = 0.1875rem */
+  font-size: 20px;
+  position:relative;
+  border-top: 4px solid #a3852d; /* doppio spessore per il bordo destro */
+  border-bottom: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
-
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #a3852d;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #a3852d;
+  color: rgba(163, 133, 45, 0.9);
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #a3852d;
 }
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -10975,7 +10983,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #a3852d;
   }
 }
 
@@ -11046,6 +11054,10 @@ p {
   .intro .intro-text {
     width: 45%;
   }
+}
+.product-item-img{
+  margin-top: 50px;
+  margin-bottom:  30px;
 }
 
 @media (min-width: 992px) {
@@ -11160,8 +11172,6 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-
-
 .trajan {
   font-family: "TrajanPro";
 }
@@ -11176,7 +11186,20 @@ p {
   margin-right: 5rem; /* 80px / 16 = 5rem */
   margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
 }
-
+.figcaption {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #385393; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+}
 
 .cinzel{
   font-family: "Cinzel", serif;
@@ -11212,13 +11235,16 @@ p {
 }
 
 #miaLettera {
-  width: 9.375rem; /* 150px / 16 = 9.375rem */
+  width:20rem; /* 150px / 16 = 9.375rem */
   height: auto; 
+  float: left;
+  margin-right: 20px; /* aggiusta questo valore come necessario */
+  margin-bottom: 5px;
 }
 
 .decorated-container {
   position: relative; 
-  margin-top: 50px;
+  margin-top: 80px;
   padding-left: calc(20px + 15px);
   margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
 }
@@ -11226,8 +11252,8 @@ p {
 .decorative-img {
   position: absolute;
   left: 0;
-  top: -3.125rem; /* -50px / 16 = -3.125rem */
-  left: -3.125rem; /* -50px / 16 = -3.125rem */
+  top: -6rem; /* -50px / 16 = -3.125rem */
+  left: -3rem; /* -50px / 16 = -3.125rem */
   height: auto; 
   width: 5.625rem; /* 90px / 16 = 5.625rem */
 }
@@ -11236,7 +11262,8 @@ p {
   margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
 }
 
-
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
+
+

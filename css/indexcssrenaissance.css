@@ -10831,7 +10831,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentook.png");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentookk.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10901,7 +10901,8 @@ p {
   font-family: "Cinzel";
   font-size: 20px;
   position:relative;
-  border: 4px solid #a3852d; /* bordo dorato esterno */
+  border-top: 4px solid #a3852d; /* doppio spessore per il bordo destro */
+  border-bottom: 4px solid #a3852d; /* bordo dorato esterno */
   box-shadow: 
       0 0 0 1px #674e29, /* linea scura di separazione */
       0 0 0 9px #a3852d; /* bordo dorato interno */
@@ -10909,14 +10910,14 @@ p {
 
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #a3852d;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(28, 65, 40, 0.9);
+  color: rgba(163, 133, 45, 0.9);
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #a3852d;
 }
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -10926,7 +10927,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #a3852d;
   }
 }
 
@@ -11141,5 +11142,4 @@ p {
   font-family: "Font Awesome 5 Free"; 
   padding-left: 8px; /* Aggiunge spazio tra "Disclaimer" e l'icona */
 }
-
 
