@@ -10951,11 +10951,13 @@ p {
 }
 
 .bg-faded {
-  background-color: #dfd9c8;
-  background-position: center center;
+  width: auto;
+  height: auto;
+  
+  background-image: url('assets\img\sfondoprova.png')!important; /* Sostituisci con il percorso corretto dell'immagine */
+  background-position: left;
   background-size: cover; 
   position: relative;  
-
 }
 
 .btn-xl {
@@ -11167,7 +11169,6 @@ p {
   display: flex;
   flex-direction: row; 
   justify-content: space-between;
-
 }
 
 .main-content {
@@ -11213,20 +11214,26 @@ p {
 }
 
 #miaLettera {
-  width:20rem; /* 150px / 16 = 9.375rem */
-  height: auto; 
+  background-image: url('assets/img/LetteraAVerrocchio.svg');
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta l'immagine per adattarla al div */
+  width: 20rem;
+  height: 20rem; /* Devi specificare un'altezza se vuoi che il div sia visibile. Potresti dover impostare un valore fisso, ad es. 10rem, se "auto" non funziona come previsto. */
   float: left;
-  margin-right: 20px; /* aggiusta questo valore come necessario */
+  margin-right: 20px; 
   margin-bottom: 5px;
+  background-color: red; 
 }
 
-.decorative-img {
+.decorative-div {
+  background-image: url('assets/img/barrarinascimento.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
-  left: 0;
-  top: -6rem; /* -50px / 16 = -3.125rem */
-  left: -3rem; /* -50px / 16 = -3.125rem */
-  height: auto; 
-  width: 5.625rem; /* 90px / 16 = 5.625rem */
+  top: 0;  /* puoi regolare queste proprietà per posizionare l'immagine dove preferisci */
+  left: -6rem;  /* sposta il div a sinistra del contenuto */
+  height: 5.625rem; 
+  width: 5.625rem; 
 }
 
 .mb-0.aquilineta {

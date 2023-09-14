@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Business Casual - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/issuerenaissance.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-lower"> The Lives</span>
+                <span class="site-heading-upper text-primary mb-3">of the Most Excellent Painters, Sculptors, and Architects</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">THE LIVES</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                        <li class="nav-item px-lg-4 dropdown">
+                            <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Issues
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="issue-leonardo.html">Da Vinci</a></li>
+                                <li><a class="dropdown-item" href="issue-verrocchio.html">Verrocchio</a></li>
+                                <li><a class="dropdown-item" href="issue-donatello.html">Donatello</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="page-section">
+        <!-- Wrapping starts here -->
+        <div class="content-wrapper">
+            <div class="accordion ms-5 sticky-accordion" id="accordionExample">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Metadata
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        
+                            <!-- Nested Accordion Starts Here -->
+                            <div class="accordion" id="nestedAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            Highlight Metadata in the text
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                        <div class="accordion-body">
+                                            <!-- Content for 'Highlight Metadata in the text' -->
+                                            <div>
+                                                <input type="checkbox" id="placeNames" name="highlight" value="PlaceNames">
+                                                <label for="placeNames">Place Names</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="personNames" name="highlight" value="PersonNames">
+                                                <label for="personNames">Person Names</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            List Metadata Below
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
+                                        <div class="accordion-body">
+                                            <!-- Content for 'List Metadata Below' -->
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                            <div class="accordion-body">
+                                                <!-- Content for 'List Metadata Below' -->
+                                                <div id="placeNameTitle" style="display:none;">Place Names List:</div>
+                                                <ul id="placeNameList"></ul>
+                                                <div id="personNameTitle" style="display:none;">Person Names List:</div>
+                                                <ul id="personNameList"></ul>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nested Accordion Ends Here -->
+
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded text-center renaissance-style">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper">LIFE OF ANDREA VERROCCHIO</span>
+                                <span class="section-heading-lower">PAINTER, SCULPTOR, AND ARCHITECT OF FLORENCE</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded">  
+                            <div class="decorative-div"></div>
+                                <img src="assets\img\barrarinascimento.svg" alt="Lettera colorata" class="decorative-img">
+
+                                <p class="mb-0 aquilineta">
+                                    <span class="personName" data-person-id="andrea">
+                                        <div id="miaLettera"></div>ndrea del Verrocchio
+                                    </span>, 
+                        		a <span class="placeName" data-place-id="florence">Florentine</span>, was in his day a goldsmith,
+				                    a master of perspective, a sculptor, a wood-carver, a painter, and a musician; but in the arts of sculpture and painting,
+				                    to tell the truth, he had a manner somewhat hard and crude, as one who acquired it rather by infinite study than by the
+				                    facility of a natural gift. Even if he had been as poor in this facility as he was rich in the study and diligence that exalted him,
+				                    he would have been most excellent in those arts, which, for their highest perfection, require a union of study and natural power.
+				                    If either of these is wanting, a man rarely attains to the first rank; but study will do a great deal,
+				                    and thus <span class="personName" data-person-id="andrea">Andrea</span>, who had it in greater abundance than any other craftsman whatsoever, is counted among
+				                    the rare and excellent masters of our arts.</p>
+                                    <figure>
+                                        <img class="product-item-img d-flex img-fluid mb-3 mb-lg-4 renaissance-style" src="assets\img\pic.png" alt="DAVID
+                                                    (After the bronze by Andrea Verrocchio. Florence: Bargello) Anderson"
+                                             style="width:5.34cm; height:8.21cm";/>
+                                        <figcaption><span class="personName" data-person-id="sculpture">DAVID</span>
+                                            (After the bronze by <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
+                                            <span class="placeName" data-place-id="florence">Florence: Bargello</span>) <span class="personName" data-person-id="">Anderson</span>
+                                        </figcaption>
+                                        
+                                    </figure>
+
+					                <p class="mb-0 aquilineta">
+                                    
+					                    In his youth he applied himself to the sciences, particularly to geometry. Among many other things that he made while working at the goldsmith's
+					                    art were certain buttons for copes, which are in <span class="placeName">S. Maria del Fiore</span> at <span class="placeName" data-place-id="florence">Florence</span>;
+					                    and he also made larger works, particularly a cup, full of animals, foliage, and other bizarre fancies, which is known to all goldsmiths,
+					                    and casts are taken of it; and likewise another, on which there is a very beautiful dance of little children. Having given a proof of his
+					                    powers in these two works, he was commissioned by the Guild of Merchants to make two scenes in silver for the ends of the altar
+					                    of <span class="personName" data-person-id="giovanni">S. Giovanni</span>, from which, when put into execution, he acquired very great praise and fame.
+					                </p>
+
+					                <p class="mb-0 aquilineta">
+					                    There were wanting at this time in <span class="placeName" data-place-id="rome">Rome</span> some of those large figures
+					                    [Pg 268]
+					                    of the Apostles which generally stood on the altar of the Chapel of the <span class="personName" data-person-id="pope">Pope</span>,
+					                    as well as certain other works in silver that had been destroyed; wherefore <span class="personName" data-person-id="pope">Pope Sixtus</span>
+					                    sent for <span class="personName" data-person-id="andrea">Andrea</span> and with great favour commissioned him to do all that was necessary in this matter,
+					                    and he brought the whole to perfection with much diligence and judgment. Meanwhile, perceiving that the many antique statues and
+					                    other things that were being found in <span class="placeName">Rome</span> were held in very great esteem, insomuch that the famous
+					                    bronze horse was set up by the <span class="personName" data-person-id="pope">Pope</span>
+					                    at <span class="placeName" data-place-id="S. Giovanni">S. Giovanni Laterano</span>, and that
+					                    even the fragments—not to speak of complete works—which were being discovered every day, were prized, <span class="personName" data-person-id="andrea">Andrea</span>
+					                    determined to devote himself to sculpture. And so, completely abandoning the goldsmith's art, he set himself to cast some little figures in
+					                    bronze, which were greatly extolled. Thereupon, growing in courage, he began to work in marble. Now in those days,
+					                    the wife of <span class="personName" data-person-id="francesco">Francesco Tornabuoni</span> had died in childbirth, and her husband, who had loved her much and
+					                    wished to honour her in death to the utmost of his power, entrusted the making of a tomb for her to <span class="personName" data-person-id="andrea">Andrea</span>,
+					                    who carved on a slab over a sarcophagus of marble the lady herself, her delivery, and her passing to the other life; and beside this, he made
+					                    three figures of Virtues, which were held very beautiful, for the first work that he had executed in marble; and this tomb was set up in
+					                    the <span class="placeName" data-place-id="minerva">Minerva</span>.
+					                </p>
+					                
+					                <p class="mb-0 aquilineta">
+                                        Having then returned to <span class="placeName">Florence</span> with money, fame, and honour, he was commissioned to make a
+                                        <span class="personName">David</span> of bronze, two braccia and a half in height, which, when finished, was placed in
+                                        the <span class="placeName">Palace</span>, with great credit to himself, at the head of the staircase, where the <span class="personName">Catena</span>
+                                        was. The while that he was executing the said statue, he also made that <span class="personName">Madonna</span> of marble which is over the tomb
+                                        of <span class="personName">Messer Lionardo Bruni</span> of <span class="placeName">Arezzo</span> in <span class="placeName">S. Croce</span>;
+                                        this he wrought, when still quite young, for <span class="personName">Bernardo Rossellino</span>, architect and sculptor, who executed the
+                                        whole of that work in marble, as has been said. The same <span class="personName">Andrea</span> made a half-length <span class="personName">Madonna</span>
+                                        in half-relief, with the <span class="personName">Child</span> in her arms, in a marble panel, which was formerly in <span class="placeName" data-place-id="medici">the house of
+                                        the Medici</span>, and is now placed, as a very beautiful thing, over a door in the apartment of
+                                        <span class="placeName" data-place-id="florence">the Duchess of Florence</span>. He also made two heads of metal, likewise
+                                        [Pg 269]
+                                        in half-relief; one of <span class="personName" data-person-id="alexander">Alexander the Great</span>, in profile, and the other a fanciful portrait
+                                        of <span class="personName">Darius</span>; each being a separate work by itself, with variety in the crests, armour, and everything else.
+                                        Both these heads were sent to <span class="placeName" data-place-id="hungray">Hungary</span> by the elder <span class="personName" data-person-id="medici">Lorenzo de' Medici</span>,
+                                        the <span class="personName">Magnificent</span>, to <span class="personName" data-person-id="king">King Matthias Corvinus</span>, together with many other things,
+                                        as will be told in the proper place.
+                                    </p>
+
+                                    <p class="mb-0 aquilineta">
+                                        Having acquired the name of an excellent master by means of these works, above all through many works in metal, in which he took much delight,
+                                        he made a tomb of bronze in <span class="placeName">S. Lorenzo</span>, wholly in the round, for <span class="personName">Giovanni</span>
+                                        and <span class="personName" data-person-id="medici">Pietro di Cosimo de' Medici</span>, with a sarcophagus of porphyry supported by four corner-pieces of bronze,
+                                        with twisted foliage very well wrought and finished with the greatest diligence. This tomb stands between the Chapel of the Sacrament and
+                                        the Sacristy, and no work could be better done, whether wrought in bronze or cast; above all since at the same time he showed therein his
+                                        talent in architecture, for he placed the said tomb within the embrasure of a window which is about five braccia in breadth and ten in height,
+                                        and set it on a base that divides the said <span class="placeName">Chapel of the Sacrament</span> from the old Sacristy.
+                                        And over the sarcophagus, to fill up the embrasure right up to the vaulting, he made a grating of bronze ropes in a pattern of mandorle, most natural,
+                                        and adorned in certain places with festoons and other beautiful things of fancy, all remarkable and executed with much mastery, judgment, and invention.
+                                    </p>
+
+                                    <p class="mb-0 aquilineta">
+                                        Now <span class="personName">Donatello</span> had made for the Tribunal of Six of the <span class="personName">Mercanzia</span>
+                                        that marble shrine which is now opposite to <span class="placeName">S. Michael</span>, in the Oratory of <span class="placeName">Orsanmichele</span>,
+                                        and for this there was to have been made a <span class="personName">S. Thomas</span> in bronze, feeling for the wound in the side of Christ;
+                                        but at that time, nothing more was done, for some of the men who had the charge of this wished to have it made by <span class="personName">Donatello</span>,
+                                        and others favoured <span class="personName">Lorenzo Ghiberti</span>. Matters stood thus as long as <span class="personName">Donatello</span>
+                                        and <span class="personName">Ghiberti</span> were alive; but finally, the said two statues were entrusted to <span class="personName" data-person-id="andrea">Andrea</span>,
+                                        who, having made the models and moulds, cast them; and they came out so solid, complete, and well made, that it was a most beautiful casting.
+                                        Thereupon, setting himself to polish and finish them, he brought them to
+                                        [Pg 270]
+                                        that perfection which is seen at the present day, which could not be greater than it is, for in <span class="personName">S. Thomas</span>
+                                        we see incredulity and a too great anxiety to assure himself of the truth, and at the same time, the love that makes him lay his hand in a
+                                        most beautiful manner on the side of <span class="personName">Christ</span>; and in <span class="personName" data-person-id="christ">Christ</span> Himself, who is
+                                        raising one arm and opening His raiment with a most spontaneous gesture, and dispelling the doubts of His incredulous disciple, there are all the grace and divinity, so to speak, that art can give to any figure. <span class="personName">Andrea</span> clothed both these figures in most beautiful and well-arranged draperies, which give us to know that he understood that art no less than did <span class="personName">Donato</span>, <span class="personName">Lorenzo</span>, and the others who had lived before him; wherefore this work well deserved to be set up in a shrine made by <span class="personName">Donatello</span> and to be ever afterwards held in the greatest price and esteem.
+                                    </p>
+
+                                    <p class="mb-0 aquilineta">
+                                        Now the fame of <span class="personName" data-person-id="andrea">Andrea</span> could not go further or grow greater in that profession,
+                                        and he, as a man who was not content with being excellent in one thing only but desired to become the same in others as well by means of study,
+                                        turned his mind to painting. He so made the cartoons for a battle of nude figures, very well drawn with the pen, to be afterwards painted in
+                                        colours on a wall. He also made the cartoons for some historical pictures and afterwards began to put them into execution in colours; but for
+                                        some reason, whatever it may have been, they remained unfinished. There are some drawings by his hand in our book, made with much patience and
+                                        very great judgment. Among these are certain heads of women, beautiful in expression and in the adornment of the hair,
+                                        which <span class="personName">Leonardo da Vinci</span> was ever imitating for their beauty. In our book, also, are two horses with the due measures
+                                        and protractors for reproducing them on a larger scale from a smaller, so that there may be no errors in their proportions. I possess a horse's head of
+                                        terra-cotta in relief, copied from the antique, which is a rare work. The Very Reverend <span class="personName">Don Vincenzio Borghini</span>
+                                        has some of his drawings in his book, of which we have spoken above; among others, a design for a tomb made by him in <span class="placeName" data-place-id="venice">Venice</span>
+                                        for a <span class="personName">Doge</span>, a scene of the Adoration of Christ by the Magi, and the head of a woman painted on paper with the utmost delicacy.
+                                        He also made for <span class="personName" data-person-id="medici">Lorenzo de' Medici</span>,
+                                        [Pg 271]
+                                        for the fountain of his Villa at <span class="placeName">Careggi</span>, a boy of bronze squeezing a fish, which
+                                        the Lord Duke <span class="personName" data-person-id="cosimo">Cosimo</span> has caused to be placed, as may be seen at the present day, on the fountain that is
+                                        in the courtyard of his <span class="placeName">Palace</span>; which boy is truly marvellous.
+                                    </p>
+
+                                
+                                     <figure>
+                                        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-4 renaissance-style" src="assets/img/verrocchio/sarcophagusrenaissance.png" class="futuristic-img" alt="CORNER AND FOOT OF THE MEDICI SARCOPHAGUS
+                                                    (Detail, after Andrea Verrocchio. Florence: S. Lorenzo) Alinari"
+                                             style="width:16.19cm; height:21.17cm";/>
+                                        <figcaption">CORNER AND FOOT OF THE <span class="personName" data-person-id="medici">MEDICI</span> SARCOPHAGUS
+                                            (Detail, after <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
+                                            <span class="placeName" data-place-id="florence">Florence: S. Lorenzo</span>) <span class="personName" data-person-id="">Alinari</span>
+                                        </figcaption>
+                                    </figure>
+
+                                   
+                       
+                        </div>                  
+                    
+
+                </div>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
