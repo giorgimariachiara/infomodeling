@@ -300,50 +300,11 @@ kbd kbd {
   font-size: 1em;
 }
 
-figure {
-  display: inline-block;
-  position: relative;
-  margin: 50px 0 1rem;
-  overflow: hidden; 
-}
-
-img {
-  max-width: 100%; /* L'immagine si ridurrà al massimo alla larghezza del contenitore */
-  
-height:auto;
-  z-index: 1; /* Assicura che l'immagine sia sopra lo sfondo */
-}
 
 figcaption {
   position: relative; /* o "absolute", dipende dalla tua struttura */
   z-index: 2; /* un valore più alto di qualsiasi altro z-index che potresti avere */
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-figure::before {
-  content: "";
-  position: absolute;
-  top: -10%; /* Decidi quanto vuoi che sia distante dall'immagine. */
-  left: -10%;
-  right: -10%;
-  bottom: -10%;
-  background-color: #00b37c; /* O qualsiasi altro colore desideri. */
-  z-index: 0;
-  animation: rotate 20s linear infinite;
-  
-  /* Questo crea un esagono come sfondo. Puoi modificare la forma come preferisci. */
-  clip-path: polygon(50% 0%, 100% 15%, 100% 75%, 50% 100%, 0% 75%, 0% 17%);
-}
-
-
 
 
 
@@ -655,9 +616,6 @@ progress {
   max-width: 100%;
   height: auto;
 }
-
-
-
 
 .container,
 .container-fluid,
@@ -10984,7 +10942,7 @@ p {
     text-align: right;         /* Sposta il testo a sinistra */
     border-top: 4px solid #000; /* Aggiunge un bordo a destra */
     border-left: 12px solid #000; /* Aggiunge un bordo in basso */  
-    margin-top:52px;
+    margin-top:60px;
     margin-bottom:70px;
     transform: rotate(5deg); 
 }
@@ -11071,27 +11029,6 @@ p {
   }
 }
 
-.cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
-}
-.cta .cta-inner {
-  position: relative;
-  padding: 3rem;
-  margin: 0.5rem;
-}
-.cta .cta-inner:before {
-  border-radius: 0.5rem;
-  content: "";
-  position: absolute;
-  top: -0.5rem;
-  bottom: -0.5rem;
-  left: -0.5rem;
-  right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
-  z-index: -1;
-}
 
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
@@ -11143,6 +11080,15 @@ p {
   }
 }
 
+.product-item-img{
+  border-top: 2px solid black;
+  border-left: 8px solid black;
+} 
+
+.product-item-img3{
+  border-bottom: 4px solid black;
+  border-right: 8px solid black;
+} 
 
 .list-hours {
   font-size: 0.9rem;
@@ -11291,8 +11237,6 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-
-
 .highlight-place {
     background-color: #6caedf;
 }
@@ -11388,8 +11332,6 @@ p {
       6px 0 rgba(255,255,255,0.2);
   position: relative;
 }
-
-
 
 /* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
 .text-primary span:nth-child(1) {
@@ -11495,16 +11437,16 @@ p {
   display: inline-block; /* Ridimensiona il contenitore intorno ai suoi contenuti */
 }
 
-.product-item-img {
+.product-item-img2 {
   display: block;
   margin: 0 auto; /* Centra l'immagine orizzontalmente */
   transition: transform 0.3s;
   z-index: 2;
 }
 
-.product-item-img:hover {
+.product-item-img2:hover {
   transform: scale(1.4);
-  z-index: 1;
+  z-index: 3s;
 }
 
 .image-container::before {
@@ -11541,7 +11483,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  .product-item-img:hover {
+  .product-item-img2:hover {
     transform: scale(1.05); /* Zoom minore per schermi più piccoli */
   }
 }
@@ -11560,4 +11502,12 @@ p {
   .break-on-mobile {
       margin-top: 10px;  /* aggiungi un po' di spazio tra le righe */
   }
+}
+
+
+
+.figcaption{
+  font-family: 'Sitka';
+  transform: rotate(180deg);
+    display: inline-block;
 }
