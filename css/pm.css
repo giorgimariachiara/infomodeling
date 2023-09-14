@@ -4513,6 +4513,24 @@ textarea.form-control-lg {
   z-index: 1;
 }
 
+@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+  .content-wrapper {
+      flex-direction: column;
+  }
+
+  .accordion {
+    position: sticky;
+    top: 60px;
+    z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+    margin-bottom: 20px;
+    margin-right:10px;
+  }
+
+  .main-content {
+      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+  }
+}
+
 .breadcrumb {
   --bs-breadcrumb-padding-x: 0;
   --bs-breadcrumb-padding-y: 0;
@@ -11319,3 +11337,12 @@ figcaption {
 .text-right{
 text-align: right;
 }
+
+.highlight-place {
+  background-color: #6caedf;
+}
+.highlight-person {
+  background-color: #a1d490;
+}
+
+
