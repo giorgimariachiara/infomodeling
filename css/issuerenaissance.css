@@ -4385,12 +4385,10 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
-  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-bg: #dfd9c8;
+  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 1px;
-  --bs-accordion-border-radius: 0.375rem;
-  --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #212529;
@@ -4406,6 +4404,10 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  box-shadow: 
+  0 0 0 1px #674e29, /* linea scura di separazione */
+  0 0 0 9px var(--bs-gold); /* bordo dorato interno */
+  padding:0;
   flex:1;
 }
 
@@ -11116,6 +11118,7 @@ p {
     min-width: 100px; /* Minimum width */
     max-width: 100%;  /* Maximum width relative to the parent element */
     width: auto;     /* Auto width */
+
 }
 
 .sticky-container {
