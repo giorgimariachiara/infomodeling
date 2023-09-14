@@ -4354,6 +4354,7 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  flex:1;
 }
 
 .accordion-button {
@@ -11033,14 +11034,14 @@ p {
 
 
 .sticky-accordion {
-    position: sticky;
-    top: 100px;  /* Adjust as needed */
-    max-height: calc(100vh - 30px);
-    overflow-y: auto;
-    z-index: 1;
-    min-width: 100px; /* Minimum width */
-    max-width: 100%;  /* Maximum width relative to the parent element */
-    width: auto;     /* Auto width */
+  position: sticky;
+  top: 200px;  
+  max-height: calc(100vh - 30px);
+  overflow-y: auto;
+  z-index: 1;
+  min-width: 100px; 
+  max-width: 100%;  
+  width: auto;   
 }
 
 .sticky-container {
@@ -11055,6 +11056,7 @@ p {
 
 .content-wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -11062,20 +11064,24 @@ p {
   flex: 3;  /* Takes 3/4 of the container width */
 }
 
+@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+  .content-wrapper {
+      flex-direction: column;
+  }
 
-.sticky-button {
+  .accordion {
+      position: sticky;
+      top: 60px;
+      z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+      margin-bottom: 20px;
+      margin-right:10px;
+  }
 
-    position: sticky;
-    top: 120px; /* Adjust this value as needed */
-    z-index: 10;
+  .main-content {
+      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+  }
 }
 
-.sticky-button-2 {
-
-    position: sticky;
-    top: 160px; /* Adjust this value as needed */
-    z-index: 10;
-}
 
 /*
 .toggle-btn {

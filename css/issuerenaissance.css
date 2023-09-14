@@ -4406,6 +4406,7 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  flex:1;
 }
 
 .accordion-button {
@@ -6851,6 +6852,7 @@ textarea.form-control-lg {
   left: 0;
   z-index: 1030;
 }
+
 
 .sticky-top {
   position: sticky;
@@ -11032,6 +11034,7 @@ p {
 .intro {
   position: relative;
 }
+
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
@@ -11106,7 +11109,7 @@ p {
 
 .sticky-accordion {
     position: sticky;
-    top: 15px;  /* Adjust as needed */
+    top: 200px;  /* Adjust as needed */
     max-height: calc(100vh - 30px);
     overflow-y: auto;
     z-index: 1;
@@ -11126,7 +11129,9 @@ p {
 
 .content-wrapper {
   display: flex;
+  flex-direction: row; 
   justify-content: space-between;
+
 }
 
 .main-content {
