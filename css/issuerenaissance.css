@@ -8303,7 +8303,8 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: var(--bs-border-radius) !important;
+  border-radius: 0 !important;
+
 }
 
 .rounded-0 {
@@ -10937,8 +10938,16 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  
-  
+  font-family: "TrajanPro";
+  color: var(--bs-gold);
+}
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "TrajanPro";
+  color: var(--bs-gold);
 }
 
 .bg-faded {
@@ -11084,6 +11093,11 @@ p {
   }
 }
 
+.product-item-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .list-hours {
   font-size: 0.9rem;
 }
@@ -11121,6 +11135,25 @@ p {
 
 }
 
+@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+  .content-wrapper {
+      flex-direction: column;
+  }
+
+  .accordion {
+    position: sticky;
+    top: 60px;
+    z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+    margin-bottom: 20px;
+    margin-right:10px;
+  }
+
+  .main-content {
+      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+  }
+}
+
+
 .sticky-container {
     display: flex;
     position: sticky;
@@ -11141,52 +11174,12 @@ p {
   flex: 3;  /* Takes 3/4 of the container width */
 }
 
-
-.sticky-button {
-    position: sticky;
-    top: 20px; /* Adjust this value as needed */
-    z-index: 10;
-}
-
-
-.toggle-btn {
-    position: sticky;  /* Use absolute positioning */
-    top: 150px;
-    right: auto;  /* Align it to the right */
-    width: 50px;
-    height: 40px;
-    border: var(--bs-gold);
-    z-index: 10;
-    font-family: "TrajanPro";
-    color:var(--bs-gold);
-}
-
-.toggle-btn2 {
-  position: sticky;  /* Use absolute positioning */
-  top: 150px;
-  right: auto;  /* Align it to the right */
-  width: 50px;
-  height: 40px;
-  border:var(--bs-gold);
-  z-index: 10;
-  font-family: "TrajanPro";
-  color:var(--bs-gold);
-}
-
-
 #mainNav {
   position: sticky;
   top: 0;
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-.trajan {
-  font-family: "TrajanPro";
-}
-
-.aquiline{
-  font-family: 'AquilineTwo', serif;
-}
 .aquilineta {
   font-family: 'AquilineTwo', serif;
   text-align: justify;
@@ -11194,7 +11187,8 @@ p {
   margin-right: 5rem; /* 80px / 16 = 5rem */
   margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
 }
-.figcaption {
+
+.product-item-img figcaption {
   font-family: 'Cinzel', serif;
   color: var(--bs-gold);
   background-color: #385393; /* Questo è il tuo sfondo blu */
@@ -11203,34 +11197,10 @@ p {
   margin-bottom: 2px;
   padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
   position: relative;
-  
   /* Creiamo il doppio bordo utilizzando border e box-shadow */
   border: 3px solid var(--bs-gold); /* Bordo interno dorato */
   box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
-}
-
-.cinzel{
-  font-family: "Cinzel", serif;
-}
-.goudy{
-  font-family: "Goudy Initialen";
-  font-size: 150px;
-  color:red;
-}
-.justify{
-  text-align: justify;
-}
-.gold-text {
-  color: var(--bs-gold);
-}
-.red-text{
-  color: var( --bs-renred);
-}
-.blue-text{
-  color: var(--bs-blue);
-}
-.nav-text{
-  color:#4f3f27;
+  margin-right: 3rem !important;
 }
 
 .renaissance-style {
@@ -11250,13 +11220,6 @@ p {
   margin-bottom: 5px;
 }
 
-.decorated-container {
-  position: relative; 
-  margin-top: 80px;
-  padding-left: calc(20px + 15px);
-  margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
-}
-
 .decorative-img {
   position: absolute;
   left: 0;
@@ -11266,12 +11229,36 @@ p {
   width: 5.625rem; /* 90px / 16 = 5.625rem */
 }
 
-.decorated-paragraph {
-  margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
-}
-
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
 
+.highlight-person {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 
+}
+
+.highlight-place {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+
+}
