@@ -4385,12 +4385,10 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
-  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-bg: #dfd9c8;
+  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 1px;
-  --bs-accordion-border-radius: 0.375rem;
-  --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #212529;
@@ -4406,6 +4404,10 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  box-shadow: 
+  0 0 0 1px #674e29, /* linea scura di separazione */
+  0 0 0 9px var(--bs-gold); /* bordo dorato interno */
+  padding:0;
   flex:1;
 }
 
@@ -8301,7 +8303,8 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: var(--bs-border-radius) !important;
+  border-radius: 0 !important;
+
 }
 
 .rounded-0 {
@@ -10930,22 +10933,31 @@ p {
 
 .section-heading {
   text-transform: uppercase;
+ 
 }
 .section-heading .section-heading-upper {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  
-  
+  font-family: "TrajanPro";
+  color: var(--bs-gold);
+}
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Aquiline";
+  color: var(--bs-gold);
 }
 
 .bg-faded {
   background-color: #dfd9c8;
-  background-position: center center;
-  background-size: cover; 
-  position: relative;  
-
+    background-position: center center;
+    background-size: cover;
+    position: relative;
 }
+
 
 .btn-xl {
   font-weight: 700;
@@ -10955,6 +10967,15 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.decorative-img {
+  float: left; /* Aggiungi questa proprietà */
+  width: 5.625rem; /* 90px / 16 = 5.625rem */
+  height: auto;
+  margin-right: 1rem; /* Distanza tra decorative-img e miaLettera */
+  display: block;
+}
+
 
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
@@ -11082,6 +11103,15 @@ p {
   }
 }
 
+.product-item-description{
+  margin-top: 100px !important;
+}
+.product-item-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  
+}
+
 .list-hours {
   font-size: 0.9rem;
 }
@@ -11116,7 +11146,27 @@ p {
     min-width: 100px; /* Minimum width */
     max-width: 100%;  /* Maximum width relative to the parent element */
     width: auto;     /* Auto width */
+
 }
+
+@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+  .content-wrapper {
+      flex-direction: column;
+  }
+
+  .accordion {
+    position: sticky;
+    top: 60px;
+    z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+    margin-bottom: 20px;
+    margin-right:10px;
+  }
+
+  .main-content {
+      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+  }
+}
+
 
 .sticky-container {
     display: flex;
@@ -11131,45 +11181,11 @@ p {
   display: flex;
   flex-direction: row; 
   justify-content: space-between;
-
 }
 
 .main-content {
   flex: 3;  /* Takes 3/4 of the container width */
 }
-
-
-.sticky-button {
-    position: sticky;
-    top: 20px; /* Adjust this value as needed */
-    z-index: 10;
-}
-
-
-.toggle-btn {
-    position: sticky;  /* Use absolute positioning */
-    top: 150px;
-    right: auto;  /* Align it to the right */
-    width: 50px;
-    height: 40px;
-    border: var(--bs-gold);
-    z-index: 10;
-    font-family: "TrajanPro";
-    color:var(--bs-gold);
-}
-
-.toggle-btn2 {
-  position: sticky;  /* Use absolute positioning */
-  top: 150px;
-  right: auto;  /* Align it to the right */
-  width: 50px;
-  height: 40px;
-  border:var(--bs-gold);
-  z-index: 10;
-  font-family: "TrajanPro";
-  color:var(--bs-gold);
-}
-
 
 #mainNav {
   position: sticky;
@@ -11177,13 +11193,6 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-.trajan {
-  font-family: "TrajanPro";
-}
-
-.aquiline{
-  font-family: 'AquilineTwo', serif;
-}
 .aquilineta {
   font-family: 'AquilineTwo', serif;
   text-align: justify;
@@ -11191,7 +11200,8 @@ p {
   margin-right: 5rem; /* 80px / 16 = 5rem */
   margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
 }
-.figcaption {
+
+.product-item-img figcaption {
   font-family: 'Cinzel', serif;
   color: var(--bs-gold);
   background-color: #385393; /* Questo è il tuo sfondo blu */
@@ -11200,34 +11210,10 @@ p {
   margin-bottom: 2px;
   padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
   position: relative;
-  
   /* Creiamo il doppio bordo utilizzando border e box-shadow */
   border: 3px solid var(--bs-gold); /* Bordo interno dorato */
   box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
-}
-
-.cinzel{
-  font-family: "Cinzel", serif;
-}
-.goudy{
-  font-family: "Goudy Initialen";
-  font-size: 150px;
-  color:red;
-}
-.justify{
-  text-align: justify;
-}
-.gold-text {
-  color: var(--bs-gold);
-}
-.red-text{
-  color: var( --bs-renred);
-}
-.blue-text{
-  color: var(--bs-blue);
-}
-.nav-text{
-  color:#4f3f27;
+  margin-right: 3rem !important;
 }
 
 .renaissance-style {
@@ -11240,35 +11226,46 @@ p {
 }
 
 #miaLettera {
-  width:20rem; /* 150px / 16 = 9.375rem */
+  float: left; 
+  width: 20rem; /* 150px / 16 = 9.375rem */
   height: auto; 
-  float: left;
-  margin-right: 20px; /* aggiusta questo valore come necessario */
+  margin-right: 1rem; /* Distanza tra miaLettera e il testo */
   margin-bottom: 5px;
+  display: block;
 }
 
-.decorated-container {
-  position: relative; 
-  margin-top: 80px;
-  padding-left: calc(20px + 15px);
-  margin-bottom: 20px; /* Modifica [larghezza dell'immagine] con il valore corretto */
-}
 
-.decorative-img {
-  position: absolute;
-  left: 0;
-  top: -6rem; /* -50px / 16 = -3.125rem */
-  left: -3rem; /* -50px / 16 = -3.125rem */
-  height: auto; 
-  width: 5.625rem; /* 90px / 16 = 5.625rem */
-}
-
-.decorated-paragraph {
-  margin-top: calc(10px + 0px); /* Questo sposterà il testo sotto l'immagine. Modifica [altezza dell'immagine] con il valore corretto e 20px con la quantità di spazio che desideri tra l'immagine e il testo. */
-}
 
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
 
+.highlight-person {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 
+}
+
+.highlight-place {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+
+}

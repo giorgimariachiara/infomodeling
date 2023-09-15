@@ -8241,7 +8241,7 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: var(--bs-border-radius) !important;
+  border-radius: 0 !important;
 }
 
 .rounded-0 {
@@ -10856,11 +10856,14 @@ p {
   display: block;
   font-size: 2rem;
   font-weight: 800;
+  font-family: 'AquilineTwo', serif;
 }
 .site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+  
+  font-family: "TrajanPro";
 }
 
 .page-section {
@@ -10875,11 +10878,31 @@ p {
   display: block;
   font-size: 2rem;
   font-weight: 100;
+  font-family: "Cinzel", serif;
+  color: #536ba4;
+
 }
 .section-heading .section-heading-lower {
   display: block;
   font-size: 2rem;
   font-weight: 100;
+}
+
+
+.section-heading-lower span:nth-child(1) {
+  color: #a3852d;
+}
+
+.section-heading-lower span:nth-child(3) {
+  color: #92302b;
+}
+
+.section-heading-lower span:nth-child(5) {
+  color: #536ba4;
+}
+
+.section-heading-lower span {
+  font-family: "Cinzel", serif;
 }
 
 .bg-faded {
@@ -11019,6 +11042,18 @@ p {
   }
 }
 
+
+.intro-text{
+  font-family: 'AquilineTwo', serif; /* o qualsiasi altro font che ti piace */
+  background-color: #f3e5c0; /* un colore beige pallido per un effetto di pagina invecchiata */
+  padding: 20px;
+  text-align: center;
+}
+
+.intro-text p {
+  color: #a3852d;  /* Questo è il colore dorato */
+}
+
 .list-hours {
   font-size: 0.9rem;
 }
@@ -11043,6 +11078,17 @@ p {
   font-size: 1.2rem;
 }
 
+.intro-text .intro-button a.btn {
+  color: #92302b;
+  border: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
+  font-family: 'TrajanPro';
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
 .renaissance-style {
   background-color: #92302b;
   border: 4px solid #a3852d; /* bordo dorato esterno */
@@ -11055,71 +11101,25 @@ p {
 }
 
 
-.renaissance-stylebt {
-  background-color: #92302b;
-  border: 4px solid #a3852d; /* bordo dorato esterno */
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
-  font-family: 'TrajanPro';
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 #mainNav {
   position: sticky;
   top: 0;
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-.trajan {
-  font-family: "TrajanPro";
-}
-
 .aquiline{
   font-family: 'AquilineTwo', serif;
 }
 
-.cinzel{
-  font-family: "Cinzel", serif;
-}
 
 .justify{
   text-align: justify;
 }
-.gold-text {
-  color: #a3852d;
-}
 
-.red-text{
-  color: #92302b;
-}
-.blue-text{
-  color: #536ba4;
-}
 .nav-text{
   color:#4f3f27;
 }
 
-
-/* Stile base per effetto libro */
-.book-style {
-  font-family: 'AquilineTwo', serif; /* o qualsiasi altro font che ti piace */
-  background-color: #f3e5c0; /* un colore beige pallido per un effetto di pagina invecchiata */
-  background-image: url('assets/img/sfondolibro.png'); /* opzionale: un'immagine texture di carta antica */
-  background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-  border: 1px solid #d1bfa3; /* un colore leggermente più scuro per il bordo */
-  padding: 20px;
-  text-align: center;
-}
-
-
-/* Una leggera ombra per dare profondità al testo e renderlo più leggibile sullo sfondo */
-.book-style h2, .book-style p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
 
 /* Stilizza il bottone per adattarsi al tema */
 .book-style .btn-primary {
@@ -11131,15 +11131,4 @@ p {
 }
 
 
-.section-heading-upper.trajan::before {
-  content: "\f269"; /* Codice Unicode per l'icona "fleur-de-lis" in Font Awesome */
-  font-family: "Font Awesome 5 Free"; 
-  padding-right: 8px; /* Aggiunge spazio tra l'icona e "Disclaimer" */
-}
-
-.section-heading-upper.trajan::after {
-  content: "\f269";
-  font-family: "Font Awesome 5 Free"; 
-  padding-left: 8px; /* Aggiunge spazio tra "Disclaimer" e l'icona */
-}
 

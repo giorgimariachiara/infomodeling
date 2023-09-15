@@ -11,7 +11,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #536ba4;
+  --bs-renred:#92302b;
+  --bs-gold:#a3852d;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -102,6 +104,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: url("png-clipart-vitruvian-man-drawing-man-angle-people-thumbnail.cur"), pointer
 }
 
 hr {
@@ -300,14 +303,9 @@ kbd kbd {
   font-size: 1em;
 }
 
-
-figcaption {
-  position: relative; /* o "absolute", dipende dalla tua struttura */
-  z-index: 2; /* un valore più alto di qualsiasi altro z-index che potresti avere */
+figure {
+  margin: 0 0 1rem;
 }
-
-
-
 
 img,
 svg {
@@ -604,8 +602,8 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 70%;
+  height: 70%;
 }
 
 .img-thumbnail {
@@ -615,6 +613,20 @@ progress {
   border-radius: 0.375rem;
   max-width: 100%;
   height: auto;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 0.875em;
+  color: #6c757d;
 }
 
 .container,
@@ -2836,21 +2848,70 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #e6a756;
-  --bs-btn-border-color: #e6a756;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #eab46f;
-  --bs-btn-hover-border-color: #e9b067;
-  --bs-btn-focus-shadow-rgb: 196, 142, 73;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ebb978;
-  --bs-btn-active-border-color: #e9b067;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #e6a756;
-  --bs-btn-disabled-border-color: #e6a756;
+  color: #000;
+  background-color: #92302b;
+  border: 4px solid #a3852d;
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
+}
+
+.btn-primary:active {
+  color: #000;
+  background-color: #ebb978;
+  border-color: #e9b067;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-primary:disabled {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+}
+
+.btn-primary2 {
+  color: #000;
+  background-color: #92302b;
+  border: 4px solid #a3852d;
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
+}
+
+.btn-primary2:hover {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+}
+
+.btn-primary2:focus {
+  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
+}
+
+.btn-primary2:active {
+  color: #000;
+  background-color: #ebb978;
+  border-color: #e9b067;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-primary2:disabled {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+}
+
+
 
 .btn-secondary {
   --bs-btn-color: #fff;
@@ -3214,10 +3275,10 @@ textarea.form-control-lg {
   --bs-dropdown-spacer: 0.125rem;
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: #212529;
-  --bs-dropdown-bg: rgba(247,230,186, 0.8);
-  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-bg: #fff;
+  --bs-dropdown-border-color: #a3852d;
   --bs-dropdown-border-radius: 0.375rem;
-  --bs-dropdown-border-width: 1px;
+  --bs-dropdown-border-width: 2px;
   --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
@@ -3243,10 +3304,10 @@ textarea.form-control-lg {
   color: var(--bs-dropdown-color);
   text-align: left;
   list-style: none;
-  background-color: var(--bs-dropdown-bg);
+  background-color: rgba(213, 206, 189, 0.7);
   background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  border-radius: var(--bs-dropdown-border-radius);
+  
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -4324,12 +4385,10 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
-  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-bg: #dfd9c8;
+  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 1px;
-  --bs-accordion-border-radius: 0.375rem;
-  --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #212529;
@@ -4345,6 +4404,10 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  box-shadow: 
+  0 0 0 1px #674e29, /* linea scura di separazione */
+  0 0 0 9px var(--bs-gold); /* bordo dorato interno */
+  padding:0;
   flex:1;
 }
 
@@ -6792,6 +6855,7 @@ textarea.form-control-lg {
   z-index: 1030;
 }
 
+
 .sticky-top {
   position: sticky;
   top: 0;
@@ -7634,6 +7698,9 @@ textarea.form-control-lg {
 .me-5 {
   margin-right: 3rem !important;
 }
+.me-5 {
+  margin-right: 5rem !important;
+}
 
 .me-auto {
 	margin-left: auto !important;
@@ -7663,6 +7730,9 @@ textarea.form-control-lg {
 .mb-5 {
   margin-bottom: 3rem !important;
 }
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
 
 .mb-auto {
   margin-bottom: auto !important;
@@ -7690,6 +7760,9 @@ textarea.form-control-lg {
 
 .ms-5 {
   margin-left: 3rem !important;
+}
+.ms-6 {
+  margin-left: 4rem !important;
 }
 
 .ms-auto {
@@ -8230,7 +8303,8 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: var(--bs-border-radius) !important;
+  border-radius: 0 !important;
+
 }
 
 .rounded-0 {
@@ -10820,8 +10894,7 @@ textarea.form-control-lg {
   }
 }
 body {
-    background-color: black;
-  background-image: url("../assets/img/futurism.jpg");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentookk.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10831,15 +10904,27 @@ p {
   line-height: 1.75;
 }
 
+.text-faded {
+  color: #f6e1c5;
+}
+
 .site-heading {
   margin-top: 5rem;
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Roboto";
-  color: black;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.site-heading .site-heading-lower {
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 4rem;
+}
 
 .page-section {
   margin-top: 5rem;
@@ -10848,135 +10933,33 @@ p {
 
 .section-heading {
   text-transform: uppercase;
-
 }
 .section-heading .section-heading-upper {
-    display: inline-block; 
-    transform: rotate(-10deg);  
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 60px;
-    font-family: "Cinzel";
-    color:#f07e02;
-}
-
-
-@keyframes swing {
-    0% {
-        transform: rotate(-15deg);
-    }
-    50% {
-        transform: rotate(15deg);
-    }
-    100% {
-        transform: rotate(-15deg);
-    }
-}
-
-.section-heading .section-heading-upper:hover {
-    animation: swing 1s ease infinite;
+  display: block;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "TrajanPro";
+  color: var(--bs-gold);
 }
 
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 2rem;
-  font-weight: 100;
-  margin-bottom: 100px;
-  font-family: "Cinzel";
-  color:white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "TrajanPro";
+  color: var(--bs-gold);
 }
 
-.section-heading-lower span {
-  font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
-  letter-spacing: 5px; /* Distanza tra le lettere */
-  font-size: 2rem;
-  color:#f07e02;
-  font-weight: 800;
+.bg-faded {
+  width: auto;
+  height: auto;
+  
+  background-image: url('assets\img\sfondoprova.png')!important; /* Sostituisci con il percorso corretto dell'immagine */
+  background-position: left;
+  background-size: cover; 
+  position: relative;  
 }
 
-.bg-fadedtitle{
-    position:relative;
-}
-  .bg-fadedtitle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%; /* Questo determina dove inizia la seconda parte del colore */
-    height: 100%;
-    background: #5a7db3; /* O qualsiasi altro colore tu voglia per la parte sinistra */
-    clip-path: polygon(0 0, 100% 0, 0 100%); 
-    z-index: -1; /* Assicurati che sia dietro al testo */
-}
-
-@media (max-width: 992px) {
-    .bg-fadedtitle::before {
-        width: 40%;
-        /* puoi cambiare qualsiasi altro stile qui per adattarlo alle dimensioni dello schermo */
-    }
-}
-.bg-faded{
-    background-color: #f7e6ba;
-}
-
-.bg-faded .p1 {
-    font-family: 'Sitka';
-    text-align: left;         /* Sposta il testo a sinistra */
-    border-right: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-right: 100px; 
-    padding-right:20px;     
-    padding-bottom: 15px; 
-}
-
-.bg-faded .p2 {
-    font-family: 'Sitka';
-    text-align: center;         /* Sposta il testo a sinistra */
-    border-top: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */    
-    margin-top:60px;
-    margin-bottom:70px;
-    transform: rotate(-5deg); 
-}
-.bg-faded .p3 {
-    font-family: 'Sitka';
-    text-align: right;         /* Sposta il testo a sinistra */
-    border-top: 4px solid #000; /* Aggiunge un bordo a destra */
-    border-left: 12px solid #000; /* Aggiunge un bordo in basso */  
-    margin-top:60px;
-    margin-bottom:70px;
-    transform: rotate(5deg); 
-}
-.bg-faded .p4 {
-    font-family: 'Sitka';
-    text-align: left;         /* Sposta il testo a sinistra */
-    border-right: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-right: 200px; 
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
-    padding-bottom: 15px;
-}
-
-.bg-faded .p5 {
-    font-family: 'Sitka';
-    text-align: center;         /* Sposta il testo a sinistra */
-    border-top: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-top: 20px;
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
-    padding-bottom: 15px;
-}
-
-.bg-faded .p6 {
-    font-family: 'Sitka';
-    text-align: left;         /* Sposta il testo a sinistra */
-    border-left: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-right: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-left: 230px;
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
-    padding-left: 120px;
-    margin-top:20px;
-}
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -10987,32 +10970,37 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(247,230,186, 0.8);
-  font-family: "SquareFont";
+  background-color: rgba(213, 206, 189, 0.8);
+  font-family: "Cinzel";
+  font-size: 20px;
+  position:relative;
+  border-top: 4px solid #a3852d; /* doppio spessore per il bordo destro */
+  border-bottom: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
 #mainNav .navbar-brand {
-  color: #f27a0a;
+  color: #a3852d;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color:black;
+  color: rgba(163, 133, 45, 0.9);
   font-weight: 800;
-  
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #a3852d;
 }
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #f27a0a;
+    color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #f27a0a;
+    color: #a3852d;
   }
 }
-
 
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
@@ -11030,14 +11018,36 @@ p {
   }
 }
 
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgba(230, 167, 86, 0.9);
+}
+.cta .cta-inner {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+}
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
 
 .footer {
-  background-color: rgba(247,230,186, 0.8);
+  background-color: rgba(101, 38, 32, 0.8);
 }
 
 .intro {
   position: relative;
 }
+
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
@@ -11061,12 +11071,16 @@ p {
     width: 45%;
   }
 }
+.product-item-img{
+  margin-top: 50px;
+  margin-bottom:  30px;
+}
 
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
   }
   .product-item .product-item-img {
     position: relative;
@@ -11076,20 +11090,15 @@ p {
   .product-item .product-item-description {
     position: relative;
     z-index: 0;
-    margin-top: 3rem;
+    margin-top: -3rem;
     max-width: 50vw;
   }
 }
 
-.product-item-img{
-  border-top: 2px solid black;
-  border-left: 8px solid black;
-} 
-
-.product-item-img3{
-  border-bottom: 4px solid black;
-  border-right: 8px solid black;
-} 
+.product-item-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
 .list-hours {
   font-size: 0.9rem;
@@ -11118,39 +11127,14 @@ p {
 
 .sticky-accordion {
     position: sticky;
-    top: 200px;  
+    top: 200px;  /* Adjust as needed */
     max-height: calc(100vh - 30px);
     overflow-y: auto;
     z-index: 1;
-    min-width: 100px; 
-    max-width: 100%;  
-    width: auto;     
-}
+    min-width: 100px; /* Minimum width */
+    max-width: 100%;  /* Maximum width relative to the parent element */
+    width: auto;     /* Auto width */
 
-.sticky-container {
-    text-align: center; 
-    display: flex;
-    position: sticky;
-    top: 15px;
-    width: 100%;
-    z-index: 1;
-}
-
-
-.content-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.main-content {
-  flex: 3;  /* Takes 3/4 of the container width */
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: row; /* direzione di default è row */
-  justify-content: space-between;
 }
 
 @media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
@@ -11171,76 +11155,25 @@ p {
   }
 }
 
-/*
-.toggle-btn {
-    position: absolute;  
-    top: 0;  
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}  */
 
-
-/* Change from sticky to absolute positioning */
-/* Align to the top */
-/* Align to the left at 50% of the container width */
-/* Center the element */
-/*
-.toggle-btn {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
- /* Use absolute positioning */
- /* Align it to the right */
- /*
-.toggle-btn {
-    position: sticky; 
-    top: 150px;
-    right: auto;  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
+.sticky-container {
+    display: flex;
+    position: sticky;
+    top: 15px;
+    width: 100%;
+    z-index: 1;
 }
 
 
-.toggle-btn-2 {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
-.button-container {
-  position: sticky;
-  top: 150px;
-  z-index: 10;
+.content-wrapper {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
 }
 
-.toggle-btn, .toggle-btn-2 {
-  width: 40px;
-  height: 40px;
-  /*transform: translate(-50%, -50%) */
-  border-radius: 50%;
-  margin-bottom: 10px;  /* Spacing between the buttons */
+.main-content {
+  flex: 3;  /* Takes 3/4 of the container width */
 }
-
 
 #mainNav {
   position: sticky;
@@ -11248,277 +11181,84 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-.highlight-place {
-    background-color: #6caedf;
+.aquilineta {
+  font-family: 'AquilineTwo', serif;
+  text-align: justify;
+  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+  margin-right: 5rem; /* 80px / 16 = 5rem */
+  margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
 }
+
+.product-item-img figcaption {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #385393; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+  margin-right: 3rem !important;
+}
+
+.renaissance-style {
+  background-color: var( --bs-renred);
+  border: 4px solid var(--bs-gold); /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px var(--bs-gold); /* bordo dorato interno */
+      padding:0;
+}
+
+
+
+.decorative-div {
+  background-image: url('assets/img/barrarinascimento.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;  /* puoi regolare queste proprietà per posizionare l'immagine dove preferisci */
+  left: -6rem;  /* sposta il div a sinistra del contenuto */
+  height: 5.625rem; 
+  width: 5.625rem; 
+}
+.decorative-img {
+  display: none;
+}
+
+.mb-0.aquilineta {
+  margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
+}
+
 .highlight-person {
-    background-color: #a1d490;
-}
-
-
-/*titolo*/
-
-.text-primary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.4em;
-}
-
-.text-primary span {
-  margin: 0 2px;
-  display: inline-block;
-  transform-origin: center;
-}
-
-.text-primary span:nth-child(1) {
-  font-size: 2em;
-  transform: rotate(-20deg);
-}
-
-.text-primary span:nth-child(2) {
-  font-size: 1.4em;
-  transform: rotate(-10deg);
-}
-
-.text-primary span:nth-child(3) {
-  font-size: 1.6em;
-  transform: rotate(0deg);
-}
-
-.text-primary span:nth-child(4) {
-  font-size: 1.2em;
-  transform: rotate(10deg);
-}
-
-.text-primary span:nth-child(5) {
-  font-size: 1em;
-  transform: rotate(20deg);
-}
-
-.text-primary span:nth-child(6) {
-  font-size: 1.9em;
-  transform: rotate(-25deg);
-}
-
-.text-primary span:nth-child(7) {
-  font-size: 1.3em;
-  transform: rotate(-5deg);
-}
-
-.text-primary span:nth-child(8) {
-  font-size: 1.7em;
-  transform: rotate(5deg);
-}
-
-
-@media (max-width: 768px) {
-  .text-primary {
-      font-size: 1.2em;
-  }
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
   
-  .text-primary span {
-      margin: 0 1px;  /* riduzione dello spazio tra le lettere */
-  }
-}
-
-@media (max-width: 576px) {
-  .text-primary {
-      font-size: 1em;
-  }
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
   
-  .text-primary span {
-      margin: 0 0.5px;  /* ulteriore riduzione dello spazio tra le lettere */
-  }
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+
 }
 
-/* ombra dietro al titolo */
-
-.text-primary span {
-  position:relative;
-  transform-origin: bottom left;
-  text-shadow: 
-      2px 0 rgba(255,255,255,0.4),
-      4px 0 rgba(255,255,255,0.3),
-      6px 0 rgba(255,255,255,0.2);
-  position: relative;
-}
-
-/* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
-.text-primary span:nth-child(1) {
-  transform: rotate(-20deg) skewY(-10deg);
-}
-
-.text-primary span:hover {
-  transform: scale(1.4) rotate(10deg);
-  transition: transform 0.3s ease;
-}
-
-/* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
-
-
-.site-heading-lower {
-  font-family:"Roboto";
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
-  position: relative;
-  text-align: center; /* Cambia da flex a text-align per centrare il testo */
-  padding: 0.5em 0;
-  word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
-  margin-left: 18%;
-  margin-right: 10%;
+.highlight-place {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
   
-}
-
-.site-heading-lower::before, .site-heading-lower::after {
-  content: "";
-  width: 20%;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-}
-
-.site-heading-lower::before {
-  left: -25%;
-}
-
-.site-heading-lower::after {
-  right: -25%;
-}
-
-.overlap {
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
   position: relative;
-  z-index: 1;
-  background: white;
-  padding: 0 0.1em;
-  display: inline-block; /* Questo fa sì che ogni elemento .overlap si comporti come un blocco inline */
-}
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 
-.overlap::before {
-  content: attr(data-overlap);
-  position: absolute;
-  top: 0;
-  left: 0.1em;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 1.3em; 
-  z-index: -1;
-}
-
-
-.bigger-text {
-  font-size: 1.5em; /* Puoi modificare questo valore a tuo piacimento */
-}
-
-.bigger-text4 {
-  font-size:2.2rem; /* Puoi modificare questo valore a tuo piacimento */
-}
-.bigger-text1 {
-  font-size: 1.4rem; /* Puoi modificare questo valore a tuo piacimento */
-}
-.bigger-text2 {
-  font-size: 1.5rem !important; /* Puoi modificare questo valore a tuo piacimento */
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
-}
-
-.bigger-text3{
-  font-size: 2rem !important;
-  margin-left:20px;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
-}
-
-.white{
-  color:white;
-}
-
-.purple{
-  color:#663d86;
-  transform: skewX(-40deg); 
-}
-.parent-of-image-container {
-  display: flex;
-  justify-content: center; /* Centra il contenuto orizzontalmente */
-  align-items: center; /* Centra il contenuto verticalmente */
-}
-
-.image-container {
-  position: relative;
-  display: inline-block; /* Ridimensiona il contenitore intorno ai suoi contenuti */
-}
-
-.product-item-img2 {
-  display: block;
-  margin: 0 auto; /* Centra l'immagine orizzontalmente */
-  transition: transform 0.3s;
-  z-index: 2;
-}
-
-.product-item-img2:hover {
-  transform: scale(1.4);
-  z-index: 3s;
-}
-
-.image-container::before {
-  content: "";
-  position: absolute;
-  left: -90px; /* Potresti dover regolare questi valori */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100px;
-  height: 70px;
-  background-color: #f2bd2f;
-  z-index: 2;
-}
-
-.image-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -40px; /* Potresti dover regolare questi valori */
-  width: 30px;
-  height: 100%;
-  background-color: #e95c0c;
-  z-index: 1;
-  transform: translateY(-40%) rotate(-10deg);
-}
-@media (max-width: 768px) {
-  .image-container::before {
-      left: -60px; /* Riduci questa distanza per avvicinarlo all'immagine */
-  }
-
-  .image-container::after {
-      right: 20px; /* Riduci questa distanza per avvicinarlo all'immagine */
-  }
-}
-
-@media (max-width: 768px) {
-  .product-item-img2:hover {
-    transform: scale(1.05); /* Zoom minore per schermi più piccoli */
-  }
-}
-
-.responsive-text {
-  display: flex;
-  flex-direction: row;
-}
-
-/* Quando lo schermo si rimpicciolisce (ad esempio sotto i 768px), sposta il testo su due righe */
-@media (max-width: 768px) {
-  .responsive-text {
-      flex-direction: column;
-  }
-
-  .break-on-mobile {
-      margin-top: 10px;  /* aggiungi un po' di spazio tra le righe */
-  }
-}
-
-
-
-.figcaption{
-  font-family: 'Sitka';
-  transform: rotate(180deg);
-    display: inline-block;
 }

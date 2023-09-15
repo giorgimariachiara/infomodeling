@@ -11,13 +11,13 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/issuerenaissance.css" rel="stylesheet" />
+        <link href="css\issuerenaissance copy.css" rel="stylesheet" />
     </head>
     <body>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-lower trajan"> The Lives</span>
-                <span class="site-heading-upper text-primary mb-3 aquiline">of the Most Excellent Painters, Sculptors, and Architects</span>
+                <span class="site-heading-lower"> The Lives</span>
+                <span class="site-heading-upper text-primary mb-3">of the Most Excellent Painters, Sculptors, and Architects</span>
             </h1>
         </header>
         <!-- Navigation-->
@@ -112,28 +112,24 @@
 
             <!-- Main Content -->
             <div class="main-content">
-
             <div class="container">
                 <div class="product-item">
-                    <div class="product-item-description d-flex me-auto">
-                        <div class="bg-faded mt-2">
-                        <div class="p-5">    
-                 	<div class="decorated-container">
-                        
-                                <img src="assets\img\barrarinascimento.svg" alt="Lettera colorata" class="decorative-img">
-                                
-                                    <div class="p-3 d-flex  text-center ms-2 mb-6 me-5 renaissance-style">
-                                        <h2 class="section-heading ">
-                                            <span class="section-heading-upper trajan gold-text">LIFE OF ANDREA VERROCCHIO
-                                            PAINTER,<br>SCVLPTOR, AND ARCHITECT OF FLORENCE</span>
-                                        </h2>
-                                    </div>
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded text-center renaissance-style">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper">LIFE OF ANDREA VERROCCHIO</span>
+                                <span class="section-heading-lower">PAINTER, SCULPTOR, AND ARCHITECT OF FLORENCE</span>
+                            </h2>
+                        </div>
+                    </div>
 
-                                    
-                                
-                                <p class="mb-0 aquilineta decorated-paragraph">
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded">  
+                                <img src="assets\img\barrarinascimento.svg" alt="Lettera colorata" class="decorative-img">
+
+                                <p class="mb-0 aquilineta">
                                     <span class="personName" data-person-id="andrea">
-                                        <img src="assets\img\LetteraAVerrocchio.svg" alt="Lettera colorata" id="miaLettera">ndrea del Verrocchio
+                                        <div id="miaLettera"></div>ndrea del Verrocchio
                                     </span>, 
                         		a <span class="placeName" data-place-id="florence">Florentine</span>, was in his day a goldsmith,
 				                    a master of perspective, a sculptor, a wood-carver, a painter, and a musician; but in the arts of sculpture and painting,
@@ -147,7 +143,7 @@
                                         <img class="product-item-img d-flex img-fluid mb-3 mb-lg-4 renaissance-style" src="assets\img\pic.png" alt="DAVID
                                                     (After the bronze by Andrea Verrocchio. Florence: Bargello) Anderson"
                                              style="width:5.34cm; height:8.21cm";/>
-                                        <figcaption class="mb-0 figcaption me-5"><span class="personName" data-person-id="sculpture">DAVID</span>
+                                        <figcaption><span class="personName" data-person-id="sculpture">DAVID</span>
                                             (After the bronze by <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
                                             <span class="placeName" data-place-id="florence">Florence: Bargello</span>) <span class="personName" data-person-id="">Anderson</span>
                                         </figcaption>
@@ -252,26 +248,19 @@
 
                                 
                                      <figure>
-                                        <img class="product-item-img mx-auto d-flex  img-fluid mb-3 mb-lg-4 renaissance-style" src="assets/img/verrocchio/sarcophagusrenaissance.png" class="futuristic-img" alt="CORNER AND FOOT OF THE MEDICI SARCOPHAGUS
+                                        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-4 renaissance-style" src="assets/img/verrocchio/sarcophagusrenaissance.png" class="futuristic-img" alt="CORNER AND FOOT OF THE MEDICI SARCOPHAGUS
                                                     (Detail, after Andrea Verrocchio. Florence: S. Lorenzo) Alinari"
                                              style="width:16.19cm; height:21.17cm";/>
-                                        <figcaption class="mb-0 figcaption me-5">CORNER AND FOOT OF THE <span class="personName" data-person-id="medici">MEDICI</span> SARCOPHAGUS
+                                        <figcaption">CORNER AND FOOT OF THE <span class="personName" data-person-id="medici">MEDICI</span> SARCOPHAGUS
                                             (Detail, after <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
                                             <span class="placeName" data-place-id="florence">Florence: S. Lorenzo</span>) <span class="personName" data-person-id="">Alinari</span>
                                         </figcaption>
                                     </figure>
 
                                    
-                        </div>
                        
-                        </div>
+                        </div>                  
                     
-
-
-                        
-                    </div>
-
-
 
                 </div>
             </div>
@@ -279,44 +268,12 @@
             </div>
         </section>
 
-
-        <div class="modal fade" id="metadataModal" tabindex="-1" aria-labelledby="metadataModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="metadataModalLabel">Metadata Options</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="placeNames">
-                    <label class="form-check-label" for="placeNames">
-                      Highlight Place Names
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="personNames">
-                    <label class="form-check-label" for="personNames">
-                      Highlight Person Names
-                    </label>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Apply</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
