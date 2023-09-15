@@ -110,13 +110,24 @@ $(document).ready(function() {
 });
 
 
-document.getElementById('stylesBtn').addEventListener('click', function() {
-    const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
-    themeButtons.forEach(btn => {
-        if (btn.style.display === 'none' || btn.style.display === '') {
-            btn.style.display = 'block';
-        } else {
-            btn.style.display = 'none';
-        }
+document.getElementById('showThemesBtn').addEventListener('click', function() {
+    const themeContainer = document.getElementById('themeContainer');
+    if (themeContainer.style.display === 'none' || themeContainer.style.display === '') {
+        themeContainer.style.display = 'block';
+    } else {
+        themeContainer.style.display = 'none';
+    }
+});
+
+document.querySelectorAll('.themeBtn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const themeName = btn.getAttribute('data-theme');
+        changeTheme(themeName);
     });
 });
+
+function changeTheme(themeName) {
+    // Logic to change the theme based on themeName
+    // For example:
+    document.body.className = themeName;
+}
