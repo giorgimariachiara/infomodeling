@@ -11,7 +11,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #536ba4;
+  --bs-renred:#92302b;
+  --bs-gold:#a3852d;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -102,6 +104,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: url("png-clipart-vitruvian-man-drawing-man-angle-people-thumbnail.cur"), pointer
 }
 
 hr {
@@ -599,8 +602,8 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 70%;
+  height: 70%;
 }
 
 .img-thumbnail {
@@ -2845,21 +2848,70 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #e6a756;
-  --bs-btn-border-color: #e6a756;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #eab46f;
-  --bs-btn-hover-border-color: #e9b067;
-  --bs-btn-focus-shadow-rgb: 196, 142, 73;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ebb978;
-  --bs-btn-active-border-color: #e9b067;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #e6a756;
-  --bs-btn-disabled-border-color: #e6a756;
+  color: #000;
+  background-color: #92302b;
+  border: 4px solid #a3852d;
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
+}
+
+.btn-primary:active {
+  color: #000;
+  background-color: #ebb978;
+  border-color: #e9b067;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-primary:disabled {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+}
+
+.btn-primary2 {
+  color: #000;
+  background-color: #92302b;
+  border: 4px solid #a3852d;
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
+}
+
+.btn-primary2:hover {
+  color: #000;
+  background-color: #eab46f;
+  border-color: #e9b067;
+}
+
+.btn-primary2:focus {
+  box-shadow: 0 0 0 0.2rem rgba(196, 142, 73, 0.5);
+}
+
+.btn-primary2:active {
+  color: #000;
+  background-color: #ebb978;
+  border-color: #e9b067;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-primary2:disabled {
+  color: #000;
+  background-color: #e6a756;
+  border-color: #e6a756;
+}
+
+
 
 .btn-secondary {
   --bs-btn-color: #fff;
@@ -3224,9 +3276,9 @@ textarea.form-control-lg {
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: #212529;
   --bs-dropdown-bg: #fff;
-  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-border-color: #a3852d;
   --bs-dropdown-border-radius: 0.375rem;
-  --bs-dropdown-border-width: 1px;
+  --bs-dropdown-border-width: 2px;
   --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
@@ -3252,10 +3304,10 @@ textarea.form-control-lg {
   color: var(--bs-dropdown-color);
   text-align: left;
   list-style: none;
-  background-color: var(--bs-dropdown-bg);
+  background-color: rgba(213, 206, 189, 0.7);
   background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  border-radius: var(--bs-dropdown-border-radius);
+  
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -4333,12 +4385,10 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
-  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-bg: #dfd9c8;
+  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 1px;
-  --bs-accordion-border-radius: 0.375rem;
-  --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #212529;
@@ -4354,6 +4404,10 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
+  box-shadow: 
+  0 0 0 1px #674e29, /* linea scura di separazione */
+  0 0 0 9px var(--bs-gold); /* bordo dorato interno */
+  padding:0;
   flex:1;
 }
 
@@ -6801,6 +6855,7 @@ textarea.form-control-lg {
   z-index: 1030;
 }
 
+
 .sticky-top {
   position: sticky;
   top: 0;
@@ -7643,6 +7698,9 @@ textarea.form-control-lg {
 .me-5 {
   margin-right: 3rem !important;
 }
+.me-5 {
+  margin-right: 5rem !important;
+}
 
 .me-auto {
 	margin-left: auto !important;
@@ -7672,6 +7730,9 @@ textarea.form-control-lg {
 .mb-5 {
   margin-bottom: 3rem !important;
 }
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
 
 .mb-auto {
   margin-bottom: auto !important;
@@ -7699,6 +7760,9 @@ textarea.form-control-lg {
 
 .ms-5 {
   margin-left: 3rem !important;
+}
+.ms-6 {
+  margin-left: 4rem !important;
 }
 
 .ms-auto {
@@ -8239,7 +8303,8 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: var(--bs-border-radius) !important;
+  border-radius: 0 !important;
+
 }
 
 .rounded-0 {
@@ -10829,7 +10894,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bgrinascimentookk.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10871,18 +10936,28 @@ p {
 }
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 1rem;
-  font-weight: 800;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "TrajanPro";
+  color: var(--bs-gold);
 }
+
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 2rem;
-  font-weight: 100;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "TrajanPro";
+  color: var(--bs-gold);
 }
 
 .bg-faded {
-  background-color: #f6e1c5;
-
+  width: auto;
+  height: auto;
+  
+  background-image: url('assets\img\sfondoprova.png')!important; /* Sostituisci con il percorso corretto dell'immagine */
+  background-position: left;
+  background-size: cover; 
+  position: relative;  
 }
 
 .btn-xl {
@@ -10895,18 +10970,25 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(47, 23, 15, 0.9);
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: rgba(213, 206, 189, 0.8);
+  font-family: "Cinzel";
+  font-size: 20px;
+  position:relative;
+  border-top: 4px solid #a3852d; /* doppio spessore per il bordo destro */
+  border-bottom: 4px solid #a3852d; /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px #a3852d; /* bordo dorato interno */
 }
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #a3852d;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(163, 133, 45, 0.9);
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #a3852d;
 }
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -10916,7 +10998,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #a3852d;
   }
 }
 
@@ -10959,12 +11041,13 @@ p {
 }
 
 .footer {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: rgba(101, 38, 32, 0.8);
 }
 
 .intro {
   position: relative;
 }
+
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
@@ -10988,12 +11071,16 @@ p {
     width: 45%;
   }
 }
+.product-item-img{
+  margin-top: 50px;
+  margin-bottom:  30px;
+}
 
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
   }
   .product-item .product-item-img {
     position: relative;
@@ -11003,9 +11090,14 @@ p {
   .product-item .product-item-description {
     position: relative;
     z-index: 0;
-    margin-top: 3rem;
+    margin-top: -3rem;
     max-width: 50vw;
   }
+}
+
+.product-item-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .list-hours {
@@ -11034,18 +11126,37 @@ p {
 
 
 .sticky-accordion {
-  position: sticky;
-  top: 200px;  
-  max-height: calc(100vh - 30px);
-  overflow-y: auto;
-  z-index: 1;
-  min-width: 100px; 
-  max-width: 100%;  
-  width: auto;   
+    position: sticky;
+    top: 200px;  /* Adjust as needed */
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    z-index: 1;
+    min-width: 100px; /* Minimum width */
+    max-width: 100%;  /* Maximum width relative to the parent element */
+    width: auto;     /* Auto width */
+
 }
 
+@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+  .content-wrapper {
+      flex-direction: column;
+  }
+
+  .accordion {
+    position: sticky;
+    top: 60px;
+    z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+    margin-bottom: 20px;
+    margin-right:10px;
+  }
+
+  .main-content {
+      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+  }
+}
+
+
 .sticky-container {
-    text-align: center; 
     display: flex;
     position: sticky;
     top: 15px;
@@ -11056,105 +11167,13 @@ p {
 
 .content-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
 }
 
 .main-content {
   flex: 3;  /* Takes 3/4 of the container width */
 }
-
-@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
-  .content-wrapper {
-      flex-direction: column;
-  }
-
-  .accordion {
-      position: sticky;
-      top: 60px;
-      z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
-      margin-bottom: 20px;
-      margin-right:10px;
-  }
-
-  .main-content {
-      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
-  }
-}
-
-
-/*
-.toggle-btn {
-    position: absolute;  
-    top: 0;  
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}  */
-
-
-/* Change from sticky to absolute positioning */
-/* Align to the top */
-/* Align to the left at 50% of the container width */
-/* Center the element */
-/*
-.toggle-btn {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
- /* Use absolute positioning */
- /* Align it to the right */
- /*
-.toggle-btn {
-    position: sticky; 
-    top: 150px;
-    right: auto;  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-
-.toggle-btn-2 {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
-.button-container {
-  position: sticky;
-  top: 150px;
-  z-index: 10;
-}
-
-.toggle-btn, .toggle-btn-2 {
-  width: 40px;
-  height: 40px;
-  /*transform: translate(-50%, -50%) */
-  border-radius: 50%;
-  margin-bottom: 10px;  /* Spacing between the buttons */
-}
-
 
 #mainNav {
   position: sticky;
@@ -11162,45 +11181,84 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-
-
-.highlight-place {
-    background-color: #6caedf;
-}
-.highlight-person {
-    background-color: #a1d490;
-}
-
-.btns-grid-container {
-  display: grid;
-  position: fixed;
-  right: 10px;  /* Adjust as per requirement */
-  bottom: 10px;  /* Adjust as per requirement */
-  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 5px;  /* Spacing between buttons */
-  z-index: 9999;  /* This will ensure it's on top of most other elements */
+.aquilineta {
+  font-family: 'AquilineTwo', serif;
+  text-align: justify;
+  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+  margin-right: 5rem; /* 80px / 16 = 5rem */
+  margin-left: 2.125rem; /* 34px / 16 = 2.125rem */
 }
 
-.sub-btn, #stylesBtn, #toTopBtn {
-  width: 50px;  /* Adjust width as required */
-  height: 50px;  /* Adjust height as required */
-  border: none;
-  border-radius: 50%;  /* To make them round */
-  background-color: #333;  /* Adjust color as required */
-  color: #fff;
-  cursor: pointer;
+.product-item-img figcaption {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #385393; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+  margin-right: 3rem !important;
 }
 
-.sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #555;  /* Adjust hover color as required */
+.renaissance-style {
+  background-color: var( --bs-renred);
+  border: 4px solid var(--bs-gold); /* bordo dorato esterno */
+  box-shadow: 
+      0 0 0 1px #674e29, /* linea scura di separazione */
+      0 0 0 9px var(--bs-gold); /* bordo dorato interno */
+      padding:0;
 }
 
-.sub-btn[data-theme] {
+
+
+.decorative-div {
+  background-image: url('assets/img/barrarinascimento.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;  /* puoi regolare queste proprietà per posizionare l'immagine dove preferisci */
+  left: -6rem;  /* sposta il div a sinistra del contenuto */
+  height: 5.625rem; 
+  width: 5.625rem; 
+}
+.decorative-img {
   display: none;
 }
 
+.mb-0.aquilineta {
+  margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
+}
 
+.highlight-person {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 
+}
 
+.highlight-place {
+  font-family: 'Cinzel', serif;
+  color: var(--bs-gold);
+  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  text-align: center;
+  
+  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  position: relative;
+  
+  /* Creiamo il doppio bordo utilizzando border e box-shadow */
+  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
+  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 
-
+}

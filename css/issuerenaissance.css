@@ -10933,6 +10933,7 @@ p {
 
 .section-heading {
   text-transform: uppercase;
+ 
 }
 .section-heading .section-heading-upper {
   display: block;
@@ -10946,17 +10947,17 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  font-family: "TrajanPro";
+  font-family: "Aquiline";
   color: var(--bs-gold);
 }
 
 .bg-faded {
   background-color: #dfd9c8;
-  background-position: center center;
-  background-size: cover; 
-  position: relative;  
-
+    background-position: center center;
+    background-size: cover;
+    position: relative;
 }
+
 
 .btn-xl {
   font-weight: 700;
@@ -10966,6 +10967,15 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.decorative-img {
+  float: left; /* Aggiungi questa proprietà */
+  width: 5.625rem; /* 90px / 16 = 5.625rem */
+  height: auto;
+  margin-right: 1rem; /* Distanza tra decorative-img e miaLettera */
+  display: block;
+}
+
 
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
@@ -11093,9 +11103,13 @@ p {
   }
 }
 
+.product-item-description{
+  margin-top: 100px !important;
+}
 .product-item-title {
   margin-left: auto !important;
   margin-right: auto !important;
+  
 }
 
 .list-hours {
@@ -11167,7 +11181,6 @@ p {
   display: flex;
   flex-direction: row; 
   justify-content: space-between;
-
 }
 
 .main-content {
@@ -11213,21 +11226,15 @@ p {
 }
 
 #miaLettera {
-  width:20rem; /* 150px / 16 = 9.375rem */
+  float: left; 
+  width: 20rem; /* 150px / 16 = 9.375rem */
   height: auto; 
-  float: left;
-  margin-right: 20px; /* aggiusta questo valore come necessario */
+  margin-right: 1rem; /* Distanza tra miaLettera e il testo */
   margin-bottom: 5px;
+  display: block;
 }
 
-.decorative-img {
-  position: absolute;
-  left: 0;
-  top: -6rem; /* -50px / 16 = -3.125rem */
-  left: -3rem; /* -50px / 16 = -3.125rem */
-  height: auto; 
-  width: 5.625rem; /* 90px / 16 = 5.625rem */
-}
+
 
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
