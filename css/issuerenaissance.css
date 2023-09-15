@@ -10933,6 +10933,7 @@ p {
 
 .section-heading {
   text-transform: uppercase;
+ 
 }
 .section-heading .section-heading-upper {
   display: block;
@@ -10946,19 +10947,17 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  font-family: "TrajanPro";
+  font-family: "Aquiline";
   color: var(--bs-gold);
 }
 
 .bg-faded {
-  width: auto;
-  height: auto;
-  
-  background-image: url('assets\img\sfondoprova.png')!important; /* Sostituisci con il percorso corretto dell'immagine */
-  background-position: left;
-  background-size: cover; 
-  position: relative;  
+  background-color: #dfd9c8;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
 }
+
 
 .btn-xl {
   font-weight: 700;
@@ -10968,6 +10967,15 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.decorative-img {
+  float: left; /* Aggiungi questa proprietà */
+  width: 5.625rem; /* 90px / 16 = 5.625rem */
+  height: auto;
+  margin-right: 1rem; /* Distanza tra decorative-img e miaLettera */
+  display: block;
+}
+
 
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
@@ -11095,9 +11103,13 @@ p {
   }
 }
 
+.product-item-description{
+  margin-top: 100px !important;
+}
 .product-item-title {
   margin-left: auto !important;
   margin-right: auto !important;
+  
 }
 
 .list-hours {
@@ -11214,27 +11226,15 @@ p {
 }
 
 #miaLettera {
-  background-image: url('assets/img/LetteraAVerrocchio.svg');
-  background-repeat: no-repeat;
-  background-size: contain; /* Ajusta l'immagine per adattarla al div */
-  width: 20rem;
-  height: 20rem; /* Devi specificare un'altezza se vuoi che il div sia visibile. Potresti dover impostare un valore fisso, ad es. 10rem, se "auto" non funziona come previsto. */
-  float: left;
-  margin-right: 20px; 
+  float: left; 
+  width: 20rem; /* 150px / 16 = 9.375rem */
+  height: auto; 
+  margin-right: 1rem; /* Distanza tra miaLettera e il testo */
   margin-bottom: 5px;
-  background-color: red; 
+  display: block;
 }
 
-.decorative-div {
-  background-image: url('assets/img/barrarinascimento.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 0;  /* puoi regolare queste proprietà per posizionare l'immagine dove preferisci */
-  left: -6rem;  /* sposta il div a sinistra del contenuto */
-  height: 5.625rem; 
-  width: 5.625rem; 
-}
+
 
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
