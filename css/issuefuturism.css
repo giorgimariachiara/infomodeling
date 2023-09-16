@@ -10919,63 +10919,65 @@ p {
     background-color: #f7e6ba;
 }
 
-.bg-faded .p1 {
-    font-family: 'Sitka';
-    text-align: left;         /* Sposta il testo a sinistra */
-    border-right: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-right: 100px; 
-    padding-right:20px;     
-    padding-bottom: 15px; 
+.bg-faded p:nth-of-type(1) {
+  font-family: 'Sitka';
+  text-align: left;         
+  border-right: 10px solid #000; 
+  border-bottom: 3px solid #000; 
+  margin-right: 100px; 
+  padding-right:20px;     
+  padding-bottom: 15px; 
 }
 
-.bg-faded .p2 {
-    font-family: 'Sitka';
-    text-align: center;         /* Sposta il testo a sinistra */
-    border-top: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */    
-    margin-top:60px;
-    margin-bottom:70px;
-    transform: rotate(-5deg); 
-}
-.bg-faded .p3 {
-    font-family: 'Sitka';
-    text-align: right;         /* Sposta il testo a sinistra */
-    border-top: 4px solid #000; /* Aggiunge un bordo a destra */
-    border-left: 12px solid #000; /* Aggiunge un bordo in basso */  
-    margin-top:60px;
-    margin-bottom:70px;
-    transform: rotate(5deg); 
-}
-.bg-faded .p4 {
-    font-family: 'Sitka';
-    text-align: left;         /* Sposta il testo a sinistra */
-    border-right: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-right: 200px; 
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
-    padding-bottom: 15px;
+.bg-faded p:nth-of-type(2) {
+  font-family: 'Sitka';
+  text-align: center;         
+  border-top: 10px solid #000; 
+  border-bottom: 3px solid #000;     
+  margin-top:60px;
+  margin-bottom:70px;
+  transform: rotate(-5deg); 
 }
 
-.bg-faded .p5 {
-    font-family: 'Sitka';
-    text-align: center;         /* Sposta il testo a sinistra */
-    border-top: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-bottom: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-top: 20px;
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
-    padding-bottom: 15px;
+.bg-faded p:nth-of-type(3) {
+  font-family: 'Sitka';
+  text-align: right;         
+  border-top: 4px solid #000; 
+  border-left: 12px solid #000;   
+  margin-top:60px;
+  margin-bottom:70px;
+  transform: rotate(5deg); 
 }
 
-.bg-faded .p6 {
-    font-family: 'Sitka';
-    text-align: left;         /* Sposta il testo a sinistra */
-    border-left: 10px solid #000; /* Aggiunge un bordo a destra */
-    border-right: 3px solid #000; /* Aggiunge un bordo in basso */
-    margin-left: 230px;
-    padding-right:20px;     /* Aggiunge un po' di spazio tra il testo e il bordo a destra */
-    padding-left: 120px;
-    margin-top:20px;
+.bg-faded p:nth-of-type(4) {
+  font-family: 'Sitka';
+  text-align: left;         
+  border-right: 10px solid #000; 
+  border-bottom: 3px solid #000; 
+  margin-right: 200px; 
+  padding-right:20px;     
+  padding-bottom: 15px;
+}
+
+.bg-faded p:nth-of-type(5) {
+  font-family: 'Sitka';
+  text-align: center;         
+  border-top: 10px solid #000; 
+  border-bottom: 3px solid #000; 
+  margin-top: 20px;
+  padding-right:20px;     
+  padding-bottom: 15px;
+}
+
+.bg-faded p:nth-of-type(6) {
+  font-family: 'Sitka';
+  text-align: left;         
+  border-left: 10px solid #000; 
+  border-right: 3px solid #000; 
+  margin-left: 230px;
+  padding-right:20px;     
+  padding-left: 120px;
+  margin-top:20px;
 }
 .btn-xl {
   font-weight: 700;
@@ -11081,7 +11083,11 @@ p {
   }
 }
 
-.product-item-img{
+.product-item-img{position: relative;
+  display: block; /* Usa inline-flex invece di inline-block per ottenere un comportamento simile a flex */
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  align-items: center; }
+.product-item-img2{
   border-top: 2px solid black;
   border-left: 8px solid black;
 } 
@@ -11134,13 +11140,6 @@ p {
     top: 15px;
     width: 100%;
     z-index: 1;
-}
-
-
-.content-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .main-content {
@@ -11406,37 +11405,41 @@ p {
 }
 
 
-.bigger-text {
-  font-size: 1.5em; /* Puoi modificare questo valore a tuo piacimento */
+
+.section-heading-lower b span {
+  font-size: 1.5rem; /* Adatta questa dimensione secondo le tue necessità */
 }
 
-.bigger-text4 {
-  font-size:2.2rem; /* Puoi modificare questo valore a tuo piacimento */
+.section-heading-lower b > span {
+  font-size: 2.2rem; /* Adatta questa dimensione secondo le tue necessità */
 }
-.bigger-text1 {
-  font-size: 1.4rem; /* Puoi modificare questo valore a tuo piacimento */
+.section-heading-upper span {
+  color: white;
 }
-.bigger-text2 {
-  font-size: 1.5rem !important; /* Puoi modificare questo valore a tuo piacimento */
+
+
+.nav-link span {
+  color: #663d86;
+  transform: skewX(-40deg);
+}
+
+.navbar-nav > li:nth-child(1) > .nav-link {
+  font-size: 1.5rem !important;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
 }
 
-.bigger-text3{
+.navbar-nav > li:nth-child(2) > .nav-link {
+  font-size: 1.4rem;
+}
+
+.navbar-nav > li:nth-child(3) > .nav-link {
   font-size: 2rem !important;
-  margin-left:20px;
+  margin-left: 20px;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
 }
 
-.white{
-  color:white;
-}
-
-.purple{
-  color:#663d86;
-  transform: skewX(-40deg); 
-}
 .parent-of-image-container {
   display: flex;
   justify-content: center; /* Centra il contenuto orizzontalmente */
@@ -11448,19 +11451,20 @@ p {
   display: inline-block; /* Ridimensiona il contenitore intorno ai suoi contenuti */
 }
 
-.product-item-img2 {
+.product-item-img {
   display: block;
   margin: 0 auto; /* Centra l'immagine orizzontalmente */
   transition: transform 0.3s;
   z-index: 2;
+  
 }
 
-.product-item-img2:hover {
+.product-item-img:hover {
   transform: scale(1.4);
   z-index: 3s;
 }
 
-.image-container::before {
+.product-item-img::before {
   content: "";
   position: absolute;
   left: -90px; /* Potresti dover regolare questi valori */
@@ -11472,7 +11476,7 @@ p {
   z-index: 2;
 }
 
-.image-container::after {
+.product-item-img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -11484,41 +11488,62 @@ p {
   transform: translateY(-40%) rotate(-10deg);
 }
 @media (max-width: 768px) {
-  .image-container::before {
+  .product-item-img::before {
       left: -60px; /* Riduci questa distanza per avvicinarlo all'immagine */
   }
 
-  .image-container::after {
+  .product-item-img::after {
       right: 20px; /* Riduci questa distanza per avvicinarlo all'immagine */
   }
 }
 
 @media (max-width: 768px) {
-  .product-item-img2:hover {
+  .product-item-img:hover {
     transform: scale(1.05); /* Zoom minore per schermi più piccoli */
   }
 }
 
-.responsive-text {
+.section-heading-lower {
   display: flex;
   flex-direction: row;
 }
-
-/* Quando lo schermo si rimpicciolisce (ad esempio sotto i 768px), sposta il testo su due righe */
 @media (max-width: 768px) {
-  .responsive-text {
+  .section-heading-lower {
       flex-direction: column;
   }
 
-  .break-on-mobile {
+  .section-heading-lower > span {
       margin-top: 10px;  /* aggiungi un po' di spazio tra le righe */
   }
 }
 
 
-
-.figcaption{
+figcaption{
   font-family: 'Sitka';
   transform: rotate(180deg);
     display: inline-block;
+}
+
+.highlight-place {
+  background-color: #6caedf;
+}
+.highlight-person {
+  background-color: #a1d490;
+}
+
+.decorative-img {
+  display: none;
+}
+
+#miaLettera {
+  display: none;
+}
+
+.immagine {
+  margin-top: 100px;
+  background-image: url('assets\img\verrocchiorenaissance4.png');
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  /* Dimensioni del div. Modificale a seconda delle tue necessità. */
+  width: 300px;  /* Ad esempio */
+  height: 300px; /* Ad esempio */
 }

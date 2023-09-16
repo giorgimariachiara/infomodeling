@@ -4404,10 +4404,7 @@ textarea.form-control-lg {
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
-  box-shadow: 
-  0 0 0 1px #674e29, /* linea scura di separazione */
-  0 0 0 9px var(--bs-gold); /* bordo dorato interno */
-  padding:0;
+  
   flex:1;
 }
 
@@ -10919,11 +10916,13 @@ p {
   display: block;
   font-size: 2rem;
   font-weight: 800;
+  font-family: "AquilineTwo";
 }
 .site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+  font-family:"TrajanPro";
 }
 
 .page-section {
@@ -10939,7 +10938,7 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  font-family: "TrajanPro";
+  font-family: "Aquiline";
   color: var(--bs-gold);
 }
 
@@ -10947,7 +10946,6 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  font-family: "Aquiline";
   color: var(--bs-gold);
 }
 
@@ -11082,6 +11080,7 @@ p {
 .product-item-img{
   margin-top: 50px;
   margin-bottom:  30px;
+  display: none;
 }
 
 @media (min-width: 992px) {
@@ -11138,14 +11137,14 @@ p {
 
 
 .sticky-accordion {
-    position: sticky;
-    top: 200px;  /* Adjust as needed */
-    max-height: calc(100vh - 30px);
-    overflow-y: auto;
-    z-index: 1;
-    min-width: 100px; /* Minimum width */
-    max-width: 100%;  /* Maximum width relative to the parent element */
-    width: auto;     /* Auto width */
+  position: sticky;
+  top: 200px;  
+  max-height: calc(100vh - 30px);
+  overflow-y: auto;
+  z-index: 1;
+  min-width: 100px; 
+  max-width: 100%;  
+  width: auto;       /* Auto width */
 
 }
 
@@ -11169,11 +11168,12 @@ p {
 
 
 .sticky-container {
-    display: flex;
-    position: sticky;
-    top: 15px;
-    width: 100%;
-    z-index: 1;
+  text-align: center; 
+  display: flex;
+  position: sticky;
+  top: 15px;
+  width: 100%;
+  z-index: 1;
 }
 
 
@@ -11234,8 +11234,6 @@ p {
   display: block;
 }
 
-
-
 .mb-0.aquilineta {
   margin-left: -1px; /* Sposta il testo di 30 pixel verso sinistra */
 }
@@ -11260,12 +11258,18 @@ p {
   color: var(--bs-gold);
   background-color: #92302b; /* Questo è il tuo sfondo blu */
   text-align: center;
-  
   padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
   position: relative;
-  
   /* Creiamo il doppio bordo utilizzando border e box-shadow */
   border: 3px solid var(--bs-gold); /* Bordo interno dorato */
   box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
 
 }
+
+.verrocchiopic{
+  width:40rem; 
+  height:50rem;
+  margin-top: 40px;
+  margin-left: 70px;
+  background-image: url('../assets/img/pic.svg');
+  background-repeat:no-repeat;}
