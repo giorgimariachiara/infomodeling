@@ -121,20 +121,9 @@ document.getElementById('stylesBtn').addEventListener('click', function() {
     });
 });
 
-
-
-const siteHeadingLower = document.querySelector(".site-heading-lower");
-const text = siteHeadingLower.textContent.trim();
-let newText = "";
-
-for (let letter of text) {
-if (letter === " ") {
-newText += letter; // non avvolgere gli spazi
-} else {
-newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
-}
-}
-
-siteHeadingLower.innerHTML = newText;
-
-
+document.getElementById('toTopBtn').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

@@ -11178,6 +11178,7 @@ p {
   bottom: 10px;  /* Adjust as per requirement */
   grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
   gap: 5px;  /* Spacing between buttons */
+  z-index: 9999;  /* This will ensure it's on top of most other elements */
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
