@@ -8230,7 +8230,7 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: var(--bs-border-radius) !important;
+  border-radius: 0 !important;
 }
 
 .rounded-0 {
@@ -10918,67 +10918,82 @@ p {
 .bg-faded{
     background-color: #f7e6ba;
 }
-
-.bg-faded p:nth-of-type(1) {
+.bg-faded p {
   font-family: 'Sitka';
-  text-align: left;         
-  border-right: 10px solid #000; 
-  border-bottom: 3px solid #000; 
-  margin-right: 100px; 
-  padding-right:20px;     
-  padding-bottom: 15px; 
 }
 
-.bg-faded p:nth-of-type(2) {
-  font-family: 'Sitka';
+.bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(10) {
+  text-align: left;         
+  border-right: 1vw solid #000; 
+  border-bottom: 0.3vw solid #000; 
+  margin-top: 1vw;
+  margin-right: 5vw; 
+  padding-right: 2vw;     
+  padding-bottom: 1.5vw; 
+}
+
+.bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5) {
   text-align: center;         
-  border-top: 10px solid #000; 
-  border-bottom: 3px solid #000;     
-  margin-top:60px;
-  margin-bottom:70px;
+  border-top: 1vw solid #000; 
+  border-bottom: 0.3vw solid #000;     
+  margin-top: 3vw;
+  margin-bottom: 3.5vw;
   transform: rotate(-5deg); 
+  
 }
 
 .bg-faded p:nth-of-type(3) {
-  font-family: 'Sitka';
   text-align: right;         
-  border-top: 4px solid #000; 
-  border-left: 12px solid #000;   
-  margin-top:60px;
-  margin-bottom:70px;
+  border-top: 0.4vw solid #000; 
+  border-left: 1.2vw solid #000;   
+  margin-top: 3vw;
+  margin-bottom: 3.5vw;
   transform: rotate(5deg); 
 }
 
-.bg-faded p:nth-of-type(4) {
-  font-family: 'Sitka';
+.bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7) {
   text-align: left;         
-  border-right: 10px solid #000; 
-  border-bottom: 3px solid #000; 
-  margin-right: 200px; 
-  padding-right:20px;     
-  padding-bottom: 15px;
+  border-left: 1vw solid #000; 
+  border-right: 0.3vw solid #000; 
+  margin-left: 11.5vw;
+  padding-right: 2vw;     
+  padding-left: 6vw;
+  margin-top: 1.75vw;
 }
 
-.bg-faded p:nth-of-type(5) {
-  font-family: 'Sitka';
-  text-align: center;         
-  border-top: 10px solid #000; 
-  border-bottom: 3px solid #000; 
+@media (max-width: 768px) {
+  .bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(10) {
+      margin-right: 2vw; 
+      padding-right: 1vw;
+      padding-bottom: 1vw; 
+  }
+
+  .bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5) {
+      margin-top: 4vw;
+      margin-bottom: 2vw;
+  }
+
+  .bg-faded p:nth-of-type(3) {
+      margin-top: 7vw;
+      margin-bottom: 2vw;
+  }
+
+  .bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7) {
+      margin-left: 6vw;
+      margin-top:5vw;
+      padding-right: 1vw;
+      padding-left: 3vw;
+  }
+}
+
+
+figcaption:nth-of-type(2) {
   margin-top: 20px;
-  padding-right:20px;     
-  padding-bottom: 15px;
+  margin-left: 160px !important;
 }
 
-.bg-faded p:nth-of-type(6) {
-  font-family: 'Sitka';
-  text-align: left;         
-  border-left: 10px solid #000; 
-  border-right: 3px solid #000; 
-  margin-left: 230px;
-  padding-right:20px;     
-  padding-left: 120px;
-  margin-top:20px;
-}
+
+
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -11083,6 +11098,9 @@ p {
   }
 }
 
+.product-item-description {
+  width: 100%;
+}
 .product-item-img{position: relative;
   display: block; /* Usa inline-flex invece di inline-block per ottenere un comportamento simile a flex */
   justify-content: center; /* Centra il contenuto orizzontalmente */
@@ -11311,6 +11329,9 @@ p {
 }
 
 
+
+
+
 @media (max-width: 768px) {
   .text-primary {
       font-size: 1.2em;
@@ -11404,8 +11425,6 @@ p {
   z-index: -1;
 }
 
-
-
 .section-heading-lower b span {
   font-size: 1.5rem; /* Adatta questa dimensione secondo le tue necessità */
 }
@@ -11416,7 +11435,6 @@ p {
 .section-heading-upper span {
   color: white;
 }
-
 
 .nav-link span {
   color: #663d86;
@@ -11517,7 +11535,6 @@ p {
   }
 }
 
-
 figcaption{
   font-family: 'Sitka';
   transform: rotate(180deg);
@@ -11547,3 +11564,98 @@ figcaption{
   width: 300px;  /* Ad esempio */
   height: 300px; /* Ad esempio */
 }
+
+.baptism {
+  margin-left:50px;
+  background-image: url('../assets/img/baptism.svg');
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  /* Dimensioni del div. Modificale a seconda delle tue necessità. */
+  width: 520px;  /* Ad esempio */
+  height: 600px; /* Ad esempio */
+  background-size: contain;
+  border-top: 2px solid black;
+  border-left: 8px solid black;
+
+}
+
+.baptism:hover {
+  transform: scale(1.2);
+  z-index: 3s;
+}
+
+.adortion {
+  margin-left:50px;
+  background-image: url('../assets/img/adortion.svg');
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  /* Dimensioni del div. Modificale a seconda delle tue necessità. */
+  width: 320px;  /* Ad esempio */
+  background-size: contain;
+  height: 320px; /* Ad esempio */
+  border-top: 2px solid black;
+  border-left: 8px solid black;
+}
+
+.adortion:hover {
+  transform: scale(1.2);
+  z-index: 3s;
+}
+
+
+.last-supper {
+  margin-left:100px;
+  margin-top:30px;
+  margin-bottom:30px;
+  background-image: url('../assets/img/last-supper.svg');
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  background-size: contain;
+  /* Dimensioni del div. Modificale a seconda delle tue necessità. */
+  width: 518px;  /* Ad esempio */
+  height: 240px; /* Ad esempio */
+  border-bottom: 2px solid black;
+  border-left: 8px solid black;
+  border-right: 10px solid black;
+}
+
+.last-supper:hover {
+  transform: scale(1.2);
+  z-index: 3s;
+}
+
+
+.madonna{
+  margin-left:140px;
+  background-image: url('../assets/img/madonna.svg');
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  /* Dimensioni del div. Modificale a seconda delle tue necessità. */
+  background-size: contain;
+  width: 300px;  /* Ad esempio */
+  height: 410px; /* Ad esempio */
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+  border-right: 16px solid black;
+}
+
+.madonna:hover {
+  transform: scale(1.2);
+  z-index: 3s;
+}
+
+.david{
+  margin-left:140px;
+  margin-top: 20px;
+  background-image: url('../assets/img/david.svg');
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  /* Dimensioni del div. Modificale a seconda delle tue necessità. */
+  background-size: contain;
+  width: 280px;  /* Ad esempio */
+  height: 400px; /* Ad esempio */
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+  border-right: 16px solid black;
+}
+
+.david:hover {
+  transform: scale(1.2);
+  z-index: 3s;
+}
+
