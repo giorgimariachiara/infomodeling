@@ -11273,3 +11273,33 @@ p {
   margin-left: 70px;
   background-image: url('../assets/img/pic.svg');
   background-repeat:no-repeat;}
+
+
+
+.btns-grid-container {
+  display: grid;
+  position: fixed;
+  right: 10px;  /* Adjust as per requirement */
+  bottom: 10px;  /* Adjust as per requirement */
+  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
+  gap: 5px;  /* Spacing between buttons */
+  z-index: 9999;  /* This will ensure it's on top of most other elements */
+}
+
+.sub-btn, #stylesBtn, #toTopBtn {
+  width: 50px;  /* Adjust width as required */
+  height: 50px;  /* Adjust height as required */
+  border: none;
+  border-radius: 50%;  /* To make them round */
+  background-color: #333;  /* Adjust color as required */
+  color: #fff;
+  cursor: pointer;
+}
+
+.sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
+  background-color: #555;  /* Adjust hover color as required */
+}
+
+.sub-btn[data-theme] {
+  display: none;
+}
