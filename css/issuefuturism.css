@@ -4340,14 +4340,24 @@ textarea.form-control-lg {
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cf964d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-focus-border-color: #f3d3ab;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(230, 167, 86, 0.25);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #5a7db3;;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
-  --bs-accordion-active-color: #cf964d;
-  --bs-accordion-active-bg: #fdf6ee;
+  --bs-accordion-active-color: #5a7db3;
+  --bs-accordion-active-bg: orange;
   flex:1;
 }
 
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;  /* Spaziatura tra la casella di controllo e l'etichetta */
+  transform: scale(1.5);  /* Rende la casella di controllo un po' più grande */
+}
+
+label {
+  font-size: 1.3rem;  /* Dimensione del testo per le etichette */
+  font-family: 'SquareFont';  /* Tipo di carattere futurista */
+}
 .accordion-button {
   position: relative;
   display: flex;
@@ -4355,13 +4365,14 @@ textarea.form-control-lg {
   width: 100%;
   padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
   font-size: 1rem;
-  color: var(--bs-accordion-btn-color);
+  color: #fff; 
   text-align: left;
-  background-color: var(--bs-accordion-btn-bg);
-  border: 0;
-  border-radius: 0;
+  background-color:#000;
+  transition: all 0.3s ease;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
+  font-family: "SquareFont"; 
+  border: 2px solid #5a7db3; 
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
@@ -4369,8 +4380,8 @@ textarea.form-control-lg {
   }
 }
 .accordion-button:not(.collapsed) {
-  color: var(--bs-accordion-active-color);
-  background-color: var(--bs-accordion-active-bg);
+  color: black;
+  background-color: white;
   box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 }
 .accordion-button:not(.collapsed)::after {
@@ -4404,7 +4415,7 @@ textarea.form-control-lg {
 }
 
 .accordion-header {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem; 
 }
 
 .accordion-item {
@@ -4413,29 +4424,32 @@ textarea.form-control-lg {
   border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
 }
 .accordion-item:first-of-type {
-  border-top-left-radius: var(--bs-accordion-border-radius);
-  border-top-right-radius: var(--bs-accordion-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .accordion-item:first-of-type .accordion-button {
-  border-top-left-radius: var(--bs-accordion-inner-border-radius);
-  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius:0;
 }
 .accordion-item:not(:first-of-type) {
   border-top: 0;
 }
 .accordion-item:last-of-type {
-  border-bottom-right-radius: var(--bs-accordion-border-radius);
-  border-bottom-left-radius: var(--bs-accordion-border-radius);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .accordion-item:last-of-type .accordion-button.collapsed {
-  border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
-  border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .accordion-item:last-of-type .accordion-collapse {
-  border-bottom-right-radius: var(--bs-accordion-border-radius);
-  border-bottom-left-radius: var(--bs-accordion-border-radius);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
-
+.accordion-collapse {
+  background-color: #FFF;
+  border-top: 2px solid #00FFFF; /* Questo aggiunge un bordo celeste sopra il contenuto dell'accordion */
+}
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
 }
@@ -10850,15 +10864,7 @@ p {
   text-transform: uppercase;
 
 }
-.section-heading .section-heading-upper {
-    display: inline-block; 
-    transform: rotate(-10deg);  
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 60px;
-    font-family: "Cinzel";
-    color:#f07e02;
-}
+
 
 
 @keyframes swing {
@@ -10875,6 +10881,7 @@ p {
 
 .section-heading .section-heading-upper:hover {
     animation: swing 1s ease infinite;
+
 }
 
 .section-heading .section-heading-lower {
@@ -10886,32 +10893,48 @@ p {
   color:white;
 }
 
+.section-heading .section-heading-upper span:nth-child(2) {
+  display: inline-block;  /* La trasformazione si applica meglio agli elementi inline-block o block */
+  transform: rotate(10deg);
+  font-size: 3rem;
+  margin-left:10px;  /* Ruota di -10 gradi, ma puoi regolare come preferisci */
+}
+
 .section-heading-lower span {
   font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
-  font-size: 2rem;
-  color:#f07e02;
+  font-size: 2.2rem;
+  color:#ffda39;
   font-weight: 800;
 }
 
+.section-heading .section-heading-upper,
+.section-heading .section-heading-lower, .section-heading .section-heading-lower span {
+  mix-blend-mode: difference;
+  color: white; /* Questo diventerà il colore opposto dello sfondo quando si sovrappone */
+}
 .bg-fadedtitle{
     position:relative;
 }
   .bg-fadedtitle::before {
     content: "";
+    border-top: 20px solid #f7e6ba;
+    border-right: 10px solid black;
+    border-bottom:20px solid white;
     position: absolute;
     top: 0;
     left: 0;
     width: 90%; /* Questo determina dove inizia la seconda parte del colore */
     height: 100%;
-    background: #5a7db3; /* O qualsiasi altro colore tu voglia per la parte sinistra */
-    clip-path: polygon(0 0, 100% 0, 0 100%); 
+    background: #663d86; /* O qualsiasi altro colore tu voglia per la parte sinistra */
+    clip-path:polygon(100% 0, 100% 71%, 53% 39%, 60% 66%, 30% 46%, 26% 69%, 11% 55%, 0% 70%, 0% 35%, 0 0);
     z-index: -1; /* Assicurati che sia dietro al testo */
 }
 
 @media (max-width: 992px) {
     .bg-fadedtitle::before {
-        width: 40%;
+        width: 60%;
+        border:none;
         /* puoi cambiare qualsiasi altro stile qui per adattarlo alle dimensioni dello schermo */
     }
 }
@@ -10922,7 +10945,7 @@ p {
   font-family: 'Sitka';
 }
 
-.bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(10) {
+.bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(11), .bg-faded p:nth-of-type(18){
   text-align: left;         
   border-right: 1vw solid #000; 
   border-bottom: 0.3vw solid #000; 
@@ -10932,7 +10955,7 @@ p {
   padding-bottom: 1.5vw; 
 }
 
-.bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5) {
+.bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(12),.bg-faded p:nth-of-type(15)  {
   text-align: center;         
   border-top: 1vw solid #000; 
   border-bottom: 0.3vw solid #000;     
@@ -10942,7 +10965,7 @@ p {
   
 }
 
-.bg-faded p:nth-of-type(3) {
+.bg-faded p:nth-of-type(3), .bg-faded p:nth-of-type(10) , .bg-faded p:nth-of-type(13), .bg-faded p:nth-of-type(17), .bg-faded p:nth-of-type(19) {
   text-align: right;         
   border-top: 0.4vw solid #000; 
   border-left: 1.2vw solid #000;   
@@ -10951,7 +10974,7 @@ p {
   transform: rotate(5deg); 
 }
 
-.bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7) {
+.bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7), .bg-faded p:nth-of-type(14), .bg-faded p:nth-of-type(16), .bg-faded p:nth-of-type(20) {
   text-align: left;         
   border-left: 1vw solid #000; 
   border-right: 0.3vw solid #000; 
@@ -10962,23 +10985,23 @@ p {
 }
 
 @media (max-width: 768px) {
-  .bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(10) {
+  .bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(11), .bg-faded p:nth-of-type(18) {
       margin-right: 2vw; 
       padding-right: 1vw;
       padding-bottom: 1vw; 
   }
 
-  .bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5) {
+  .bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(12) , .bg-faded p:nth-of-type(15) {
       margin-top: 4vw;
       margin-bottom: 2vw;
   }
 
-  .bg-faded p:nth-of-type(3) {
+  .bg-faded p:nth-of-type(3),  .bg-faded p:nth-of-type(10), .bg-faded p:nth-of-type(13), .bg-faded p:nth-of-type(17), .bg-faded p:nth-of-type(19) {
       margin-top: 7vw;
       margin-bottom: 2vw;
   }
 
-  .bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7) {
+  .bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7), .bg-faded p:nth-of-type(14) , .bg-faded p:nth-of-type(16), .bg-faded p:nth-of-type(20){
       margin-left: 6vw;
       margin-top:5vw;
       padding-right: 1vw;
@@ -11007,6 +11030,25 @@ figcaption:nth-of-type(2) {
   background-color: rgba(247,230,186, 0.8);
   font-family: "SquareFont";
 }
+
+@media (min-width: 992px) {
+  #mainNav {
+      clip-path: polygon(
+          0% 10%, 
+          20% 0%, 
+          40% 10%, 
+          60% 0%, 
+          80% 10%, 
+          100% 0%, 
+          100% 100%, 
+          80% 90%, 
+          60% 100%, 
+          40% 90%, 
+          20% 100%, 
+          0% 90%
+      );
+  }
+}
 #mainNav .navbar-brand {
   color: #f27a0a;
 }
@@ -11021,6 +11063,7 @@ figcaption:nth-of-type(2) {
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
+   
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #f27a0a;
@@ -11029,6 +11072,7 @@ figcaption:nth-of-type(2) {
     color: #f27a0a;
   }
 }
+
 
 
 .btn {
@@ -11101,19 +11145,7 @@ figcaption:nth-of-type(2) {
 .product-item-description {
   width: 100%;
 }
-.product-item-img{position: relative;
-  display: block; /* Usa inline-flex invece di inline-block per ottenere un comportamento simile a flex */
-  justify-content: center; /* Centra il contenuto orizzontalmente */
-  align-items: center; }
-.product-item-img2{
-  border-top: 2px solid black;
-  border-left: 8px solid black;
-} 
 
-.product-item-img3{
-  border-bottom: 4px solid black;
-  border-right: 8px solid black;
-} 
 
 .list-hours {
   font-size: 0.9rem;
@@ -11328,10 +11360,6 @@ figcaption:nth-of-type(2) {
   transform: rotate(5deg);
 }
 
-
-
-
-
 @media (max-width: 768px) {
   .text-primary {
       font-size: 1.2em;
@@ -11432,13 +11460,21 @@ figcaption:nth-of-type(2) {
 .section-heading-lower b > span {
   font-size: 2.2rem; /* Adatta questa dimensione secondo le tue necessità */
 }
-.section-heading-upper span {
-  color: white;
+
+
+.section-heading-upper {
+  display: inline-block; 
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+  font-family: "Cinzel";
+  color:#f07e02;
 }
+
 
 .nav-link span {
   color: #663d86;
-  transform: skewX(-40deg);
+ 
 }
 
 .navbar-nav > li:nth-child(1) > .nav-link {
@@ -11541,8 +11577,24 @@ figcaption{
     display: inline-block;
 }
 
+
 .highlight-place {
-  background-color: #6caedf;
+  color:#f9e8bc;
+  background-color: black;
+  border: 3px solid #eb5032;
+  padding: 4px ;
+  text-transform: uppercase;
+  font-family: "SquareFont";
+
+}
+.highlight-place:hover {
+  color:black;
+  background-color: #f9e8bc;
+  border: 3px solid #eb5032;
+  padding: 4px ;
+  text-transform: uppercase;
+  font-family: "SquareFont";
+
 }
 .highlight-person {
   background-color: #a1d490;
