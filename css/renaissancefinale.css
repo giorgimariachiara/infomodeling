@@ -2846,7 +2846,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #e6a756;
+  --bs-btn-bg: #d4af37;
   --bs-btn-border-color: #e6a756;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #eab46f;
@@ -2859,6 +2859,10 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #e6a756;
   --bs-btn-disabled-border-color: #e6a756;
+  border: none;
+  font-family: 'Cinzel', serif; 
+  border-radius: 0;
+  font-size: 14px;
 }
 
 .btn-secondary {
@@ -3224,9 +3228,9 @@ textarea.form-control-lg {
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: #212529;
   --bs-dropdown-bg: #fff;
-  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-border-color: #a3852d;
   --bs-dropdown-border-radius: 0.375rem;
-  --bs-dropdown-border-width: 1px;
+  --bs-dropdown-border-width: 2px;
   --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
@@ -3252,10 +3256,10 @@ textarea.form-control-lg {
   color: var(--bs-dropdown-color);
   text-align: left;
   list-style: none;
-  background-color: var(--bs-dropdown-bg);
+  background-color: rgba(213, 206, 189, 0.7);
   background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  border-radius: var(--bs-dropdown-border-radius);
+  
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -10897,6 +10901,38 @@ p {
   color: var(--bs-gold);
 }
 
+
+.section-heading .section-heading-upper2 {
+  display: block;
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: "Cinzel", serif;
+  color: #536ba4;
+
+}
+.section-heading .section-heading-lower2 {
+  display: block;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+
+.section-heading-lower2 span:nth-child(1) {
+  color: #a3852d;
+ 
+}
+
+.section-heading-lower2 span:nth-child(3) {
+  color: #92302b;
+}
+
+.section-heading-lower2 span:nth-child(5) {
+  color: #536ba4;
+}
+
+.section-heading-lower2 span {
+  font-family: "Cinzel", serif;
+}
 .bg-faded {
   background-color: #dfd9c8;
 
@@ -11012,6 +11048,10 @@ p {
     width: 45%;
   }
 }
+.intro-text p{
+  color:var(--bs-gold);
+  text-align:center;
+}
 
 @media (min-width: 992px) {
   .product-item .product-item-title {
@@ -11102,9 +11142,9 @@ p {
 
   .accordion {
       position: sticky;
-      top: 60px;
+      top: 80px;
       z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       margin-right:30px;
   }
 
@@ -11426,6 +11466,43 @@ p {
   }
 }
 
+
+.vasaripaint{
+  margin-right:40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70vw;
+  max-width: 750px;
+  height: 50vw;
+  max-height:940px;
+  background-image: url('../assets/img/vasaripaintrenaissance.svg');
+  background-size: contain;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .intro .vasaripaint {
+    width: 75%;
+    float: right;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 45%;
+    margin-top: 3rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+    color: var(--bs-gold)
+  }
+}
 
  figcaption {
   font-family: 'Cinzel', serif;

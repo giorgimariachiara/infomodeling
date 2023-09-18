@@ -11203,10 +11203,33 @@ p {
 /*immagini*/
 
 .verrocchio{
-  width:40rem; 
-  height:50rem;
-  background-image: url('../assets/img/Verrocchio2.jpg');
-  background-repeat:no-repeat;}
+  width: 70vw;
+  max-width: 750px;
+  height: 50vw;
+  max-height:940px;
+  background-image: url('../assets/img/verrocchiodefault.svg');
+  background-repeat:no-repeat;
+  background-size: contain;
+}
+
+
+.decorative-img{
+  display: none;
+}
+
+#miaLettera{
+  display:none;
+}
+
+p::before {
+  content: "F";  /* mostra "F" di default */
+  margin-right: -0.25em;
+}
+
+.A::before {
+  content: "A";  /* mostra "F" di default */
+  margin-right: -0.10em;
+}
 
 
 
