@@ -11200,7 +11200,13 @@ p {
 }
 
 
+/*immagini*/
 
+.verrocchio{
+  width:40rem; 
+  height:50rem;
+  background-image: url('../assets/img/Verrocchio2.jpg');
+  background-repeat:no-repeat;}
 
 
 

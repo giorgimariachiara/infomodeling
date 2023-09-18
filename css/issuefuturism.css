@@ -2766,9 +2766,8 @@ textarea.form-control-lg {
   --bs-btn-line-height: 1.5;
   --bs-btn-color: #212529;
   --bs-btn-bg: transparent;
-  --bs-btn-border-width: 1px;
+  --bs-btn-border-width: 8px;
   --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: 0.375rem;
   --bs-btn-hover-border-color: transparent;
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
@@ -2783,13 +2782,13 @@ textarea.form-control-lg {
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: url('triangle.png'), auto;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border: var(--bs-btn-border-width) solid #00b477;
   border-radius: var(--bs-btn-border-radius);
-  background-color: var(--bs-btn-bg);
+  background-color: #fecc30;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2838,10 +2837,10 @@ textarea.form-control-lg {
 .btn-primary {
   --bs-btn-color: #000;
   --bs-btn-bg: #e6a756;
-  --bs-btn-border-color: #e6a756;
+  --bs-btn-border-color: #00b477;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #eab46f;
-  --bs-btn-hover-border-color: #e9b067;
+  --bs-btn-hover-bg: #00b477;
+  --bs-btn-hover-border-color: #fecc30;
   --bs-btn-focus-shadow-rgb: 196, 142, 73;
   --bs-btn-active-color: #000;
   --bs-btn-active-bg: #ebb978;
@@ -10834,7 +10833,7 @@ label {
   }
 }
 body {
-    background-color: black;
+  background-color: black;
   background-image: url("../assets/img/futurism.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -10860,11 +10859,30 @@ p {
   margin-bottom: 5rem;
 }
 
-.section-heading {
-  text-transform: uppercase;
-
+.bg-faded2 {
+  position: relative; /* Per posizionare correttamente l'elemento pseudo */
 }
 
+.bg-faded2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #663d86;
+  clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
+  z-index: 0; /* Per metterlo dietro al contenuto */
+}
+
+.bg-faded2 h2, .bg-faded2 p, .bg-faded2 .intro-button {
+  position: relative;
+  z-index: 2; /* Imposta a 1 */
+}
+
+.section-heading {
+  text-transform: uppercase;
+}
 
 
 @keyframes swing {
@@ -10901,7 +10919,7 @@ p {
 }
 
 .section-heading-lower span {
-  font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
+  font-family: 'SquareFont', sans-serif; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
   font-size: 2.2rem;
   color:#ffda39;
@@ -10909,9 +10927,46 @@ p {
 }
 
 .section-heading .section-heading-upper,
-.section-heading .section-heading-lower, .section-heading .section-heading-lower span {
+.section-heading .section-heading-upper2,
+.section-heading .section-heading-lower, .section-heading .section-heading-lower2, .section-heading .section-heading-lower span {
   mix-blend-mode: difference;
   color: white; /* Questo diventerà il colore opposto dello sfondo quando si sovrappone */
+}
+
+.section-heading .section-heading-lower2 {
+  display: block;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-top: 40px;
+  margin-bottom: 170px;
+  font-family: "SquareFont";
+  transform: rotate(10deg);
+  color:white;
+}
+
+.section-heading .section-heading-upper2 {
+  display: block;
+  font-size: 5rem;
+  font-weight: 100;
+  font-family: "SquareFont";
+  transform: rotate(-50deg);
+  animation: placeholder-wave 1s infinite; 
+
+  color:white;
+}
+.section-heading .section-heading-upper span:nth-child(2) {
+  display: inline-block;  /* La trasformazione si applica meglio agli elementi inline-block o block */
+  transform: rotate(10deg);
+  font-size: 3rem;
+  margin-left:10px;  /* Ruota di -10 gradi, ma puoi regolare come preferisci */
+}
+
+.section-heading-lower span {
+  font-family: 'Cinzel'; /* Puoi sostituire con altri font geometrici */
+  letter-spacing: 5px; /* Distanza tra le lettere */
+  font-size: 2.2rem;
+  color:#ffda39;
+  font-weight: 800;
 }
 .bg-fadedtitle{
     position:relative;
@@ -11015,8 +11070,6 @@ figcaption:nth-of-type(2) {
   margin-left: 160px !important;
 }
 
-
-
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -11031,24 +11084,6 @@ figcaption:nth-of-type(2) {
   font-family: "SquareFont";
 }
 
-@media (min-width: 992px) {
-  #mainNav {
-      clip-path: polygon(
-          0% 10%, 
-          20% 0%, 
-          40% 10%, 
-          60% 0%, 
-          80% 10%, 
-          100% 0%, 
-          100% 100%, 
-          80% 90%, 
-          60% 100%, 
-          40% 90%, 
-          20% 100%, 
-          0% 90%
-      );
-  }
-}
 #mainNav .navbar-brand {
   color: #f27a0a;
 }
@@ -11073,8 +11108,6 @@ figcaption:nth-of-type(2) {
   }
 }
 
-
-
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
@@ -11098,6 +11131,15 @@ figcaption:nth-of-type(2) {
 
 .intro {
   position: relative;
+}
+
+.intro-text p.mb-3 {
+  color: white;
+  font-family: "Cinzel";
+  font-size:1rem;
+  margin-bottom:40px;
+  margin-right: 50px;
+  background-color: black;
 }
 @media (min-width: 992px) {
   .intro .intro-img {
@@ -11752,6 +11794,46 @@ figcaption{
   z-index: 10000; 
 }
 
+
+.vasaripaint {
+  margin-right:40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70vw;
+  max-width: 750px;
+  height: 80vw;
+  max-height:860px;
+  transform: rotate(10deg);
+}
+
+.vasaripaint {
+  background-image: url('../assets/img/vasaripaint.svg');
+}
+.vasaripaint:hover {
+  transform: scale(1.1);
+  z-index: 10000; 
+}
+
+@media (min-width: 992px) {
+  .intro .vasaripaint {
+    width: 75%;
+    float: right;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 3rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+/*Bottoni stile  */
 .btns-grid-container {
   display: grid;
   position: fixed;
@@ -11766,16 +11848,41 @@ figcaption{
   width: 50px;  /* Adjust width as required */
   height: 50px;  /* Adjust height as required */
   border: none;
-  border-radius: 50%;  /* To make them round */
-  background-color: #333;  /* Adjust color as required */
+   /* To make them round */
+  background-color: #f07a00;  /* Adjust color as required */
   color: #fff;
   cursor: pointer;
 }
 
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #555;  /* Adjust hover color as required */
+  background-color: #5477ad;  /* Adjust hover color as required */
 }
 
 .sub-btn[data-theme] {
   display: none;
 }
+
+
+#stylesBtn {
+  background-image: url('../assets/img/visualization.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.sub-btn[data-theme="theme3"] {
+  background-image: url('../assets/img/heptagon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme1"] {
+  background-image: url('../assets/img/vitruvian-man.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
