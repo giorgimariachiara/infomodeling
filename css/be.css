@@ -80,19 +80,22 @@
  */
 
 @font-face {
-    font-family: 'Silkscreen-Bold';
-    src: url('/assets/fonts/Silkscreen-Bold.ttf') format('truetype');
+    font-family: 'Flowers';
+    src: url('/assets/fonts/Flowers.ttf') format('truetype');
   }
 @font-face {
-    font-family: 'Silkscreen-Regular';
-    src: url('/assets/fonts/Silkscreen-Regular.ttf') format('truetype');
+    font-family: 'Paris Metro';
+    src: url('/assets/fonts/PARISME_.TTF') format('truetype');
   }
 
-@font-face {
-    font-family: 'Bauhaus';
-    src: url('/assets/fonts/Bauhaus_.ttf') format('truetype');
+  @font-face {
+    font-family:'Trash Hand';
+    src: url('/assets/fonts/TrashHand.TTF') format('truetype');
   }
-
+  @font-face {
+    font-family:'Cocotte Regular';
+    src: url('/assets/fonts/Cocotte/Cocotte-Regular-trial.ttf') format('truetype');
+  }
 
 
 *,
@@ -109,7 +112,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: "Cocotte Regular";
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -118,10 +121,15 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-image: url('/assets/img/pmbg2.svg');
+  background-image: url('/assets/img/bebg.svg');
+  background-size: cover;
 
 }
-
+.fiori{
+  font-family: "Flowers";
+  font-size: 10rem;
+ color: gold;
+}
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -133,7 +141,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family:"Silkscreen-Regular";
+  font-family:"Cocotte Regular";
   font-weight: 800;
   line-height: 1.2;
   
@@ -11003,7 +11011,7 @@ p {
 }
 .site-heading .site-heading-upper {
   display: block;
-  font-family: "Silkscreen-Regular";
+  font-family:"Cocotte Regular";
   font-size: 3rem;
   font-weight: 900;
   color: #02B1BA !important;
@@ -11017,7 +11025,7 @@ p {
   font-size: 8rem;
   font-weight: 600;
   line-height: 4rem;
-  font-family: "Silkscreen-Bold";
+  font-family: "Cocotte Regular";
   color: #0047AB ;
   display: block;
   margin-bottom: -2rem;
@@ -11060,7 +11068,7 @@ margin-right:-10rem;
   margin-top: 5rem;
 }
 .bg-faded p{
-  font-family: "SF mono", monospace ;
+  font-family: "Cochin", serif;
   font-size: 18px;
   color: black; /* Colore del testo */
   background-color: transparent !important; /* Colore di sfondo */
@@ -11100,7 +11108,7 @@ margin-right:-10rem;
 
 
 .judith figcaption {
-  font-family: "Bauhaus", sans-serif;
+  font-family: "Cochin", serif;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -11257,7 +11265,7 @@ margin-right:-10rem;
 
 .intro .intro-text p{
   font-size: 1rem;
-  font-family: "Bauhaus";
+  font-family: "Cochin";
 
 
 }
