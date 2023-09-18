@@ -11,20 +11,20 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css\indexartdeco.css" rel="stylesheet" />
+        <link href="css\issuefuturism.css" rel="stylesheet" />
     </head>
     <body>
         <header>
             <h1 class="site-heading text-center d-none d-lg-block">
                 <span class="site-heading-upper text-primary mb-3">
-                    <span data-shadow="T">T</span> 
-                    <span data-shadow="h">h</span> 
-                    <span data-shadow="e">e</span> 
-                    <span data-shadow="L">L</span> 
-                    <span data-shadow="i">i</span> 
-                    <span data-shadow="v">v</span> 
-                    <span data-shadow="e">e</span> 
-                    <span data-shadow="s">s</span> 
+                    <span >T</span> 
+                    <span >h</span> 
+                    <span >e</span> 
+                    <span >L</span> 
+                    <span >i</span> 
+                    <span >v</span> 
+                    <span>e</span> 
+                    <span >s</span> 
                 </span>
                 <div class="overlap-container">
                     <span class="site-heading-lower">
@@ -36,11 +36,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html"><span>T</span>H<span>E</span> L<span>I</span>V<span>E</span>S</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">H<span>o</span>m<span>e</span></a></li>
                         <li class="nav-item px-lg-4 dropdown">
                             <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Issues
@@ -50,9 +50,8 @@
                                 <li><a class="dropdown-item" href="issue-verrocchio.html">Verrocchio</a></li>
                                 <li><a class="dropdown-item" href="issue-donatello.html">Donatello</a></li>
                             </ul>
-                        </li>     
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
-                        
+                        </li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html"><span>D</span>o<span>c</span>u<span>m</span>e<span>n</span>t<span >a</span>t<span>i</span>o<span>n</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -79,18 +78,18 @@
 
         <script>
             const siteHeadingLower = document.querySelector(".site-heading-lower");
-  const text = siteHeadingLower.textContent.trim();
-  let newText = "";
-  
-  for (let letter of text) {
-      if (letter === " ") {
-          newText += letter; // non avvolgere gli spazi
-      } else {
-          newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
-      }
-  }
-  
-  siteHeadingLower.innerHTML = newText;
+            const text = siteHeadingLower.textContent.trim();
+            let newText = "";
+            
+            for (let letter of text) {
+            if (letter === " ") {
+            newText += letter; // non avvolgere gli spazi
+            } else {
+            newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
+            }
+            }
+            
+            siteHeadingLower.innerHTML = newText;
   
           </script>
         <footer class="footer text-faded text-center py-5">
