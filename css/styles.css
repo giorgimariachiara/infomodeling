@@ -11186,7 +11186,7 @@ p {
   height: 50px;  /* Adjust height as required */
   border: none;
   border-radius: 50%;  /* To make them round */
-  background-color: #333;  /* Adjust color as required */
+  background-color: rgba(47, 23, 15, 0.9);  /* Adjust color as required */
   color: #fff;
   cursor: pointer;
 }
@@ -11198,7 +11198,28 @@ p {
 .sub-btn[data-theme] {
   display: none;
 }
+#stylesBtn {
+  width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
+  height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
+  background-image: url('../assets/img/brush.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
+.sub-btn[data-theme="theme3"] {
+  background-image: url('../assets/img/heptagon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme1"] {
+  background-image: url('../assets/img/vitruvian-man.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /*immagini*/
 
