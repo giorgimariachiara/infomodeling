@@ -4334,15 +4334,15 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
+  --bs-accordion-bg:#dfd9c8;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-  --bs-accordion-border-color: var(--bs-border-color);
-  --bs-accordion-border-width: 1px;
-  --bs-accordion-border-radius: 0.375rem;
+  --bs-accordion-border-color: var(--bs-gold);
+  --bs-accordion-border-width: 4px solid;  
+font-family: "Cinzel";
   --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
-  --bs-accordion-btn-color: #212529;
+  --bs-accordion-btn-color: var(--bs-gold);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
@@ -4356,6 +4356,8 @@ textarea.form-control-lg {
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
   flex:1;
+  
+  
 }
 
 .accordion-button {
@@ -4368,10 +4370,12 @@ textarea.form-control-lg {
   color: var(--bs-accordion-btn-color);
   text-align: left;
   background-color: var(--bs-accordion-btn-bg);
-  border: 0;
-  border-radius: 0;
+  border: 2px solid var(--bs-gold);
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
+  background-color:#dfd9c8; 
+  font-family: "Cinzel";
+  font-weight: bold;
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
@@ -4404,6 +4408,7 @@ textarea.form-control-lg {
   }
 }
 .accordion-button:hover {
+  background-color:#92302b;
   z-index: 2;
 }
 .accordion-button:focus {
@@ -4423,27 +4428,27 @@ textarea.form-control-lg {
   border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
 }
 .accordion-item:first-of-type {
-  border-top-left-radius: var(--bs-accordion-border-radius);
-  border-top-right-radius: var(--bs-accordion-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .accordion-item:first-of-type .accordion-button {
-  border-top-left-radius: var(--bs-accordion-inner-border-radius);
-  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .accordion-item:not(:first-of-type) {
   border-top: 0;
 }
 .accordion-item:last-of-type {
-  border-bottom-right-radius: var(--bs-accordion-border-radius);
-  border-bottom-left-radius: var(--bs-accordion-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .accordion-item:last-of-type .accordion-button.collapsed {
-  border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
-  border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .accordion-item:last-of-type .accordion-collapse {
-  border-bottom-right-radius: var(--bs-accordion-border-radius);
-  border-bottom-left-radius: var(--bs-accordion-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .accordion-body {
@@ -4467,7 +4472,13 @@ textarea.form-control-lg {
 .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
   border-radius: 0;
 }
-
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bs-gold);
+}
+input[type="checkbox"]:checked {
+  background-color: var(--bs-gold);
+}
 .breadcrumb {
   --bs-breadcrumb-padding-x: 0;
   --bs-breadcrumb-padding-y: 0;
@@ -11094,13 +11105,14 @@ p {
       top: 60px;
       z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
       margin-bottom: 20px;
-      margin-right:10px;
+      margin-right:30px;
   }
 
   .main-content {
       width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
   }
 }
+
 
 
 /*
@@ -11180,33 +11192,27 @@ p {
   z-index: 1000;  /* To ensure it stays above other elements */
 }
 
-
-
-.highlight-place {
-    background-color: #6caedf;
-}
-.highlight-person {
-    background-color: #a1d490;
-}
-
 .btns-grid-container {
-  background-color: #dfd9c8;  /* Usa il colore dello sfondo di .bg-faded */
-  border: 4px solid var(--bs-gold);  /* Bordo dorato simile a .renaissance-style */
-  box-shadow: 
-      0 0 0 1px #674e29,  /* Linea di separazione scura */
-      0 0 0 9px var(--bs-gold);  /* Bordo dorato interno */
-  padding: 10px;  /* Padding intorno ai bottoni per dare spazio al bordo dorato */
-  /* ... altre proprietà ... */
+  display: grid;
+  position: fixed;
+  right: 10px;  /* Adjust as per requirement */
+  bottom: 10px;  /* Adjust as per requirement */
+  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
+  gap: 5px;  /* Spacing between buttons */
+  z-index: 9999;  /* This will ensure it's on top of most other elements */
+  
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 50px;  /* Adjust width as required */
-  height: 50px;  /* Adjust height as required */
+  width: 60px;  /* Adjust width as required */
+  height: 60px;  /* Adjust height as required */
   border: none;
    /* To make them round */
-  background-color: #333;  /* Adjust color as required */
-  color: #fff;
+  background-color: #dfd9c8;  /* Adjust color as required */
+  color:#a3852d;
   cursor: pointer;
+  border: 4px solid var(--bs-gold);
+ 
 }
 
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
@@ -11215,6 +11221,27 @@ p {
 
 .sub-btn[data-theme] {
   display: none;
+}
+#stylesBtn {
+  background-image: url('../assets/img/visualization.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.sub-btn[data-theme="theme3"] {
+  background-image: url('../assets/img/heptagon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme1"] {
+  background-image: url('../assets/img/vitruvian-man.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .renaissance-style {
