@@ -12,23 +12,36 @@
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <!--<link href="css/styles.css" rel="stylesheet" />-->
-        <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/be.css">
+        <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/issuefuturism.css">
+        <!-- Font Awesome CSS Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-lower">The Lives</span>
-                <span class="site-heading-upper text-primary mb-3">of the Most Excellent Painters, Sculptors, and Architects </span>
-            </h1>
+            <h1 class="site-heading text-center d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">
+                    <span >T</span> 
+                    <span >h</span> 
+                    <span >e</span> 
+                    <span >L</span> 
+                    <span >i</span> 
+                    <span >v</span> 
+                    <span>e</span> 
+                    <span >s</span> 
+                </span>
+                    <span class="site-heading-lower">
+                        of the Most Excellent Painters, <br> Sculptors, and Architects
+                    </span>
+                </h1>
         </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html"><span>T</span>H<span>E</span> L<span>I</span>V<span>E</span>S</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">H<span>o</span>m<span>e</span></a></li>
                         <li class="nav-item px-lg-4 dropdown">
                             <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Issues
@@ -39,142 +52,107 @@
                                 <li><a class="dropdown-item" href="issue-donatello.html">Donatello</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html"><span>D</span>o<span>c</span>u<span>m</span>e<span>n</span>t<span >a</span>t<span>i</span>o<span>n</span></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
+        
         <section class="page-section">
         <!-- Wrapping starts here -->
 
         <div class="content-wrapper">
-                <!-- Sidebar for Metadata
-                <div class="sidebar">
-                  
-                </div>  -->
+            <div class="accordion ms-5 sticky-accordion" id="accordionExample">
 
-            <!-- Main Content -->
-
-
-<!-- Accordion menu starts here -->
-<div class="accordion ms-5 sticky-accordion" id="accordionExample">
-
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Metadata
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-            
-                <!-- Nested Accordion Starts Here -->
-                <div class="accordion" id="nestedAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                Highlight Metadata in the text
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-                            <div class="accordion-body">
-                                <!-- Content for 'Highlight Metadata in the text' -->
-                                <div>
-                                    <input type="checkbox" id="placeNames" name="highlight" value="PlaceNames">
-                                    <label for="placeNames">Place Names</label>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Metadata
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        
+                            <!-- Nested Accordion Starts Here -->
+                            <div class="accordion" id="nestedAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            Highlight Metadata in the text
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                        <div class="accordion-body">
+                                            <!-- Content for 'Highlight Metadata in the text' -->
+                                            <div>
+                                                <input type="checkbox" id="placeNames" name="highlight" value="PlaceNames">
+                                                <label for="placeNames">Place Names</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="personNames" name="highlight" value="PersonNames">
+                                                <label for="personNames">Person Names</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <input type="checkbox" id="personNames" name="highlight" value="PersonNames">
-                                    <label for="personNames">Person Names</label>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                            List Metadata Below
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
+                                        <div class="accordion-body">
+                                            <!-- Content for 'List Metadata Below' -->
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                            <div class="accordion-body">
+                                                <!-- Content for 'List Metadata Below' -->
+                                                <div id="placeNameTitle" style="display:none;">Place Names List:</div>
+                                                <ul id="placeNameList"></ul>
+                                                <div id="personNameTitle" style="display:none;">Person Names List:</div>
+                                                <ul id="personNameList"></ul>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- Nested Accordion Ends Here -->
+
+
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                List Metadata Below
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
-                            <div class="accordion-body">
-                                <!-- Content for 'List Metadata Below' -->
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
-                                <div class="accordion-body">
-                                    <!-- Content for 'List Metadata Below' -->
-                                    <div id="placeNameTitle" style="display:none;">Place Names List:</div>
-                                    <ul id="placeNameList"></ul>
-                                    <div id="personNameTitle" style="display:none;">Person Names List:</div>
-                                    <ul id="personNameList"></ul>
-                                </div>
-                            </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Nested Accordion Ends Here -->
 
-
-            </div>
-            </div>
-        </div>
-    </div>
-
-<!-- Accordion menu ends here -->
-
-
-
-
-
-            
+            <!-- Main Content -->
             <div class="main-content">
+
 
 
             <div class="container">
 
-            
-
-
-            <!-- Content column -->
-            <div class="col-lg-9 d-flex justify-content-center">    
                 <div class="product-item">
                     <div class="product-item-title d-flex">
-                        <div class="bg-faded p-5 d-flex ms-auto rounded text-center">
+                        <div class="bg-fadedtitle p-5 d-flex ms-auto rounded text-center">
                             <h2 class="section-heading mb-0">
-                                <span class="section-heading-upper">LIFE OF LEONARDO DA VINCI</span>
-                                <span class="section-heading-lower">PAINTER AND SCULPTOR OF FLORENCE</span>
+                                <span class="section-heading-upper">
+                                  <span>LIFE
+                                    OF</span> 
+                                    <span>LEONARDO DA VINCI </span>  
+                                </span>
+                                <span class="section-heading-lower"> PAINTER AND SCULPTOR &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; OF FLORENCE</b></span></span>
                             </h2>
-
                         </div>
-
+                        
                     </div>
 
                     <!--<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/leonardo.jpg" alt="..." />-->
 
 
                     <div class="product-item-description d-flex me-auto">
-                        <div class="sticky-container">
-                            <!--<button id="toggleAccordionButton" class="btn btn-primary toggle-btn">Toggle Accordion</button>-->
-                            <!--<button id="toggleAccordionButton" class="btn btn-primary toggle-btn">▶</button>-->
-
-                            <!--<button type="button" class="btn btn-primary toggle-btn sticky-button" data-bs-toggle="modal" data-bs-target="#metadataModal">Metadata</button-->
-
-                            <div class="button-container">
-
-                                <!--<button type="button" class="btn btn-primary toggle-btn sticky-button" data-bs-toggle="modal" data-bs-target="#metadataModal">Metadata</button>
-
-                                
-                                <button type="button" class="btn btn-primary toggle-btn-2 sticky-button-2" data-bs-toggle="modal" data-bs-target="#themeModal">Theme</button>-->
- 
-                            </div>
-
-                            
-                        </div>
                         <div class="bg-faded p-5 rounded">
-                            <div class="leonardopic"></div>
-                            <p class="aquilineta"> 
-                            The greatest gifts are often seen, in the course of nature, rained by celestial influences on human creatures; and sometimes,
+                            <p>The greatest gifts are often seen, in the course of nature, rained by celestial influences on human creatures; and sometimes,
                             in supernatural fashion, beauty, grace, and talent are united beyond measure in one single person, in a manner that to whatever
                             such one turns his attention, his every action is so divine, that, surpassing all other men, it makes itself clearly known as a thing bestowed
                             by <span class="personName">God</span> (as it is), and not acquired by human art. This was seen by all mankind in <span class="personName" data-person-id="leo">Leonardo da Vinci</span>,
@@ -239,12 +217,10 @@
                             <span class="personName" data-person-id="leo">Leonardo</span> executed it in such a manner that his angel was much better than the figures of <span class="personName" data-person-id="andrea">Andrea</span>;
                             which was the reason that <span class="personName" data-person-id="andrea">Andrea</span> would never again touch colour, in disdain that a child should know more than he.
                         </p>
+                        <div class="baptism"></div>
 
-                        <figure>
-                            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/leonardo/baptism.jpg" alt="ANDREA VERROCCHIO: THE BAPTISM IN JORDAN (Florence: Accademia, 71. Panel)" style="width:10.58cm; height:12.51cm";/>
-                            <figcaption><span class="personName" data-place-id="andrea">ANDREA VERROCCHIO</span>: THE BAPTISM IN JORDAN
+                            <figcaption><span class="personName" data-place-id="andrea"><b>ANDREA VERROCCHIO</b></span>: THE BAPTISM IN JORDAN
                                 (<span class="placeName" data-place-id="florence">Florence</span>: <span class="placeName" data-place-id="florence">Accademia</span>, 71. Panel)</figcaption>
-                        </figure>
 
                         <p>He was commissioned to make a cartoon for a door-hanging that was to be executed in <span class="placeName">Flanders</span>, woven in gold and silk, to be sent to
                             the <span class="personName" data-person-id="king">King</span> of <span class="placeName" data-place-id="portugal">Portugal</span>, of
@@ -292,7 +268,14 @@
                             <span class="personName">Fabio</span>, the son of <span class="personName" data-person-id="antonio">Antonio</span>, to <span class="personName" data-person-id="giovanni">Messer Giovanni Gaddi</span>,
                             with this epigram:
                         </p>
-
+                            
+                        <div class="adoration">
+                        </div>
+                        <figcaption><b>THE ADORATION OF <span class="personName" data-person-id="magi">THE MAGI</span> </b><br>(After the panel by
+                            <span class="personName" data-person-id="leo">Leonardo da Vinci</span>. <span class="placeName" data-place-id="florence">Florence</span>:
+                            <span class="placeName" data-place-id="florence">Uffizi</span>, 1252)
+                                <span class="personName">Anderson</span></figcaption>
+                        <!--
                         <figure>
                             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/leonardo/adortion.jpg" alt="THE ADORATION OF THE MAGI (After the panel by Leonardo da Vinci. Florence: Uffizi, 1252) Anderson"
                                  style="width:10.58cm; height:10.29cm";/>
@@ -300,7 +283,7 @@
                                 <span class="personName" data-person-id="leo">Leonardo da Vinci</span>. <span class="placeName" data-place-id="florence">Florence</span>:
                                 <span class="placeName" data-place-id="florence">Uffizi</span>, 1252)
                                     <span class="personName">Anderson</span></figcaption>
-                        </figure>
+                        </figure> -->
 
                         <p>The fancy came to him to paint a picture in oils of the head of a Medusa, with the head attired with a coil of snakes, the most strange [Pg 95]and
                             extravagant invention that could ever be imagined; but since it was a work that took time, it remained unfinished, as happened with almost all his things.
@@ -343,6 +326,8 @@
                             that even in the tablecloth the texture of the stuff is counterfeited in such a manner that linen itself could not seem more real.</p>
 
 
+                            <div class="last-supper"></div>
+                             <!--
                         <figure>
                             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/leonardo/last-supper.jpg" alt="THE LAST SUPPER
                             (After the oil fresco by Leonardo da Vinci.
@@ -353,7 +338,7 @@
                                 <span class="placeName" data-place-id="milan">Milan: S. Maria delle Grazie</span>)
                             </figcaption>
 
-                        </figure>
+                        </figure> -->
 
                         <p>It is said that the Prior of that place kept pressing <span class="personName">Leonardo</span>, in a most importunate manner, to finish the work;
                             for it seemed strange to him to see <span class="personName">Leonardo</span> sometimes stand half a day at a time, lost in contemplation, and he
@@ -393,6 +378,13 @@
                             to <span class="placeName">Milan</span> with <span class="personName">King Louis of France</span>, and broke it all to pieces. Lost, also,
                             is a little model of it in wax, which was held to be perfect, together with a book on the anatomy of the horse made by him by way of study.</p>
 
+
+                            <div class="madonna"></div>
+                            <figcaption><b>THE <span class="personName">MADONNA</span> AND CHILD WITH <span class="personName">S. ANNE</b></span>
+                                (After the cartoon by <span class="personName" data-person-id="leo">Leonardo da Vinci</span>.
+                                <span class="placeName" data-place-id="london">London</span>: <span class="placeName" data-place-id="london">Burlington House</span>) Vasari Society
+                            </figcaption>
+                            <!--
                         <figure>
                             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/leonardo/madonna.jpg"
                                  alt="THE MADONNA AND CHILD WITH S. ANNE
@@ -404,7 +396,7 @@
                                 <span class="placeName" data-place-id="london">London</span>: <span class="placeName" data-place-id="london">Burlington House</span>) Vasari Society
                             </figcaption>
 
-                        </figure>
+                        </figure>-->
 
                         <p>He then applied himself, but with greater care, to the anatomy of man, assisted by and in turn assisting, in this
                             research, <span class="personName">Messer Marc' Antonio della Torre</span>, an excellent philosopher, who was then lecturing
@@ -439,44 +431,69 @@
                         
                         </div>
 
+
                         
                     </div>
 
+
+
                 </div>
 
+
+
             </div>
-        </div>
+
 
         </div>
-    </div>
             </div>
 
         </section>
+        <script>const siteHeadingLower = document.querySelector(".site-heading-lower");
+            const text = siteHeadingLower.textContent.trim();
+            let newText = "";
+            
+            for (let letter of text) {
+            if (letter === " ") {
+            newText += letter; // non avvolgere gli spazi
+            } else {
+            newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
+            }
+            }
+            
+            siteHeadingLower.innerHTML = newText;</script>
 
-        <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="themeModalLabel">Theme Options</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="theme" id="theme1" value="theme1">
-                  <label class="form-check-label" for="theme1">theme 1</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="theme" id="theme2" value="theme2">
-                  <label class="form-check-label" for="theme2">theme 2</label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="applyTheme">Apply</button>
-              </div>
+        <div class="btns-grid-container">
+            <div class="btns-grid-item btns-item-1">
+                <button class="sub-btn" data-theme="theme6">Theme 6</button>
             </div>
-          </div>
+            <div class="btns-grid-item btns-item-2">
+                <button class="sub-btn" data-theme="theme5">Theme 5</button>
+            </div>
+            <div class="btns-grid-item btns-item-3">
+                <button class="sub-btn" data-theme="theme4">Theme 4</button>
+            </div>
+            <div class="btns-grid-item btns-item-4">
+                <button class="sub-btn" data-theme="theme3">Theme 3</button>
+            </div>
+            <div class="btns-grid-item btns-item-5">
+                <button class="sub-btn" data-theme="theme2">Theme 2</button>
+            </div>
+            <div class="btns-grid-item btns-item-6">
+                <button class="sub-btn" data-theme="theme1">Theme 1</button>
+            </div>
+            <div class="btns-grid-item btns-item-7">
+                <button id="stylesBtn" class="styles-btn" type="button"><img class="btn-icon" id="stylerImg" src="./images_styles/icons/styler_icon.svg" alt="Styler"></button>
+            </div>
+            <div class="btns-grid-item btns-item-8">
+                <button id="toTopBtn"> <i class="fa-solid fa-arrow-up btn-icon"></i></button>
+            </div>
         </div>
+
+
+
+
+
+
 
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>

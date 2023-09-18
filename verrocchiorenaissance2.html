@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+      
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
@@ -12,11 +13,13 @@
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/issuerenaissance.css" rel="stylesheet" />
+        <!-- Font Awesome CSS Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-lower"> The Lives</span>
+                <span class="site-heading-lower">The Lives</span>
                 <span class="site-heading-upper text-primary mb-3">of the Most Excellent Painters, Sculptors, and Architects</span>
             </h1>
         </header>
@@ -51,11 +54,11 @@
 
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Metadata
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                         
                             <!-- Nested Accordion Starts Here -->
@@ -111,7 +114,7 @@
                 </div>
 
             <!-- Main Content -->
-            <div class="main-content">
+        <div class="main-content">
             <div class="container">
                 <div class="product-item">
                     <div class="product-item-title d-flex">
@@ -126,7 +129,10 @@
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-5 rounded"> 
                                 <p class="mb-0 aquilineta">
+
+                                    <div class="verrocchio"></div>
                                     <img src="assets\img\barrarinascimento.svg" alt="Lettera colorata" class="decorative-img">
+                                    
                                         <span class="personName" data-person-id="andrea">
                                             <img src="assets\img\LetteraAVerrocchio.svg" alt="Lettera colorata" id="miaLettera">ndrea del Verrocchio
                                         </span>
@@ -138,17 +144,19 @@
 				                    If either of these is wanting, a man rarely attains to the first rank; but study will do a great deal,
 				                    and thus <span class="personName" data-person-id="andrea">Andrea</span>, who had it in greater abundance than any other craftsman whatsoever, is counted among
 				                    the rare and excellent masters of our arts.</p>
-                                    <figure>
-                                        <img class="product-item-img d-flex img-fluid mb-3 mb-lg-4 renaissance-style" src="assets\img\pic.png" alt="DAVID
+                                   
+                                    <div class="verrocchiopic">
+                                    
+                                       <!-- <img class="product-item-img d-flex img-fluid mb-3 mb-lg-4 renaissance-style" src="assets\img\pic.png" alt="DAVID
                                                     (After the bronze by Andrea Verrocchio. Florence: Bargello) Anderson"
-                                             style="width:5.34cm; height:8.21cm";/>
-                                        <figcaption><span class="personName" data-person-id="sculpture">DAVID</span>
-                                            (After the bronze by <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
-                                            <span class="placeName" data-place-id="florence">Florence: Bargello</span>) <span class="personName" data-person-id="">Anderson</span>
-                                        </figcaption>
-                                        
-                                    </figure>
-
+                                             style="width:5.34cm; height:8.21cm";/>-->
+                                  
+                               
+                                     </div>
+                                     <figcaption><span class="personName" data-person-id="sculpture">DAVID</span>
+                                        (After the bronze by <span class="personName" data-person-id="andrea">Andrea Verrocchio</span>.
+                                        <span class="placeName" data-place-id="florence">Florence: Bargello</span>) <span class="personName" data-person-id="">Anderson</span>
+                                    </figcaption>
 					                <p class="mb-0 aquilineta">
                                     
 					                    In his youth he applied himself to the sciences, particularly to geometry. Among many other things that he made while working at the goldsmith's
@@ -267,6 +275,35 @@
         </div>
             </div>
         </section>
+
+        <div class="btns-grid-container">
+            <div class="btns-grid-item btns-item-1">
+                <button class="sub-btn" data-theme="theme6">Theme 6</button>
+            </div>
+            <div class="btns-grid-item btns-item-2">
+                <button class="sub-btn" data-theme="theme5">Theme 5</button>
+            </div>
+            <div class="btns-grid-item btns-item-3">
+                <button class="sub-btn" data-theme="theme4">Theme 4</button>
+            </div>
+            <div class="btns-grid-item btns-item-4">
+                <button class="sub-btn" data-theme="theme3">Theme 3</button>
+            </div>
+            <div class="btns-grid-item btns-item-5">
+                <button class="sub-btn" data-theme="theme2">Theme 2</button>
+            </div>
+            <div class="btns-grid-item btns-item-6">
+                <button class="sub-btn" data-theme="theme1">Theme 1</button>
+            </div>
+            <div class="btns-grid-item btns-item-7">
+                <button id="stylesBtn" class="styles-btn" type="button"><img class="btn-icon" id="stylerImg" src="./images_styles/icons/styler_icon.svg" alt="Styler"></button>
+            </div>
+            <div class="btns-grid-item btns-item-8">
+                <button id="toTopBtn"> <i class="fa-solid fa-arrow-up btn-icon"></i></button>
+            </div>
+        </div>
+
+
 
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
