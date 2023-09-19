@@ -10899,6 +10899,7 @@ p {
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--bs-gold);
+  font-family: "Aquiline";
 }
 
 
@@ -11284,7 +11285,7 @@ p {
   background-repeat: no-repeat;
 }
 
-.renaissance-style {
+.product-item-title > .bg-faded {
   background-color: var( --bs-renred);
   border: 4px solid var(--bs-gold); /* bordo dorato esterno */
   box-shadow: 

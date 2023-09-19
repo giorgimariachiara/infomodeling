@@ -10968,10 +10968,10 @@ p {
   color:#ffda39;
   font-weight: 800;
 }
-.bg-fadedtitle{
+ .bg-fadedtitle{
     position:relative;
 }
-  .bg-fadedtitle::before {
+.bg-fadedtitle::before {
     content: "";
     border-top: 20px solid #f7e6ba;
     border-right: 10px solid black;
@@ -10987,7 +10987,7 @@ p {
 }
 
 @media (max-width: 992px) {
-    .bg-fadedtitle::before {
+ .bg-fadedtitle::before {
         width: 60%;
         border:none;
         /* puoi cambiare qualsiasi altro stile qui per adattarlo alle dimensioni dello schermo */
