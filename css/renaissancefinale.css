@@ -10866,14 +10866,14 @@ p {
   line-height: 1;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.site-heading .site-heading-upper {
+.site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
   
   font-family:"TrajanPro";
 }
-.site-heading .site-heading-lower {
+.site-heading .site-heading-upper {
   display: block;
   font-size: 2rem;
   font-weight: 800;
@@ -10887,23 +10887,23 @@ p {
 .section-heading {
   text-transform: uppercase;
 }
-.section-heading .section-heading-upper {
-  display: block;
-  font-weight: 500;
-  font-size: 1.5rem;
-  font-family: "Aquiline";
-  color: var(--bs-gold);
-}
 .section-heading .section-heading-lower {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
+  font-family: "Aquiline";
+  color: var(--bs-gold);
+}
+.section-heading .section-heading-upper {
+  display: block;
+  font-weight: 500;
+  font-size: 1.5rem;
   color: var(--bs-gold);
   font-family: "Aquiline";
 }
 
 
-.section-heading .section-heading-upper2 {
+.section-heading .section-heading-lower2 {
   display: block;
   font-size: 2rem;
   font-weight: 100;
@@ -10911,27 +10911,27 @@ p {
   color: #536ba4;
 
 }
-.section-heading .section-heading-lower2 {
+.section-heading .section-heading-upper2 {
   display: block;
   font-size: 2rem;
   font-weight: 100;
 }
 
 
-.section-heading-lower2 span:nth-child(1) {
+.section-heading-upper2 span:nth-child(1) {
   color: #a3852d;
  
 }
 
-.section-heading-lower2 span:nth-child(3) {
+.section-heading-upper2 span:nth-child(3) {
   color: #92302b;
 }
 
-.section-heading-lower2 span:nth-child(5) {
+.section-heading-upper2 span:nth-child(5) {
   color: #536ba4;
 }
 
-.section-heading-lower2 span {
+.section-heading-upper2 span {
   font-family: "Cinzel", serif;
 }
 .bg-faded {

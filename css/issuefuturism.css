@@ -11447,7 +11447,7 @@ figcaption:nth-of-type(2) {
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
 
 
-.site-heading-lower {
+.site-heading-upper {
   font-family:"Roboto";
   font-size: 1.2em;
   letter-spacing: 0.1em;
@@ -11460,7 +11460,7 @@ figcaption:nth-of-type(2) {
   
 }
 
-.site-heading-lower::before, .site-heading-lower::after {
+.site-heading-upper::before, .site-heading-upper::after {
   content: "";
   width: 20%;
   height: 2px;
@@ -11469,11 +11469,11 @@ figcaption:nth-of-type(2) {
   top: 50%;
 }
 
-.site-heading-lower::before {
+.site-heading-upper::before {
   left: -25%;
 }
 
-.site-heading-lower::after {
+.site-heading-upper::after {
   right: -25%;
 }
 
