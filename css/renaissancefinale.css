@@ -11318,7 +11318,6 @@ p {
 .bg-faded p {
   overflow: hidden; 
   margin-left: 2rem; /* 34px / 16 = 2.125rem */
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -11517,4 +11516,17 @@ p {
   border: 3px solid var(--bs-gold); /* Bordo interno dorato */
   box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
   margin-right: 2rem !important;
+}
+
+
+.letteraT {
+  display: none;
+}
+
+.letteraF {
+  display: none;
+}
+
+.letteraA {
+  display: none;
 }

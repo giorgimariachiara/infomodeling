@@ -11242,14 +11242,17 @@ p {
   display:none;
 }
 
-p::before {
-  content: "F";  /* mostra "F" di default */
-  margin-right: -0.25em;
+
+.letteraT {
+  display: inline;
 }
 
-.A::before {
-  content: "A";  /* mostra "F" di default */
-  margin-right: -0.10em;
+.letteraF {
+  display: inline;
+}
+
+.letteraA {
+  display: inline;
 }
 
 
