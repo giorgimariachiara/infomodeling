@@ -11221,6 +11221,20 @@ p {
   background-repeat: no-repeat;
 }
 
+.sub-btn[data-theme="theme6"] {
+  background-image: url('../assets/img/brain.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme5"] {
+  background-image: url('../assets/img/late90.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .sub-btn {
   position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
 }
