@@ -11221,6 +11221,27 @@ p {
   background-repeat: no-repeat;
 }
 
+.sub-btn {
+  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+}
+
+.btn-hover-text {
+  display: none;  /* Inizialmente, il testo non sarà visibile */
+  position: absolute;
+  top: 0;  /* Posiziona il testo in alto */
+  left: 10%;
+  transform: translateX(-100%); /* Centra orizzontalmente il testo */
+  font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
+  background-color: rgba(0,0,0,0.6);  /* Sfondo semi-trasparente */
+  color: white;  /* Colore del testo */
+  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
+  border-radius: 0.3rem;  /* Angoli arrotondati */
+}
+
+.sub-btn:hover .btn-hover-text {
+  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+}
+
 /*immagini*/
 
 .verrocchio{

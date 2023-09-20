@@ -4322,17 +4322,18 @@ textarea.form-control-lg {
 }
 
 .accordion {
-  --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
+  --bs-accordion-color: transparent;
+  --bs-accordion-bg: #000;
+  
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-  --bs-accordion-border-color: var(--bs-border-color);
+  --bs-accordion-border-color: #673d86;
   --bs-accordion-border-width: 1px;
   --bs-accordion-border-radius: 0.375rem;
   --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #212529;
-  --bs-accordion-btn-bg: var(--bs-accordion-bg);
+  --bs-accordion-btn-bg:linear-gradient(45deg, #673d86, #673d86 25%, #ed8543 25%, #ed8543 50%, #85c06c 50%, #85c06c 75%, #f07a00 75%);
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
@@ -4342,45 +4343,52 @@ textarea.form-control-lg {
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #5a7db3;;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
+  --bs-accordion-btn-hover-bg:  linear-gradient(45deg, #ed8543, #ed8543 25%, #85c06c 25%, #85c06c 50%, #f07a00 50%, #f07a00 75%, #673d86 75%);
   --bs-accordion-active-color: #5a7db3;
-  --bs-accordion-active-bg: orange;
+  --bs-accordion-active-bg: #85c06c;
   flex:1;
 }
 
 
 input[type="checkbox"] {
-  margin-right: 0.5rem;  /* Spaziatura tra la casella di controllo e l'etichetta */
-  transform: scale(1.5);  /* Rende la casella di controllo un po' più grande */
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 label {
-  font-size: 1.3rem;  /* Dimensione del testo per le etichette */
-  font-family: 'SquareFont';  /* Tipo di carattere futurista */
+  font-size: 1.3rem;
+  color: #f7e6ba;
+  font-family: "Squarefont";
 }
 .accordion-button {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
   color: #fff; 
   text-align: left;
-  background-color:#000;
+  background: var(--bs-accordion-btn-bg);
   transition: all 0.3s ease;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
-  font-family: "SquareFont"; 
-  border: 2px solid #5a7db3; 
+  font-family: 'SquareFont';
+  border: 2px solid var(--bs-accordion-border-color);
+  letter-spacing: 10px; 
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
     transition: none;
   }
 }
+
+.accordion-button span {
+  font-size: 1.2em; 
+  transform: rotate(10deg) /* Rende le lettere all'interno di <span> più grandi */
+}
 .accordion-button:not(.collapsed) {
-  color: black;
-  background-color: white;
+  background: var(--bs-accordion-active-bg);
+  color: #000;
   box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 }
 .accordion-button:not(.collapsed)::after {
@@ -4405,6 +4413,7 @@ label {
 }
 .accordion-button:hover {
   z-index: 2;
+  background: var(--bs-accordion-btn-hover-bg);
 }
 .accordion-button:focus {
   z-index: 3;
@@ -4418,9 +4427,11 @@ label {
 }
 
 .accordion-item {
-  color: var(--bs-accordion-color);
-  background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10px;
+ 
 }
 .accordion-item:first-of-type {
   border-top-left-radius: 0;
@@ -4446,11 +4457,16 @@ label {
   border-bottom-left-radius: 0;
 }
 .accordion-collapse {
-  background-color: #FFF;
+  background-color: transparent;
   border-top: 2px solid #00FFFF; /* Questo aggiunge un bordo celeste sopra il contenuto dell'accordion */
+  
 }
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+  background-color: transparent;
+  color: #f7e6ba;
+  border-top: 2px solid var(--bs-accordion-border-color);
+
 }
 
 .accordion-flush .accordion-collapse {
@@ -8041,7 +8057,7 @@ label {
 }
 
 /* rtl:end:remove */
-.text-primary {
+.site-heading-lower {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
@@ -10927,13 +10943,13 @@ p {
 }
 
 .section-heading .section-heading-upper,
-.section-heading .section-heading-upper2,
-.section-heading .section-heading-lower, .section-heading .section-heading-lower2, .section-heading .section-heading-lower span {
+.intro-text .section-heading-upper,
+.section-heading .section-heading-lower, .intro-text .section-heading-lower, .section-heading .section-heading-lower span {
   mix-blend-mode: difference;
   color: white; /* Questo diventerà il colore opposto dello sfondo quando si sovrappone */
 }
 
-.section-heading .section-heading-lower2 {
+.intro-text .section-heading-lower {
   display: block;
   font-size: 4rem;
   font-weight: 100;
@@ -10944,14 +10960,13 @@ p {
   color:white;
 }
 
-.section-heading .section-heading-upper2 {
+.intro-text .section-heading-upper {
   display: block;
   font-size: 5rem;
   font-weight: 100;
   font-family: "SquareFont";
   transform: rotate(-50deg);
   animation: placeholder-wave 1s infinite; 
-
   color:white;
 }
 .section-heading .section-heading-upper span:nth-child(2) {
@@ -10981,7 +10996,7 @@ p {
     left: 0;
     width: 90%; /* Questo determina dove inizia la seconda parte del colore */
     height: 100%;
-    background: #663d86; /* O qualsiasi altro colore tu voglia per la parte sinistra */
+    background: linear-gradient(120deg, #ed8543, #ed8543 35%, #85c06c 15%, #85c06c 60%, #f07a00 40%, #f07a00 75%, #673d86 75%);
     clip-path:polygon(100% 0, 100% 71%, 53% 39%, 60% 66%, 30% 46%, 26% 69%, 11% 55%, 0% 70%, 0% 35%, 0 0);
     z-index: -1; /* Assicurati che sia dietro al testo */
 }
@@ -11349,82 +11364,82 @@ figcaption:nth-of-type(2) {
 
 /*titolo*/
 
-.text-primary {
+.site-heading-lower{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.4em;
 }
 
-.text-primary span {
+.site-heading-lower span {
   margin: 0 2px;
   display: inline-block;
   transform-origin: center;
 }
 
-.text-primary span:nth-child(1) {
+.site-heading-lower span:nth-child(1) {
   font-size: 2em;
   transform: rotate(-20deg);
 }
 
-.text-primary span:nth-child(2) {
+.site-heading-lower span:nth-child(2) {
   font-size: 1.4em;
   transform: rotate(-10deg);
 }
 
-.text-primary span:nth-child(3) {
+.site-heading-lower span:nth-child(3) {
   font-size: 1.6em;
   transform: rotate(0deg);
 }
 
-.text-primary span:nth-child(4) {
+.site-heading-lower span:nth-child(4) {
   font-size: 1.2em;
   transform: rotate(10deg);
 }
 
-.text-primary span:nth-child(5) {
+.site-heading-lower span:nth-child(5) {
   font-size: 1em;
   transform: rotate(20deg);
 }
 
-.text-primary span:nth-child(6) {
+.site-heading-lower span:nth-child(6) {
   font-size: 1.9em;
   transform: rotate(-25deg);
 }
 
-.text-primary span:nth-child(7) {
+.site-heading-lower span:nth-child(7) {
   font-size: 1.3em;
   transform: rotate(-5deg);
 }
 
-.text-primary span:nth-child(8) {
+.site-heading-lower span:nth-child(8) {
   font-size: 1.7em;
   transform: rotate(5deg);
 }
 
 @media (max-width: 768px) {
-  .text-primary {
+  .site-heading-lower {
       font-size: 1.2em;
   }
   
-  .text-primary span {
+  .site-heading-lower span {
       margin: 0 1px;  /* riduzione dello spazio tra le lettere */
   }
 }
 
 @media (max-width: 576px) {
-  .text-primary {
+  .site-heading-lower{
       font-size: 1em;
   }
   
-  .text-primary span {
+  .site-heading-lower span {
       margin: 0 0.5px;  /* ulteriore riduzione dello spazio tra le lettere */
   }
 }
 
 /* ombra dietro al titolo */
 
-.text-primary span {
+.site-heading-lower span {
   position:relative;
   transform-origin: bottom left;
   text-shadow: 
@@ -11435,11 +11450,11 @@ figcaption:nth-of-type(2) {
 }
 
 /* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
-.text-primary span:nth-child(1) {
+.site-heading-lower span:nth-child(1) {
   transform: rotate(-20deg) skewY(-10deg);
 }
 
-.text-primary span:hover {
+.site-heading-lower span:hover {
   transform: scale(1.4) rotate(10deg);
   transition: transform 0.3s ease;
 }
@@ -11845,17 +11860,17 @@ figcaption{
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 50px;  /* Adjust width as required */
-  height: 50px;  /* Adjust height as required */
-  border: none;
+  width: 60px;  /* Adjust width as required */
+  height: 60px;  /* Adjust height as required */
+  border: 7px solid #8bc276;
    /* To make them round */
-  background-color: #f07a00;  /* Adjust color as required */
+  background-color: rgba(247,230,186);  /* Adjust color as required */
   color: #fff;
   cursor: pointer;
 }
 
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #5477ad;  /* Adjust hover color as required */
+  background-color: #e77f3d;  /* Adjust hover color as required */
 }
 
 .sub-btn[data-theme] {
@@ -11864,7 +11879,7 @@ figcaption{
 
 
 #stylesBtn {
-  background-image: url('../assets/img/visualization.png');
+  background-image: url('../assets/img/paint.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11884,6 +11899,32 @@ figcaption{
   background-position: center;
   background-repeat: no-repeat;
 }
+#toTopBtn .btn-icon {
+  color: #673d86; /* Questo è un esempio di colore viola. Puoi sostituirlo con il codice esatto del colore viola che desideri. */
+}
+
+.sub-btn {
+  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+}
+
+.btn-hover-text {
+  display: none;  /* Inizialmente, il testo non sarà visibile */
+  position: absolute;
+  top: 0;  /* Posiziona il testo in alto */
+  left: 10%;
+  transform: translateX(-100%);  /* Centra orizzontalmente il testo */
+  font-size: 1.1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
+  background-color: rgba(247,230,186);
+  font-family: "SquareFont"; /* Sfondo semi-trasparente */
+  color: #da7634; 
+  font-weight: bold; /* Colore del testo */
+  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
+  
+}
+
+.sub-btn:hover .btn-hover-text {
+  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+}
 
 
 .letteraT {
@@ -11896,4 +11937,107 @@ figcaption{
 
 .letteraA {
   display: inline;
+}
+
+
+/*prova effetto parole*/
+.floating-word {
+  color:white;
+  font-family: "Squarefont";
+  position: fixed;
+  opacity: 0;
+  z-index: 9999; 
+  animation-duration: 4s;  /* puoi modificare la durata come preferisci */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.word1 {
+  left: 10%;
+  top: 20%;
+  font-size: 2em;
+  animation-name: fadeInOut1;
+  color:#fed231;
+  transform:rotate(20deg)
+}
+
+.word2 {
+  left: 70%;
+  top: 45%;
+  font-size: 1em;
+  animation-name: fadeInOut2;
+}
+
+.word3 {
+  left: 30%;
+  top: 70%;
+  font-size: 3em;
+  animation-name: fadeInOut3;
+  color:#673d86;
+}
+
+.word4 {
+  left: 60%;
+  top: 10%;
+  font-size: 3em;
+  animation: curveFadeInOut 4s infinite;
+}
+
+.word5 {
+  left: 60%;
+  top: 10%;
+  font-size: 1em;
+  color:#7cb76c;
+  animation: curveFadeInOut2 4s infinite;
+}
+@keyframes fadeInOut1 {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInOut2 {
+  0% { opacity: 0; }
+  35% { opacity: 0; }
+  60% { opacity: 1; }
+  85% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInOut3 {
+  0% { opacity: 0; }
+  45% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes curveFadeInOut {
+  0% { 
+    opacity: 0; 
+    transform: translateY(0) rotate(0deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-30px) rotate(25deg); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(0) rotate(0deg); 
+  }
+}
+
+@keyframes curveFadeInOut2 {
+  0% { 
+    opacity: 0; 
+    transform: translateY(10) rotate(0deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(30px) rotate(-25deg); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(0) rotate(10deg); 
+  }
 }
