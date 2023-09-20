@@ -155,7 +155,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Copperplate";
-font-style: normal;
+  font-style: normal;
   line-height: 1.2;
   
 }
@@ -2887,19 +2887,19 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #9B3189;
-  --bs-btn-border-color: #9B3189;
-  --bs-btn-hover-color: #FF0033;
-  --bs-btn-hover-bg: #9B3189;
-  --bs-btn-hover-border-color: #9B3189;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #CAC0CD;
+  --bs-btn-hover-color: #AF4751;
+  --bs-btn-hover-bg:transparent;
+  --bs-btn-hover-border-color: #CAC0CD;
   --bs-btn-focus-shadow-rgb: 196, 142, 73;
-  --bs-btn-active-color: #FF0033;
-  --bs-btn-active-bg: #9B3189;
-  --bs-btn-active-border-color: #9B3189;
+  --bs-btn-active-color: #AF4751;
+  --bs-btn-active-bg: #CAC0CD;
+  --bs-btn-active-border-color: #CAC0CD;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #FF0033;
-  --bs-btn-disabled-bg: #9B3189;
-  --bs-btn-disabled-border-color: #9B3189;
+  --bs-btn-disabled-color: #AF4751;
+  --bs-btn-disabled-bg: #CAC0CD;
+  --bs-btn-disabled-border-color: #CAC0CD;
   margin-bottom: 20px;
   text-transform: uppercase;
 
@@ -11056,10 +11056,6 @@ header h1::first-letter{
   margin-bottom: 5rem;
 }
 
-.section-heading {
-  text-transform: uppercase;
-
-}
 
 .product-item-title .bg-faded{
 margin-top:-50px;
@@ -11158,14 +11154,11 @@ margin-right:-10rem;
 
 
 #mainNav {
-  width:2000px;
-  height: auto;
-  padding-top: 20rem;
-  padding-right: 20rem;
-  background-image: url("/assets/img/NAVBAR.svg");
-  background-repeat: no-repeat;
+
+
+  background-color:  #E49462;
   font-family: "Copperplate";
-  background-size: cover;
+  font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;  /* To ensure it stays above other elements */
@@ -11178,10 +11171,13 @@ margin-right:-10rem;
   
 #mainNav .navbar-brand {
   color: #e6a756;
+  
 
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color:  #FF0033;
+  color:  #243F39;
+  
+
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
@@ -11239,18 +11235,30 @@ margin-right:-10rem;
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
 }
+.intro-img{
+  padding: 0.3rem;
+  border-style: double;
+  border-width: 0.7rem;
+  border-color: #243F39;
+  filter: grayscale(100%);
+  margin-left:10rem;
 
+
+}
 
 .intro {
   position: relative;
-
+  
 
 }
 @media (min-width: 992px) {
   .intro .intro-img {
-    width: 55%;
-    float: right;
-    margin-right:200px;
+    width: 40%;
+    float:left;
+    margin-right:2rem;
+    margin-left:10rem;
+    font-family: "Copperplate";
+
     
   }
   .intro .intro-text {
@@ -11258,7 +11266,9 @@ margin-right:-10rem;
     width: 60%;
     margin-top: 3rem;
     position: absolute;
-    background-color: #0047AB;
+    background-color:transparent;
+    font-family: "Copperplate";
+
 
   }
   .intro .intro-text .intro-button {
@@ -11266,40 +11276,74 @@ margin-right:-10rem;
     left: 0;
     position: absolute;
     bottom: -2rem; 
-   color:red;
-    background-color: #0047AB;
+    background-color:transparent;
+    font-family: "Copperplate";
+
   }
+.section-heading{
+    font-family: "Copperplate" !important;
+    font-size: 1.5rem;
+    }
+  
+
 }
 
 
+
+
+
+/* Altezza desiderata */
 @media (min-width: 1200px) {
+
   .intro .intro-text {
     width: 30%;
-    height: auto; /* Altezza desiderata */
-    background-color: #0047AB;
-    background-size: 25% 20%;
+    height: auto; 
+    background-color:transparent;
     color: #243F39;
     margin-left: 200px;
     margin-top:80px;
-
-
+    font-family: "Copperplate";
+    float:left;
 
   }
-}
-
-.intro .intro-text p{
-  font-size: 1rem;
-  font-family: "Cochin";
 
 
-}
+  .intro .intro-img {
+    width: 40%;
+    float: right;
+    margin-right:2rem;
+    margin-left:10rem;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem; 
+    color:  #AF4751;
+    background-color: #D6C8AA;
+    font-family: "Copperplate";
 
-.intro .intro-text .section-heading-upper{
-  font-size:3rem;
-  background-color: #FF00FF;
-  margin-bottom:3rem;
+  }
+
+  .intro .intro-text p{
+    font-size: 1rem;
+    font-family: "Cochin";
+  
   
 }
+.section-heading{
+  font-family: "Copperplate" !important;
+  font-size: 3rem;
+  }
+.section-heading{
+font-family: "Copperplate" !important;
+font-size: 3rem;
+
+}
+
+
+}
+
 
 
 @media (min-width: 992px) {
@@ -11398,58 +11442,3 @@ text-align: right;
   background-color: #a1d490;
 }
 
-
-/* Stile generale per la navbar */
-#mainNav {
-  background-color: #363636!important; /* Colore di sfondo */
-  padding: 20px 0!important; /* Spaziatura interna */
-}
-
-.navbar-brand {
-  font-size: 24px!important; /* Dimensione del testo del logo */
-  color: #FFD700!important; /* Colore del testo del logo */
-  text-decoration: none!important; /* Rimuove la sottolineatura del testo del logo */
-}
-
-.navbar-toggler-icon {
-  background-color: #FFD700!important; /* Colore dell'icona del pulsante di toggle */
-}
-
-/* Stile per gli elementi di menu */
-.navbar-nav {
-  font-family: "Alexang", sans-serif !important; /* Font per il testo del menu */
-}
-
-.nav-item {
-  margin: 0 15px!important; /* Spaziatura tra gli elementi di menu */
-}
-
-.nav-link {
-  color: #FFD700!important; /* Colore del testo del menu */
-  text-decoration: none!important; /* Rimuove la sottolineatura del testo del menu */
-  position: relative!important; /* Posizione relativa per posizionare i bordi curvati */
-}
-
-.nav-link:hover {
-  color: #363636 !important; /* Cambia il colore del testo al passaggio del mouse */
-  background-color: #FFD700 !important; /* Cambia il colore di sfondo al passaggio del mouse */
-  border-radius: 10px !important; /* Bordi curvati al passaggio del mouse */
-  padding: 5px 15px !important; /* Spaziatura interna al passaggio del mouse */
-  transition: all 0.3s ease !important; /* Transizione animata */
-}
-
-/* Stile per il dropdown */
-.dropdown-menu {
-  background-color: #FFD700 !important; /* Colore di sfondo del dropdown */
-}
-
-.dropdown-item {
-  color: #363636 !important; /* Colore del testo del dropdown */
-}
-
-.dropdown-item:hover {
-  background-color: #363636 !important; /* Cambia il colore di sfondo del dropdown al passaggio del mouse */
-  color: #FFD700 !important; /* Cambia il colore del testo del dropdown al passaggio del mouse */
-  border-radius: 10px !important; /* Bordi curvati al passaggio del mouse */
-  transition: all 0.3s ease!important; /* Transizione animata */
-}
