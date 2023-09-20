@@ -111,6 +111,14 @@ $(document).ready(function() {
     });
 });
 
+document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/renaissancefinale.css";
+});
+
+document.querySelector('.sub-btn[data-theme="theme3"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/issuefuturism.css";
+});
+
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
