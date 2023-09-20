@@ -119,6 +119,10 @@ document.querySelector('.sub-btn[data-theme="theme3"]').addEventListener('click'
     document.getElementById('themeStylesheet').href = "css/issuefuturism.css";
 });
 
+document.querySelector('.sub-btn[data-theme="theme5"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/styles.css";
+});
+
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
