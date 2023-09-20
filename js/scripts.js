@@ -179,3 +179,53 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
             }
             
             siteHeadingUpper.innerHTML = newText;
+
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const wrapLettersInSpans = (element) => {
+                  const text = element.textContent.trim();
+                  let wrappedText = "";
+              
+                  for (let letter of text) {
+                    if (letter === " ") {
+                      wrappedText += letter; // non avvolgere gli spazi
+                    } else {
+                      wrappedText += `<span>${letter}</span>`;
+                    }
+                  }
+              
+                  element.innerHTML = wrappedText;
+                }
+              
+                const siteHeadingLower = document.querySelector(".site-heading-lower");
+                
+                if (siteHeadingLower) {
+                  wrapLettersInSpans(siteHeadingLower);
+                }
+              });
+
+              document.addEventListener('DOMContentLoaded', function() {
+                const wrapAlternateLettersInSpans = (element) => {
+                    const text = element.textContent.trim();
+                    let wrappedText = "";
+                    
+                    for (let i = 0; i < text.length; i++) {
+                        if (text[i] === " ") {
+                            wrappedText += text[i]; // non avvolgere gli spazi
+                        } else if (i % 2 === 0) { // avvolge solo le lettere in posizioni pari (0-based)
+                            wrappedText += `<span>${text[i]}</span>`;
+                        } else {
+                            wrappedText += text[i];
+                        }
+                    }
+                    
+                    element.innerHTML = wrappedText;
+                }
+            
+                const navLinks = document.querySelectorAll('#mainNav .nav-link');
+            
+                navLinks.forEach(navLink => {
+                    wrapAlternateLettersInSpans(navLink);
+                });
+            });
+            

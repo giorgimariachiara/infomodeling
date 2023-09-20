@@ -91,6 +91,11 @@
   }
 }
 
+body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion, .accordion-body, .accordion-button {
+  cursor: url('../assets/img/cursorerinascimento.svg') 0 0, auto;
+  
+  /* Le coordinate 0 0 indicano la posizione "punta" del cursore. Puoi regolarle se necessario. */
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -10903,35 +10908,34 @@ p {
 }
 
 
-.section-heading .section-heading-lower2 {
+.intro .section-heading-lower {
   display: block;
   font-size: 2rem;
-  font-weight: 100;
   font-family: "Cinzel", serif;
   color: #536ba4;
 
 }
-.section-heading .section-heading-upper2 {
+.intro .section-heading-upper {
   display: block;
   font-size: 2rem;
-  font-weight: 100;
+  color: #536ba4;
 }
 
 
-.section-heading-upper2 span:nth-child(1) {
+.intro .section-heading-lower span:nth-child(1) {
   color: #a3852d;
  
 }
 
-.section-heading-upper2 span:nth-child(3) {
+.intro .section-heading-lower span:nth-child(3) {
   color: #92302b;
 }
 
-.section-heading-upper2 span:nth-child(5) {
+.intro .section-heading-lower span:nth-child(5) {
   color: #536ba4;
 }
 
-.section-heading-upper2 span {
+.intro .section-heading-lower span {
   font-family: "Cinzel", serif;
 }
 .bg-faded {
