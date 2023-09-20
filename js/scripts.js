@@ -4,11 +4,13 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
 */
 // Highlights current date on contact page
+
+/*
 window.addEventListener('DOMContentLoaded', event => {
     const listHoursArray = document.body.querySelectorAll('.list-hours li');
     listHoursArray[new Date().getDay()].classList.add(('today'));
 })
-
+*/
 
 /*!
 document.addEventListener("DOMContentLoaded", function () {
@@ -109,6 +111,14 @@ $(document).ready(function() {
     });
 });
 
+document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/renaissancefinale.css";
+});
+
+document.querySelector('.sub-btn[data-theme="theme3"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/issuefuturism.css";
+});
+
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
@@ -127,3 +137,45 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
+
+// effetto parole futurismo
+const wordText = "click";
+
+function createWord(className) {
+    const word = document.createElement("div");
+    word.textContent = wordText;
+    word.classList.add('floating-word', className);
+    document.body.appendChild(word);
+}
+
+function randomizeWordPosition(wordElement) {
+    const randomTop = Math.random() * (window.innerHeight - 100);
+    const randomLeft = Math.random() * (window.innerWidth - 100);
+
+    wordElement.style.top = `${randomTop}px`;
+    wordElement.style.left = `${randomLeft}px`;
+}
+
+
+for (let i = 1; i <= 7; i++) {
+    const className = `word${i}`;
+    createWord(className);
+    const wordElement = document.querySelector(`.${className}`);
+    randomizeWordPosition(wordElement);
+}
+
+
+//effetto titolo futurismo
+const siteHeadingUpper = document.querySelector(".site-heading-upper");
+            const text = siteHeadingUpper.textContent.trim();
+            let newText = "";
+            
+            for (let letter of text) {
+            if (letter === " ") {
+            newText += letter; // non avvolgere gli spazi
+            } else {
+            newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
+            }
+            }
+            
+            siteHeadingUpper.innerHTML = newText;

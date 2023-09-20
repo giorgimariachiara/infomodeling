@@ -5,20 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Business Casual - Start Bootstrap Theme</title>
+        <title>THE LIVES</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/issuefuturism.css" rel="stylesheet" />
-        
-
+         <!-- Font Awesome CSS Link -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
         <header>
             <h1 class="site-heading text-center d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">
+                <span class="site-heading-lower">
                     <span >T</span> 
                     <span >h</span> 
                     <span >e</span> 
@@ -28,7 +28,7 @@
                     <span>e</span> 
                     <span >s</span> 
                 </span>
-                    <span class="site-heading-lower">
+                    <span class="site-heading-upper text-primary mb-3">
                         of the Most Excellent Painters, <br> Sculptors, and Architects
                     </span>
                 </h1>
@@ -57,7 +57,6 @@
             </div>
         </nav>
         <section class="page-section">
-        <!-- Wrapping starts here -->
         <div class="content-wrapper">
             <div class="accordion ms-5 sticky-accordion" id="accordionExample">
 
@@ -114,7 +113,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Nested Accordion Ends Here -->
                         </div>
                         </div>
                     </div>
@@ -137,15 +135,11 @@
                         
                     </div>
                     <div class="verrocchio"></div>
-
-                    <img src="assets\img\barrarinascimento.svg" alt="Lettera colorata" class="decorative-img">
-                    <!--<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/verrocchio futurista.jpg" alt="..." /> -->
-                    
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-5 rounded">
-                        
-                        	<p>
-                        	<span class="personName" data-person-id="andrea"><b><img src="assets\img\LetteraAVerrocchio.svg" alt="Lettera colorata" id="miaLettera">Andrea del Verrocchio</b></span>, 
+                            <img src="assets\img\barrarinascimento.svg" alt="Lettera colorata" class="decorative-img">                  
+                            <span class="personName" data-person-id="andrea">
+                              <p><img src="assets\img\LetteraAVerrocchio.svg" alt="Lettera colorata" id="miaLettera"><span class="letteraA">A</span>ndrea del Verrocchio</b></span>, 
                         		a <span class="placeName" data-place-id="florence">Florentine</span>, was in his day a goldsmith,
 				                    a master of perspective, a sculptor, a wood-carver, a painter, and a musician; but in the arts of sculpture and painting,
 				                    to tell the truth, he had a manner somewhat hard and crude, as one who acquired it rather by infinite study than by the
@@ -297,24 +291,10 @@
             </div>
         </div>
             </div>
-        </section>
-       <script>const siteHeadingLower = document.querySelector(".site-heading-lower");
-        const text = siteHeadingLower.textContent.trim();
-        let newText = "";
-        
-        for (let letter of text) {
-        if (letter === " ") {
-        newText += letter; // non avvolgere gli spazi
-        } else {
-        newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
-        }
-        }
-        
-        siteHeadingLower.innerHTML = newText;
-        </script>
-        
-        
+        </section>    
 
+
+      
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
         </footer>
@@ -325,6 +305,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <script src="js/mainjs.js"></script>
+       
     </body>
 </html>

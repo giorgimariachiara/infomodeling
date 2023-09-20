@@ -11186,7 +11186,7 @@ p {
   height: 50px;  /* Adjust height as required */
   border: none;
   border-radius: 50%;  /* To make them round */
-  background-color: #333;  /* Adjust color as required */
+  background-color: rgba(47, 23, 15, 0.9);  /* Adjust color as required */
   color: #fff;
   cursor: pointer;
 }
@@ -11198,9 +11198,83 @@ p {
 .sub-btn[data-theme] {
   display: none;
 }
+#stylesBtn {
+  width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
+  height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
+  background-image: url('../assets/img/brush.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme3"] {
+  background-image: url('../assets/img/heptagon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme1"] {
+  background-image: url('../assets/img/vitruvian-man.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn {
+  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+}
+
+.btn-hover-text {
+  display: none;  /* Inizialmente, il testo non sarà visibile */
+  position: absolute;
+  top: 0;  /* Posiziona il testo in alto */
+  left: 10%;
+  transform: translateX(-100%); /* Centra orizzontalmente il testo */
+  font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
+  background-color: rgba(0,0,0,0.6);  /* Sfondo semi-trasparente */
+  color: white;  /* Colore del testo */
+  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
+  border-radius: 0.3rem;  /* Angoli arrotondati */
+}
+
+.sub-btn:hover .btn-hover-text {
+  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+}
+
+/*immagini*/
+
+.verrocchio{
+  width: 70vw;
+  max-width: 750px;
+  height: 50vw;
+  max-height:940px;
+  background-image: url('../assets/img/verrocchiodefault.svg');
+  background-repeat:no-repeat;
+  background-size: contain;
+}
 
 
+.decorative-img{
+  display: none;
+}
 
+#miaLettera{
+  display:none;
+}
+
+
+.letteraT {
+  display: inline;
+}
+
+.letteraF {
+  display: inline;
+}
+
+.letteraA {
+  display: inline;
+}
 
 
 

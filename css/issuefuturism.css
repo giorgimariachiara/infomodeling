@@ -2766,9 +2766,8 @@ textarea.form-control-lg {
   --bs-btn-line-height: 1.5;
   --bs-btn-color: #212529;
   --bs-btn-bg: transparent;
-  --bs-btn-border-width: 1px;
+  --bs-btn-border-width: 8px;
   --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: 0.375rem;
   --bs-btn-hover-border-color: transparent;
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
@@ -2783,13 +2782,13 @@ textarea.form-control-lg {
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: url('triangle.png'), auto;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border: var(--bs-btn-border-width) solid #00b477;
   border-radius: var(--bs-btn-border-radius);
-  background-color: var(--bs-btn-bg);
+  background-color: #fecc30;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2838,10 +2837,10 @@ textarea.form-control-lg {
 .btn-primary {
   --bs-btn-color: #000;
   --bs-btn-bg: #e6a756;
-  --bs-btn-border-color: #e6a756;
+  --bs-btn-border-color: #00b477;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #eab46f;
-  --bs-btn-hover-border-color: #e9b067;
+  --bs-btn-hover-bg: #00b477;
+  --bs-btn-hover-border-color: #fecc30;
   --bs-btn-focus-shadow-rgb: 196, 142, 73;
   --bs-btn-active-color: #000;
   --bs-btn-active-bg: #ebb978;
@@ -4323,17 +4322,18 @@ textarea.form-control-lg {
 }
 
 .accordion {
-  --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
+  --bs-accordion-color: transparent;
+  --bs-accordion-bg: #000;
+  
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-  --bs-accordion-border-color: var(--bs-border-color);
+  --bs-accordion-border-color: #673d86;
   --bs-accordion-border-width: 1px;
   --bs-accordion-border-radius: 0.375rem;
   --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: #212529;
-  --bs-accordion-btn-bg: var(--bs-accordion-bg);
+  --bs-accordion-btn-bg:linear-gradient(45deg, #673d86, #673d86 25%, #ed8543 25%, #ed8543 50%, #85c06c 50%, #85c06c 75%, #f07a00 75%);
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
@@ -4343,45 +4343,52 @@ textarea.form-control-lg {
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #5a7db3;;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
+  --bs-accordion-btn-hover-bg:  linear-gradient(45deg, #ed8543, #ed8543 25%, #85c06c 25%, #85c06c 50%, #f07a00 50%, #f07a00 75%, #673d86 75%);
   --bs-accordion-active-color: #5a7db3;
-  --bs-accordion-active-bg: orange;
+  --bs-accordion-active-bg: #85c06c;
   flex:1;
 }
 
 
 input[type="checkbox"] {
-  margin-right: 0.5rem;  /* Spaziatura tra la casella di controllo e l'etichetta */
-  transform: scale(1.5);  /* Rende la casella di controllo un po' più grande */
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 label {
-  font-size: 1.3rem;  /* Dimensione del testo per le etichette */
-  font-family: 'SquareFont';  /* Tipo di carattere futurista */
+  font-size: 1.3rem;
+  color: #f7e6ba;
+  font-family: "Squarefont";
 }
 .accordion-button {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
   color: #fff; 
   text-align: left;
-  background-color:#000;
+  background: var(--bs-accordion-btn-bg);
   transition: all 0.3s ease;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
-  font-family: "SquareFont"; 
-  border: 2px solid #5a7db3; 
+  font-family: 'SquareFont';
+  border: 2px solid var(--bs-accordion-border-color);
+  letter-spacing: 10px; 
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
     transition: none;
   }
 }
+
+.accordion-button span {
+  font-size: 1.2em; 
+  transform: rotate(10deg) /* Rende le lettere all'interno di <span> più grandi */
+}
 .accordion-button:not(.collapsed) {
-  color: black;
-  background-color: white;
+  background: var(--bs-accordion-active-bg);
+  color: #000;
   box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 }
 .accordion-button:not(.collapsed)::after {
@@ -4406,6 +4413,7 @@ label {
 }
 .accordion-button:hover {
   z-index: 2;
+  background: var(--bs-accordion-btn-hover-bg);
 }
 .accordion-button:focus {
   z-index: 3;
@@ -4419,9 +4427,11 @@ label {
 }
 
 .accordion-item {
-  color: var(--bs-accordion-color);
-  background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10px;
+ 
 }
 .accordion-item:first-of-type {
   border-top-left-radius: 0;
@@ -4447,11 +4457,16 @@ label {
   border-bottom-left-radius: 0;
 }
 .accordion-collapse {
-  background-color: #FFF;
+  background-color: transparent;
   border-top: 2px solid #00FFFF; /* Questo aggiunge un bordo celeste sopra il contenuto dell'accordion */
+  
 }
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+  background-color: transparent;
+  color: #f7e6ba;
+  border-top: 2px solid var(--bs-accordion-border-color);
+
 }
 
 .accordion-flush .accordion-collapse {
@@ -8042,7 +8057,7 @@ label {
 }
 
 /* rtl:end:remove */
-.text-primary {
+.site-heading-lower {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
@@ -10834,7 +10849,7 @@ label {
   }
 }
 body {
-    background-color: black;
+  background-color: black;
   background-image: url("../assets/img/futurism.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -10860,11 +10875,30 @@ p {
   margin-bottom: 5rem;
 }
 
-.section-heading {
-  text-transform: uppercase;
-
+.bg-faded2 {
+  position: relative; /* Per posizionare correttamente l'elemento pseudo */
 }
 
+.bg-faded2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #663d86;
+  clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
+  z-index: 0; /* Per metterlo dietro al contenuto */
+}
+
+.bg-faded2 h2, .bg-faded2 p, .bg-faded2 .intro-button {
+  position: relative;
+  z-index: 2; /* Imposta a 1 */
+}
+
+.section-heading {
+  text-transform: uppercase;
+}
 
 
 @keyframes swing {
@@ -10901,7 +10935,7 @@ p {
 }
 
 .section-heading-lower span {
-  font-family: 'Cinzel', sans-serif; /* Puoi sostituire con altri font geometrici */
+  font-family: 'SquareFont', sans-serif; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
   font-size: 2.2rem;
   color:#ffda39;
@@ -10909,14 +10943,50 @@ p {
 }
 
 .section-heading .section-heading-upper,
-.section-heading .section-heading-lower, .section-heading .section-heading-lower span {
+.intro-text .section-heading-upper,
+.section-heading .section-heading-lower, .intro-text .section-heading-lower, .section-heading .section-heading-lower span {
   mix-blend-mode: difference;
   color: white; /* Questo diventerà il colore opposto dello sfondo quando si sovrappone */
 }
-.bg-fadedtitle{
+
+.intro-text .section-heading-lower {
+  display: block;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-top: 40px;
+  margin-bottom: 170px;
+  font-family: "SquareFont";
+  transform: rotate(10deg);
+  color:white;
+}
+
+.intro-text .section-heading-upper {
+  display: block;
+  font-size: 5rem;
+  font-weight: 100;
+  font-family: "SquareFont";
+  transform: rotate(-50deg);
+  animation: placeholder-wave 1s infinite; 
+  color:white;
+}
+.section-heading .section-heading-upper span:nth-child(2) {
+  display: inline-block;  /* La trasformazione si applica meglio agli elementi inline-block o block */
+  transform: rotate(10deg);
+  font-size: 3rem;
+  margin-left:10px;  /* Ruota di -10 gradi, ma puoi regolare come preferisci */
+}
+
+.section-heading-lower span {
+  font-family: 'Cinzel'; /* Puoi sostituire con altri font geometrici */
+  letter-spacing: 5px; /* Distanza tra le lettere */
+  font-size: 2.2rem;
+  color:#ffda39;
+  font-weight: 800;
+}
+ .bg-fadedtitle{
     position:relative;
 }
-  .bg-fadedtitle::before {
+.bg-fadedtitle::before {
     content: "";
     border-top: 20px solid #f7e6ba;
     border-right: 10px solid black;
@@ -10926,13 +10996,13 @@ p {
     left: 0;
     width: 90%; /* Questo determina dove inizia la seconda parte del colore */
     height: 100%;
-    background: #663d86; /* O qualsiasi altro colore tu voglia per la parte sinistra */
+    background: linear-gradient(120deg, #ed8543, #ed8543 35%, #85c06c 15%, #85c06c 60%, #f07a00 40%, #f07a00 75%, #673d86 75%);
     clip-path:polygon(100% 0, 100% 71%, 53% 39%, 60% 66%, 30% 46%, 26% 69%, 11% 55%, 0% 70%, 0% 35%, 0 0);
     z-index: -1; /* Assicurati che sia dietro al testo */
 }
 
 @media (max-width: 992px) {
-    .bg-fadedtitle::before {
+ .bg-fadedtitle::before {
         width: 60%;
         border:none;
         /* puoi cambiare qualsiasi altro stile qui per adattarlo alle dimensioni dello schermo */
@@ -11015,8 +11085,6 @@ figcaption:nth-of-type(2) {
   margin-left: 160px !important;
 }
 
-
-
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -11031,24 +11099,6 @@ figcaption:nth-of-type(2) {
   font-family: "SquareFont";
 }
 
-@media (min-width: 992px) {
-  #mainNav {
-      clip-path: polygon(
-          0% 10%, 
-          20% 0%, 
-          40% 10%, 
-          60% 0%, 
-          80% 10%, 
-          100% 0%, 
-          100% 100%, 
-          80% 90%, 
-          60% 100%, 
-          40% 90%, 
-          20% 100%, 
-          0% 90%
-      );
-  }
-}
 #mainNav .navbar-brand {
   color: #f27a0a;
 }
@@ -11073,8 +11123,6 @@ figcaption:nth-of-type(2) {
   }
 }
 
-
-
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
@@ -11098,6 +11146,15 @@ figcaption:nth-of-type(2) {
 
 .intro {
   position: relative;
+}
+
+.intro-text p.mb-3 {
+  color: white;
+  font-family: "Cinzel";
+  font-size:1rem;
+  margin-bottom:40px;
+  margin-right: 50px;
+  background-color: black;
 }
 @media (min-width: 992px) {
   .intro .intro-img {
@@ -11307,82 +11364,82 @@ figcaption:nth-of-type(2) {
 
 /*titolo*/
 
-.text-primary {
+.site-heading-lower{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.4em;
 }
 
-.text-primary span {
+.site-heading-lower span {
   margin: 0 2px;
   display: inline-block;
   transform-origin: center;
 }
 
-.text-primary span:nth-child(1) {
+.site-heading-lower span:nth-child(1) {
   font-size: 2em;
   transform: rotate(-20deg);
 }
 
-.text-primary span:nth-child(2) {
+.site-heading-lower span:nth-child(2) {
   font-size: 1.4em;
   transform: rotate(-10deg);
 }
 
-.text-primary span:nth-child(3) {
+.site-heading-lower span:nth-child(3) {
   font-size: 1.6em;
   transform: rotate(0deg);
 }
 
-.text-primary span:nth-child(4) {
+.site-heading-lower span:nth-child(4) {
   font-size: 1.2em;
   transform: rotate(10deg);
 }
 
-.text-primary span:nth-child(5) {
+.site-heading-lower span:nth-child(5) {
   font-size: 1em;
   transform: rotate(20deg);
 }
 
-.text-primary span:nth-child(6) {
+.site-heading-lower span:nth-child(6) {
   font-size: 1.9em;
   transform: rotate(-25deg);
 }
 
-.text-primary span:nth-child(7) {
+.site-heading-lower span:nth-child(7) {
   font-size: 1.3em;
   transform: rotate(-5deg);
 }
 
-.text-primary span:nth-child(8) {
+.site-heading-lower span:nth-child(8) {
   font-size: 1.7em;
   transform: rotate(5deg);
 }
 
 @media (max-width: 768px) {
-  .text-primary {
+  .site-heading-lower {
       font-size: 1.2em;
   }
   
-  .text-primary span {
+  .site-heading-lower span {
       margin: 0 1px;  /* riduzione dello spazio tra le lettere */
   }
 }
 
 @media (max-width: 576px) {
-  .text-primary {
+  .site-heading-lower{
       font-size: 1em;
   }
   
-  .text-primary span {
+  .site-heading-lower span {
       margin: 0 0.5px;  /* ulteriore riduzione dello spazio tra le lettere */
   }
 }
 
 /* ombra dietro al titolo */
 
-.text-primary span {
+.site-heading-lower span {
   position:relative;
   transform-origin: bottom left;
   text-shadow: 
@@ -11393,11 +11450,11 @@ figcaption:nth-of-type(2) {
 }
 
 /* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
-.text-primary span:nth-child(1) {
+.site-heading-lower span:nth-child(1) {
   transform: rotate(-20deg) skewY(-10deg);
 }
 
-.text-primary span:hover {
+.site-heading-lower span:hover {
   transform: scale(1.4) rotate(10deg);
   transition: transform 0.3s ease;
 }
@@ -11405,7 +11462,7 @@ figcaption:nth-of-type(2) {
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
 
 
-.site-heading-lower {
+.site-heading-upper {
   font-family:"Roboto";
   font-size: 1.2em;
   letter-spacing: 0.1em;
@@ -11418,7 +11475,7 @@ figcaption:nth-of-type(2) {
   
 }
 
-.site-heading-lower::before, .site-heading-lower::after {
+.site-heading-upper::before, .site-heading-upper::after {
   content: "";
   width: 20%;
   height: 2px;
@@ -11427,11 +11484,11 @@ figcaption:nth-of-type(2) {
   top: 50%;
 }
 
-.site-heading-lower::before {
+.site-heading-upper::before {
   left: -25%;
 }
 
-.site-heading-lower::after {
+.site-heading-upper::after {
   right: -25%;
 }
 
@@ -11752,6 +11809,46 @@ figcaption{
   z-index: 10000; 
 }
 
+
+.vasaripaint {
+  margin-right:40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70vw;
+  max-width: 750px;
+  height: 80vw;
+  max-height:860px;
+  transform: rotate(10deg);
+}
+
+.vasaripaint {
+  background-image: url('../assets/img/vasaripaint.svg');
+}
+.vasaripaint:hover {
+  transform: scale(1.1);
+  z-index: 10000; 
+}
+
+@media (min-width: 992px) {
+  .intro .vasaripaint {
+    width: 75%;
+    float: right;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 3rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+/*Bottoni stile  */
 .btns-grid-container {
   display: grid;
   position: fixed;
@@ -11763,19 +11860,184 @@ figcaption{
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 50px;  /* Adjust width as required */
-  height: 50px;  /* Adjust height as required */
-  border: none;
-  border-radius: 50%;  /* To make them round */
-  background-color: #333;  /* Adjust color as required */
+  width: 60px;  /* Adjust width as required */
+  height: 60px;  /* Adjust height as required */
+  border: 7px solid #8bc276;
+   /* To make them round */
+  background-color: rgba(247,230,186);  /* Adjust color as required */
   color: #fff;
   cursor: pointer;
 }
 
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #555;  /* Adjust hover color as required */
+  background-color: #e77f3d;  /* Adjust hover color as required */
 }
 
 .sub-btn[data-theme] {
   display: none;
+}
+
+
+#stylesBtn {
+  background-image: url('../assets/img/paint.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.sub-btn[data-theme="theme3"] {
+  background-image: url('../assets/img/heptagon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme1"] {
+  background-image: url('../assets/img/vitruvian-man.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#toTopBtn .btn-icon {
+  color: #673d86; /* Questo è un esempio di colore viola. Puoi sostituirlo con il codice esatto del colore viola che desideri. */
+}
+
+.sub-btn {
+  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+}
+
+.btn-hover-text {
+  display: none;  /* Inizialmente, il testo non sarà visibile */
+  position: absolute;
+  top: 0;  /* Posiziona il testo in alto */
+  left: 10%;
+  transform: translateX(-100%);  /* Centra orizzontalmente il testo */
+  font-size: 1.1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
+  background-color: rgba(247,230,186);
+  font-family: "SquareFont"; /* Sfondo semi-trasparente */
+  color: #da7634; 
+  font-weight: bold; /* Colore del testo */
+  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
+  
+}
+
+.sub-btn:hover .btn-hover-text {
+  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+}
+
+
+.letteraT {
+  display: inline;
+}
+
+.letteraF {
+  display: inline;
+}
+
+.letteraA {
+  display: inline;
+}
+
+
+/*prova effetto parole*/
+.floating-word {
+  color:white;
+  font-family: "Squarefont";
+  position: fixed;
+  opacity: 0;
+  z-index: 9999; 
+  animation-duration: 4s;  /* puoi modificare la durata come preferisci */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.word1 {
+  left: 10%;
+  top: 20%;
+  font-size: 2em;
+  animation-name: fadeInOut1;
+  color:#fed231;
+  transform:rotate(20deg)
+}
+
+.word2 {
+  left: 70%;
+  top: 45%;
+  font-size: 1em;
+  animation-name: fadeInOut2;
+}
+
+.word3 {
+  left: 30%;
+  top: 70%;
+  font-size: 3em;
+  animation-name: fadeInOut3;
+  color:#673d86;
+}
+
+.word4 {
+  left: 60%;
+  top: 10%;
+  font-size: 3em;
+  animation: curveFadeInOut 4s infinite;
+}
+
+.word5 {
+  left: 60%;
+  top: 10%;
+  font-size: 1em;
+  color:#7cb76c;
+  animation: curveFadeInOut2 4s infinite;
+}
+@keyframes fadeInOut1 {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInOut2 {
+  0% { opacity: 0; }
+  35% { opacity: 0; }
+  60% { opacity: 1; }
+  85% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInOut3 {
+  0% { opacity: 0; }
+  45% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes curveFadeInOut {
+  0% { 
+    opacity: 0; 
+    transform: translateY(0) rotate(0deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-30px) rotate(25deg); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(0) rotate(0deg); 
+  }
+}
+
+@keyframes curveFadeInOut2 {
+  0% { 
+    opacity: 0; 
+    transform: translateY(10) rotate(0deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(30px) rotate(-25deg); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(0) rotate(10deg); 
+  }
 }
