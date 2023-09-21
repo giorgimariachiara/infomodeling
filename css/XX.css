@@ -11243,8 +11243,8 @@ p {
   left: 10%;
   transform: translateX(-100%); /* Centra orizzontalmente il testo */
   font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
-  background-color: rgba(0,0,0,0.6);  /* Sfondo semi-trasparente */
-  color: white;  /* Colore del testo */
+  background-color: rgba(247,230,186);  /* Sfondo semi-trasparente */
+  color: #da7634;  /* Colore del testo */
   padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
   border-radius: 0.3rem;  /* Angoli arrotondati */
 }
