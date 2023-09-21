@@ -11084,63 +11084,6 @@ p {
   }
 }
 
-
-/*
-.toggle-btn {
-    position: absolute;  
-    top: 0;  
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}  */
-
-
-/* Change from sticky to absolute positioning */
-/* Align to the top */
-/* Align to the left at 50% of the container width */
-/* Center the element */
-/*
-.toggle-btn {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
- /* Use absolute positioning */
- /* Align it to the right */
- /*
-.toggle-btn {
-    position: sticky; 
-    top: 150px;
-    right: auto;  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-
-.toggle-btn-2 {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
 .button-container {
   position: sticky;
   top: 150px;
@@ -11170,6 +11113,50 @@ p {
 .highlight-person {
     background-color: #a1d490;
 }
+
+
+/* CSS per schermi di dimensioni standard */
+.baptism, .adoration, .last-supper, .madonna {
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-top: 2px solid black;
+  border-left: 8px solid black;
+}
+
+.baptism {
+  margin-left: 5vw;
+  width: 30vw;
+  height: 35vw;
+  background-image: url('../assets/img/baptism.svg');
+}
+
+.adoration {
+  margin-left: 5vw;
+  width: 20vw;
+  height: 20vw;
+  background-image: url('../assets/img/adortion.svg');
+}
+
+.last-supper {
+  margin-left: 10vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  width: 30vw;
+  height: 14vw;
+  border-right: 1vw solid black;
+  background-image: url('../assets/img/last-supper.svg');
+}
+
+.madonna {
+  margin-left: 14vw;
+  width: 18vw;
+  height: 24vw;
+  border-bottom: 0.3vw solid black;
+  border-right: 1.6vw solid black;
+  background-image: url('../assets/img/madonna.svg');
+}
+
+
 
 .btns-grid-container {
   display: grid;
