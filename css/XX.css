@@ -11168,18 +11168,28 @@ p {
   z-index: 9999;  /* This will ensure it's on top of most other elements */
 }
 
+/* Retro Button Styles */
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 60px;  /* Adjust width as required */
-  height: 60px;  /* Adjust height as required */
-  border: 7px solid #8bc276;
-  /* To make them round */
-  background-color: rgba(247,230,186);  /* Adjust color as required */
-  color: #fff;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 60px;  /* Original 60px + 10px to account for the added border */
+  height: 60px;  /* Original 60px + 10px to account for the added border */
+  /* Gradient background for retro look */
+  background: linear-gradient(45deg, #FFDDAA, #FFAABB);
+  border: 5px solid #FF55AA;
+  box-shadow:
+          5px 5px 10px rgba(0, 0, 0, 0.5),
+          inset 3px 3px 5px rgba(255, 255, 255, 0.6),
+          inset -3px -3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #e77f3d;  /* Adjust hover color as required */
+  /* Reverse gradients and shadows to give a pressed effect */
+  background: linear-gradient(45deg, #FFAABB, #FFDDAA);
+  box-shadow:
+          3px 3px 6px rgba(0, 0, 0, 0.5),
+          inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+          inset -1px -1px 3px rgba(0, 0, 0, 0.4);
+  transform: translate(2px, 2px);
 }
 
 .sub-btn[data-theme] {
