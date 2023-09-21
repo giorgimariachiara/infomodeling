@@ -11634,6 +11634,52 @@ p {
     margin-bottom: 3.5vw;
   }
 }
+
+.judith {
+  width: 30vw;
+  height: 44vw;
+  margin-top: 4vw;
+  margin-left: 7vw;
+  margin-bottom: 1.5vw;
+  background-image: url('../assets/img/donatello/judith.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+}
+
+
+@media (max-width: 768px) {
+  .judith {
+    width: 50vw;
+    height: 70vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 6vw;
+    margin-left: 10vw;
+    margin-bottom: 2.5vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .judith {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw;
+    margin-top: 8vw;
+    margin-left: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
+
+
+
+
+
+
+
+
 .vasaripaint{
   margin-right:40px;
   background-repeat: no-repeat;

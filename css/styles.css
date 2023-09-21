@@ -11252,14 +11252,64 @@ p {
 
 /*immagini*/
 
-.verrocchio{
-  width: 70vw;
-  max-width: 750px;
-  height: 50vw;
-  max-height:940px;
+.verrocchio {
+  width: 40vw;
+  height: 34vw;
+  margin-left: 20vw;
   background-image: url('../assets/img/verrocchiodefault.svg');
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .verrocchio {
+    width: 50vw;
+    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-top: 6vw;
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .verrocchio {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-top: 8vw;
+    margin-left: 15vw;
+  }
+}
+
+
+
+.leonardo {
+  width: 60vw;
+  height: 35vw;
+  margin-top: 2vw;
+  background-image: url('../assets/img/leonardo/leonardo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .leonardo {
+    width: 50vw;
+    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-top: 6vw;
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .leonardo{
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-top: 8vw;
+    margin-left: 15vw;
+  }
 }
 
 .decorative-img{
@@ -11429,10 +11479,90 @@ p {
   }
 }
 
+.david {
+  width: 40vw;
+  height: 30vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/davidefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .david {
+    width: 60vw;
+    height: 50vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .david {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+.sarcophagus {
+  width: 30vw;
+  height: 40vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/sarcophagudefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .sarcophagus {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .sarcophagus {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+.judith {
+  width: 30vw;
+  height: 40vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/judithdefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .judith {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .judith {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
 
 .figcaption{
   text-align: center;
   margin-bottom:15px;
-  
+
 }
 
