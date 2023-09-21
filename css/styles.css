@@ -11290,5 +11290,36 @@ p {
   display: inline;
 }
 
+.vasaripaint {
+  margin-right:40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70vw;
+  max-width: 750px;
+  height: 80vw;
+  max-height:860px;
+}
+
+.vasaripaint {
+  background-image: url('../assets/img/vasaripaint.svg');
+}
+@media (min-width: 992px) {
+  .intro .vasaripaint {
+    width: 75%;
+    float: right;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 3rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
 
 

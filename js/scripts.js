@@ -142,7 +142,6 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
     });
 });
 
-// effetto parole futurismo
 const wordText = "click";
 
 function createWord(className) {
@@ -160,13 +159,16 @@ function randomizeWordPosition(wordElement) {
     wordElement.style.left = `${randomLeft}px`;
 }
 
-
-for (let i = 1; i <= 7; i++) {
-    const className = `word${i}`;
-    createWord(className);
-    const wordElement = document.querySelector(`.${className}`);
-    randomizeWordPosition(wordElement);
+function activateFuturismEffects() {
+  for (let i = 1; i <= 7; i++) {
+      const className = `word${i}`;
+      createWord(className);
+      const wordElement = document.querySelector(`.${className}`);
+      randomizeWordPosition(wordElement);
+  }
 }
+
+document.querySelector('.btns-item-4 .sub-btn').addEventListener('click', activateFuturismEffects);
 
 
 //effetto titolo futurismo

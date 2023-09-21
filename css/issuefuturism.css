@@ -10940,14 +10940,14 @@ p {
   color:white;
 }
 
-.section-heading .section-heading-upper span:nth-child(2) {
+.section-heading .section-heading-upper{
   display: inline-block;  /* La trasformazione si applica meglio agli elementi inline-block o block */
   transform: rotate(10deg);
   font-size: 3rem;
   margin-left:10px;  /* Ruota di -10 gradi, ma puoi regolare come preferisci */
 }
 
-.section-heading-lower span {
+.section-heading-lower {
   font-family: 'SquareFont', sans-serif; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
   font-size: 2.2rem;
@@ -10996,10 +10996,10 @@ p {
   color:#ffda39;
   font-weight: 800;
 }
- .bg-fadedtitle{
+ .product-item .bg-faded{
     position:relative;
 }
-.bg-fadedtitle::before {
+.product-item .bg-faded::before {
     content: "";
     border-top: 20px solid #f7e6ba;
     border-right: 10px solid black;
@@ -11015,7 +11015,7 @@ p {
 }
 
 @media (max-width: 992px) {
- .bg-fadedtitle::before {
+  .product-item .bg-faded::before {
         width: 60%;
         border:none;
         /* puoi cambiare qualsiasi altro stile qui per adattarlo alle dimensioni dello schermo */
@@ -11024,11 +11024,11 @@ p {
 .product-item-description .bg-faded{
     background-color: #f7e6ba;
 }
-.bg-faded p {
+.product-item-description .bg-faded p {
   font-family: 'Sitka';
 }
 
-.bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(11), .bg-faded p:nth-of-type(18){
+.product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8), .product-item-description .bg-faded p:nth-of-type(11), .product-item-description .bg-faded p:nth-of-type(18){
   text-align: left;         
   border-right: 1vw solid #000; 
   border-bottom: 0.3vw solid #000; 
@@ -11038,7 +11038,7 @@ p {
   padding-bottom: 1.5vw; 
 }
 
-.bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(12),.bg-faded p:nth-of-type(15)  {
+.product-item-description .bg-faded p:nth-of-type(2), .product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9),.product-item-description .bg-faded p:nth-of-type(12),.product-item-description .bg-faded p:nth-of-type(15)  {
   text-align: center;         
   border-top: 1vw solid #000; 
   border-bottom: 0.3vw solid #000;     
@@ -11048,7 +11048,7 @@ p {
   
 }
 
-.bg-faded p:nth-of-type(3), .bg-faded p:nth-of-type(10) , .bg-faded p:nth-of-type(13), .bg-faded p:nth-of-type(17), .bg-faded p:nth-of-type(19) {
+.product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
   text-align: right;         
   border-top: 0.4vw solid #000; 
   border-left: 1.2vw solid #000;   
@@ -11057,7 +11057,7 @@ p {
   transform: rotate(5deg); 
 }
 
-.bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7), .bg-faded p:nth-of-type(14), .bg-faded p:nth-of-type(16), .bg-faded p:nth-of-type(20) {
+.product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7), .product-item-description .bg-faded p:nth-of-type(14), .product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20) {
   text-align: left;         
   border-left: 1vw solid #000; 
   border-right: 0.3vw solid #000; 
@@ -11068,23 +11068,23 @@ p {
 }
 
 @media (max-width: 768px) {
-  .bg-faded p:nth-of-type(1), .bg-faded p:nth-of-type(4), .bg-faded p:nth-of-type(8), .bg-faded p:nth-of-type(11), .bg-faded p:nth-of-type(18) {
+  .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8),.product-item-description .bg-faded p:nth-of-type(11),.product-item-description .bg-faded p:nth-of-type(18) {
       margin-right: 2vw; 
       padding-right: 1vw;
       padding-bottom: 1vw; 
   }
 
-  .bg-faded p:nth-of-type(2), .bg-faded p:nth-of-type(5), .bg-faded p:nth-of-type(9), .bg-faded p:nth-of-type(12) , .bg-faded p:nth-of-type(15) {
+  .product-item-description .bg-faded p:nth-of-type(2),.product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9), .product-item-description .bg-faded p:nth-of-type(12) , .product-item-description .bg-faded p:nth-of-type(15) {
       margin-top: 4vw;
       margin-bottom: 2vw;
   }
 
-  .bg-faded p:nth-of-type(3),  .bg-faded p:nth-of-type(10), .bg-faded p:nth-of-type(13), .bg-faded p:nth-of-type(17), .bg-faded p:nth-of-type(19) {
+  .product-item-description .bg-faded p:nth-of-type(3),  .product-item-description .bg-faded p:nth-of-type(10),.product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17), .product-item-description .bg-faded p:nth-of-type(19) {
       margin-top: 7vw;
       margin-bottom: 2vw;
   }
 
-  .bg-faded p:nth-of-type(6), .bg-faded p:nth-of-type(7), .bg-faded p:nth-of-type(14) , .bg-faded p:nth-of-type(16), .bg-faded p:nth-of-type(20){
+  .product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7),.product-item-description .bg-faded p:nth-of-type(14) ,.product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20){
       margin-left: 6vw;
       margin-top:5vw;
       padding-right: 1vw;
