@@ -4,8 +4,8 @@
 
 .sub-btn, #stylesBtn, #toTopBtn {
     box-sizing: border-box;
-    width: 70px;  /* Original 60px + 10px to account for the added border */
-    height: 70px;  /* Original 60px + 10px to account for the added border */
+    width: 60px;  /* Original 60px + 10px to account for the added border */
+    height: 60px;  /* Original 60px + 10px to account for the added border */
     /* Gradient background for retro look */
     background: linear-gradient(45deg, #FFDDAA, #FFAABB);
     border: 5px solid #FF55AA;
