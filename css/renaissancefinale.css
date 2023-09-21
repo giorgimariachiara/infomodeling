@@ -10855,15 +10855,12 @@ body {
   background-position: center;
   background-size: cover;
 }
-
 p {
   line-height: 1.75;
 }
-
 .text-faded {
   color: #f6e1c5;
 }
-
 .site-heading {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -11157,9 +11154,6 @@ p {
       width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
   }
 }
-
-
-
 /*
 .toggle-btn {
     position: absolute;  
@@ -11320,8 +11314,6 @@ p {
       padding:0;
 }
 
-
-
 .bg-faded.p-5.rounded {
   position: relative;
 }
@@ -11387,7 +11379,6 @@ p {
 
 }
 
-
 p {
   font-family: 'AquilineTwo', serif;
   text-align: justify;
@@ -11411,8 +11402,6 @@ p {
       margin-left: 0.7rem;
   }
 }
-
-
 /*immagini*/
 
 .david {
@@ -11453,7 +11442,6 @@ p {
   }
 }
 
-
 .sarcophagus {
   width: 25vw;
   height: 30vw;
@@ -11469,7 +11457,6 @@ p {
       0 0 0 0.9vw var(--bs-gold);
   padding: 0;
 }
-
 
 @media (max-width: 768px) {
   .sarcophagus {
@@ -11492,7 +11479,161 @@ p {
   }
 }
 
+.madonna {
+  width: 30vw;
+  height: 44vw;
+  margin-top: 4vw;
+  margin-left: 7vw;
+  margin-bottom: 1.5vw;
+  background-image: url('../assets/img/madonnarenaissace.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+}
 
+
+@media (max-width: 768px) {
+  .madonna {
+    width: 50vw;  /* Aumenta la larghezza per adattarsi meglio a schermi più piccoli */
+    height: 74vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 6vw;
+    margin-left: 10vw;
+    margin-bottom: 2.5vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .madonna {
+    width: 80vw;  /* Aumenta ulteriormente la larghezza per schermi molto piccoli */
+    height: 120vw;
+    margin-top: 8vw;
+    margin-left: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
+
+
+
+.last-supper {
+  width: 30vw;
+  height: 44vw;
+  margin-top: 4vw;
+  margin-left: 7vw;
+  margin-bottom: 1.5vw;
+  background-image: url('../assets/img/last-supperrenaissance.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+}
+
+
+@media (max-width: 768px) {
+  .last-supper {
+    width: 50vw;  /* Aumenta la larghezza per adattarsi meglio a schermi più piccoli */
+    height: 10vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 6vw;
+    margin-left: 10vw;
+    margin-bottom: 2.5vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .last-supper {
+    width: 80vw;  /* Aumenta ulteriormente la larghezza per schermi molto piccoli */
+    height: 120vw;
+    margin-top: 8vw;
+    margin-left: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
+
+.adortion {
+  width: 30vw;
+  height: 44vw;
+  margin-top: 4vw;
+  margin-left: 7vw;
+  margin-bottom: 1.5vw;
+  background-image: url('../assets/img/adortionrenaissance.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+}
+
+
+@media (max-width: 768px) {
+  .adortion {
+    width: 50vw;  /* Aumenta la larghezza per adattarsi meglio a schermi più piccoli */
+    height: 10vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 6vw;
+    margin-left: 10vw;
+    margin-bottom: 2.5vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .adortion {
+    width: 80vw;  /* Aumenta ulteriormente la larghezza per schermi molto piccoli */
+    height: 120vw;
+    margin-top: 8vw;
+    margin-left: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
+
+
+
+.baptism {
+  width: 30vw;
+  height: 44vw;
+  margin-top: 4vw;
+  margin-left: 7vw;
+  margin-bottom: 1.5vw;
+  background-image: url('../assets/img/baptismrenaissance.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+}
+
+
+@media (max-width: 768px) {
+  .baptism {
+    width: 50vw;
+    height: 70vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 6vw;
+    margin-left: 10vw;
+    margin-bottom: 2.5vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .baptism {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw;
+    margin-top: 8vw;
+    margin-left: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
 .vasaripaint{
   margin-right:40px;
   background-repeat: no-repeat;

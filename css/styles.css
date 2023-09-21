@@ -11161,16 +11161,12 @@ p {
   top: 0;
   z-index: 1000;  /* To ensure it stays above other elements */
 }
-
-
-
 .highlight-place {
     background-color: #6caedf;
 }
 .highlight-person {
     background-color: #a1d490;
 }
-
 .btns-grid-container {
   display: grid;
   position: fixed;
@@ -11180,7 +11176,6 @@ p {
   gap: 5px;  /* Spacing between buttons */
   z-index: 9999;  /* This will ensure it's on top of most other elements */
 }
-
 .sub-btn, #stylesBtn, #toTopBtn {
   width: 50px;  /* Adjust width as required */
   height: 50px;  /* Adjust height as required */
@@ -11190,7 +11185,6 @@ p {
   color: #fff;
   cursor: pointer;
 }
-
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
   background-color: #555;  /* Adjust hover color as required */
 }
@@ -11268,7 +11262,6 @@ p {
   background-size: contain;
 }
 
-
 .decorative-img{
   display: none;
 }
@@ -11276,7 +11269,6 @@ p {
 #miaLettera{
   display:none;
 }
-
 
 .letteraT {
   display: inline;
@@ -11322,4 +11314,125 @@ p {
   }
 }
 
+
+.baptism {
+  width: 30vw;
+  height: 34vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/baptismdefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .baptism {
+    width: 50vw;
+    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-top: 6vw;
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .baptism {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-top: 8vw;
+    margin-left: 5vw;
+  }
+}
+
+
+.adortion {
+  width: 30vw;
+  height: 30vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/adortiondefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .adortion {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .adortion {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+
+
+.last-supper {
+  width: 30vw;
+  height: 20vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/last-supperdefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .last-supper {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .last-supper {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+
+.madonna {
+  width: 30vw;
+  height: 20vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/madonnadefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .madonna {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .madonna {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+
+.figcaption{
+  text-align: center;
+  margin-bottom:15px;
+  
+}
 
