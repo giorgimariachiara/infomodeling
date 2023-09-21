@@ -11175,7 +11175,7 @@ p {
   height: 60px;  /* Original 60px + 10px to account for the added border */
   /* Gradient background for retro look */
   background: linear-gradient(45deg, #FFDDAA, #FFAABB);
-  border: 5px solid #FF55AA;
+  border: 7px solid #FF55AA;
   box-shadow:
           5px 5px 10px rgba(0, 0, 0, 0.5),
           inset 3px 3px 5px rgba(255, 255, 255, 0.6),
@@ -11196,8 +11196,8 @@ p {
   display: none;
 }
 #stylesBtn {
-  width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
-  height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
+  width: 60px;  /* Adatta a seconda delle dimensioni dell'immagine */
+  height: 60px; /* Adatta a seconda delle dimensioni dell'immagine */
   background-image: url('../assets/img/paint.png');
   background-size: contain;
   background-position: center;
