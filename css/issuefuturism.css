@@ -10934,10 +10934,13 @@ p {
 .section-heading .section-heading-lower {
   display: block;
   font-size: 2rem;
-  font-weight: 100;
   margin-bottom: 100px;
-  font-family: "Cinzel";
+  font-family: "Roboto";
   color:white;
+}
+
+body .section-heading .section-heading-lower {
+  font-weight: 700;
 }
 
 .section-heading .section-heading-upper{
@@ -10950,7 +10953,7 @@ p {
 .section-heading-lower {
   font-family: 'SquareFont', sans-serif; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
-  font-size: 2.2rem;
+  font-size: s2.2rem;
   color:#ffda39;
   font-weight: 800;
 }
@@ -11751,19 +11754,6 @@ figcaption{
 }
 
 
-.david {
-  margin-left: 10vw;
-  margin-top: 2vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 40vw;
-  max-width: 280px;
-  height: 50vw;
-  max-height: 400px;
-  border-top: 0.1vw solid black;
-  border-bottom: 0.3vw solid black;
-  border-right: 1.6vw solid black;
-}
 .sarcophagus {
   margin-left: 5vw;
   margin-top: 2vw;
@@ -11778,13 +11768,49 @@ figcaption{
   border-right: 1.6vw solid black;
 }
 
-
-.david {
-  background-image: url('../assets/img/david.svg');
-}
-
 .sarcophagus {
   background-image: url('../assets/img/sarcophagus.svg');
+}
+
+
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 1px) rotate(1deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(0deg); }
+  60% { transform: translate(-1px, -1px) rotate(-1deg); }
+  70% { transform: translate(1px, 1px) rotate(1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  90% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(1px, 1px) rotate(0deg); }
+}
+
+.david {
+  margin-left: 10vw;
+  margin-top: 2vw;
+  background-image: 
+    url('../assets/img/david.svg'),
+    url('../assets/img/david.svg'),
+    url('../assets/img/david.svg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, contain, contain;
+  background-position: 
+    0 0,
+    5px 5px, 
+    10px 10px;
+  width: 40vw;
+  max-width: 280px;
+  height: 50vw;
+  max-height: 400px;
+  border-top: 0.1vw solid black;
+  border-bottom: 0.3vw solid black;
+  border-right: 1.6vw solid black;
+  animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
 }
 
 .david:hover, .sarcophagus:hover {

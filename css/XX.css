@@ -11168,26 +11168,36 @@ p {
   z-index: 9999;  /* This will ensure it's on top of most other elements */
 }
 
+/* Retro Button Styles */
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 60px;  /* Adjust width as required */
-  height: 60px;  /* Adjust height as required */
-  border: 7px solid #8bc276;
-  /* To make them round */
-  background-color: rgba(247,230,186);  /* Adjust color as required */
-  color: #fff;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 60px;  /* Original 60px + 10px to account for the added border */
+  height: 60px;  /* Original 60px + 10px to account for the added border */
+  /* Gradient background for retro look */
+  background: linear-gradient(45deg, #FFDDAA, #FFAABB);
+  border: 7px solid #FF55AA;
+  box-shadow:
+          5px 5px 10px rgba(0, 0, 0, 0.5),
+          inset 3px 3px 5px rgba(255, 255, 255, 0.6),
+          inset -3px -3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #e77f3d;  /* Adjust hover color as required */
+  /* Reverse gradients and shadows to give a pressed effect */
+  background: linear-gradient(45deg, #FFAABB, #FFDDAA);
+  box-shadow:
+          3px 3px 6px rgba(0, 0, 0, 0.5),
+          inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+          inset -1px -1px 3px rgba(0, 0, 0, 0.4);
+  transform: translate(2px, 2px);
 }
 
 .sub-btn[data-theme] {
   display: none;
 }
 #stylesBtn {
-  width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
-  height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
+  width: 60px;  /* Adatta a seconda delle dimensioni dell'immagine */
+  height: 60px; /* Adatta a seconda delle dimensioni dell'immagine */
   background-image: url('../assets/img/paint.png');
   background-size: contain;
   background-position: center;
@@ -11233,8 +11243,8 @@ p {
   left: 10%;
   transform: translateX(-100%); /* Centra orizzontalmente il testo */
   font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
-  background-color: rgba(0,0,0,0.6);  /* Sfondo semi-trasparente */
-  color: white;  /* Colore del testo */
+  background-color: rgba(247,230,186);  /* Sfondo semi-trasparente */
+  color: #da7634;  /* Colore del testo */
   padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
   border-radius: 0.3rem;  /* Angoli arrotondati */
 }

@@ -11636,12 +11636,12 @@ p {
 }
 
 .judith {
-  width: 30vw;
-  height: 44vw;
+  width: 20vw;
+  height: 40vw;
   margin-top: 4vw;
   margin-left: 7vw;
   margin-bottom: 1.5vw;
-  background-image: url('../assets/img/donatello/judith.svg');
+  background-image: url('../assets/img/judithdefault.svg');
   background-repeat: no-repeat;
   background-size: contain;
   border: 0.4vw solid var(--bs-gold);
@@ -11650,7 +11650,6 @@ p {
       0 0 0 0.9vw var(--bs-gold);
   padding: 0;
 }
-
 
 @media (max-width: 768px) {
   .judith {
@@ -11673,11 +11672,41 @@ p {
   }
 }
 
+.general {
+  width: 30vw;
+  height: 23vw;
+  margin-top: 4vw;
+  margin-left: 7vw;
+  margin-bottom: 1.5vw;
+  background-image: url('../assets/img/generaldefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+
+  padding: 0;
+}
 
 
+@media (max-width: 768px) {
+  .general {
+    width: 50vw;
+    height: 70vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 6vw;
+    margin-left: 10vw;
+    margin-bottom: 2.5vw;
+  }
+}
 
-
-
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .general {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw;
+    margin-top: 8vw;
+    margin-left: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
 
 
 .vasaripaint{
@@ -11729,7 +11758,8 @@ p {
   /* Creiamo il doppio bordo utilizzando border e box-shadow */
   border: 3px solid var(--bs-gold); /* Bordo interno dorato */
   box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
-  margin-right: 2rem !important;
+  margin-right: 4rem !important;
+  margin-left:3rem !important;
 }
 
 
