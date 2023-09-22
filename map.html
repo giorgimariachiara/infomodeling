@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="map.css">
 </head>
 <body>
+<!--
     <div id="map"></div>
     <button id="toggle-sidebar" onclick="toggleSidebar()">Apri Sidebar</button>
     <div id="sidebar">
@@ -22,9 +23,12 @@
       <h2>Articoli</h2>
       <ul id="article-list"></ul>
     </div>
-
+  -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script>
+
+
+
     // Struttura dei dati degli articoli
     var articles = [
       {
@@ -122,7 +126,6 @@ for (var i = 0; i < articles.length; i++) {
       sidebar.innerHTML = '<h2>' + article.title + '</h2><p>' + article.content + '</p>';
       sidebar.innerHTML += '<h3>People:</h3><p>' + article.people.join(', ') + '</p>';
       sidebar.innerHTML += '<h3>Places:</h3><p>' + article.places.join(', ') + '</p>';
-      sidebar.innerHTML += '<h3>Evidences:</h3><p>' + article.evidences.join(', ') + '</p>';
     }
 
 
@@ -130,7 +133,6 @@ for (var i = 0; i < articles.length; i++) {
     function filterArticles() {
       var filterPeople = document.getElementById('filter-people').value.toLowerCase();
       var filterPlaces = document.getElementById('filter-places').value.toLowerCase();
-      var filterEvidences = document.getElementById('filter-evidences').value.toLowerCase();
 
       var filteredArticles = articles.filter(function(article) {
         var peopleMatch = article.people.some(function(person) {
@@ -139,10 +141,8 @@ for (var i = 0; i < articles.length; i++) {
         var placesMatch = article.places.some(function(place) {
           return place.toLowerCase().includes(filterPlaces);
         });
-        var evidencesMatch = article.evidences.some(function(evidence) {
-          return evidence.toLowerCase().includes(filterEvidences);
-        });
-        return peopleMatch || placesMatch || evidencesMatch;
+       
+        return peopleMatch || placesMatch;
       });
 
       
