@@ -115,9 +115,17 @@ document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click'
     document.getElementById('themeStylesheet').href = "css/renaissancefinale.css";
 });
 
+document.querySelector('.sub-btn[data-theme="theme2"]').addEventListener('click', function() {
+  document.getElementById('themeStylesheet').href = "css/be.css";
+});
+
 document.querySelector('.sub-btn[data-theme="theme3"]').addEventListener('click', function() {
     document.getElementById('themeStylesheet').href = "css/issuefuturism.css";
 });
+document.querySelector('.sub-btn[data-theme="theme4"]').addEventListener('click', function() {
+  document.getElementById('themeStylesheet').href = "css/pm.css";
+});
+
 
 document.querySelector('.sub-btn[data-theme="theme5"]').addEventListener('click', function() {
     document.getElementById('themeStylesheet').href = "css/XX.css";
@@ -238,32 +246,33 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
 
 
 
-// effetto parole futurismo
+// effetto parole belle epoque
 const decor = "❉";
 
 function createWord(className) {
     const word = document.createElement("div");
     word.textContent = decor;
-    word.classList.add('floating-word', className);
+    word.classList.add('floating-flower', className);
     document.body.appendChild(word);
 }
 
 function randomizeWordPosition(wordElement) {
     const randomTop = Math.random() * (window.innerHeight - 100);
     const randomLeft = Math.random() * (window.innerWidth - 100);
-
     wordElement.style.top = `${randomTop}px`;
     wordElement.style.left = `${randomLeft}px`;
 }
 
+function activateBeEffects() {
 
-for (let i = 1; i <= 7; i++) {
-    const className = `word${i}`;
+for (let i = 1; i <= 4; i++) {
+    const className = `flower${i}`;
     createWord(className);
     const wordElement = document.querySelector(`.${className}`);
     randomizeWordPosition(wordElement);
 }
-
+}
+document.querySelector('.btns-item-5 .sub-btn').addEventListener('click', activateBeEffects);
 
 
             
