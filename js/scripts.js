@@ -4,11 +4,13 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
 */
 // Highlights current date on contact page
+
+/*
 window.addEventListener('DOMContentLoaded', event => {
     const listHoursArray = document.body.querySelectorAll('.list-hours li');
     listHoursArray[new Date().getDay()].classList.add(('today'));
 })
-
+*/
 
 /*!
 document.addEventListener("DOMContentLoaded", function () {
@@ -109,6 +111,26 @@ $(document).ready(function() {
     });
 });
 
+document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/renaissancefinale.css";
+});
+
+document.querySelector('.sub-btn[data-theme="theme2"]').addEventListener('click', function() {
+  document.getElementById('themeStylesheet').href = "css/be.css";
+});
+
+document.querySelector('.sub-btn[data-theme="theme3"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/issuefuturism.css";
+});
+document.querySelector('.sub-btn[data-theme="theme4"]').addEventListener('click', function() {
+  document.getElementById('themeStylesheet').href = "css/pm.css";
+});
+
+
+document.querySelector('.sub-btn[data-theme="theme5"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/XX.css";
+});
+
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
@@ -127,3 +149,130 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
+
+const wordText = "click";
+
+function createWord(className) {
+    const word = document.createElement("div");
+    word.textContent = wordText;
+    word.classList.add('floating-word', className);
+    document.body.appendChild(word);
+}
+
+function randomizeWordPosition(wordElement) {
+    const randomTop = Math.random() * (window.innerHeight - 100);
+    const randomLeft = Math.random() * (window.innerWidth - 100);
+
+    wordElement.style.top = `${randomTop}px`;
+    wordElement.style.left = `${randomLeft}px`;
+}
+
+function activateFuturismEffects() {
+  for (let i = 1; i <= 7; i++) {
+      const className = `word${i}`;
+      createWord(className);
+      const wordElement = document.querySelector(`.${className}`);
+      randomizeWordPosition(wordElement);
+  }
+}
+
+document.querySelector('.btns-item-4 .sub-btn').addEventListener('click', activateFuturismEffects);
+
+
+//effetto titolo futurismo
+const siteHeadingUpper = document.querySelector(".site-heading-upper");
+            const text = siteHeadingUpper.textContent.trim();
+            let newText = "";
+            
+            for (let letter of text) {
+            if (letter === " ") {
+            newText += letter; // non avvolgere gli spazi
+            } else {
+            newText += `<span class="overlap" data-overlap="${letter}">${letter}</span>`;
+            }
+            }
+            
+            siteHeadingUpper.innerHTML = newText;
+
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const wrapLettersInSpans = (element) => {
+                  const text = element.textContent.trim();
+                  let wrappedText = "";
+              
+                  for (let letter of text) {
+                    if (letter === " ") {
+                      wrappedText += letter; // non avvolgere gli spazi
+                    } else {
+                      wrappedText += `<span>${letter}</span>`;
+                    }
+                  }
+              
+                  element.innerHTML = wrappedText;
+                }
+              
+                const siteHeadingLower = document.querySelector(".site-heading-lower");
+                
+                if (siteHeadingLower) {
+                  wrapLettersInSpans(siteHeadingLower);
+                }
+              });
+
+              document.addEventListener('DOMContentLoaded', function() {
+                const wrapAlternateLettersInSpans = (element) => {
+                    const text = element.textContent.trim();
+                    let wrappedText = "";
+                    
+                    for (let i = 0; i < text.length; i++) {
+                        if (text[i] === " ") {
+                            wrappedText += text[i]; // non avvolgere gli spazi
+                        } else if (i % 2 === 0) { // avvolge solo le lettere in posizioni pari (0-based)
+                            wrappedText += `<span>${text[i]}</span>`;
+                        } else {
+                            wrappedText += text[i];
+                        }
+                    }
+                    
+                    element.innerHTML = wrappedText;
+                }
+            
+                const navLinks = document.querySelectorAll('#mainNav .nav-link');
+            
+                navLinks.forEach(navLink => {
+                    wrapAlternateLettersInSpans(navLink);
+                });
+            });
+            
+
+
+
+// effetto parole belle epoque
+const decor = "❉";
+
+function createWord(className) {
+    const word = document.createElement("div");
+    word.textContent = decor;
+    word.classList.add('floating-flower', className);
+    document.body.appendChild(word);
+}
+
+function randomizeWordPosition(wordElement) {
+    const randomTop = Math.random() * (window.innerHeight - 100);
+    const randomLeft = Math.random() * (window.innerWidth - 100);
+    wordElement.style.top = `${randomTop}px`;
+    wordElement.style.left = `${randomLeft}px`;
+}
+
+function activateBeEffects() {
+
+for (let i = 1; i <= 4; i++) {
+    const className = `flower${i}`;
+    createWord(className);
+    const wordElement = document.querySelector(`.${className}`);
+    randomizeWordPosition(wordElement);
+}
+}
+document.querySelector('.btns-item-5 .sub-btn').addEventListener('click', activateBeEffects);
+
+
+            

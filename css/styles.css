@@ -11161,16 +11161,12 @@ p {
   top: 0;
   z-index: 1000;  /* To ensure it stays above other elements */
 }
-
-
-
 .highlight-place {
     background-color: #6caedf;
 }
 .highlight-person {
     background-color: #a1d490;
 }
-
 .btns-grid-container {
   display: grid;
   position: fixed;
@@ -11180,17 +11176,15 @@ p {
   gap: 5px;  /* Spacing between buttons */
   z-index: 9999;  /* This will ensure it's on top of most other elements */
 }
-
 .sub-btn, #stylesBtn, #toTopBtn {
   width: 50px;  /* Adjust width as required */
   height: 50px;  /* Adjust height as required */
   border: none;
   border-radius: 50%;  /* To make them round */
-  background-color: #333;  /* Adjust color as required */
+  background-color: rgba(47, 23, 15, 0.9);  /* Adjust color as required */
   color: #fff;
   cursor: pointer;
 }
-
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
   background-color: #555;  /* Adjust hover color as required */
 }
@@ -11198,9 +11192,379 @@ p {
 .sub-btn[data-theme] {
   display: none;
 }
+#stylesBtn {
+  width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
+  height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
+  background-image: url('../assets/img/brush.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme3"] {
+  background-image: url('../assets/img/heptagon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme1"] {
+  background-image: url('../assets/img/vitruvian-man.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme6"] {
+  background-image: url('../assets/img/brain.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme5"] {
+  background-image: url('../assets/img/late90.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn {
+  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+}
+
+.btn-hover-text {
+  display: none;  /* Inizialmente, il testo non sarà visibile */
+  position: absolute;
+  top: 0;  /* Posiziona il testo in alto */
+  left: 10%;
+  transform: translateX(-100%); /* Centra orizzontalmente il testo */
+  font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
+  background-color: rgba(0,0,0,0.6);  /* Sfondo semi-trasparente */
+  color: white;  /* Colore del testo */
+  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
+  border-radius: 0.3rem;  /* Angoli arrotondati */
+}
+
+.sub-btn:hover .btn-hover-text {
+  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+}
+
+/*immagini*/
+
+.verrocchio {
+  width: 40vw;
+  height: 34vw;
+  margin-left: 20vw;
+  background-image: url('../assets/img/verrocchiodefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .verrocchio {
+    width: 50vw;
+    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-top: 6vw;
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .verrocchio {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-top: 8vw;
+    margin-left: 15vw;
+  }
+}
 
 
 
+.leonardo {
+  width: 60vw;
+  height: 35vw;
+  margin-top: 2vw;
+  background-image: url('../assets/img/leonardo/leonardo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .leonardo {
+    width: 50vw;
+    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-top: 6vw;
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .leonardo{
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-top: 8vw;
+    margin-left: 15vw;
+  }
+}
+
+.decorative-img{
+  display: none;
+}
+
+#miaLettera{
+  display:none;
+}
+
+.letteraT {
+  display: inline;
+}
+
+.letteraF {
+  display: inline;
+}
+
+.letteraA {
+  display: inline;
+}
+
+.vasaripaint {
+  margin-right:40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70vw;
+  max-width: 750px;
+  height: 80vw;
+  max-height:860px;
+}
+
+.vasaripaint {
+  background-image: url('../assets/img/vasaripaint.svg');
+}
+@media (min-width: 992px) {
+  .intro .vasaripaint {
+    width: 75%;
+    float: right;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 3rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
 
 
+.baptism {
+  width: 30vw;
+  height: 34vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/baptismdefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  
+}
+
+@media (max-width: 768px) {
+  .baptism {
+    width: 50vw;
+    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-top: 6vw;
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .baptism {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-top: 8vw;
+    margin-left: 5vw;
+  }
+}
+
+
+.adortion {
+  width: 30vw;
+  height: 30vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/adortiondefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .adortion {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .adortion {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+
+
+.last-supper {
+  width: 30vw;
+  height: 20vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/last-supperdefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .last-supper {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .last-supper {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+
+.madonna {
+  width: 30vw;
+  height: 20vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/madonnadefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .madonna {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .madonna {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+.david {
+  width: 40vw;
+  height: 30vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/davidefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .david {
+    width: 60vw;
+    height: 50vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .david {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+.sarcophagus {
+  width: 30vw;
+  height: 40vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/sarcophagudefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .sarcophagus {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .sarcophagus {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+.judith {
+  width: 30vw;
+  height: 40vw;
+  margin-left: 7vw;
+  background-image: url('../assets/img/judithdefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  
+}
+
+@media (max-width: 768px) {
+  .judith {
+    width: 50vw;
+    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    margin-left: 10vw;
+  }
+}
+
+/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
+@media (max-width: 480px) {
+  .judith {
+    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 112vw; /* Proporzionalmente ridotto */
+    margin-left: 5vw;
+  }
+}
+
+.figcaption{
+  text-align: center;
+  margin-bottom:15px;
+
+}
 

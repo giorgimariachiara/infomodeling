@@ -453,29 +453,31 @@
 
         </section>
 
-        <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="themeModalLabel">Theme Options</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="theme" id="theme1" value="theme1">
-                  <label class="form-check-label" for="theme1">theme 1</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="theme" id="theme2" value="theme2">
-                  <label class="form-check-label" for="theme2">theme 2</label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="applyTheme">Apply</button>
-              </div>
+        <div class="btns-grid-container">
+            <div class="btns-grid-item btns-item-1">
+                <button class="sub-btn" data-theme="theme6"><span class="btn-hover-text">RENAISSANCE</span></button>
             </div>
-          </div>
+            <div class="btns-grid-item btns-item-2">
+                <button class="sub-btn" data-theme="theme5"><span class="btn-hover-text">Tema 2</span></button>
+            </div>
+            <div class="btns-grid-item btns-item-3">
+                <button class="sub-btn" data-theme="theme4"><span class="btn-hover-text">Tema 2</span></button>
+            </div>
+            <div class="btns-grid-item btns-item-4">
+                <button class="sub-btn" data-theme="theme3"><span class="btn-hover-text">FUTURISM</span></button>
+            </div>
+            <div class="btns-grid-item btns-item-5">
+                <button class="sub-btn" data-theme="theme2"><span class="btn-hover-text">Tema 2</span></button>
+            </div>
+            <div class="btns-grid-item btns-item-6">
+                <button class="sub-btn" data-theme="theme1"><span class="btn-hover-text">RENAISSANCE</span></button>
+            </div>
+            <div class="btns-grid-item btns-item-7">
+                <button id="stylesBtn" class="styles-btn" type="button"></button>
+            </div>
+            <div class="btns-grid-item btns-item-8">
+                <button id="toTopBtn"> <i class="fa-solid fa-arrow-up btn-icon"></i></button>
+            </div>
         </div>
 
         <footer class="footer text-faded text-center py-5">
