@@ -11373,6 +11373,7 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
   padding: 0;
+  
 }
 
 @media (max-width: 768px) {
@@ -11541,6 +11542,7 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
   padding: 0;
+  
 }
 
 @media (max-width: 768px) {
