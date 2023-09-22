@@ -1,0 +1,26 @@
+
+
+/* ... (rest of your existing CSS) ... */
+
+.sub-btn, #stylesBtn, #toTopBtn {
+    box-sizing: border-box;
+    width: 60px;  /* Original 60px + 10px to account for the added border */
+    height: 60px;  /* Original 60px + 10px to account for the added border */
+    /* Gradient background for retro look */
+    background: linear-gradient(45deg, #FFDDAA, #FFAABB);
+    border: 5px solid #FF55AA;
+    box-shadow:
+            5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 3px 3px 5px rgba(255, 255, 255, 0.6),
+            inset -3px -3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
+    /* Reverse gradients and shadows to give a pressed effect */
+    background: linear-gradient(45deg, #FFAABB, #FFDDAA);
+    box-shadow:
+            3px 3px 6px rgba(0, 0, 0, 0.5),
+            inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+            inset -1px -1px 3px rgba(0, 0, 0, 0.4);
+    transform: translate(2px, 2px);
+}
