@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Italia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="map.css">
+
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Inizializza la mappa
+        var map = L.map('map').setView([41.9028, 12.4964], 6); // Centra la mappa su Roma
+
+        // Aggiungi una mappa di base
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Lista di posti con coordinate
+        var places = [
+        { name: "Milano", secondaryName: "Milano secondario", coordinates: [45.4642, 9.1900] },
+        { name: "Roma", coordinates: [41.9028, 12.4964] },
+        { name: "Napoli", coordinates: [40.8522, 14.2681] },
+        // Aggiungi altri posti qui
+        
+    ];
+
+
+
+
+// ...
+
+// Aggiungi marker per ogni posto con il nome e, se disponibile, il nome secondario nel popup
+places.forEach(function(place) {
+    var popupContent = "<b>" + place.name + "</b>";
+    
+    // Aggiungi il nome secondario se disponibile
+    if (place.secondaryName) {
+        popupContent += "<br>" + place.secondaryName;
+    }
+    
+    // Crea il marker e imposta il popup direttamente su di esso con autoClose: false
+var marker = L.marker(place.coordinates, { 
+    icon: L.divIcon({ 
+        className: 'custom-marker',
+        iconSize: [35, 35]  // Imposta le dimensioni desiderate
+    }) 
+}).addTo(map);    
+    // Aggiungi un gestore di eventi per aprire il popup al clic sul marker
+    marker.on('click', function(e) {
+        L.popup().setContent(popupContent).setLatLng(e.latlng).openOn(map);
+    });
+});
+
+// ...
+
+
+
+
+    </script>
+</body>
+</html>

@@ -264,7 +264,6 @@ function randomizeWordPosition(wordElement) {
 }
 
 function activateBeEffects() {
-
 for (let i = 1; i <= 4; i++) {
     const className = `flower${i}`;
     createWord(className);
@@ -275,4 +274,3 @@ for (let i = 1; i <= 4; i++) {
 document.querySelector('.btns-item-5 .sub-btn').addEventListener('click', activateBeEffects);
 
 
-            
