@@ -11383,3 +11383,20 @@ header {
 .text-center {
   text-align: center;
 }
+
+/* Styles for PopUp */
+/* Hide the popup by default */
+.popuptextright {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+/* Style for the clickable element */
+.popupright {
+  cursor: pointer;
+}
+/* Ends Styles for PopUp */

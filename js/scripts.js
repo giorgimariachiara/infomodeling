@@ -160,6 +160,18 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
     });
 });
 
+//popup script
+function popupfunction() {
+    var popup = document.getElementById("myPopup");
+    if (popup.style.display === "none" || popup.style.display === "") {
+        popup.style.display = "block";
+    } else {
+        popup.style.display = "none";
+    }
+}
+//ends popup script
+
+
 const wordText = "click";
 
 function createWord(className) {
