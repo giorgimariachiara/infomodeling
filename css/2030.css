@@ -84,7 +84,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #dee2e6;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -4356,29 +4356,43 @@ textarea.form-control-lg {
 }
 
 .accordion {
-  --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
+  /* Main accordion settings */
+  --bs-accordion-color: var(--bs-body-color);
+  --bs-accordion-bg: var(--bs-gray-800);  /* Dark background for modern look */
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-  --bs-accordion-border-color: var(--bs-border-color);
+
+  /* Border settings */
+  --bs-accordion-border-color: var(--bs-gray-700);  /* Slightly lighter border for contrast */
   --bs-accordion-border-width: 1px;
-  --bs-accordion-border-radius: 0.375rem;
-  --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
+  --bs-accordion-border-radius: var(--bs-border-radius-lg);  /* Softer border radius */
+  --bs-accordion-inner-border-radius: calc(var(--bs-border-radius-lg) - 1px);
+
+  /* Button settings */
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
-  --bs-accordion-btn-color: #212529;
-  --bs-accordion-btn-bg: var(--bs-accordion-bg);
+  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-btn-bg: var(--bs-gray-900);  /* Darker background for buttons for a layered look */
+
+  /* Icon settings - keeping them as they are */
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cf964d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-border-color: #f3d3ab;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(230, 167, 86, 0.25);
+
+  /* Focus and hover settings */
+  --bs-accordion-btn-focus-border-color: var(--bs-primary);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+
+  /* Accordion body settings */
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
-  --bs-accordion-active-color: #cf964d;
-  --bs-accordion-active-bg: #fdf6ee;
-  flex:1;
+
+  /* Active item settings */
+  --bs-accordion-active-color: var(--bs-primary);
+  --bs-accordion-active-bg: var(--bs-gray-700);  /* Slightly lighter background for active items */
+
+  flex: 1;
 }
 
 .accordion-button {
@@ -4392,24 +4406,33 @@ textarea.form-control-lg {
   text-align: left;
   background-color: var(--bs-accordion-btn-bg);
   border: 0;
-  border-radius: 0;
+  border-radius: var(--bs-border-radius); /* Introduce rounded borders for modern feel */
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
+  cursor: pointer; /* Indicate that it's clickable */
 }
+
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
     transition: none;
   }
 }
+
+.accordion-button:hover {
+  background-color: var(--bs-gray-700); /* Slight change in color on hover */
+}
+
 .accordion-button:not(.collapsed) {
   color: var(--bs-accordion-active-color);
   background-color: var(--bs-accordion-active-bg);
-  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+  /* Removed the box-shadow for cleaner design */
 }
+
 .accordion-button:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-active-icon);
   transform: var(--bs-accordion-btn-icon-transform);
 }
+
 .accordion-button::after {
   flex-shrink: 0;
   width: var(--bs-accordion-btn-icon-width);
@@ -4421,30 +4444,40 @@ textarea.form-control-lg {
   background-size: var(--bs-accordion-btn-icon-width);
   transition: var(--bs-accordion-btn-icon-transition);
 }
+/* For users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .accordion-button::after {
     transition: none;
   }
 }
+
+/* Hover effect for accordion button */
 .accordion-button:hover {
   z-index: 2;
-}
-.accordion-button:focus {
-  z-index: 3;
-  border-color: var(--bs-accordion-btn-focus-border-color);
-  outline: 0;
-  box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+  background-color: var(--bs-gray-700); /* Slight change in color on hover for a modern look */
 }
 
+/* Focus effect for accordion button */
+.accordion-button:focus {
+  z-index: 3;
+  border-color: var(--bs-primary); /* Use primary color for focus */
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25); /* Soft focus shadow */
+}
+
+/* Accordion header */
 .accordion-header {
   margin-bottom: 0;
 }
 
+/* Accordion item */
 .accordion-item {
   color: var(--bs-accordion-color);
   background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+  border: var(--bs-accordion-border-width) solid var(--bs-gray-700); /* Use a slightly darker border for a modern look */
+  border-radius: var(--bs-border-radius); /* Introduce rounded borders for modern feel */
 }
+
 .accordion-item:first-of-type {
   border-top-left-radius: var(--bs-accordion-border-radius);
   border-top-right-radius: var(--bs-accordion-border-radius);
@@ -10917,32 +10950,38 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
 #mainNav {
-  background-color: rgba(47, 23, 15, 0.9);
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: var(--bs-gray-900);  /* Dark background for a modern look */
+  font-family: var(--bs-font-sans-serif); /* Modern font stack */
+  border-bottom: 1px solid var(--shadow-color); /* Subtle border for separation */
 }
+
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: var(--bs-primary); /* Using primary color */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+#mainNav .navbar-brand:hover {
+  color: var(--bs-link-hover-color); /* Slight color change on hover */
+}
+
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 800;
+  rgba(255, 255, 255, 0.7); /* Dark text color */
+  font-weight: 500; /* Medium weight for a cleaner look */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
-#mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+
+#mainNav .navbar-nav .nav-item.active .nav-link,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: var(--bs-primary); /* Using primary color for active and hover states */
 }
+
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
   }
-  #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
-  }
-  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
-  }
 }
+
 
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
