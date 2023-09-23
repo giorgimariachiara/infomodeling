@@ -70,46 +70,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(document).ready(function() {
-    function appendToMetadataList(className, listId, titleId) {
-        var elements = $(className);
-        var names = [];
-        elements.each(function() {
-            names.push($(this).text());
-        });
-        var uniqueNames = Array.from(new Set(names));
-        if (uniqueNames.length > 0) {
-            $(titleId).show();
-        } else {
-            $(titleId).hide();
-        }
-        var listHtml = uniqueNames.map(function(name) {
-            return "<li>" + name + "</li>";
-        }).join("");
-        $(listId).append(listHtml);
-    }
 
-    $("#placeNames").change(function() {
-        $("#placeNameList").empty();
-        if(this.checked) {
-            $(".placeName").addClass("highlight-place");
-            appendToMetadataList(".highlight-place", "#placeNameList", "#placeNameTitle");
-        } else {
-            $(".placeName").removeClass("highlight-place");
-            $("#placeNameTitle").hide();
-        }
-    });
+  function appendToMetadataList(className, listId, titleId) {
+      var elements = $(className);
+      var items = [];
+      elements.each(function() {
+          var name = $(this).text();
+          var wikipediaUrl = $(this).data('wikipedia-url');
+          items.push({ name: name, url: wikipediaUrl });
+      });
+      var uniqueItems = Array.from(new Set(items.map(i => i.name))).map(name => {
+          return items.find(i => i.name === name);
+      });
+      if (uniqueItems.length > 0) {
+          $(titleId).show();
+      } else {
+          $(titleId).hide();
+      }
+      var listHtml = uniqueItems.map(function(item) {
+          if (item.url) {
+              return `<li><a href="${item.url}" target="_blank">${item.name}</a></li>`;
+          } else {
+              return `<li>${item.name}</li>`;
+          }
+      }).join("");
+      $(listId).append(listHtml);
+  }
 
-    $("#personNames").change(function() {
-        $("#personNameList").empty();
-        if(this.checked) {
-            $(".personName").addClass("highlight-person");
-            appendToMetadataList(".highlight-person", "#personNameList", "#personNameTitle");
-        } else {
-            $(".personName").removeClass("highlight-person");
-            $("#personNameTitle").hide();
-        }
-    });
+  $("#placeNames").change(function() {
+      $("#placeNameList").empty();
+      if (this.checked) {
+          $(".placeName").addClass("highlight-place");
+          appendToMetadataList(".highlight-place", "#placeNameList", "#placeNameTitle");
+      } else {
+          $(".placeName").removeClass("highlight-place");
+          $("#placeNameTitle").hide();
+      }
+  });
+
+  $("#personNames").change(function() {
+      $("#personNameList").empty();
+      if (this.checked) {
+          $(".personName").addClass("highlight-person");
+          appendToMetadataList(".highlight-person", "#personNameList", "#personNameTitle");
+      } else {
+          $(".personName").removeClass("highlight-person");
+          $("#personNameTitle").hide();
+      }
+  });
 });
+
 
 document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click', function() {
     document.getElementById('themeStylesheet').href = "css/renaissancefinale.css";
@@ -272,5 +282,3 @@ for (let i = 1; i <= 4; i++) {
 }
 }
 document.querySelector('.btns-item-5 .sub-btn').addEventListener('click', activateBeEffects);
-
-
