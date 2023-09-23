@@ -42,8 +42,8 @@ places.forEach(function(place) {
     
     // Aggiungi il nome secondario se disponibile
     if (place.secondaryName) {
-        popupContent += "<br>" + place.secondaryName;
-    }
+    popupContent += "<br><span class='secondary-name'>" + place.secondaryName + "</span>";
+}
     
     // Crea il marker e imposta il popup direttamente su di esso con autoClose: false
 var marker = L.marker(place.coordinates, { 
@@ -58,7 +58,6 @@ var marker = L.marker(place.coordinates, {
     });
 });
 
-// ...
 
 
 

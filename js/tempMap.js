@@ -17,7 +17,7 @@ function setMapTiles(tileUrl, attributionText) {
 }
 
 // For each theme, we have an event listener:
-// Theme1
+// Theme1 
 // Theme2
 // Theme3
 // Theme4
