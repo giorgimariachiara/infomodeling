@@ -12,41 +12,6 @@ window.addEventListener('DOMContentLoaded', event => {
 })
 */
 
-/*!
-document.addEventListener("DOMContentLoaded", function () {
-  const applyButton = document.querySelector(".modal-footer .btn-primary");
-  applyButton.addEventListener("click", function () {
-    const placeNamesCheckbox = document.getElementById("placeNames");
-    const personNamesCheckbox = document.getElementById("personNames");
-    
-    toggleHighlight("placeName", placeNamesCheckbox.checked);
-    toggleHighlight("personName", personNamesCheckbox.checked);
-
-    // Close the modal
-    const modalElement = document.getElementById('metadataModal'); // Replace 'yourModalId' with the actual ID of your modal
-    const modalInstance = bootstrap.Modal.getInstance(modalElement);
-    modalInstance.hide();
-  });
-});
-
-
-function toggleHighlight(className, isChecked) {
-  const elements = document.getElementsByClassName(className);
-  const colorMap = {
-    'placeName': '#6caedf',
-    'personName': '#a1d490'
-  };
-  for (let i = 0; i < elements.length; i++) {
-    if (isChecked) {
-      elements[i].style.backgroundColor = colorMap[className];
-    } else {
-      elements[i].style.backgroundColor = '';
-    }
-  }
-}
-*/
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const applyThemeButton = document.getElementById("applyTheme");
   const themeStylesheet = document.getElementById("themeStylesheet");
@@ -141,6 +106,10 @@ document.querySelector('.sub-btn[data-theme="theme5"]').addEventListener('click'
     document.getElementById('themeStylesheet').href = "css/XX.css";
 });
 
+document.querySelector('.sub-btn[data-theme="theme6"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/2030.css";
+});
+
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
@@ -159,6 +128,18 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
+
+//popup script
+function popupfunction() {
+    var popup = document.getElementById("myPopup");
+    if (popup.style.display === "none" || popup.style.display === "") {
+        popup.style.display = "block";
+    } else {
+        popup.style.display = "none";
+    }
+}
+//ends popup script
+
 
 const wordText = "click";
 
