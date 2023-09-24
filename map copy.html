@@ -1,168 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Progetto Storia dell'Arte</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link rel="stylesheet" href="map copy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Italia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="map copy.css">
+
 </head>
 <body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-lower">The Lives</span>
+            <span class="site-heading-upper text-primary mb-3" >of the Most Excellent Painters, Sculptors, and Architects</span>
+        </h1>
+    </header>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">The Lives</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                    <li class="nav-item px-lg-4 dropdown">
+                        <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Issues
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="issue-leonardo.html">Da Vinci</a></li>
+                            <li><a class="dropdown-item" href="issue-verrocchio.html">Verrocchio</a></li>
+                            <li><a class="dropdown-item" href="issue-donatello.html">Donatello</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="mapofficial.html">Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div id="map"></div>
-    <!--
-    <button id="toggle-sidebar" onclick="toggleSidebar()">Apri Sidebar</button>
-    <div id="sidebar">
-      <div id="filters">
-        <h3>Filtri</h3>
-        <label for="filter-people">People:</label>
-        <input type="text" id="filter-people" oninput="filterArticles()" />
-        <br>
-        <label for="filter-places">Places:</label>
-        <input type="text" id="filter-places" oninput="filterArticles()" />
-        <br>
-   
-      </div>
-      <h2>Articoli</h2>
-      <ul id="article-list"></ul>
-    </div>-->
 
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script>
-    // Struttura dei dati degli articoli
-    var articles = [
-      {
-        title: "Titolo dell'articolo 1",
-        content: "Testo dell'articolo 1...",
-        people: [
-          {name: "Verrocchio", birthplace: [43.7695604, 11.2558136] /* Latitudine e longitudine della città di nascita */ },
-          { name: "Leonardo Da Vinci", birthplace: [44.494887, 11.3426163] /* Latitudine e longitudine della città di nascita */ }
-        ],
-        places: [
-          { name: "Roma", location: [41.9027835, 12.4963655] /* Latitudine e longitudine del luogo */ },
-          { name: "Firenze", location: [43.7695604, 11.2558136] /* Latitudine e longitudine del luogo */ }
-          ],
-        location: [41.9027835, 12.4963655] /* Latitudine e longitudine del posto di pubblicazione dell'articolo 1 */
-      },
-      {
-        title: "Titolo dell'articolo 2",
-        content: "Testo dell'articolo 2...",
-        people: [
-          { name: "Donatello", birthplace: [43.7695604, 11.2558136] /* Latitudine e longitudine della città di nascita */ },
-          { name: "Vasari", birthplace: [45.4654219, 9.1859243] /* Latitudine e longitudine della città di nascita */ }
-        ],
-        places: [
-          { name: "Bologna", location: [44.494887, 11.3426163] /* Latitudine e longitudine del luogo */ },
-          { name: "Milano", location: [45.4654219, 9.1859243] /* Latitudine e longitudine del luogo */ }
-        ],
-        location: [45.4654219, 9.1859243] /* Latitudine e longitudine del posto di pubblicazione dell'articolo 1 */
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+     // Inizializza la mappa
+var map = L.map('map').setView([41.9028, 12.4964], 6); // Centra la mappa su Roma
 
-      },
-      // Aggiungi altri articoli qui...
-    ];
-
-    // Inizializza la mappa
-    var map = L.map('map').setView([41.87194, 12.56738], 6); // Coordinate centrare Italia (Latitudine: 41.87194, Longitudine: 12.56738), livello di zoom 6
-
- // Aggiungi un tile layer per la mappa
+// Aggiungi una mappa di base
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-
-// Aggiungi marcatori sulla mappa per i luoghi degli articoli e delle persone
-for (var i = 0; i < articles.length; i++) {
-  var article = articles[i];
-
-  // Marcatori per luoghi degli articoli
-  for (var j = 0; j < article.places.length; j++) {
-    var place = article.places[j];
-    var popupContent = "<b>" + article.title + "</b><br>" + place.name;
-    var marker = L.marker(place.location).addTo(map);
-
-    // Aggiungi il popup al marker e imposta la proprietà autoClose a false
-    marker.bindPopup(popupContent, { autoClose: false });
-  }
-
-  // Marcatori per luoghi di nascita delle persone
-  for (var k = 0; k < article.people.length; k++) {
-    var person = article.people[k];
-    var popupContent = "<b>" + person.name + "'s Birthplace</b><br>" + "Birthplace: " + person.birthplace[0] + ", " + person.birthplace[1];
-    var marker = L.marker(person.birthplace).addTo(map);
-
-    // Aggiungi il popup al marker e imposta la proprietà autoClose a false
-    marker.bindPopup(popupContent, { autoClose: false });
-  }
-
-  // Marcatori per gli articoli
-  var articleMarker = L.marker(article.location).addTo(map);
-  var popupContent = "<b>" + article.title + "</b><br>" + "Pubblicato a: " + article.location[0] + ", " + article.location[1] +
-    "<br><a href='link_per_articolo.html'>Leggi l'articolo</a>";
-
-  // Aggiungi il popup al marker e imposta la proprietà autoClose a false
-  articleMarker.bindPopup(popupContent, { autoClose: false });
-
-  // Aggiungi l'evento click al marker degli articoli per aprire il popup
-  articleMarker.on('click', function () {
-    this.openPopup();
-  });
+function getCustomPopupContent(placeName) {
+    switch (placeName) {
+        case "Campanile di Santa Maria del Fiore, Firenze":
+            return "<b>Campanile di Santa Maria del Fiore</b><br>Campanile di Giotto";
+        case "Palazzo Medici Riccardi, Firenze":
+            return "<b>Palazzo Medici Riccardi</b><br>Casa de Medici";
+        case "Palazzo Pazzi, Firenze":
+            return "<b>Palazzo Pazzi</b><br>Giardino dei Pazzi";
+        case "Museo di Casa Martelli, Firenze":
+            return "<b>Museo di Casa Martelli</b><br>Palazzo Martelli";
+        // ... aggiungi altre descrizioni personalizzate qui ...
+        default:
+            return placeName;  // contenuto predefinito se non viene trovato nessun match
+    }
 }
 
+function getCoordinatesOfPlace(placeName) {
+    var nominatimUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${placeName}`;
 
+    fetch(nominatimUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                var lat = data[0].lat;
+                var lon = data[0].lon;
 
-    // Popola il pannello laterale con la lista degli articoli
-    var articleList = document.getElementById('article-list');
-    for (var i = 0; i < articles.length; i++) {
-      var article = articles[i];
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<a href="#" onclick="showArticle(' + i + ')">' + article.title + '</a>';
-      articleList.appendChild(listItem);
-    }
+                // Utilizza la tua funzione getCustomPopupContent qui
+                var popupContent = getCustomPopupContent(placeName);
 
-    // Funzione per visualizzare l'articolo selezionato nel pannello laterale
-    function showArticle(index) {
-      var article = articles[index];
-      var sidebar = document.getElementById('sidebar');
-      sidebar.innerHTML = '<h2>' + article.title + '</h2><p>' + article.content + '</p>';
-      sidebar.innerHTML += '<h3>People:</h3><p>' + article.people.join(', ') + '</p>';
-      sidebar.innerHTML += '<h3>Places:</h3><p>' + article.places.join(', ') + '</p>';
-      sidebar.innerHTML += '<h3>Evidences:</h3><p>' + article.evidences.join(', ') + '</p>';
-    }
-
-
-    // Funzione per filtrare gli articoli in base ai metadata
-    function filterArticles() {
-      var filterPeople = document.getElementById('filter-people').value.toLowerCase();
-      var filterPlaces = document.getElementById('filter-places').value.toLowerCase();
-      var filterEvidences = document.getElementById('filter-evidences').value.toLowerCase();
-
-      var filteredArticles = articles.filter(function(article) {
-        var peopleMatch = article.people.some(function(person) {
-          return person.toLowerCase().includes(filterPeople);
+                // Visualizza un marker sulla mappa con le coordinate ottenute
+                L.marker([lat, lon], {
+                    icon: L.divIcon({
+                        className: 'custom-marker',
+                        iconSize: [35, 35]
+                    })
+                }).addTo(map).bindPopup(popupContent).openPopup();
+            } else {
+                console.log(`Nessun risultato trovato per ${placeName}`);
+            }
+        })
+        .catch(error => {
+            console.error(`Errore durante il recupero delle coordinate per ${placeName}:`, error);
         });
-        var placesMatch = article.places.some(function(place) {
-          return place.toLowerCase().includes(filterPlaces);
-        });
-        var evidencesMatch = article.evidences.some(function(evidence) {
-          return evidence.toLowerCase().includes(filterEvidences);
-        });
-        return peopleMatch || placesMatch || evidencesMatch;
-      });
+}
 
-      
+var placesToSearch = [
+    "Basilica di Santa Croce, Firenze",
+    "Basilica di San Giovanni in Laterano, Roma",
+    "Santa Maria delle Grazie, Milano",
+    "Campanile di Santa Maria del Fiore, Firenze",
+    "Palazzo Medici Riccardi, Firenze",
+    "Palazzo Pazzi, Firenze",
+    "Museo di Casa Martelli, Firenze",
+    "Napoli",
+    "Palazzo Diomede Carafa, Napoli",
+    "Chiesa di Sant'Angelo a Segno, Napoli",
+    "Museo del Bargello, Firenze",
+    "Cattedrale di Santa Maria del Fiore, Firenze",
+    "Basilica di Santa Maria Sopra Minerva, Roma",
+    "Tribunale della Mercanzia, Firenze",
+    "Chiesa e Museo di Orsanmichele, Firenze",
+    "Villa Medicea di Careggi",
+    "Basilica di San Lorenzo, Milano",
+    "Battistero di San Giovanni, Firenze"
+    
 
-      // Aggiorna la lista degli articoli nel pannello laterale
-      var articleList = document.getElementById('article-list');
-      articleList.innerHTML = "";
-      for (var i = 0; i < filteredArticles.length; i++) {
-        var article = filteredArticles[i];
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<a href="#" onclick="showArticle(' + articles.indexOf(article) + ')">' + article.title + '</a>';
-        articleList.appendChild(listItem);
-      }
-    }
+];
 
-    function toggleSidebar() {
-    var sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('open');
-  }
-  </script>
+// Ottenere le coordinate per ogni luogo
+placesToSearch.forEach(getCoordinatesOfPlace);
+
+</script>
+
+<div class="btns-grid-container">
+    <div class="btns-grid-item btns-item-1">
+        <button class="sub-btn" data-theme="theme6"><span class="btn-hover-text">RENAISSANCE</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-2">
+        <button class="sub-btn" data-theme="theme5"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-3">
+        <button class="sub-btn" data-theme="theme4"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-4">
+        <button class="sub-btn" data-theme="theme3"><span class="btn-hover-text">FUTURISM</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-5">
+        <button class="sub-btn" data-theme="theme2"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-6">
+        <button class="sub-btn" data-theme="theme1"><span class="btn-hover-text">RENAISSANCE</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-7">
+        <button id="stylesBtn" class="styles-btn" type="button"></button>
+    </div>
+    <div class="btns-grid-item btns-item-8">
+        <button id="toTopBtn"> <i class="fa-solid fa-arrow-up btn-icon"></i></button>
+    </div>
+</div>
+<footer class="footer text-faded text-center py-5">
+    <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -11608,9 +11608,12 @@ p {
 }
 
 #map {
-width: 100%;
-height: 800px;
+  width: 100%;
+  height: 800px;
+
 }
+
+
 
 .custom-marker {
 
