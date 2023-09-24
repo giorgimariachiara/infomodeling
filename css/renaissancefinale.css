@@ -11817,12 +11817,13 @@ p {
 #map {
 width: 100%;
 height: 800px;
+filter: sepia(0.6);
 }
 
 .custom-marker {
 
 /* Specifica l'immagine SVG personalizzata come sfondo */
-background-image: url('/assets/img/my-costum-icon.svg');
+background-image: url('../assets/img/markermapparinascimento.svg');
 /* Specifica l'ancoraggio dell'icona (opzionale) */
  background-repeat: no-repeat;
  background-position-x: center;
