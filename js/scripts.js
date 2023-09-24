@@ -254,31 +254,16 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
             });
             
 
-
-
-// effetto parole belle epoque
-const decor = "❉";
-
-function createWord(className) {
-    const word = document.createElement("div");
-    word.textContent = decor;
-    word.classList.add('floating-flower', className);
-    document.body.appendChild(word);
-}
-
-function randomizeWordPosition(wordElement) {
-    const randomTop = Math.random() * (window.innerHeight - 100);
-    const randomLeft = Math.random() * (window.innerWidth - 100);
-    wordElement.style.top = `${randomTop}px`;
-    wordElement.style.left = `${randomLeft}px`;
-}
-
-function activateBeEffects() {
-for (let i = 1; i <= 4; i++) {
-    const className = `flower${i}`;
-    createWord(className);
-    const wordElement = document.querySelector(`.${className}`);
-    randomizeWordPosition(wordElement);
-}
-}
-document.querySelector('.btns-item-5 .sub-btn').addEventListener('click', activateBeEffects);
+//fiori animazione
+document.addEventListener('DOMContentLoaded', function() {
+              const siteHeading = document.querySelector('.site-heading');
+          
+              // Funzione per avviare l'animazione dell'immagine di sfondo
+              function animateBackgroundImage() {
+                  siteHeading.style.backgroundSize = '100%'; // Imposta la dimensione finale desiderata
+              }
+          
+              // Avvia l'animazione quando il documento è pronto
+              animateBackgroundImage();
+          });
+          
