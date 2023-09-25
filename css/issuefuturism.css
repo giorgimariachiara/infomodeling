@@ -10996,7 +10996,8 @@ body .section-heading .section-heading-lower {
   display: inline-block;  /* La trasformazione si applica meglio agli elementi inline-block o block */
   transform: rotate(10deg);
   font-size: 3rem;
-  margin-left:10px;  /* Ruota di -10 gradi, ma puoi regolare come preferisci */
+  margin-left:10px; 
+  font-family: "Roboto"; /* Ruota di -10 gradi, ma puoi regolare come preferisci */
 }
 
 .section-heading-lower {
