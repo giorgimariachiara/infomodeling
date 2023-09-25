@@ -11364,6 +11364,17 @@ p {
   }
 }
 
+@media (min-width: 480px) {
+  .intro .vasaripaint {
+   margin-left:3.125rem;
+  }
+  .intro .intro-text {
+  
+    margin-top: 0;
+    
+  }
+}
+
 
 .baptism {
   width: 30vw;
@@ -11612,9 +11623,6 @@ p {
   height: 800px;
 
 }
-
-
-
 .custom-marker {
 
 /* Specifica l'immagine SVG personalizzata come sfondo */
