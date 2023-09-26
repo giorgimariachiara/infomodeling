@@ -91,6 +91,11 @@
   }
 }
 
+@font-face {
+  font-family: 'AquilineTwo';
+  src: url('/assets/fonts/Square.ttf') format('truetype');
+}
+
 body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion, .accordion-body, .accordion-button {
   cursor: url('../assets/img/cursorerinascimento.svg') 0 0, auto;
   
@@ -10893,7 +10898,7 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  font-family: "Aquiline";
+  font-family: "AquilineTwo";
   color: var(--bs-gold);
 }
 .section-heading .section-heading-upper {
@@ -10901,7 +10906,7 @@ p {
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--bs-gold);
-  font-family: "Aquiline";
+  font-family: "AquilineTwo";
 }
 
 

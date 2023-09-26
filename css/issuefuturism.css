@@ -93,9 +93,10 @@
 
 
 @font-face {
-  font-family: 'Squarefont';
-  src: url('/assets/fonts/Silkscreen-Bold.ttf') format('truetype');
+  font-family: 'SquareFont';
+  src: url('/assets/fonts/Square.ttf') format('truetype');
 }
+
 
 body {
   margin: 0;
@@ -12046,7 +12047,7 @@ figcaption{
 /*prova effetto parole*/
 .floating-word {
   color:white;
-  font-family: "Squarefont";
+  font-family: "SquareFont";
   position: fixed;
   opacity: 0;
   z-index: 9999; 
