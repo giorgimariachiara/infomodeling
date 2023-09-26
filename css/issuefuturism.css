@@ -11712,14 +11712,6 @@ figcaption{
   display: none;
 }
 
-.immagine {
-  margin-top: 100px;
-  background-image: url('assets\img\verrocchiorenaissance4.png');
-  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
-  width: 300px;  /* Ad esempio */
-  height: 300px; /* Ad esempio */
-}
-
 /* CSS per schermi di dimensioni standard */
 .baptism, .adoration, .last-supper, .madonna {
   background-repeat: no-repeat;
@@ -12044,7 +12036,6 @@ figcaption{
 .letteraA {
   display: inline;
 }
-
 
 /*prova effetto parole*/
 .floating-word {
