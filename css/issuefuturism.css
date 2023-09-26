@@ -91,6 +91,12 @@
   }
 }
 
+
+@font-face {
+  font-family: 'Squarefont';
+  src: url('/assets/fonts/Silkscreen-Bold.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -3724,7 +3730,7 @@ textarea.form-control-lg {
 }
 
 body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion, .accordion-body, .accordion-button {
-  cursor: url('../assets/img/cursorefuturismo.svg') 0 0, auto;
+  cursor: url('../assets/img/wrench.svg') 0 0, auto;
   
   /* Le coordinate 0 0 indicano la posizione "punta" del cursore. Puoi regolarle se necessario. */
 }
@@ -3773,7 +3779,7 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
   padding-bottom: var(--bs-navbar-brand-padding-y);
   margin-right: var(--bs-navbar-brand-margin-end);
   font-size: var(--bs-navbar-brand-font-size);
-  color: var(--bs-navbar-brand-color);
+  color: black;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -4368,7 +4374,7 @@ input[type="checkbox"] {
 label {
   font-size: 1.3rem;
   color: #f7e6ba;
-  font-family: "Squarefont";
+  font-family: "SquareFont";
 }
 .accordion-button {
   position: relative;
