@@ -12,41 +12,6 @@ window.addEventListener('DOMContentLoaded', event => {
 })
 */
 
-/*!
-document.addEventListener("DOMContentLoaded", function () {
-  const applyButton = document.querySelector(".modal-footer .btn-primary");
-  applyButton.addEventListener("click", function () {
-    const placeNamesCheckbox = document.getElementById("placeNames");
-    const personNamesCheckbox = document.getElementById("personNames");
-    
-    toggleHighlight("placeName", placeNamesCheckbox.checked);
-    toggleHighlight("personName", personNamesCheckbox.checked);
-
-    // Close the modal
-    const modalElement = document.getElementById('metadataModal'); // Replace 'yourModalId' with the actual ID of your modal
-    const modalInstance = bootstrap.Modal.getInstance(modalElement);
-    modalInstance.hide();
-  });
-});
-
-
-function toggleHighlight(className, isChecked) {
-  const elements = document.getElementsByClassName(className);
-  const colorMap = {
-    'placeName': '#6caedf',
-    'personName': '#a1d490'
-  };
-  for (let i = 0; i < elements.length; i++) {
-    if (isChecked) {
-      elements[i].style.backgroundColor = colorMap[className];
-    } else {
-      elements[i].style.backgroundColor = '';
-    }
-  }
-}
-*/
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const applyThemeButton = document.getElementById("applyTheme");
   const themeStylesheet = document.getElementById("themeStylesheet");
@@ -70,46 +35,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(document).ready(function() {
-    function appendToMetadataList(className, listId, titleId) {
-        var elements = $(className);
-        var names = [];
-        elements.each(function() {
-            names.push($(this).text());
-        });
-        var uniqueNames = Array.from(new Set(names));
-        if (uniqueNames.length > 0) {
-            $(titleId).show();
-        } else {
-            $(titleId).hide();
-        }
-        var listHtml = uniqueNames.map(function(name) {
-            return "<li>" + name + "</li>";
-        }).join("");
-        $(listId).append(listHtml);
-    }
 
-    $("#placeNames").change(function() {
-        $("#placeNameList").empty();
-        if(this.checked) {
-            $(".placeName").addClass("highlight-place");
-            appendToMetadataList(".highlight-place", "#placeNameList", "#placeNameTitle");
-        } else {
-            $(".placeName").removeClass("highlight-place");
-            $("#placeNameTitle").hide();
-        }
-    });
+  function appendToMetadataList(className, listId, titleId) {
+      var elements = $(className);
+      var items = [];
+      elements.each(function() {
+          var name = $(this).text();
+          var wikipediaUrl = $(this).data('wikipedia-url');
+          items.push({ name: name, url: wikipediaUrl });
+      });
+      var uniqueItems = Array.from(new Set(items.map(i => i.name))).map(name => {
+          return items.find(i => i.name === name);
+      });
+      if (uniqueItems.length > 0) {
+          $(titleId).show();
+      } else {
+          $(titleId).hide();
+      }
+      var listHtml = uniqueItems.map(function(item) {
+          if (item.url) {
+              return `<li><a href="${item.url}" target="_blank">${item.name}</a></li>`;
+          } else {
+              return `<li>${item.name}</li>`;
+          }
+      }).join("");
+      $(listId).append(listHtml);
+  }
 
-    $("#personNames").change(function() {
-        $("#personNameList").empty();
-        if(this.checked) {
-            $(".personName").addClass("highlight-person");
-            appendToMetadataList(".highlight-person", "#personNameList", "#personNameTitle");
-        } else {
-            $(".personName").removeClass("highlight-person");
-            $("#personNameTitle").hide();
-        }
-    });
+  $("#placeNames").change(function() {
+      $("#placeNameList").empty();
+      if (this.checked) {
+          $(".placeName").addClass("highlight-place");
+          appendToMetadataList(".highlight-place", "#placeNameList", "#placeNameTitle");
+      } else {
+          $(".placeName").removeClass("highlight-place");
+          $("#placeNameTitle").hide();
+      }
+  });
+
+  $("#personNames").change(function() {
+      $("#personNameList").empty();
+      if (this.checked) {
+          $(".personName").addClass("highlight-person");
+          appendToMetadataList(".highlight-person", "#personNameList", "#personNameTitle");
+      } else {
+          $(".personName").removeClass("highlight-person");
+          $("#personNameTitle").hide();
+      }
+  });
 });
+
 
 document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click', function() {
     document.getElementById('themeStylesheet').href = "css/renaissancefinale.css";
@@ -131,6 +106,10 @@ document.querySelector('.sub-btn[data-theme="theme5"]').addEventListener('click'
     document.getElementById('themeStylesheet').href = "css/XX.css";
 });
 
+document.querySelector('.sub-btn[data-theme="theme6"]').addEventListener('click', function() {
+    document.getElementById('themeStylesheet').href = "css/2030.css";
+});
+
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
@@ -149,6 +128,18 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
+
+//popup script
+function popupfunction() {
+    var popup = document.getElementById("myPopup");
+    if (popup.style.display === "none" || popup.style.display === "") {
+        popup.style.display = "block";
+    } else {
+        popup.style.display = "none";
+    }
+}
+//ends popup script
+
 
 const wordText = "click";
 
@@ -244,35 +235,16 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
             });
             
 
-
-
-// effetto parole belle epoque
-const decor = "❉";
-
-function createWord(className) {
-    const word = document.createElement("div");
-    word.textContent = decor;
-    word.classList.add('floating-flower', className);
-    document.body.appendChild(word);
-}
-
-function randomizeWordPosition(wordElement) {
-    const randomTop = Math.random() * (window.innerHeight - 100);
-    const randomLeft = Math.random() * (window.innerWidth - 100);
-    wordElement.style.top = `${randomTop}px`;
-    wordElement.style.left = `${randomLeft}px`;
-}
-
-function activateBeEffects() {
-
-for (let i = 1; i <= 4; i++) {
-    const className = `flower${i}`;
-    createWord(className);
-    const wordElement = document.querySelector(`.${className}`);
-    randomizeWordPosition(wordElement);
-}
-}
-document.querySelector('.btns-item-5 .sub-btn').addEventListener('click', activateBeEffects);
-
-
-            
+//fiori animazione
+document.addEventListener('DOMContentLoaded', function() {
+              const siteHeading = document.querySelector('.site-heading');
+          
+              // Funzione per avviare l'animazione dell'immagine di sfondo
+              function animateBackgroundImage() {
+                  siteHeading.style.backgroundSize = '100%'; // Imposta la dimensione finale desiderata
+              }
+          
+              // Avvia l'animazione quando il documento è pronto
+              animateBackgroundImage();
+          });
+          

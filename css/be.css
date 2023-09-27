@@ -10872,24 +10872,28 @@ p {
 }
 
 
-
-
-@media (min-width: 600px){
+.site-heading {
+  background-image: url("/assets/img/corniceverde.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-right: 3rem;
+  /* Altre proprietà comuni */
+  padding-left: 2.5rem;
+  padding-right: 4.5rem;
+  padding-bottom: 9rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 400px){
   .site-heading {
-    background-image: url("/assets/img/corniceverde.svg");
-    background-repeat: no-repeat;
-    background-size:85%;
-    background-position-x: center;
-    background-position-y: center ;
-    padding-left:5.5rem;
-    padding-right: 7rem;
-    padding-bottom: 18rem;
-    margin-top: 5rem;
-    
-    text-transform: uppercase;
-    line-height: 1;
-    margin-right: 3rem;
-  }
+    /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
+    background-size: 65%;
+    padding-left: 2.5rem;
+    padding-right: 4.5rem;
+    padding-bottom: 9rem;
+    margin-top: 2.5rem;
+}
   .site-heading .site-heading-upper {
     display: block;
     font-family: "Copperplate";
@@ -10906,7 +10910,7 @@ p {
   }
   .site-heading .site-heading-lower {
     width: auto;
-    font-size: 12rem;
+    font-size: 10rem;
     line-height: 4rem;
     font-family: "Alexang";
     font-style: normal;
@@ -10919,19 +10923,13 @@ p {
 
 @media (min-width: 900px){
   .site-heading {
-    background-image: url("/assets/img/corniceverde.svg");
-    background-repeat: no-repeat;
-    background-size:100%;
-    background-position-x: center;
-    background-position-y: center ;
-    padding-left:5rem;
+    /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
+    background-size: 100%;
+    padding-left: 5rem;
     padding-right: 7rem;
     padding-bottom: 18rem;
     margin-top: 5rem;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-left: 5rem;
-    
+
   }
   .site-heading .site-heading-upper {
     display: block;
@@ -10963,19 +10961,13 @@ p {
 
 
 @media (min-width: 1250px){
-.site-heading {
-  background-image: url("/assets/img/corniceverde.svg");
-  background-repeat: no-repeat;
-  background-size:100%;
-  background-position-x: center;
-  background-position-y: center ;
-  padding-left: 5.5rem;
-  padding-right: 7rem;
-  padding-bottom: 18rem;
-  margin-top: 5rem;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-left:5rem;
+  .site-heading {
+    /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
+    background-size: 100%;
+    padding-left: 5.5rem;
+    padding-right: 7rem;
+    padding-bottom: 18rem;
+    margin-top: 5rem;
 }
 .site-heading .site-heading-upper {
   display: block;
@@ -11136,8 +11128,9 @@ p {
  
 }
 
-    .intro .intro-img {
-      width: 50%;
+ .vasaripaint {
+      background-image: url("/assets/img/vasaripaint.jpg");
+      width: 100%;
       margin-bottom: 10rem;
       margin-left:10rem;
       padding: 0.3rem;
@@ -11196,8 +11189,9 @@ p {
   }
 
 @media (min-width: 992px) {
-  .intro .intro-img {
-    width: 50%;
+  .intro .vasaripaint {
+    background-image: url("/assets/img/vasaripaint.jpg");
+    width: 100%;
     float: right;
     padding: 0.3rem;
     border-style: double;
@@ -11269,8 +11263,9 @@ p {
     padding-bottom:15rem;
 
   }
-  .intro .intro-img {
-    width: 40%;
+  .intro .vasaripaint{
+    background-image: url("/assets/img/vasaripaint.jpg");
+    width: 100%;
     padding: 0.3rem;
     margin-right: 5rem;
     margin-left: 5rem;
@@ -11278,6 +11273,7 @@ p {
     border-width: 0.7rem;
     border-color: #243F39;
     filter: grayscale(100%);
+
   }
   .intro .intro-text .intro-button {
     width: 100%;
@@ -11609,107 +11605,6 @@ nav{
 
 
 
-/*prova effetto parole*/
-.floating-flower {
-  color:black;
-  font-family: "Copperplate";
-  position: fixed;
-  opacity: 0;
-  z-index: 9999; 
-  animation-duration: 4s;  /* puoi modificare la durata come preferisci */
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-.flower1 {
-  left: 10%;
-  top: 20%;
-  font-size: 10em;
-  animation-name: fadeInOut1;
-  color:#fed231;
-  transform:rotate(20deg)
-}
-
-.flower2 {
-  left: 70%;
-  top: 45%;
-  font-size: 5em;
-  animation-name: fadeInOut2;
-}
-
-.flower3 {
-  left: 30%;
-  top: 70%;
-  font-size: 4em;
-  animation-name: fadeInOut3;
-  color:#673d86;
-}
-
-.flower4 {
-  left: 60%;
-  top: 10%;
-  font-size: 3em;
-  animation: curveFadeInOut 4s infinite;
-}
-
-.flower5 {
-  left: 60%;
-  top: 10%;
-  font-size: 1em;
-  color:#7cb76c;
-  animation: curveFadeInOut2 4s infinite;
-}
-@keyframes fadeInOut1 {
-  0% { opacity: 0; }
-  25% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-@keyframes fadeInOut2 {
-  0% { opacity: 0; }
-  35% { opacity: 0; }
-  60% { opacity: 1; }
-  85% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-@keyframes fadeInOut3 {
-  0% { opacity: 0; }
-  45% { opacity: 0; }
-  75% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes curveFadeInOut {
-  0% { 
-    opacity: 0; 
-    transform: translateY(0) rotate(0deg); 
-  }
-  50% { 
-    opacity: 1; 
-    transform: translateY(-30px) rotate(25deg); 
-  }
-  100% { 
-    opacity: 0; 
-    transform: translateY(0) rotate(0deg); 
-  }
-}
-
-@keyframes curveFadeInOut2 {
-  0% { 
-    opacity: 0; 
-    transform: translateY(10) rotate(0deg); 
-  }
-  50% { 
-    opacity: 1; 
-    transform: translateY(30px) rotate(-25deg); 
-  }
-  100% { 
-    opacity: 0; 
-    transform: translateY(0) rotate(10deg); 
-  }
-}
 
 
 /* bottoni stili */
@@ -11796,3 +11691,68 @@ nav{
 .sub-btn:hover .btn-hover-text {
   display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
 }
+
+
+.decorative-img {
+  display: none;
+}
+
+#miaLettera {
+  display: none;
+}
+
+
+
+#map {
+  width: 100%;
+  height: 800px;
+  }
+  
+  .custom-marker {
+   
+    /* Specifica l'immagine SVG personalizzata come sfondo */
+    background-image: url('/assets/img/my-costum-icon.svg');
+    /* Specifica l'ancoraggio dell'icona (opzionale) */
+     background-repeat: no-repeat;
+     background-position-x: center;
+     background-position-y: center;
+     background-size: 100%;
+  
+  }
+  
+  /* Stile generale del popup */
+  .leaflet-popup {  
+    background-color: #6aa024; /* Colore di sfondo */
+    border: 2px solid #333; /* Bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    padding: 10px; /* Spaziatura interna */
+    font-family: Arial, sans-serif; /* Tipo di carattere */
+  }
+  
+  .leaflet-popup-content-wrapper {
+    background-color: #e686b9; /* New background color */
+    border: 2px solid #333; /* Border color */
+    border-radius: 5px; /* Border radius */
+    padding: 10px; /* Padding inside the popup */
+    font-family: Arial, sans-serif; /* Font family */
+  }
+  
+  /* Stile del titolo del popup */
+  .leaflet-popup b {
+    color: #000000; /* Colore del titolo */
+    font-size: 18px; /* Dimensione del titolo */
+  }
+  
+  /* Stile del testo del popup */
+  .leaflet-popup p {
+    color: #f1a1a1; /* Colore del testo */
+    font-size: 14px; /* Dimensione del testo */
+  }
+  
+  /* Style for the secondary name */
+  .secondary-name {
+    color: #1121ad; /* Change the text color */
+    font-size: 12px; /* Change the font size */
+    /* Add other styles as needed */
+  }
+  

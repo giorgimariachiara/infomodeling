@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Italia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="map copy.css">
+
+</head>
+<body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-lower">The Lives</span>
+            <span class="site-heading-upper text-primary mb-3" >of the Most Excellent Painters, Sculptors, and Architects</span>
+        </h1>
+    </header>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">The Lives</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                    <li class="nav-item px-lg-4 dropdown">
+                        <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Issues
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="issue-leonardo.html">Da Vinci</a></li>
+                            <li><a class="dropdown-item" href="issue-verrocchio.html">Verrocchio</a></li>
+                            <li><a class="dropdown-item" href="issue-donatello.html">Donatello</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="mapofficial.html">Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+     // Inizializza la mappa
+var map = L.map('map').setView([41.9028, 12.4964], 6); // Centra la mappa su Roma
+
+// Aggiungi una mappa di base
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+function getCustomPopupContent(placeName) {
+    switch (placeName) {
+        case "Campanile di Santa Maria del Fiore, Firenze":
+            return "<b>Campanile di Santa Maria del Fiore</b><br>Campanile di Giotto";
+        case "Palazzo Medici Riccardi, Firenze":
+            return "<b>Palazzo Medici Riccardi</b><br>Casa de Medici";
+        case "Palazzo Pazzi, Firenze":
+            return "<b>Palazzo Pazzi</b><br>Giardino dei Pazzi";
+        case "Museo di Casa Martelli, Firenze":
+            return "<b>Museo di Casa Martelli</b><br>Palazzo Martelli";
+        // ... aggiungi altre descrizioni personalizzate qui ...
+        default:
+            return placeName;  // contenuto predefinito se non viene trovato nessun match
+    }
+}
+
+function getCoordinatesOfPlace(placeName) {
+    var nominatimUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${placeName}`;
+
+    fetch(nominatimUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                var lat = data[0].lat;
+                var lon = data[0].lon;
+
+                // Utilizza la tua funzione getCustomPopupContent qui
+                var popupContent = getCustomPopupContent(placeName);
+
+                // Visualizza un marker sulla mappa con le coordinate ottenute
+                L.marker([lat, lon], {
+                    icon: L.divIcon({
+                        className: 'custom-marker',
+                        iconSize: [35, 35]
+                    })
+                }).addTo(map).bindPopup(popupContent).openPopup();
+            } else {
+                console.log(`Nessun risultato trovato per ${placeName}`);
+            }
+        })
+        .catch(error => {
+            console.error(`Errore durante il recupero delle coordinate per ${placeName}:`, error);
+        });
+}
+
+var placesToSearch = [
+    "Basilica di Santa Croce, Firenze",
+    "Basilica di San Giovanni in Laterano, Roma",
+    "Santa Maria delle Grazie, Milano",
+    "Campanile di Santa Maria del Fiore, Firenze",
+    "Palazzo Medici Riccardi, Firenze",
+    "Palazzo Pazzi, Firenze",
+    "Museo di Casa Martelli, Firenze",
+    "Napoli",
+    "Palazzo Diomede Carafa, Napoli",
+    "Chiesa di Sant'Angelo a Segno, Napoli",
+    "Museo del Bargello, Firenze",
+    "Cattedrale di Santa Maria del Fiore, Firenze",
+    "Basilica di Santa Maria Sopra Minerva, Roma",
+    "Tribunale della Mercanzia, Firenze",
+    "Chiesa e Museo di Orsanmichele, Firenze",
+    "Villa Medicea di Careggi",
+    "Basilica di San Lorenzo, Milano",
+    "Battistero di San Giovanni, Firenze"
+    
+
+];
+
+// Ottenere le coordinate per ogni luogo
+placesToSearch.forEach(getCoordinatesOfPlace);
+
+</script>
+
+<div class="btns-grid-container">
+    <div class="btns-grid-item btns-item-1">
+        <button class="sub-btn" data-theme="theme6"><span class="btn-hover-text">RENAISSANCE</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-2">
+        <button class="sub-btn" data-theme="theme5"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-3">
+        <button class="sub-btn" data-theme="theme4"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-4">
+        <button class="sub-btn" data-theme="theme3"><span class="btn-hover-text">FUTURISM</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-5">
+        <button class="sub-btn" data-theme="theme2"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-6">
+        <button class="sub-btn" data-theme="theme1"><span class="btn-hover-text">RENAISSANCE</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-7">
+        <button id="stylesBtn" class="styles-btn" type="button"></button>
+    </div>
+    <div class="btns-grid-item btns-item-8">
+        <button id="toTopBtn"> <i class="fa-solid fa-arrow-up btn-icon"></i></button>
+    </div>
+</div>
+<footer class="footer text-faded text-center py-5">
+    <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
