@@ -93,13 +93,12 @@
 
 @font-face {
   font-family: 'AquilineTwo';
-  src: url('/assets/fonts/Square.ttf') format('truetype');
+  src: url('/assets/fonts/AquilineTwo.ttf') format('truetype');
 }
 
 body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion, .accordion-body, .accordion-button {
   cursor: url('../assets/img/cursorerinascimento.svg') 0 0, auto;
   
-  /* Le coordinate 0 0 indicano la posizione "punta" del cursore. Puoi regolarle se necessario. */
 }
 body {
   margin: 0;
@@ -10898,7 +10897,7 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1.5rem;
-  font-family: "AquilineTwo";
+  font-family: "Cinzel";
   color: var(--bs-gold);
 }
 .section-heading .section-heading-upper {
@@ -10906,7 +10905,7 @@ p {
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--bs-gold);
-  font-family: "AquilineTwo";
+  font-family: "Cinzel";
 }
 
 
@@ -10940,9 +10939,36 @@ p {
 .intro .section-heading-lower span {
   font-family: "Cinzel", serif;
 }
+
+
+.intro-text.bg-faded, .intro-text.bg-faded::before {
+  background-color: transparent;
+}
+.intro-text.bg-faded {
+  background-image: url('../assets/img/cornice2.png');
+  background-size: cover;/* Questo farà in modo che l'immagine copra l'intero elemento */
+  background-repeat: no-repeat; /* Questo eviterà che l'immagine si ripeta */
+  background-position: center center;
+  min-height: 23rem;
+}
+.intro-text.bg-faded::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../assets/img/cornice2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  z-index: -1;
+}
+
 .bg-faded {
   background-color: #dfd9c8;
-
 }
 
 .btn-xl {
@@ -10956,14 +10982,14 @@ p {
 
 #mainNav {
   background-color: rgba(213, 206, 189, 0.8);
-  font-family: "Cinzel";
-  font-size: 20px;
-  position:relative;
-  border-top: 4px solid #a3852d; /* doppio spessore per il bordo destro */
-  border-bottom: 4px solid #a3852d; /* bordo dorato esterno */
-  box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px #a3852d; /* bordo dorato interno */
+font-family: "Cinzel";
+font-size: 1.25rem;  
+position: relative;
+border-top: 0.25rem solid #a3852d; 
+border-bottom: 0.25rem solid #a3852d;  
+box-shadow: 
+    0 0 0 0.0625rem #674e29,  
+    0 0 0 0.5625rem #a3852d;  
 }
 #mainNav .navbar-brand {
   color: #a3852d;
@@ -11080,9 +11106,9 @@ p {
   }
 }
 
-@media (max-width: 768px) { /* Puoi cambiare 768px con il valore di breakpoint desiderato */
+@media (max-width: 768px) { 
   .product-item-title {
-      margin-bottom: 40px; /* Aumenta lo spazio per schermi più piccoli */
+    margin-bottom: 2.5rem; 
   }
 }
 
@@ -11110,14 +11136,13 @@ p {
   font-size: 1.2rem;
 }
 
-
 .sticky-accordion {
   position: sticky;
-  top: 200px;  
-  max-height: calc(100vh - 30px);
+  top: 12.5rem;  
+  max-height: calc(100vh - 1.875rem); 
   overflow-y: auto;
   z-index: 1;
-  min-width: 100px; 
+  min-width: 6.25rem; 
   max-width: 100%;  
   width: auto;   
 }
@@ -11126,7 +11151,7 @@ p {
     text-align: center; 
     display: flex;
     position: sticky;
-    top: 15px;
+    top: 0.9375rem; 
     width: 100%;
     z-index: 1;
 }
@@ -11139,10 +11164,10 @@ p {
 }
 
 .main-content {
-  flex: 3;  /* Takes 3/4 of the container width */
+  flex: 3; 
 }
 
-@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+@media (max-width: 768px) { 
   .content-wrapper {
       flex-direction: column;
   }
@@ -11150,70 +11175,15 @@ p {
   .accordion {
       position: sticky;
       top: 80px;
-      z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+      z-index: 100; 
       margin-bottom: 10px;
       margin-right:30px;
   }
 
   .main-content {
-      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+      width: 100%; 
   }
 }
-/*
-.toggle-btn {
-    position: absolute;  
-    top: 0;  
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}  */
-
-
-/* Change from sticky to absolute positioning */
-/* Align to the top */
-/* Align to the left at 50% of the container width */
-/* Center the element */
-/*
-.toggle-btn {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
- /* Use absolute positioning */
- /* Align it to the right */
- /*
-.toggle-btn {
-    position: sticky; 
-    top: 150px;
-    right: auto;  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-
-.toggle-btn-2 {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
 
 .button-container {
   position: sticky;
@@ -11224,43 +11194,40 @@ p {
 .toggle-btn, .toggle-btn-2 {
   width: 40px;
   height: 40px;
-  /*transform: translate(-50%, -50%) */
   border-radius: 50%;
-  margin-bottom: 10px;  /* Spacing between the buttons */
+  margin-bottom: 10px; 
 }
 
 
 #mainNav {
   position: sticky;
   top: 0;
-  z-index: 1000;  /* To ensure it stays above other elements */
+  z-index: 1000;  
 }
 
 .btns-grid-container {
   display: grid;
   position: fixed;
-  right: 10px;  /* Adjust as per requirement */
-  bottom: 10px;  /* Adjust as per requirement */
-  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 5px;  /* Spacing between buttons */
-  z-index: 9999;  /* This will ensure it's on top of most other elements */
+  right: 0.625rem; 
+  bottom: 0.625rem; 
+  grid-template-rows: repeat(8, auto);
+  gap: 0.3125rem;  
+  z-index: 9999; 
   
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 60px;  /* Adjust width as required */
-  height: 60px;  /* Adjust height as required */
+  width: 3.75rem; 
+  height: 3.75rem;  
   border: none;
-   /* To make them round */
-  background-color: #dfd9c8;  /* Adjust color as required */
-  color:#a3852d;
+  background-color: #dfd9c8;  
+  color: #a3852d;
   cursor: pointer;
-  border: 3px solid var(--bs-gold);
- 
+  border: 0.1875rem solid var(--bs-gold);
 }
 
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: rgba(213, 206, 189, 0.9); /* Adjust hover color as required */
+  background-color: rgba(213, 206, 189, 0.9);
 }
 
 .sub-btn[data-theme] {
@@ -11272,51 +11239,47 @@ p {
   background-position: center;
   background-repeat: no-repeat;
 }
-
-
 .sub-btn[data-theme="theme3"] {
   background-image: url('../assets/img/heptagon.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .sub-btn[data-theme="theme1"] {
   background-image: url('../assets/img/vitruvian-manoro.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .sub-btn {
-  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+  position: relative;  
 }
 
 .btn-hover-text {
-  display: none;  /* Inizialmente, il testo non sarà visibile */
+  display: none; 
   font-family: "Cinzel";
   position: absolute;
-  top: 0;  /* Posiziona il testo in alto */
+  top: 0;  
   left: -10%;
-  transform: translateX(-100%); /* Centra orizzontalmente il testo */
-  font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
-  background-color: rgba(213, 206, 189, 0.9); /* Sfondo semi-trasparente */
-  color:var(--bs-gold); /* Colore del testo */
-  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
+  transform: translateX(-100%); 
+  font-size: 1rem;  
+  background-color: rgba(213, 206, 189, 0.9); 
+  color:var(--bs-gold); 
+  padding: 0.1rem 0.3rem;  
   font-weight: bold;
 }
 
 .sub-btn:hover .btn-hover-text {
-  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+  display: inline-block;  
 }
 
 .product-item-title > .bg-faded {
-  background-color: var( --bs-renred);
-  border: 4px solid var(--bs-gold); /* bordo dorato esterno */
+  background-color: var(--bs-renred);
+  border: 0.25rem solid var(--bs-gold); 
   box-shadow: 
-      0 0 0 1px #674e29, /* linea scura di separazione */
-      0 0 0 9px var(--bs-gold); /* bordo dorato interno */
-      padding:0;
+      0 0 0 0.07rem #674e29, 
+      0 0 0 0.6rem var(--bs-gold); 
+  padding: 0;
 }
 
 .bg-faded.p-5.rounded {
@@ -11325,8 +11288,8 @@ p {
 
 .decorative-img {
   position: absolute;
-  top: 0;  /* A seconda della tua necessità, potresti dover regolare questo valore */
-  left: 0;  /* A seconda della tua necessità, potresti dover regolare questo valore */
+  top: 0; 
+  left: 0; 
   width: 5.625rem;
   height: auto;
   display:block;
@@ -11341,55 +11304,48 @@ p {
 
 .bg-faded p {
   overflow: hidden; 
-  margin-left: 2rem; /* 34px / 16 = 2.125rem */
+  margin-left: 2rem; 
 }
 
 @media only screen and (max-width: 768px) {
   #miaLettera {
-    width: 15rem; /* Rimpicciolisci l'immagine */
+    width: 15rem; 
   }
 
   .decorative-img {
-    width: 4rem; /* Rimpicciolisci l'immagine */
+    width: 4rem; 
   }
 }
-
-
 
 .highlight-person {
   font-family: 'Cinzel', serif;
   color: var(--bs-gold);
-  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  background-color: #92302b; 
   text-align: center;
-  
-  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  padding: 0.125rem;
   position: relative;
-  
-  /* Creiamo il doppio bordo utilizzando border e box-shadow */
-  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
-  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+  border: 0.1875rem solid var(--bs-gold); 
+  box-shadow: 0 0 0 0.1875rem #2e2e2e;  
 
 }
 
 .highlight-place {
   font-family: 'Cinzel', serif;
   color: var(--bs-gold);
-  background-color: #92302b; /* Questo è il tuo sfondo blu */
+  background-color: #92302b; 
   text-align: center;
-  padding: 2px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  padding: 0.125rem; 
   position: relative;
-  /* Creiamo il doppio bordo utilizzando border e box-shadow */
-  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
-  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
-
+  border: 0.1875rem solid var(--bs-gold); 
+  box-shadow: 0 0 0 0.1875rem #2e2e2e;  
 }
 
 p {
   font-family: 'AquilineTwo', serif;
   text-align: justify;
-  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
-  margin-right: 4rem; /* 80px / 16 = 5rem */
-  margin-left: 4rem; /* 34px / 16 = 2.125rem */
+  font-size: 1.25rem; 
+  margin-right: 4rem; 
+  margin-left: 4rem; 
   position: relative;
 }
 
@@ -11521,8 +11477,6 @@ p {
     margin-bottom: 3.5vw;
   }
 }
-
-
 
 .last-supper {
   width: 30vw;
@@ -11687,7 +11641,6 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
   box-sizing: border-box;
-
   padding: 0;
 }
 
@@ -11724,10 +11677,6 @@ p {
   max-height:940px;
   background-image: url('../assets/img/vasaripaintrenaissance.svg');
   background-size: contain;
-  border: 0.4vw solid var(--bs-gold);
-  box-shadow: 
-      0 0 0 0.1vw #674e29,
-      0 0 0 0.9vw var(--bs-gold);
   padding: 0;
 }
 
@@ -11751,20 +11700,19 @@ p {
   }
 }
 
- figcaption {
+figcaption {
   font-family: 'Cinzel', serif;
   color: var(--bs-gold);
-  background-color: #385393; /* Questo è il tuo sfondo blu */
+  background-color: #385393; 
   text-align: center;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding: 3px; /* Puoi regolare questo padding a seconda delle tue necessità */
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0.1875rem; 
   position: relative;
-  /* Creiamo il doppio bordo utilizzando border e box-shadow */
-  border: 3px solid var(--bs-gold); /* Bordo interno dorato */
-  box-shadow: 0 0 0 3px #2e2e2e;   /* Bordo esterno marrone scuro */
+  border: 0.1875rem solid var(--bs-gold); 
+  box-shadow: 0 0 0 0.2rem #2e2e2e;   
   margin-right: 4rem !important;
-  margin-left:3rem !important;
+  margin-left: 3rem !important;
 }
 
 
@@ -11786,7 +11734,6 @@ p {
 #filters {
   margin-bottom: 10px;
 }
-
 
  /* Stili della sidebar */
  #sidebar {
@@ -11824,9 +11771,7 @@ width: 100%;
 height: 800px;
 filter: sepia(0.6);
 }
-
 .custom-marker {
-
 /* Specifica l'immagine SVG personalizzata come sfondo */
 background-image: url('../assets/img/markermapparinascimento.svg');
 /* Specifica l'ancoraggio dell'icona (opzionale) */
@@ -11834,5 +11779,4 @@ background-image: url('../assets/img/markermapparinascimento.svg');
  background-position-x: center;
  background-position-y: center;
  background-size: 100%;
-
 }

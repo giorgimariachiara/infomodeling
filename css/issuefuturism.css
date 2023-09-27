@@ -11593,7 +11593,7 @@ figcaption:nth-of-type(2) {
   display: inline-block; 
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
   font-family: "Cinzel";
   color:#f07e02;
 }
@@ -11605,8 +11605,8 @@ figcaption:nth-of-type(2) {
 
 .navbar-nav > li:nth-child(1) > .nav-link {
   font-size: 1.5rem !important;
-  border-top: 4px solid black;
-  border-bottom: 3px solid black;
+  border-top: 0.3rem solid black;
+  border-bottom: 0.2rem solid black;
 }
 
 .navbar-nav > li:nth-child(2) > .nav-link {
@@ -11615,22 +11615,22 @@ figcaption:nth-of-type(2) {
 
 .navbar-nav > li:nth-child(3) > .nav-link {
   font-size: 2rem !important;
-  margin-left: 20px;
-  border-right: 5px solid black;
-  border-bottom: 3px solid black;
+  margin-left: 1.25rem;
+  border-right: 0.3125 solid black;
+  border-bottom: 0.2rem solid black;
 }
 
 .navbar-nav > li:nth-child(4) > .nav-link {
   font-size: 1.5rem !important;
-  margin-left: 40px;
-  border-left: 3px solid black;
+  margin-left: 2.5rem;
+  border-left: 0.2rem solid black;
   transform:rotate(20deg)
 }
 
 @media (max-width: 768px){
   .navbar-nav > li:nth-child(1) > .nav-link {
     font-size: 1.5rem !important;
-    border-bottom: 3px solid black;
+    border-bottom: 0.2rem solid black;
   }
   
   .navbar-nav > li:nth-child(2) > .nav-link {
@@ -11640,13 +11640,13 @@ figcaption:nth-of-type(2) {
   .navbar-nav > li:nth-child(3) > .nav-link {
     font-size: 2rem !important;
     margin-left: 20px;
-    border-right: 5px solid black;
-    border-bottom: 3px solid black;
+    border-right: 0.3125 solid black;
+    border-bottom: 0.2rem solid black;
   }
   
   .navbar-nav > li:nth-child(4) > .nav-link {
     font-size: 1.5rem !important;
-    border-left: 3px solid black;
+    border-left: 0.2rem solid black;
     padding-left:0.3rem;
     transform: none;
   }
@@ -11676,8 +11676,8 @@ figcaption{
 .highlight-place {
   color:#f9e8bc;
   background-color: black;
-  border: 3px solid #eb5032;
-  padding: 4px ;
+  border: 0.2rem solid #eb5032;
+  padding: 0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
 
@@ -11685,8 +11685,8 @@ figcaption{
 .highlight-place:hover {
   color:black;
   background-color: #f9e8bc;
-  border: 3px solid #eb5032;
-  padding: 4px ;
+  border: 0.2rem solid #eb5032;
+  padding: 0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
 }
@@ -11695,8 +11695,8 @@ figcaption{
 .highlight-person {
   color:#f9e8bc;
   background-color: black;
-  border: 3px solid #eb5032;
-  padding: 4px ;
+  border: 0.2rem solid #eb5032;
+  padding: 0.25rem ;
   text-transform: uppercase;
   font-family: "SquareFont";
 
@@ -11704,12 +11704,11 @@ figcaption{
 .highlight-person:hover {
   color:black;
   background-color: #f9e8bc;
-  border: 3px solid #eb5032;
-  padding: 4px ;
+  border: 0.2rem solid #eb5032;
+  padding: 0.25rem ;
   text-transform: uppercase;
   font-family: "SquareFont";
 }
-
 
 .decorative-img {
   display: none;
@@ -11723,22 +11722,21 @@ figcaption{
 .baptism, .adoration, .last-supper, .madonna {
   background-repeat: no-repeat;
   background-size: contain;
-  border-top: 2px solid black;
-  border-left: 8px solid black;
 }
 
 .baptism {
   margin-left: 5vw;
   width: 30vw;
   height: 35vw;
-  background-image: url('../assets/img/baptism.svg');
+  background-image: url('../assets/img/baptismfuturism.svg');
 }
 
 .adoration {
   margin-left: 5vw;
-  width: 20vw;
-  height: 20vw;
-  background-image: url('../assets/img/adortion.svg');
+  margin-top: 5vw;
+  width: 50vw;
+  height: 50vw;
+  background-image: url('../assets/img/adorationfuturism.svg');
 }
 
 .last-supper {
@@ -11747,17 +11745,14 @@ figcaption{
   margin-bottom: 3vw;
   width: 30vw;
   height: 14vw;
-  border-right: 1vw solid black;
-  background-image: url('../assets/img/last-supper.svg');
+  background-image: url('../assets/img/last-supperfuturismo.svg');
 }
 
 .madonna {
   margin-left: 14vw;
   width: 18vw;
   height: 24vw;
-  border-bottom: 0.3vw solid black;
-  border-right: 1.6vw solid black;
-  background-image: url('../assets/img/madonna.svg');
+  background-image: url('../assets/img/madonnadefault.svg');
 }
 
 /* Effetto hover */
@@ -11777,7 +11772,7 @@ figcaption{
     height: 70vw;
   }
 
-  .adoration {
+  .adortion {
     width: 50vw;
     height: 50vw;
   }
@@ -11800,20 +11795,12 @@ figcaption{
   background-repeat: no-repeat;
   background-size: contain;
   width: 50vw;
-  max-width: 280px;
   height: 70vw;
-  max-height: 400px;
-  border-top: 0.1vw solid black;
-  border-bottom: 0.3vw solid black;
-  border-right: 1.6vw solid black;
 }
 
 .sarcophagus {
-  background-image: url('../assets/img/sarcophagus.svg');
+  background-image: url('../assets/img/sarcophagudefault.svg');
 }
-
-
-
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -11830,27 +11817,14 @@ figcaption{
 }
 
 .david {
-  margin-left: 10vw;
+  margin-left: 5vw;
   margin-top: 2vw;
-  background-image: 
-    url('../assets/img/david.svg'),
-    url('../assets/img/david.svg'),
-    url('../assets/img/david.svg');
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: contain, contain, contain;
-  background-position: 
-    0 0,
-    5px 5px, 
-    10px 10px;
-  width: 40vw;
-  max-width: 280px;
-  height: 50vw;
-  max-height: 400px;
-  border-top: 0.1vw solid black;
-  border-bottom: 0.3vw solid black;
-  border-right: 1.6vw solid black;
-  animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50vw; 
+  height: 70vw;
+  background-image: url('../assets/img/davidefault.svg');
+
 }
 
 .david:hover, .sarcophagus:hover {
@@ -11858,55 +11832,87 @@ figcaption{
   z-index: 3;
 }
  
+
+.judith {
+  margin-left: 5vw;
+  margin-top: 2vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50vw;
+  
+  height: 70vw;
+   
+  background-image: url('../assets/img/judithdefault.svg');
+
+}
+
+.judith:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+
+.general {
+  margin-left: 5vw;
+  margin-top: 6vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50vw;
+  
+  height: 70vw;
+  
+  background-image: url('../assets/img/generaldefault.svg');
+
+}
+
+.general:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
 .verrocchio {
   margin-left: 20vw;
   margin-top:-8vw;
   background-repeat: no-repeat;
   background-size: contain;
   width: 40vw;
-  max-width: 350px;
+  max-width: 22rem; 
   height: 50vw;
-  max-height: 460px;
+  max-height: 29rem;  
   filter: grayscale(80%); 
-}
-
-
-.verrocchio {
   background-image: url('../assets/img/verrocchiofuturista.svg');
 }
+
 .verrocchio:hover {
   transform: scale(1.4);
   z-index: 10000; 
 }
 .donatello {
   margin-left: 20vw;
-  margin-top:-8vw;
+  margin-top: -8vw;
   background-repeat: no-repeat;
   background-size: contain;
   width: 50vw;
-  max-width: 350px;
+  max-width: 22rem; 
   height: 60vw;
-  max-height: 460px;
-  filter: grayscale(80%); 
+  max-height: 29rem;  
+  filter: grayscale(80%);
+  background-image: url('../assets/img/donatellofuturismo.svg'); 
 }
 
-.donatello {
-  background-image: url('../assets/img/donatellofuturismo.svg');
-}
 .donatello:hover {
   transform: scale(1.4);
   z-index: 10000; 
 }
 
-
 .vasaripaint {
-  margin-right:40px;
+  margin-right: 2.5rem;  
   background-repeat: no-repeat;
   background-size: contain;
   width: 70vw;
-  max-width: 750px;
+  max-width: 47rem; 
   height: 80vw;
-  max-height:860px;
+  max-height: 54rem; 
   transform: rotate(10deg);
 }
 
@@ -11941,23 +11947,21 @@ figcaption{
 .btns-grid-container {
   display: grid;
   position: fixed;
-  right: 10px;  /* Adjust as per requirement */
-  bottom: 10px;  /* Adjust as per requirement */
+  right: 0.6rem;  /* 10px convertito in rem */
+  bottom: 0.6rem;  /* 10px convertito in rem */
   grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 5px;  /* Spacing between buttons */
+  gap: 0.3125rem;  /* 5px convertito in rem */
   z-index: 9999;  /* This will ensure it's on top of most other elements */
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 60px;  /* Adjust width as required */
-  height: 60px;  /* Adjust height as required */
-  border: 7px solid #8bc276;
-   /* To make them round */
-  background-color: rgba(247,230,186);  /* Adjust color as required */
+  width: 3.75rem;  /* 60px convertito in rem */
+  height: 3.75rem;  /* 60px convertito in rem */
+  border: 0.4375rem solid #8bc276;  /* 7px convertito in rem */
+  background-color: rgba(247,230,186);  
   color: #fff;
   cursor: pointer;
 }
-
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
   background-color: #e77f3d;  /* Adjust hover color as required */
 }
@@ -12003,7 +12007,6 @@ figcaption{
   background-repeat: no-repeat;
 }
 
-
 #toTopBtn .btn-icon {
   color: #673d86; /* Questo è un esempio di colore viola. Puoi sostituirlo con il codice esatto del colore viola che desideri. */
 }
@@ -12013,22 +12016,22 @@ figcaption{
 }
 
 .btn-hover-text {
-  display: none;  /* Inizialmente, il testo non sarà visibile */
+  display: none;  
   position: absolute;
-  top: 0;  /* Posiziona il testo in alto */
+  top: 0;  
   left: 10%;
-  transform: translateX(-100%);  /* Centra orizzontalmente il testo */
-  font-size: 1.1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
+  transform: translateX(-100%); 
+  font-size: 1.1rem; 
   background-color: rgba(247,230,186);
-  font-family: "SquareFont"; /* Sfondo semi-trasparente */
+  font-family: "SquareFont"; 
   color: #da7634; 
-  font-weight: bold; /* Colore del testo */
-  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
+  font-weight: bold;
+  padding: 0.1rem 0.3rem;  
   
 }
 
 .sub-btn:hover .btn-hover-text {
-  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+  display: inline-block;  
 }
 
 
@@ -12051,7 +12054,7 @@ figcaption{
   position: fixed;
   opacity: 0;
   z-index: 9999; 
-  animation-duration: 4s;  /* puoi modificare la durata come preferisci */
+  animation-duration: 4s; 
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
@@ -12189,7 +12192,7 @@ figcaption{
 
 #map {
   width: 100%;
-  height: 800px;
+  height: 50rem;
   background-color: #000000;
   filter: contrast(1.5) brightness(0.8);
 }
