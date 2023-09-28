@@ -106,7 +106,10 @@
   font-family:'Alexang';
   src: url('/assets/fonts/alexang-display.regular.ttf') format('truetype');
 }
-
+@font-face {
+  font-family:'OTP';
+  src: url('/assets/fonts/OPTIKiteLight.otf') format('truetype');
+}
 *,
 *::before,
 *::after {
@@ -11014,10 +11017,7 @@ p {
   font-weight: 100;
 }
 
-.bg-faded {
-  background-color: #f6e1c5;
 
-}
 
 .btn-xl {
   font-weight: 700;
@@ -11159,20 +11159,19 @@ p {
      
      
     }
+    
 
     .section-heading-upper{
       font-family: "Alexang";
-      font-size: 4rem !important;
-      text-decoration: underline;
+      font-size: 2rem !important;
       width: 100%;
       margin-bottom: 2rem;
 
     }
     .section-heading-lower{
       font-family: "Alexang";
-      font-size: 3.5rem!important;
-      width: 20%;
-      text-decoration: underline;
+      font-size: 1.5rem!important;
+      width: 100%;
       text-align: left;
       margin-left: 4.5rem;
       line-height: 4.5rem;
@@ -11319,6 +11318,49 @@ nav{
     margin-top: 3rem;
     max-width: 50vw;
   }
+}
+.product-item-title .bg-faded{
+  background-image: url("/assets/img/titbe.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom:5rem;
+  margin-bottom: 5rem;
+
+}
+.product-item .bg-faded{
+  font-family: "Copperplate";
+  text-decoration: none !important;
+}
+.product-item-description .bg-faded{
+  background-color: #FFFAF0 !important;
+}
+.product-item-description p {
+  /* Imposta la larghezza massima per i paragrafi */
+  max-width: 100%;
+  /* Utilizza colonne, suddividendo i paragrafi in due colonne */
+  column-count: 2;
+  /* Aggiungi spazio tra le colonne se lo desideri */
+  column-gap: 20px; /* Modifica il valore a tuo piacimento */
+  font-family: "OTP" !important;
+  text-align: justify;
+}
+.product-item-description p:first-of-type::first-letter{
+ font-family: "FloralCapital" !important;
+ font-size: 6rem !important;
+ line-height:1px ;
+}
+.product-item-description p:last-child {
+  break-inside: avoid;
+}
+
+.product-item-description p::after {
+  font-family: "OTP" !important;
+  content: "\A ❊ ❊ ❊ ";
+  font-size: 1.5rem;
+  white-space: pre; 
+}
+.bg-faded {
+  background-color: #f6e1c5;
 }
 
 .list-hours {
