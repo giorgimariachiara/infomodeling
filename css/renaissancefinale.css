@@ -4369,8 +4369,6 @@ font-family: "Cinzel";
   --bs-accordion-active-color: #cf964d;
   --bs-accordion-active-bg: #fdf6ee;
   flex:1;
-  
-  
 }
 
 .accordion-button {
@@ -10903,10 +10901,126 @@ p {
 .section-heading .section-heading-upper {
   display: block;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--bs-gold);
   font-family: "Cinzel";
 }
+
+.product-item-title > .bg-faded {
+  background-color: var(--bs-renred);
+  border: 0.25rem solid var(--bs-gold); 
+  box-shadow: 
+      0 0 0 0.07rem #674e29, 
+      0 0 0 0.6rem var(--bs-gold); 
+  padding: 0;
+}
+
+.bg-faded.p-5.rounded {
+  position: relative;
+}
+/* Piccolo - Telefoni */
+@media (max-width: 576px) {
+  .section-heading {
+    text-transform: uppercase;
+  }
+  .section-heading .section-heading-lower {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: "Cinzel";
+    color: var(--bs-gold);
+  }
+  .section-heading .section-heading-upper {
+    display: block;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--bs-gold);
+    font-family: "Cinzel";
+  }
+  
+  .product-item-title > .bg-faded {
+    background-color: var(--bs-renred);
+    border: 0.25rem solid var(--bs-gold); 
+    box-shadow: 
+        0 0 0 0.07rem #674e29, 
+        0 0 0 0.6rem var(--bs-gold); 
+    padding: 0;
+  }
+  
+  .bg-faded.p-5.rounded {
+    position: relative;
+  }
+}
+
+/* Medio - Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+  .section-heading {
+    text-transform: uppercase;
+  }
+  .section-heading .section-heading-lower {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: "Cinzel";
+    color: var(--bs-gold);
+  }
+  .section-heading .section-heading-upper {
+    display: block;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--bs-gold);
+    font-family: "Cinzel";
+  }
+  
+  .product-item-title > .bg-faded {
+    background-color: var(--bs-renred);
+    border: 0.25rem solid var(--bs-gold); 
+    box-shadow: 
+        0 0 0 0.07rem #674e29, 
+        0 0 0 0.6rem var(--bs-gold); 
+    padding: 0;
+    margin-bottom:2rem;
+  }
+  
+  .bg-faded.p-5.rounded {
+    position: relative;
+  }
+}
+
+/* Grande - Desktop */
+@media (min-width: 993px) {
+  .section-heading {
+    text-transform: uppercase;
+  }
+  .section-heading .section-heading-lower {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: "Cinzel";
+    color: var(--bs-gold);
+  }
+  .section-heading .section-heading-upper {
+    display: block;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--bs-gold);
+    font-family: "Cinzel";
+  }
+  
+  .product-item-title > .bg-faded {
+    background-color: var(--bs-renred);
+    border: 0.25rem solid var(--bs-gold); 
+    box-shadow: 
+        0 0 0 0.07rem #674e29, 
+        0 0 0 0.6rem var(--bs-gold); 
+    padding: 0;
+  }
+  
+  .bg-faded.p-5.rounded {
+    position: relative;
+  }
+}
+
 
 
 .intro .section-heading-lower {
@@ -10922,12 +11036,9 @@ p {
   color: #536ba4;
 }
 
-
 .intro .section-heading-lower span:nth-child(1) {
   color: #a3852d;
- 
 }
-
 .intro .section-heading-lower span:nth-child(3) {
   color: #92302b;
 }
@@ -10939,7 +11050,6 @@ p {
 .intro .section-heading-lower span {
   font-family: "Cinzel", serif;
 }
-
 
 .intro-text.bg-faded, .intro-text.bg-faded::before {
   background-color: transparent;
@@ -10963,8 +11073,128 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  
   z-index: -1;
+}
+
+
+/* Piccolo - Telefoni */
+@media (max-width: 576px) {
+  /* Stili per dispositivi piccoli */
+}
+
+/* Medio - Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+  .intro .section-heading-lower {
+    display: block;
+    font-size: 2rem;
+    font-family: "Cinzel", serif;
+    color: #536ba4;
+  
+  }
+  .intro .section-heading-upper {
+    display: block;
+    font-size: 2rem;
+    color: #536ba4;
+  }
+  
+  .intro .section-heading-lower span:nth-child(1) {
+    color: #a3852d;
+  }
+  .intro .section-heading-lower span:nth-child(3) {
+    color: #92302b;
+  }
+  
+  .intro .section-heading-lower span:nth-child(5) {
+    color: #536ba4;
+  }
+  
+  .intro .section-heading-lower span {
+    font-family: "Cinzel", serif;
+  }
+  
+  .intro-text.bg-faded, .intro-text.bg-faded::before {
+    background-color: transparent;
+  }
+  .intro-text.bg-faded {
+    background-image: url('../assets/img/cornice2.png');
+    background-size: cover;/* Questo farà in modo che l'immagine copra l'intero elemento */
+    background-repeat: no-repeat; /* Questo eviterà che l'immagine si ripeta */
+    background-position: center center;
+    min-height: 15rem;
+  }
+  .intro-text.bg-faded::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../assets/img/cornice2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+  }
+  
+}
+
+/* Grande - Desktop */
+@media (min-width: 993px) {
+ 
+.intro .section-heading-lower {
+  display: block;
+  font-size: 2rem;
+  font-family: "Cinzel", serif;
+  color: #536ba4;
+
+}
+.intro .section-heading-upper {
+  display: block;
+  font-size: 2rem;
+  color: #536ba4;
+}
+
+.intro .section-heading-lower span:nth-child(1) {
+  color: #a3852d;
+}
+.intro .section-heading-lower span:nth-child(3) {
+  color: #92302b;
+}
+
+.intro .section-heading-lower span:nth-child(5) {
+  color: #536ba4;
+}
+
+.intro .section-heading-lower span {
+  font-family: "Cinzel", serif;
+}
+
+.intro-text.bg-faded, .intro-text.bg-faded::before {
+  background-color: transparent;
+}
+.intro-text.bg-faded {
+  background-image: url('../assets/img/cornice2.png');
+  background-size: cover;/* Questo farà in modo che l'immagine copra l'intero elemento */
+  background-repeat: no-repeat; /* Questo eviterà che l'immagine si ripeta */
+  background-position: center center;
+  min-height: 23rem;
+}
+.intro-text.bg-faded::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../assets/img/cornice2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+
 }
 
 .bg-faded {
@@ -11251,19 +11481,6 @@ box-shadow:
   background-position: center;
   background-repeat: no-repeat;
 }
-.sub-btn[data-theme="theme6"] {
-  background-image: url('../assets/img/brain.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sub-btn[data-theme="theme5"] {
-  background-image: url('../assets/img/late90.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .sub-btn {
   position: relative;  
 }
@@ -11285,17 +11502,6 @@ box-shadow:
 .sub-btn:hover .btn-hover-text {
   display: inline-block;  
 }
-
-.product-item-title > .bg-faded {
-  background-color: var(--bs-renred);
-  border: 0.25rem solid var(--bs-gold); 
-  box-shadow: 
-      0 0 0 0.07rem #674e29, 
-      0 0 0 0.6rem var(--bs-gold); 
-  padding: 0;
-}
-
-
 
 .decorative-img {
   position: absolute;
