@@ -11159,20 +11159,19 @@ p {
      
      
     }
+    
 
     .section-heading-upper{
       font-family: "Alexang";
-      font-size: 4rem !important;
-      text-decoration: underline;
+      font-size: 2rem !important;
       width: 100%;
       margin-bottom: 2rem;
 
     }
     .section-heading-lower{
       font-family: "Alexang";
-      font-size: 3.5rem!important;
-      width: 20%;
-      text-decoration: underline;
+      font-size: 1.5rem!important;
+      width: 100%;
       text-align: left;
       margin-left: 4.5rem;
       line-height: 4.5rem;
@@ -11320,7 +11319,21 @@ nav{
     max-width: 50vw;
   }
 }
+.product-item-title .bg-faded{
+  background-image: url("/assets/img/titbe.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom:5rem;
+  margin-bottom: 5rem;
 
+}
+.product-item .bg-faded{
+  font-family: "Copperplate";
+  text-decoration: none !important;
+}
+.product-item-description .bg-faded{
+  background-color: #FFFAF0 !important;
+}
 .product-item-description p {
   /* Imposta la larghezza massima per i paragrafi */
   max-width: 100%;
