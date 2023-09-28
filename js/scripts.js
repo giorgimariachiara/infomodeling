@@ -85,31 +85,44 @@ $(document).ready(function() {
   });
 });
 
+function removeFuturismEffects() {
+    const floatingWords = document.querySelectorAll('.floating-word');
+    floatingWords.forEach(word => word.remove());
+}
+function isFuturismActive() {
+    const stylesheet = document.getElementById('themeStylesheet').getAttribute('href');
+    return stylesheet.includes('futurism.css');
+}
+
+function changeStylesheetAndCheckEffects(newStylesheet) {
+    document.getElementById('themeStylesheet').href = newStylesheet;
+    if (isFuturismActive()) activateFuturismEffects();
+    else removeFuturismEffects();
+}
 
 document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click', function() {
-    document.getElementById('themeStylesheet').href = "css/renaissancefinale.css";
+    changeStylesheetAndCheckEffects("css/renaissancefinale.css");
 });
 
 document.querySelector('.sub-btn[data-theme="theme2"]').addEventListener('click', function() {
-  document.getElementById('themeStylesheet').href = "css/be.css";
+    changeStylesheetAndCheckEffects("css/be.css");
 });
 
 document.querySelector('.sub-btn[data-theme="theme3"]').addEventListener('click', function() {
-    document.getElementById('themeStylesheet').href = "css/issuefuturism.css";
-});
-document.querySelector('.sub-btn[data-theme="theme4"]').addEventListener('click', function() {
-  document.getElementById('themeStylesheet').href = "css/pm.css";
+    changeStylesheetAndCheckEffects("css/futurism.css");
 });
 
+document.querySelector('.sub-btn[data-theme="theme4"]').addEventListener('click', function() {
+    changeStylesheetAndCheckEffects("css/pm.css");
+});
 
 document.querySelector('.sub-btn[data-theme="theme5"]').addEventListener('click', function() {
-    document.getElementById('themeStylesheet').href = "css/XX.css";
+    changeStylesheetAndCheckEffects("css/XX.css");
 });
 
 document.querySelector('.sub-btn[data-theme="theme6"]').addEventListener('click', function() {
-    document.getElementById('themeStylesheet').href = "css/2030.css";
+    changeStylesheetAndCheckEffects("css/2030.css");
 });
-
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
@@ -166,8 +179,6 @@ function activateFuturismEffects() {
       randomizeWordPosition(wordElement);
   }
 }
-
-document.querySelector('.btns-item-4 .sub-btn').addEventListener('click', activateFuturismEffects);
 
 
 //effetto titolo futurismo
@@ -227,13 +238,18 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
                     element.innerHTML = wrappedText;
                 }
             
+                // Applica l'effetto ai link della navbar nella visualizzazione normale
                 const navLinks = document.querySelectorAll('#mainNav .nav-link');
-            
                 navLinks.forEach(navLink => {
                     wrapAlternateLettersInSpans(navLink);
                 });
-            });
             
+                // Applica l'effetto ai link della navbar nella visualizzazione contratta
+                const collapsedNavLinks = document.querySelectorAll('#mainNav .navbar-collapse .nav-link');
+                collapsedNavLinks.forEach(navLink => {
+                    wrapAlternateLettersInSpans(navLink);
+                });
+            });
 
 //fiori animazione
 document.addEventListener('DOMContentLoaded', function() {

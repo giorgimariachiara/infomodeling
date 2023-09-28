@@ -91,12 +91,10 @@
   }
 }
 
-
 @font-face {
   font-family: 'SquareFont';
   src: url('/assets/fonts/Square.ttf') format('truetype');
 }
-
 
 body {
   margin: 0;
@@ -306,16 +304,6 @@ kbd kbd {
   padding: 0;
   font-size: 1em;
 }
-
-
-figcaption {
-  position: relative; /* o "absolute", dipende dalla tua struttura */
-  z-index: 2; /* un valore più alto di qualsiasi altro z-index che potresti avere */
-  margin-top: 1rem;
-}
-
-
-
 
 img,
 svg {
@@ -4343,7 +4331,6 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
 .accordion {
   --bs-accordion-color: transparent;
   --bs-accordion-bg: #000;
-  
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: #673d86;
   --bs-accordion-border-width: 1px;
@@ -4509,16 +4496,15 @@ label {
   text-align: center;
   color:black;
   background-color: #f9e8bc;
-  border: 3px solid #673D86;
+  border: 0.2rem solid #673D86;
   margin:0.5rem;
 }
-
 
 #placeNameList > li {
   color:#f9e8bc;
   background-color: black;
-  border: 3px solid #673D86;
-  padding: 4px;
+  border: 0.2rem  solid #673D86;
+  padding: 0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
   margin: 0.3rem;
@@ -4527,8 +4513,8 @@ label {
 #placeNameList > li:hover {
   color:black;
   background-color: #f9e8bc;
-  border: 3px solid #673D86;
-  padding: 4px;
+  border: 0.2rem  solid #673D86;
+  padding: 0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
 }
@@ -4536,8 +4522,8 @@ label {
 #personNameList > li {
   color:#f9e8bc;
   background-color: black;
-  border: 3px solid #673D86;
-  padding: 4px;
+  border: 0.2rem solid #673D86;
+  padding:0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
   margin: 0.3rem;
@@ -4546,8 +4532,8 @@ label {
 #personNameList > li:hover {
   color:black;
   background-color: #f9e8bc;
-  border: 3px solid #673D86;
-  padding: 4px;
+  border: 0.2rem solid #673D86;
+  padding: 0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
 }
@@ -4555,6 +4541,25 @@ label {
   list-style-type: square;
 }
 
+@media (min-width: 480px) and (max-width: 768px) { 
+  /* Questo stile verrà applicato solo per dimensioni dello schermo tra 480px e 768px. Adatta questi valori come necessario. */
+
+  #personNameList, #placeNameList {
+      font-size: 0.8rem; /* Adatta la dimensione del font */
+      margin: 0.2rem;
+      padding: 0.2rem;
+  }
+  #personNameList > li, #placeNameList > li {
+    font-size: 0.8rem; /* Adatta la dimensione del font */
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+
+  .accordion-body {
+      overflow: auto; /* Permette di fare scroll se il contenuto eccede le dimensioni del contenitore */
+  }
+}
 .breadcrumb {
   --bs-breadcrumb-padding-x: 0;
   --bs-breadcrumb-padding-y: 0;
@@ -11000,16 +11005,17 @@ body .section-heading .section-heading-lower {
 }
 
 .section-heading .section-heading-upper{
-  display: inline-block;  /* La trasformazione si applica meglio agli elementi inline-block o block */
+  display: inline-block;  
   transform: rotate(10deg);
   font-size: 3rem;
   margin-left:10px; 
-  font-family: "Roboto"; /* Ruota di -10 gradi, ma puoi regolare come preferisci */
+  font-family: "Roboto";
+  margin-bottom: 3.75rem; 
 }
 
 .section-heading-lower {
-  font-family: 'SquareFont', sans-serif; /* Puoi sostituire con altri font geometrici */
-  letter-spacing: 5px; /* Distanza tra le lettere */
+  font-family: 'SquareFont', sans-serif; 
+  letter-spacing: 5px; 
   font-size: 2.2rem;
   color:#ffda39;
   font-weight: 800;
@@ -11181,7 +11187,6 @@ figcaption:nth-of-type(2) {
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
-   
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #f27a0a;
@@ -11589,16 +11594,6 @@ figcaption:nth-of-type(2) {
   z-index: -1;
 }
 
-.section-heading-upper {
-  display: inline-block; 
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 3.75rem;
-  font-family: "Cinzel";
-  color:#f07e02;
-}
-
-
 .nav-link span {
   color: #663d86;
 }
@@ -11667,11 +11662,14 @@ figcaption:nth-of-type(2) {
 }
 
 figcaption{
-  font-family: 'Sitka';
+  font-family: 'Roboto';
   transform: rotate(180deg);
     display: inline-block;
-}
+    position: relative; /* o "absolute", dipende dalla tua struttura */
+   
+  margin-top: 1rem;
 
+}
 
 .highlight-place {
   color:#f9e8bc;
@@ -11786,21 +11784,19 @@ figcaption{
     width: 56vw;
     height: 76vw;
   }
-}
 
+}
 
 .sarcophagus {
   margin-left: 5vw;
   margin-top: 2vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50vw;
-  height: 70vw;
-}
-
-.sarcophagus {
+  width: 30vw;
+  height: 50vw;
   background-image: url('../assets/img/sarcophagudefault.svg');
 }
+
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -11821,8 +11817,8 @@ figcaption{
   margin-top: 2vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50vw; 
-  height: 70vw;
+  width: 30vw; 
+  height: 30vw;
   background-image: url('../assets/img/davidefault.svg');
 
 }
@@ -11838,12 +11834,9 @@ figcaption{
   margin-top: 2vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50vw;
-  
-  height: 70vw;
-   
+  width: 30vw;
+  height: 40vw;
   background-image: url('../assets/img/judithdefault.svg');
-
 }
 
 .judith:hover {
@@ -11857,17 +11850,33 @@ figcaption{
   margin-top: 6vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50vw;
-  
-  height: 70vw;
-  
+  width: 30vw;
+  height: 30vw;
   background-image: url('../assets/img/generaldefault.svg');
-
 }
 
 .general:hover {
   transform: scale(1.2);
   z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .sarcophagus{
+    width: 60vw;
+    height: 70vw;
+  }
+  .david{
+    width: 60vw;
+    height: 70vw;
+  }
+  .judith{
+    width: 60vw;
+    height: 70vw;
+  }
+  .general{
+    width: 60vw;
+    height: 70vw;
+  }
 }
 
 .verrocchio {
@@ -11897,13 +11906,49 @@ figcaption{
   height: 60vw;
   max-height: 29rem;  
   filter: grayscale(80%);
-  background-image: url('../assets/img/donatellofuturismo.svg'); 
+  background-image: url('../assets/img/Donatellofuturism.svg'); 
 }
 
 .donatello:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   z-index: 10000; 
 }
+
+.leonardo {
+  margin-left: 20vw;
+  margin-top: -8vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50vw;
+  max-width: 22rem; 
+  height: 60vw;
+  max-height: 29rem;  
+  filter: grayscale(80%);
+  background-image: url('../assets/img/Leonardofuturism.svg'); 
+}
+
+.leonardo:hover {
+  transform: scale(1.2);
+  z-index: 10000; 
+}
+
+@media (max-width: 768px) {
+  .donatello{
+    width: 70vw;
+    height: 70vw;
+    margin-left: 15vw;
+    margin-bottom:10vw;
+  }
+  .verrocchio{
+    width: 60vw;
+    height: 70vw;
+  }
+  .leonardo{
+    width: 60vw;
+    height: 70vw;
+  }
+}
+
 
 .vasaripaint {
   margin-right: 2.5rem;  
@@ -11914,11 +11959,9 @@ figcaption{
   height: 80vw;
   max-height: 54rem; 
   transform: rotate(10deg);
-}
-
-.vasaripaint {
   background-image: url('../assets/img/vasaripaintfuturism.svg');
 }
+
 .vasaripaint:hover {
   transform: scale(1.1);
   z-index: 10000; 
@@ -12198,16 +12241,12 @@ figcaption{
 }
 
 .custom-marker {
-
-/* Specifica l'immagine SVG personalizzata come sfondo */
 background-image: url('/assets/img/cursorefuturismo.svg');
 /* Specifica l'ancoraggio dell'icona (opzionale) */
  background-repeat: no-repeat;
  background-position-x: center;
  background-position-y: center;
  background-size: 100%;
- 
-
 }
 
 .leaflet-popup-content-wrapper {
