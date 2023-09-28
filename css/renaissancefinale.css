@@ -11251,6 +11251,19 @@ box-shadow:
   background-position: center;
   background-repeat: no-repeat;
 }
+.sub-btn[data-theme="theme6"] {
+  background-image: url('../assets/img/brain.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme5"] {
+  background-image: url('../assets/img/late90.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .sub-btn {
   position: relative;  
 }
@@ -11282,9 +11295,7 @@ box-shadow:
   padding: 0;
 }
 
-.bg-faded.p-5.rounded {
-  position: relative;
-}
+
 
 .decorative-img {
   position: absolute;
