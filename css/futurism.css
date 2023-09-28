@@ -11358,7 +11358,7 @@ figcaption:nth-of-type(2) {
 
   .accordion {
     position: sticky;
-    top: 60px;
+    top: 80px;
     z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
     margin-bottom: 20px;
     margin-right:10px;
@@ -11732,8 +11732,8 @@ figcaption{
 .adoration {
   margin-left: 5vw;
   margin-top: 5vw;
-  width: 50vw;
-  height: 50vw;
+  width: 30vw;
+  height: 30vw;
   background-image: url('../assets/img/adorationfuturism.svg');
 }
 
@@ -11796,7 +11796,6 @@ figcaption{
   height: 50vw;
   background-image: url('../assets/img/sarcophagudefault.svg');
 }
-
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -11949,7 +11948,6 @@ figcaption{
   }
 }
 
-
 .vasaripaint {
   margin-right: 2.5rem;  
   background-repeat: no-repeat;
@@ -12013,14 +12011,12 @@ figcaption{
   display: none;
 }
 
-
 #stylesBtn {
   background-image: url('../assets/img/paint.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .sub-btn[data-theme="theme3"] {
   background-image: url('../assets/img/heptagon.png');
@@ -12076,7 +12072,6 @@ figcaption{
 .sub-btn:hover .btn-hover-text {
   display: inline-block;  
 }
-
 
 .letteraT {
   display: inline;
@@ -12192,45 +12187,10 @@ figcaption{
   }
 }
 
-
-
 /*map css */
 
 #filters {
   margin-bottom: 10px;
-}
-
-
- /* Stili della sidebar */
- #sidebar {
-  width: 300px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  display: none;
-}
-#sidebar.open {
-  display: block;
-  width: 200px;
-
-}
-
-
-/* Stili del pulsante per aprire/chiudere la sidebar */
-#toggle-sidebar {
-  margin-top: 100px;
-  position: absolute;
-  top: 10px;
-  right: 330px;
-  background-color: #0074D9;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-
 }
 
 #map {
@@ -12242,7 +12202,6 @@ figcaption{
 
 .custom-marker {
 background-image: url('/assets/img/cursorefuturismo.svg');
-/* Specifica l'ancoraggio dell'icona (opzionale) */
  background-repeat: no-repeat;
  background-position-x: center;
  background-position-y: center;
@@ -12250,9 +12209,9 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 .leaflet-popup-content-wrapper {
-  background-color: black; /* Sfondo grigio scuro */
-  color: #ffffff; /* Testo bianco */
-  border: 2px solid #00ff00; /* Bordo verde neon */
+  background-color: black; 
+  color: #ffffff; 
+  border: 2px solid #00ff00; 
   border-radius: 0;
   font-family: "Roboto";
   text-transform: uppercase;
@@ -12265,6 +12224,7 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 .leaflet-popup-content-wrapper:hover {
-  background-color: white;  /* Sfondo bianco al passaggio del mouse */
-  color: black;             /* Testo nero al passaggio del mouse */
+  background-color: white;
+  color: black;            
 }
+
