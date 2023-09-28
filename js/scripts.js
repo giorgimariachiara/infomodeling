@@ -253,14 +253,14 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
 
 //fiori animazione
 document.addEventListener('DOMContentLoaded', function() {
-              const siteHeading = document.querySelector('.site-heading');
-          
-              // Funzione per avviare l'animazione dell'immagine di sfondo
-              function animateBackgroundImage() {
-                  siteHeading.style.backgroundSize = '100%'; // Imposta la dimensione finale desiderata
-              }
-          
-              // Avvia l'animazione quando il documento è pronto
-              animateBackgroundImage();
-          });
-          
+  const siteHeading = document.querySelector('.site-heading');
+
+  function animateBackgroundImage() {
+      setTimeout(function() {
+          siteHeading.style.backgroundSize = '100%'; // Imposta la dimensione finale desiderata
+      }, 100); // Ritarda l'animazione di 100 millisecondi
+  }
+
+  // Avvia l'animazione quando il documento è pronto
+  animateBackgroundImage();
+});
