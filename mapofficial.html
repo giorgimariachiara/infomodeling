@@ -6,7 +6,7 @@
     <title>Mappa Italia</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/styles.css">
-
+    <link rel="stylesheet" href="src/leaflet-search.css" />
 
 </head>
 <body>
@@ -41,9 +41,12 @@
             </div>
         </div>
     </nav>
+    <button id="centerToMarkers">Center to Markers</button>
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="src/leaflet-search.js"></script>
+    <script src="data/italy-prov.js"></script>
     <script>
         // Inizializza la mappa
         var map = L.map('map').setView([41.9028, 12.4964], 6); // Centra la mappa su Roma
@@ -81,37 +84,98 @@
 
         // Aggiungi altri posti qui
         
-    ];
+        ];
 
+        // Initialize an array to hold the marker coordinates
+        var markerCoordinates = [];
+        // ...
 
+        // Aggiungi marker per ogni posto con il nome e, se disponibile, il nome secondario nel popup
+        places.forEach(function(place) {
+            var popupContent = "<b>" + place.name + "</b>";
 
+            // Aggiungi il nome secondario se disponibile
+            if (place.secondaryName) {
+                popupContent += "<br><span class='secondary-name'>" + place.secondaryName + "</span>";
+            }
 
-// ...
+            // Crea il marker e imposta il popup direttamente su di esso con autoClose: false
+            var marker = L.marker(place.coordinates, {
+                icon: L.divIcon({
+                    className: 'custom-marker',
+                    iconSize: [35, 35]  // Imposta le dimensioni desiderate
+                })
+            }).addTo(map);
+            // Add the marker's coordinates to the array
+            markerCoordinates.push(place.coordinates);
+            // Aggiungi un gestore di eventi per aprire il popup al clic sul marker
+            marker.on('click', function(e) {
+                L.popup().setContent(popupContent).setLatLng(e.latlng).openOn(map);
+            });
+        });
+        // Function to center the map to all markers
+        function centerToMarkers() {
+            // Calculate the center of all markers
+            var latSum = 0, lngSum = 0, count = 0;
+            for (var i = 0; i < markerCoordinates.length; i++) {
+                latSum += markerCoordinates[i][0];
+                lngSum += markerCoordinates[i][1];
+                count++;
+            }
+            var centerLat = latSum / count;
+            var centerLng = lngSum / count;
 
-// Aggiungi marker per ogni posto con il nome e, se disponibile, il nome secondario nel popup
-places.forEach(function(place) {
-    var popupContent = "<b>" + place.name + "</b>";
-    
-    // Aggiungi il nome secondario se disponibile
-    if (place.secondaryName) {
-    popupContent += "<br><span class='secondary-name'>" + place.secondaryName + "</span>";
-}
-    
-    // Crea il marker e imposta il popup direttamente su di esso con autoClose: false
-var marker = L.marker(place.coordinates, { 
-    icon: L.divIcon({ 
-        className: 'custom-marker',
-        iconSize: [35, 35]  // Imposta le dimensioni desiderate
-    }) 
-}).addTo(map);    
-    // Aggiungi un gestore di eventi per aprire il popup al clic sul marker
-    marker.on('click', function(e) {
-        L.popup().setContent(popupContent).setLatLng(e.latlng).openOn(map);
-    });
-});
+            // Set the map view to the center
+            map.setView([centerLat, centerLng], 6);
+        }
 
-// ...
-</script>
+        // Add click event to the "Center to Markers" button
+        document.getElementById("centerToMarkers").addEventListener("click", centerToMarkers);
+
+        //data values define in italy prov geojson
+        var data = italy_prov;
+        var featuresLayer = new L.GeoJSON(data, {
+            style: function(feature) {
+                return {color: feature.properties.color };
+            },
+            onEachFeature: function(feature, marker) {
+                marker.bindPopup('<h4 style="color:'+feature.properties.color+'">'+ feature.properties.prov_name +'</h4>');
+            }
+        });
+
+        map.addLayer(featuresLayer);
+
+        var searchControl = new L.Control.Search({
+            layer: featuresLayer,
+            propertyName: 'prov_name',
+            marker: false,
+            moveToLocation: function(latlng, title, map) {
+                //map.fitBounds( latlng.layer.getBounds() );
+                var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+                map.setView(latlng, zoom); // access the zoom
+            }
+        });
+
+        searchControl.on('search:locationfound', function(e) {
+
+            //console.log('search:locationfound', );
+
+            //map.removeLayer(this._markerSearch)
+
+            e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+            if(e.layer._popup)
+                e.layer.openPopup();
+
+        }).on('search:collapsed', function(e) {
+
+            featuresLayer.eachLayer(function(layer) {	//restore feature color
+                featuresLayer.resetStyle(layer);
+            });
+        });
+
+        map.addControl( searchControl );  //inizialize search control
+        // ...
+    </script>
 
 <div class="btns-grid-container">
     <div class="btns-grid-item btns-item-1">

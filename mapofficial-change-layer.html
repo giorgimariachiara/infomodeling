@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Italia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="src/leaflet-search.css" />
+
+</head>
+<body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-lower">The Lives</span>
+            <span class="site-heading-upper text-primary mb-3" >of the Most Excellent Painters, Sculptors, and Architects</span>
+        </h1>
+    </header>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">The Lives</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                    <li class="nav-item px-lg-4 dropdown">
+                        <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Issues
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="issue-leonardo.html">Da Vinci</a></li>
+                            <li><a class="dropdown-item" href="issue-verrocchio.html">Verrocchio</a></li>
+                            <li><a class="dropdown-item" href="issue-donatello.html">Donatello</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="documentation.html">Documentation</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="mapofficial.html">Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <button id="centerToMarkers">Center to Markers</button>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="src/leaflet-search.js"></script>
+    <script src="data/italy-prov.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Inizializza la mappa
+        var map = L.map('map').setView([41.9028, 12.4964], 6); // Centra la mappa su Roma
+
+        // Declare a variable to hold the current tile layer
+        var currentTileLayer;
+
+        // Function to change the tile layer
+        function changeTileLayer(newLayerURL, newAttribution, newMaxZoom) {
+            // Remove the existing layer if it exists
+            if (currentTileLayer) {
+                map.removeLayer(currentTileLayer);
+            }
+
+            // Add the new layer
+            currentTileLayer = L.tileLayer(newLayerURL, {
+                maxZoom: newMaxZoom,
+                attribution: newAttribution
+            }).addTo(map);
+        }
+
+        // Initially set to OpenStreetMap
+        changeTileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            19
+        );
+
+        // Add an event listener to your button
+        document.getElementById("changeLayerBtn").addEventListener("click", function() {
+            changeTileLayer(
+                'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+                'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+                19
+            );
+        });
+
+        // Event listeners for changing back to the initial map
+        document.querySelector('button[data-theme="theme6"]').addEventListener("click", function() {
+            changeTileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                19
+            );
+        });
+
+        document.querySelector('button[data-theme="theme1"]').addEventListener("click", function() {
+            changeTileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                19
+            );
+        });
+
+
+        // Lista di posti con coordinate
+        var places = [
+        {name: "Milano", secondaryName: "Milano secondario", coordinates: [45.4642, 9.1900]},
+        {name: "Roma", coordinates: [41.9028, 12.4964] },
+        {name: "Napoli", coordinates: [40.8522, 14.2681] },
+        {name:"Campanile di Santa Maria del Fiore",secondaryName: "Campanile di Giotto", coordinates:[43.77322244361872, 11.254997123398514]},
+        {name:"Palazzo Medici Riccardi ",secondaryName: "Casa de' Medici", coordinates:[43.7753606018183, 11.255689065727562]},
+        {name:"Palazzo Pazzi", coordinates:[43.77138165522237, 11.258155242735974]},
+        {name:"Museo di Casa Martelli",secondaryName: "Palazzo Martelli", coordinates:[43.774298663851354, 11.25327276757623]},
+        {name:"Palazzo Diomede Carafa",secondaryName: "Palazzo del conte di Matalone", coordinates:[40.84905095827882, 14.256806420279661]},
+        {name:"Chiesa di Sant'Angelo a Segno ",secondaryName: "Sant'Angelo a seggio di Nido", coordinates:[40.850914718590715, 14.256036223250897]},
+        {name:"Museo del Bargello", coordinates:[43.770607252765586, 11.258061440589218]},
+        {name:"Cattedrale di Santa Maria del Fiore", coordinates:[43.773377384452345, 11.25585290805639]},
+        {name:"Basilica di San Giovanni in Laterano", coordinates:[41.88606478030329, 12.505726640492865]},
+        {name:"Basilica di Santa Croce", coordinates:[43.76880424994407, 11.262309582918057]},
+        {name:"Basilica di Santa Maria Sopra Minerva", secondaryName: "Minerva",coordinates:[41.972860153669636, 12.456089742688258]},
+        {name:"Tribunale della Mercanzia",coordinates:[43.76991676003848, 11.256715496411482]},
+        {name:"Chiesa e Museo di Orsanmichele ",coordinates:[43.770869309507766, 11.254951052233915]},
+        {name:"Villa Medicea di Careggi",coordinates:[43.80944187732179, 11.249517081071414]},
+        {name:"Basilica di San Lorenzo",coordinates:[43.775016024804266, 11.25381180413416]},
+        {name:"Battistero di San Giovanni",coordinates:[43.7732703135126, 11.254980281069596]},
+        {name:"Santa Maria delle Grazie",coordinates:[45.5371366790148, 9.170837291171871]},
+        {name:"Santa Maria delle Grazie",coordinates:[45.5371366790148, 9.170837291171871]},
+        {name:"Accademia di Belle Arti", secondaryName: "Accademia",coordinates:[43.7769, 11.2588]},
+
+        // Aggiungi altri posti qui
+        
+        ];
+
+        // Initialize an array to hold the marker coordinates
+        var markerCoordinates = [];
+        // ...
+
+        // Aggiungi marker per ogni posto con il nome e, se disponibile, il nome secondario nel popup
+        places.forEach(function(place) {
+            var popupContent = "<b>" + place.name + "</b>";
+
+            // Aggiungi il nome secondario se disponibile
+            if (place.secondaryName) {
+                popupContent += "<br><span class='secondary-name'>" + place.secondaryName + "</span>";
+            }
+
+            // Crea il marker e imposta il popup direttamente su di esso con autoClose: false
+            var marker = L.marker(place.coordinates, {
+                icon: L.divIcon({
+                    className: 'custom-marker',
+                    iconSize: [35, 35]  // Imposta le dimensioni desiderate
+                })
+            }).addTo(map);
+            // Add the marker's coordinates to the array
+            markerCoordinates.push(place.coordinates);
+            // Aggiungi un gestore di eventi per aprire il popup al clic sul marker
+            marker.on('click', function(e) {
+                L.popup().setContent(popupContent).setLatLng(e.latlng).openOn(map);
+            });
+        });
+        // Function to center the map to all markers
+        function centerToMarkers() {
+            // Calculate the center of all markers
+            var latSum = 0, lngSum = 0, count = 0;
+            for (var i = 0; i < markerCoordinates.length; i++) {
+                latSum += markerCoordinates[i][0];
+                lngSum += markerCoordinates[i][1];
+                count++;
+            }
+            var centerLat = latSum / count;
+            var centerLng = lngSum / count;
+
+            // Set the map view to the center
+            map.setView([centerLat, centerLng], 6);
+        }
+
+        // Add click event to the "Center to Markers" button
+        document.getElementById("centerToMarkers").addEventListener("click", centerToMarkers);
+
+        //data values define in italy prov geojson
+        var data = italy_prov;
+        var featuresLayer = new L.GeoJSON(data, {
+            style: function(feature) {
+                return {color: feature.properties.color };
+            },
+            onEachFeature: function(feature, marker) {
+                marker.bindPopup('<h4 style="color:'+feature.properties.color+'">'+ feature.properties.prov_name +'</h4>');
+            }
+        });
+
+        map.addLayer(featuresLayer);
+
+        var searchControl = new L.Control.Search({
+            layer: featuresLayer,
+            propertyName: 'prov_name',
+            marker: false,
+            moveToLocation: function(latlng, title, map) {
+                //map.fitBounds( latlng.layer.getBounds() );
+                var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+                map.setView(latlng, zoom); // access the zoom
+            }
+        });
+
+        searchControl.on('search:locationfound', function(e) {
+
+            //console.log('search:locationfound', );
+
+            //map.removeLayer(this._markerSearch)
+
+            e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+            if(e.layer._popup)
+                e.layer.openPopup();
+
+        }).on('search:collapsed', function(e) {
+
+            featuresLayer.eachLayer(function(layer) {	//restore feature color
+                featuresLayer.resetStyle(layer);
+            });
+        });
+
+        map.addControl( searchControl );  //inizialize search control
+        });
+        // ...
+    </script>
+
+<div class="btns-grid-container">
+    <div class="btns-grid-item btns-item-1">
+        <button class="sub-btn" data-theme="theme6"><span class="btn-hover-text">2030</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-2">
+        <button  id="changeLayerBtn" class="sub-btn" data-theme="theme5"><span class="btn-hover-text">XX</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-3">
+        <button class="sub-btn" data-theme="theme4"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-4">
+        <button class="sub-btn" data-theme="theme3"><span class="btn-hover-text">FUTURISM</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-5">
+        <button class="sub-btn" data-theme="theme2"><span class="btn-hover-text">Tema 2</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-6">
+        <button class="sub-btn" data-theme="theme1"><span class="btn-hover-text">RENAISSANCE</span></button>
+    </div>
+    <div class="btns-grid-item btns-item-7">
+        <button id="stylesBtn" class="styles-btn" type="button"></button>
+    </div>
+    <div class="btns-grid-item btns-item-8">
+        <button id="toTopBtn"> <i class="fa-solid fa-arrow-up btn-icon"></i></button>
+    </div>
+</div>
+<footer class="footer text-faded text-center py-5">
+    <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
