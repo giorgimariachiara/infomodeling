@@ -12172,3 +12172,37 @@ background-image: url('/assets/img/cursorefuturismo.svg');
   color: black;            
 }
 
+/* Stile per la barra di ricerca */
+  .searchBar{
+    position:fixed;
+    z-index: 10000;
+  }
+#search-input {
+  float: right;
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Stile per il conteggio delle occorrenze */
+#occurrences-count {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Stile per i pulsanti di navigazione */
+#prev-button,
+#next-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
+
