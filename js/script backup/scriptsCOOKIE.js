@@ -85,147 +85,79 @@ $(document).ready(function() {
   });
 });
 
-
-
-let searchTerm = '';
-let matchingElements = [];
-let currentIndex = -1;
-
-function performSearch() {
-  searchTerm = document.getElementById('search-input').value.toLowerCase();
-  matchingElements = [];
-  
-  if (searchTerm) {
-    const elements = document.querySelectorAll('.personName, .placeName');
-
-    elements.forEach((element) => {
-      const text = element.textContent.toLowerCase();
-
-      if (text.includes(searchTerm)) {
-        matchingElements.push(element);
-      }
-    });
-
-    if (matchingElements.length > 0) {
-      currentIndex = 0;
-      clearHighlights();
-      scrollCurrentOccurrenceIntoView();
-      updateOccurrenceCount();
-    } else {
-      currentIndex = -1;
-      clearHighlights();
-      updateOccurrenceCount();
-    }
-  } else {
-    currentIndex = -1;
-    clearHighlights();
-    updateOccurrenceCount();
-  }
-}
-
-function clearHighlights() {
-  matchingElements.forEach((element) => {
-    element.classList.remove('highlight');
-  });
-}
-
-function scrollCurrentOccurrenceIntoView() {
-  if (currentIndex >= 0 && currentIndex < matchingElements.length) {
-    const element = matchingElements[currentIndex];
-    element.classList.add('highlight'); // Evidenzia l'occorrenza corrente
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-}
-
-function updateOccurrenceCount() {
-  document.getElementById('occurrences-count').textContent = `${currentIndex + 1} di ${matchingElements.length}`;
-}
-
-document.getElementById('search-input').addEventListener('input', performSearch);
-
-document.getElementById('prev-button').addEventListener('click', () => {
-  if (matchingElements.length > 0) {
-    currentIndex = (currentIndex - 1 + matchingElements.length) % matchingElements.length;
-    clearHighlights();
-    scrollCurrentOccurrenceIntoView();
-    updateOccurrenceCount();
-  }
-});
-
-document.getElementById('next-button').addEventListener('click', () => {
-  if (matchingElements.length > 0) {
-    currentIndex = (currentIndex + 1) % matchingElements.length;
-    clearHighlights();
-    scrollCurrentOccurrenceIntoView();
-    updateOccurrenceCount();
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function removeFuturismEffects() {
     const floatingWords = document.querySelectorAll('.floating-word');
     floatingWords.forEach(word => word.remove());
 }
-
-function isFuturismActive(stylesheet) {
+function isFuturismActive() {
+    const stylesheet = document.getElementById('themeStylesheet').getAttribute('href');
     return stylesheet.includes('futurism.css');
 }
 
-function changeStylesheet(newStylesheet) {
-    document.getElementById('themeStylesheet').href = newStylesheet;
-    // Save the stylesheet to localStorage
-    localStorage.setItem('currentStylesheet', newStylesheet);
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-function toggleEffectsBasedOnStylesheet(newStylesheet) {
-    if (isFuturismActive(newStylesheet)) {
-        // Activate futurism effects here
-    } else {
-        removeFuturismEffects();
+function getCookie(name) {
+    const cookieArr = document.cookie.split(';');
+    for (let i = 0; i < cookieArr.length; i++) {
+        let cookiePair = cookieArr[i].split('=');
+        if (name === cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
     }
+    return null;
 }
 
-function initializeThemeButtons() {
-    const themeMapping = {
-        'theme1': 'css/renaissancefinale.css',
-        'theme2': 'css/be.css',
-        'theme3': 'css/futurism.css',
-        'theme4': 'css/pm.css',
-        'theme5': 'css/XX.css',
-        'theme6': 'css/2030.css'
-    };
-
-    Object.keys(themeMapping).forEach(theme => {
-        document.querySelector(`.sub-btn[data-theme="${theme}"]`).addEventListener('click', function() {
-            const newStylesheet = themeMapping[theme];
-            changeStylesheet(newStylesheet);
-            toggleEffectsBasedOnStylesheet(newStylesheet);
-        });
-    });
+function changeStylesheetAndCheckEffects(newStylesheet) {
+    document.getElementById('themeStylesheet').href = newStylesheet;
+    setCookie('themeStylesheet', newStylesheet, 30);
+    if (isFuturismActive()) activateFuturismEffects();
+    else removeFuturismEffects();
 }
+
+window.onload = function() {
+    const savedStylesheet = getCookie('themeStylesheet');
+    if (savedStylesheet) {
+        changeStylesheetAndCheckEffects(savedStylesheet);
+    }
+};
+
+document.querySelector('.sub-btn[data-theme="theme1"]').addEventListener('click', function() {
+    changeStylesheetAndCheckEffects("css/renaissancefinale.css");
+});
+
+document.querySelector('.sub-btn[data-theme="theme2"]').addEventListener('click', function() {
+    changeStylesheetAndCheckEffects("css/be.css");
+});
+
+document.querySelector('.sub-btn[data-theme="theme3"]').addEventListener('click', function() {
+    changeStylesheetAndCheckEffects("css/futurism.css");
+});
+
+document.querySelector('.sub-btn[data-theme="theme4"]').addEventListener('click', function() {
+    changeStylesheetAndCheckEffects("css/pm.css");
+});
+
+document.querySelector('.sub-btn[data-theme="theme5"]').addEventListener('click', function() {
+    changeStylesheetAndCheckEffects("css/XX.css");
+});
+
+document.querySelector('.sub-btn[data-theme="theme6"]').addEventListener('click', function() {
+    changeStylesheetAndCheckEffects("css/2030.css");
+});
 
 document.getElementById('stylesBtn').addEventListener('click', function() {
     const themeButtons = document.querySelectorAll('.sub-btn[data-theme]');
     themeButtons.forEach(btn => {
-        btn.style.display = (btn.style.display === 'none' || btn.style.display === '') ? 'block' : 'none';
+        if (btn.style.display === 'none' || btn.style.display === '') {
+            btn.style.display = 'block';
+        } else {
+            btn.style.display = 'none';
+        }
     });
 });
 
@@ -235,9 +167,6 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
-
-// Initialize theme buttons
-initializeThemeButtons();
 
 //popup script
 function popupfunction() {
@@ -361,16 +290,3 @@ document.addEventListener('DOMContentLoaded', function() {
   // Avvia l'animazione quando il documento è pronto
   animateBackgroundImage();
 });
-
-
-// Function to load saved stylesheet from localStorage
-function loadSavedStylesheet() {
-    const savedStylesheet = localStorage.getItem('currentStylesheet');
-    if (savedStylesheet) {
-        changeStylesheet(savedStylesheet);
-        toggleEffectsBasedOnStylesheet(savedStylesheet);
-    }
-}
-
-// Load saved stylesheet
-loadSavedStylesheet();
