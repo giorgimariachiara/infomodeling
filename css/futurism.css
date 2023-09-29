@@ -11369,62 +11369,6 @@ figcaption:nth-of-type(2) {
   }
 }
 
-/*
-.toggle-btn {
-    position: absolute;  
-    top: 0;  
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}  */
-
-
-/* Change from sticky to absolute positioning */
-/* Align to the top */
-/* Align to the left at 50% of the container width */
-/* Center the element */
-/*
-.toggle-btn {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
- /* Use absolute positioning */
- /* Align it to the right */
- /*
-.toggle-btn {
-    position: sticky; 
-    top: 150px;
-    right: auto;  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-
-.toggle-btn-2 {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
 .button-container {
   position: sticky;
   top: 150px;
