@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', event => {
     listHoursArray[new Date().getDay()].classList.add(('today'));
 })
 */
-
+/*
 document.addEventListener("DOMContentLoaded", function () {
   const applyThemeButton = document.getElementById("applyTheme");
   const themeStylesheet = document.getElementById("themeStylesheet");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalInstance = bootstrap.Modal.getInstance(modalElement);
     modalInstance.hide();
   });
-});
+});*/
 
 
 $(document).ready(function() {
