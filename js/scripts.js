@@ -85,6 +85,101 @@ $(document).ready(function() {
   });
 });
 
+
+
+let searchTerm = '';
+let matchingElements = [];
+let currentIndex = -1;
+
+function performSearch() {
+  searchTerm = document.getElementById('search-input').value.toLowerCase();
+  matchingElements = [];
+  
+  if (searchTerm) {
+    const elements = document.querySelectorAll('.personName, .placeName');
+
+    elements.forEach((element) => {
+      const text = element.textContent.toLowerCase();
+
+      if (text.includes(searchTerm)) {
+        matchingElements.push(element);
+      }
+    });
+
+    if (matchingElements.length > 0) {
+      currentIndex = 0;
+      clearHighlights();
+      scrollCurrentOccurrenceIntoView();
+      updateOccurrenceCount();
+    } else {
+      currentIndex = -1;
+      clearHighlights();
+      updateOccurrenceCount();
+    }
+  } else {
+    currentIndex = -1;
+    clearHighlights();
+    updateOccurrenceCount();
+  }
+}
+
+function clearHighlights() {
+  matchingElements.forEach((element) => {
+    element.classList.remove('highlight');
+  });
+}
+
+function scrollCurrentOccurrenceIntoView() {
+  if (currentIndex >= 0 && currentIndex < matchingElements.length) {
+    const element = matchingElements[currentIndex];
+    element.classList.add('highlight'); // Evidenzia l'occorrenza corrente
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function updateOccurrenceCount() {
+  document.getElementById('occurrences-count').textContent = `${currentIndex + 1} di ${matchingElements.length}`;
+}
+
+document.getElementById('search-input').addEventListener('input', performSearch);
+
+document.getElementById('prev-button').addEventListener('click', () => {
+  if (matchingElements.length > 0) {
+    currentIndex = (currentIndex - 1 + matchingElements.length) % matchingElements.length;
+    clearHighlights();
+    scrollCurrentOccurrenceIntoView();
+    updateOccurrenceCount();
+  }
+});
+
+document.getElementById('next-button').addEventListener('click', () => {
+  if (matchingElements.length > 0) {
+    currentIndex = (currentIndex + 1) % matchingElements.length;
+    clearHighlights();
+    scrollCurrentOccurrenceIntoView();
+    updateOccurrenceCount();
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function removeFuturismEffects() {
     const floatingWords = document.querySelectorAll('.floating-word');
     floatingWords.forEach(word => word.remove());
