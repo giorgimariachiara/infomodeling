@@ -85,100 +85,14 @@ $(document).ready(function() {
   });
 });
 
-
-
-let searchTerm = '';
-let matchingElements = [];
-let currentIndex = -1;
-
-function performSearch() {
-  searchTerm = document.getElementById('search-input').value.toLowerCase();
-  matchingElements = [];
-  
-  if (searchTerm) {
-    const elements = document.querySelectorAll('.personName, .placeName');
-
-    elements.forEach((element) => {
-      const text = element.textContent.toLowerCase();
-
-      if (text.includes(searchTerm)) {
-        matchingElements.push(element);
-      }
-    });
-
-    if (matchingElements.length > 0) {
-      currentIndex = 0;
-      clearHighlights();
-      scrollCurrentOccurrenceIntoView();
-      updateOccurrenceCount();
-    } else {
-      currentIndex = -1;
-      clearHighlights();
-      updateOccurrenceCount();
+// Function to load saved stylesheet from localStorage
+function loadSavedStylesheet() {
+    const savedStylesheet = localStorage.getItem('currentStylesheet');
+    if (savedStylesheet) {
+        changeStylesheet(savedStylesheet);
+        toggleEffectsBasedOnStylesheet(savedStylesheet);
     }
-  } else {
-    currentIndex = -1;
-    clearHighlights();
-    updateOccurrenceCount();
-  }
 }
-
-function clearHighlights() {
-  matchingElements.forEach((element) => {
-    element.classList.remove('highlight');
-  });
-}
-
-function scrollCurrentOccurrenceIntoView() {
-  if (currentIndex >= 0 && currentIndex < matchingElements.length) {
-    const element = matchingElements[currentIndex];
-    element.classList.add('highlight'); // Evidenzia l'occorrenza corrente
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-}
-
-function updateOccurrenceCount() {
-  document.getElementById('occurrences-count').textContent = `${currentIndex + 1} di ${matchingElements.length}`;
-}
-
-document.getElementById('search-input').addEventListener('input', performSearch);
-
-document.getElementById('prev-button').addEventListener('click', () => {
-  if (matchingElements.length > 0) {
-    currentIndex = (currentIndex - 1 + matchingElements.length) % matchingElements.length;
-    clearHighlights();
-    scrollCurrentOccurrenceIntoView();
-    updateOccurrenceCount();
-  }
-});
-
-document.getElementById('next-button').addEventListener('click', () => {
-  if (matchingElements.length > 0) {
-    currentIndex = (currentIndex + 1) % matchingElements.length;
-    clearHighlights();
-    scrollCurrentOccurrenceIntoView();
-    updateOccurrenceCount();
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function removeFuturismEffects() {
     const floatingWords = document.querySelectorAll('.floating-word');
@@ -236,8 +150,10 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
     });
 });
 
-// Initialize theme buttons
+// Initialize theme buttons and load saved stylesheet
 initializeThemeButtons();
+loadSavedStylesheet();
+
 
 //popup script
 function popupfunction() {
@@ -361,16 +277,3 @@ document.addEventListener('DOMContentLoaded', function() {
   // Avvia l'animazione quando il documento è pronto
   animateBackgroundImage();
 });
-
-
-// Function to load saved stylesheet from localStorage
-function loadSavedStylesheet() {
-    const savedStylesheet = localStorage.getItem('currentStylesheet');
-    if (savedStylesheet) {
-        changeStylesheet(savedStylesheet);
-        toggleEffectsBasedOnStylesheet(savedStylesheet);
-    }
-}
-
-// Load saved stylesheet
-loadSavedStylesheet();
