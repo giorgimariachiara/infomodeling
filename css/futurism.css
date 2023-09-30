@@ -11113,7 +11113,7 @@ body .section-heading .section-heading-lower {
   text-align: right;         
   border-top: 0.4vw solid #000; 
   border-left: 1.2vw solid #000;   
-  margin-top: 3vw;
+  margin-top: 5vw;
   margin-bottom: 3.5vw;
   transform: rotate(5deg); 
 }
@@ -11128,36 +11128,121 @@ body .section-heading .section-heading-lower {
   margin-top: 1.75vw;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 576px) {
+ 
+}
+@media (min-width: 577px) and (max-width: 700px) {
   .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8),.product-item-description .bg-faded p:nth-of-type(11),.product-item-description .bg-faded p:nth-of-type(18) {
-      margin-right: 2vw; 
-      padding-right: 1vw;
-      padding-bottom: 1vw; 
-  }
-
-  .product-item-description .bg-faded p:nth-of-type(2),.product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9), .product-item-description .bg-faded p:nth-of-type(12) , .product-item-description .bg-faded p:nth-of-type(15) {
-      margin-top: 4vw;
-      margin-bottom: 2vw;
-  }
-
-  .product-item-description .bg-faded p:nth-of-type(3),  .product-item-description .bg-faded p:nth-of-type(10),.product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17), .product-item-description .bg-faded p:nth-of-type(19) {
-      margin-top: 7vw;
-      margin-bottom: 2vw;
-  }
-
-  .product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7),.product-item-description .bg-faded p:nth-of-type(14) ,.product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20){
-      margin-left: 6vw;
-      margin-top:5vw;
-      padding-right: 1vw;
-      padding-left: 3vw;
-  }
+    margin-right: 2vw; 
+    padding-right: 1vw;
+    padding-bottom: 1vw; 
 }
 
-
-figcaption:nth-of-type(2) {
-  margin-top: 20px;
-  margin-left: 160px !important;
+.product-item-description .bg-faded p:nth-of-type(2),.product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9), .product-item-description .bg-faded p:nth-of-type(12) , .product-item-description .bg-faded p:nth-of-type(15) {
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    font-size: 1rem;
+    transform: rotate(-2deg); 
 }
+
+.product-item-description .bg-faded p:nth-of-type(3),  .product-item-description .bg-faded p:nth-of-type(10),.product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17), .product-item-description .bg-faded p:nth-of-type(19) {
+    margin-top: 7vw;
+    margin-bottom: 2vw;
+}
+
+.product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7),.product-item-description .bg-faded p:nth-of-type(14) ,.product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20){
+    margin-left: 6vw;
+    margin-top:5vw;
+    padding-right: 1vw;
+    padding-left: 3vw;
+}
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8), .product-item-description .bg-faded p:nth-of-type(11), .product-item-description .bg-faded p:nth-of-type(18){
+    text-align: left;         
+    border-right: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000; 
+    margin-top: 1vw;
+    margin-right: 5vw; 
+    padding-right: 2vw;     
+    padding-bottom: 1.5vw; 
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(2), .product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9),.product-item-description .bg-faded p:nth-of-type(12),.product-item-description .bg-faded p:nth-of-type(15)  {
+    text-align: center;         
+    border-top: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000;     
+    margin-top: 3vw;
+    margin-bottom: 3.5vw;
+    
+    
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
+    text-align: right;         
+    border-top: 0.4vw solid #000; 
+    border-left: 1.2vw solid #000;   
+    margin-top: 5vw;
+    margin-bottom: 3.5vw;
+    transform: rotate(5deg); 
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7), .product-item-description .bg-faded p:nth-of-type(14), .product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20) {
+    text-align: left;         
+    border-left: 1vw solid #000; 
+    border-right: 0.3vw solid #000; 
+    margin-left: 11.5vw;
+    padding-right: 2vw;     
+    padding-left: 6vw;
+    margin-top: 1.75vw;
+  }
+  
+ }
+
+@media (min-width: 992px){
+  .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8), .product-item-description .bg-faded p:nth-of-type(11), .product-item-description .bg-faded p:nth-of-type(18){
+    text-align: left;         
+    border-right: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000; 
+    margin-top: 1vw;
+    margin-right: 5vw; 
+    padding-right: 2vw;     
+    padding-bottom: 1.5vw; 
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(2), .product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9),.product-item-description .bg-faded p:nth-of-type(12),.product-item-description .bg-faded p:nth-of-type(15)  {
+    text-align: center;         
+    border-top: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000;     
+    margin-top: 3vw;
+    margin-bottom: 3.5vw;
+    transform: rotate(-5deg); 
+    
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
+    text-align: right;         
+    border-top: 0.4vw solid #000; 
+    border-left: 1.2vw solid #000;   
+    margin-top: 5vw;
+    margin-bottom: 3.5vw;
+    transform: rotate(5deg); 
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7), .product-item-description .bg-faded p:nth-of-type(14), .product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20) {
+    text-align: left;         
+    border-left: 1vw solid #000; 
+    border-right: 0.3vw solid #000; 
+    margin-left: 11.5vw;
+    padding-right: 2vw;     
+    padding-left: 6vw;
+    margin-top: 1.75vw;
+  }
+  
+}
+
 
 .btn-xl {
   font-weight: 700;
@@ -11601,18 +11686,21 @@ figcaption:nth-of-type(2) {
   }
 
   .section-heading-lower > span {
-      margin-top: 10px;  /* aggiungi un po' di spazio tra le righe */
+      margin-top: 10px;  
   }
 }
 
 figcaption{
   font-family: 'Roboto';
   transform: rotate(180deg);
-    display: inline-block;
-    position: relative; /* o "absolute", dipende dalla tua struttura */
-   
+  display: inline-block;
+  position: relative; /* o "absolute", dipende dalla tua struttura */
   margin-top: 1rem;
+}
 
+figcaption:nth-of-type(2) {
+  margin-top: 20px;
+  margin-left: 13px !important;
 }
 
 .highlight-place {
@@ -11667,33 +11755,18 @@ figcaption{
 }
 
 .baptism {
-  margin-left: 5vw;
-  width: 30vw;
-  height: 35vw;
   background-image: url('../assets/img/baptismfuturism.svg');
 }
 
 .adoration {
-  margin-left: 5vw;
-  margin-top: 5vw;
-  width: 30vw;
-  height: 30vw;
   background-image: url('../assets/img/adorationfuturism.svg');
 }
 
 .last-supper {
-  margin-left: 10vw;
-  margin-top: 3vw;
-  margin-bottom: 3vw;
-  width: 30vw;
-  height: 14vw;
   background-image: url('../assets/img/last-supperfuturismo.svg');
 }
 
 .madonna {
-  margin-left: 14vw;
-  width: 18vw;
-  height: 24vw;
   background-image: url('../assets/img/madonnadefault.svg');
 }
 
@@ -11703,32 +11776,141 @@ figcaption{
   z-index: 3;
 }
 
-/* Media query per schermi piccoli (ad esempio, meno di 768px) */
-@media (max-width: 768px) {
-  .baptism, .adoration, .last-supper, .madonna {
-    margin-left: 3vw;
+@media (max-width: 576px) {
+  .baptism{
+    width: 60vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 70vw;
+    
   }
-
+}
+@media (min-width: 577px) and (max-width: 700px) {
   .baptism {
     width: 60vw;
     height: 70vw;
   }
+}
 
-  .adortion {
-    width: 50vw;
+ @media (min-width: 701px) and (max-width: 992px) {
+  .baptism {
+    width: 40vw;
     height: 50vw;
   }
+}
 
-  .last-supper {
+@media (min-width: 992px){
+  .baptism{
+  width:30vw;  
+  height: 30vw;
+  margin-top: 4vw;
+  margin-bottom: 2.5vw;
+  margin-left:2vw;
+
+}
+}
+
+@media (max-width: 576px) {
+  .adoration{
     width: 60vw;
-    height: 28vw;
+    height: 60vw;
+    margin-top:5vw;
   }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .adoration {
+    width: 40vw;
+    height: 40vw;
+    margin-top:2vw;
+  }
+}
 
+ @media (min-width: 701px) and (max-width: 992px) {
+  .adoration {
+    width: 40vw;
+    height: 40vw;
+    margin-top:2vw;
+  }
+}
+
+@media (min-width: 992px){
+  .adoration{
+  width:30vw;  
+  height: 30vw;
+  margin-top: 4vw;
+  margin-left:2vw;
+
+}
+}
+
+@media (max-width: 576px) {
+  .last-supper{
+    width: 60vw;
+    height: 30vw;
+    margin-top:10vw;
+    margin-left:15vw;
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .last-supper{
+    width: 40vw;
+    height: 20vw;
+    margin-top:2vw;
+    margin-left:10vw;
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .last-supper {
+    width: 40vw;
+    height: 20vw;
+    margin-top:4vw;
+  }
+}
+
+@media (min-width: 992px){
+  .last-supper{
+  width:30vw;  
+  height: 15vw;
+  margin-top: 4vw;
+  margin-left:8vw;
+
+}
+}
+
+
+@media (max-width: 576px) {
+  .madonna{
+    width: 50vw;
+    height: 40vw;
+    margin-top:10vw;
+    
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .madonna{
+    width: 30vw;
+    height: 20vw;
+    margin-top:10vw;
+    
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
   .madonna {
-    width: 56vw;
-    height: 76vw;
+    width: 40vw;
+    height: 40vw;
+    margin-top:5vw;
+  
   }
+}
 
+@media (min-width: 992px){
+  .madonna{
+  width:30vw;  
+  height: 30vw;
+  margin-top: 4vw;
+  
+
+}
 }
 
 .sarcophagus {
@@ -12173,222 +12355,4 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 
-/* Stile per la barra di ricerca */
-  .searchBar{
-    position:fixed;
-    z-index: 10000;
-    background-color: #85c06c;
-    border: 2px solid #673d86;
-  
-  }
-#search-input {
-  float: right;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-/* Stile per il conteggio delle occorrenze */
-#occurrences-count {
- margin-left: 2rem;
-  font-weight: bold;
-  color:black;
-}
-
-/* Stile per i pulsanti di navigazione */
-#prev-button,
-#next-button {
-  background-color: #673d86;
-  margin-right: 1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top:0.5rem;
-}
-
-/* Stile per gli elementi evidenziati */
-.highlight {
-  background-color: yellow !important;
-  font-weight: bold !important;
-}
-
-
-
-@media (max-width: 576px) {
-  .searchBar{
-    position:fixed;
-    z-index: 10000;
-    background-color: #85c06c;
-    margin-left:3rem;
-    padding:0.5rem;
-    border: 2px solid #673d86;
-  
-  }
-#search-input {
-  float: right;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-/* Stile per il conteggio delle occorrenze */
-#occurrences-count {
- margin-left: 2rem;
-  font-weight: bold;
- 
-  color:black;
-}
-
-/* Stile per i pulsanti di navigazione */
-#prev-button,
-#next-button {
-  background-color: #673d86;
-  margin-right: 1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top:0.5rem;
-}
-
-/* Stile per gli elementi evidenziati */
-.highlight {
-  background-color: yellow !important;
-  font-weight: bold !important;
-}
-
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .searchBar{
-    position:fixed;
-    z-index: 10000;
-    background-color: #85c06c;
-    margin-left:3rem;
-    padding:0.5rem;
-    border: 2px solid #673d86;
-  
-  }
-#search-input {
-  float: right;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-/* Stile per il conteggio delle occorrenze */
-#occurrences-count {
- margin-left: 2rem;
-  font-weight: bold;
- 
-  color:black;
-}
-
-/* Stile per i pulsanti di navigazione */
-#prev-button,
-#next-button {
-  background-color: #673d86;
-  margin-right: 1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top:0.5rem;
-}
-
-/* Stile per gli elementi evidenziati */
-.highlight {
-  background-color: yellow !important;
-  font-weight: bold !important;
-}
-
-  
-}
-
- @media (min-width: 701px) and (max-width: 992px) {
-  .searchBar{
-    position:fixed;
-    z-index: 10000;
-    background-color: #85c06c;
-    margin-left:3rem;
-    padding:0.5rem;
-    border: 2px solid #673d86;
-  
-  }
-#search-input {
-  float: right;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-/* Stile per il conteggio delle occorrenze */
-#occurrences-count {
- margin-left: 2rem;
-  font-weight: bold;
- 
-  color:black;
-}
-
-/* Stile per i pulsanti di navigazione */
-#prev-button,
-#next-button {
-  background-color: #673d86;
-  margin-right: 1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top:0.5rem;
-}
-
-/* Stile per gli elementi evidenziati */
-.highlight {
-  background-color: yellow !important;
-  font-weight: bold !important;
-}
-
-}
-
-@media (min-width: 993px){
-  .searchBar{
-    position:fixed;
-    z-index: 10000;
-    background-color: #85c06c;
-    margin-left:3rem;
-    padding:0.5rem;
-    border: 2px solid #673d86;
-    margin-top: -2rem;
-  
-  }
-#search-input {
-  float: right;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-/* Stile per il conteggio delle occorrenze */
-#occurrences-count {
- margin-left: 2rem;
-  font-weight: bold;
- 
-  color:black;
-}
-
-/* Stile per i pulsanti di navigazione */
-#prev-button,
-#next-button {
-  background-color: #673d86;
-  margin-right: 1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top:0.5rem;
-}
-
-/* Stile per gli elementi evidenziati */
-.highlight {
-  background-color: yellow !important;
-  font-weight: bold !important;
-}
-
-  
-}
 
