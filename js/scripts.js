@@ -397,30 +397,3 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
                     wrapAlternateLettersInSpans(navLink);
                 });
             });
-
-//fiori animazione
-document.addEventListener('DOMContentLoaded', function() {
-  const siteHeading = document.querySelector('.site-heading');
-
-  function animateBackgroundImage() {
-      setTimeout(function() {
-          siteHeading.style.backgroundSize = '100%'; // Imposta la dimensione finale desiderata
-      }, 100); // Ritarda l'animazione di 100 millisecondi
-  }
-
-  // Avvia l'animazione quando il documento è pronto
-  animateBackgroundImage();
-});
-
-
-// Function to load saved stylesheet from localStorage
-function loadSavedStylesheet() {
-    const savedStylesheet = localStorage.getItem('currentStylesheet');
-    if (savedStylesheet) {
-        changeStylesheet(savedStylesheet);
-        toggleEffectsBasedOnStylesheet(savedStylesheet);
-    }
-}
-
-// Load saved stylesheet
-loadSavedStylesheet();
