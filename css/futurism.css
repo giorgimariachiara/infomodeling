@@ -11049,7 +11049,171 @@ body .section-heading .section-heading-lower {
   color:#df3a1e;
 }
 
+@media (max-width: 576px) {
+  .intro .bg-faded {
+    position: relative;
+  }
+  
+  .intro .bg-faded::before {
+    content: "";
+    position: absolute;
+    top: -10vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#eedfb2;
+    clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
+    z-index: 0; 
+    /*background-image: linear-gradient(to top right, #673D86 45%, #85C06C 45%);*/
+  }
+  
+  .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
+    position: relative;
+    z-index: 2;
+  }
+}
 
+@media (min-width: 577px) and (max-width: 700px) {
+  .intro .bg-faded {
+    position: relative;
+  }
+  
+  .intro .bg-faded::before {
+    content: "";
+    position: absolute;
+    top: -10vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#eedfb2;
+    clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
+    z-index: 0; 
+    /*background-image: linear-gradient(to top right, #673D86 45%, #85C06C 45%);*/
+  }
+  
+  .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
+    position: relative;
+    z-index: 2;
+  }
+  .intro-text .section-heading-lower {
+    display: block;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-top: 40px;
+    margin-bottom: 170px;
+    font-family: "SquareFont";
+    transform: rotate(10deg);
+    color: #df3a1e;
+  }
+  
+  .intro-text .section-heading-upper {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: "SquareFont";
+    transform: rotate(-50deg);
+    animation: placeholder-wave 1s infinite; 
+    color:#df3a1e;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 992px) {
+  .baptism, .david, .judith, .sarcophagus {
+      width: 40vw;
+      height: 50vw;
+  }
+
+  .adoration {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 2vw;
+  }
+
+  .last-supper {
+      width: 40vw;
+      height: 20vw;
+      margin-top: 4vw;
+  }
+
+  .madonna {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 5vw;
+  }
+
+  .general {
+      width: 40vw;
+      height: 35vw;
+  }
+
+  .verrocchio {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 15vw;
+      margin-top: -13vw;
+      margin-bottom: 2vw;
+  }
+
+  .donatello {
+      width: 40vw;
+      height: 35vw;
+  }
+
+  .leonardo {
+      width: 50vw;
+      height: 45vw;
+      margin-left: 16vw;
+      margin-bottom: 5vw;
+      margin-top: -10vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .baptism, .david, .sarcophagus, .judith {
+      width: 30vw;
+      height: 30vw;
+      margin-top: 4vw;
+      margin-bottom: 2.5vw;
+      margin-left: 2vw;
+  }
+
+  .adoration, .madonna {
+      width: 30vw;
+      height: 30vw;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+
+  .last-supper {
+      width: 30vw;
+      height: 15vw;
+      margin-top: 4vw;
+      margin-left: 8vw;
+  }
+
+  .general {
+      width: 30vw;
+      height: 25vw;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+
+  .verrocchio, .donatello {
+      width: 50vw;
+      max-width: 22rem;
+      height: 60vw;
+      max-height: 29rem;
+      margin-left: 20vw;
+      margin-top: -8vw;
+  }
+
+  .leonardo {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 16vw;
+      margin-bottom: 8vw;
+  }
+}
 .section-heading-lower span {
   font-family: 'Cinzel'; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
@@ -11326,39 +11490,6 @@ body .section-heading .section-heading-lower {
   z-index: 1;
 }
 
-
-@media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    float: right;
-  }
-  .intro .intro-text {
-    left: 0;
-    width: 60%;
-    margin-top: 3rem;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .intro .intro-text {
-
-    margin-top: 0;
-    
-  }
-}
-@media (min-width: 1200px) {
-  .intro .intro-text {
-    width: 45%;
-  }
-}
-
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
@@ -11579,7 +11710,7 @@ body .section-heading .section-heading-lower {
 
 .site-heading-upper {
   font-family:"Roboto";
-  font-size: 1.2em;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   position: relative;
   text-align: center; /* Cambia da flex a text-align per centrare il testo */
@@ -11590,22 +11721,6 @@ body .section-heading .section-heading-lower {
   
 }
 
-.site-heading-upper::before, .site-heading-upper::after {
-  content: "";
-  width: 20%;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-}
-
-.site-heading-upper::before {
-  left: -25%;
-}
-
-.site-heading-upper::after {
-  right: -25%;
-}
 
 .overlap {
   position: relative;
@@ -11749,9 +11864,8 @@ figcaption:nth-of-type(2) {
 #miaLettera {
   display: none;
 }
-
 /* CSS per schermi di dimensioni standard */
-.baptism, .adoration, .last-supper, .madonna {
+.baptism, .adoration, .last-supper, .madonna, .david, .sarcophagus, .judith, .general, .verrocchio, .donatello, .leonardo {
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -11772,478 +11886,242 @@ figcaption:nth-of-type(2) {
   background-image: url('../assets/img/madonnadefault.svg');
 }
 
-/* Effetto hover */
-.baptism:hover, .adoration:hover, .last-supper:hover, .madonna:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
-
-@media (max-width: 576px) {
-  .baptism{
-    width: 60vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 70vw;
-    
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .baptism {
-    width: 60vw;
-    height: 70vw;
-  }
-}
-
- @media (min-width: 701px) and (max-width: 992px) {
-  .baptism {
-    width: 40vw;
-    height: 50vw;
-  }
-}
-
-@media (min-width: 992px){
-  .baptism{
-  width:30vw;  
-  height: 30vw;
-  margin-top: 4vw;
-  margin-bottom: 2.5vw;
-  margin-left:2vw;
-
-}
-}
-
-@media (max-width: 576px) {
-  .adoration{
-    width: 60vw;
-    height: 60vw;
-    margin-top:5vw;
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .adoration {
-    width: 40vw;
-    height: 40vw;
-    margin-top:2vw;
-  }
-}
-
- @media (min-width: 701px) and (max-width: 992px) {
-  .adoration {
-    width: 40vw;
-    height: 40vw;
-    margin-top:2vw;
-  }
-}
-
-@media (min-width: 992px){
-  .adoration{
-  width:30vw;  
-  height: 30vw;
-  margin-top: 4vw;
-  margin-left:2vw;
-
-}
-}
-
-@media (max-width: 576px) {
-  .last-supper{
-    width: 60vw;
-    height: 30vw;
-    margin-top:10vw;
-    margin-left:15vw;
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .last-supper{
-    width: 40vw;
-    height: 20vw;
-    margin-top:2vw;
-    margin-left:10vw;
-  }
-}
-
- @media (min-width: 701px) and (max-width: 992px) {
-  .last-supper {
-    width: 40vw;
-    height: 20vw;
-    margin-top:4vw;
-  }
-}
-
-@media (min-width: 992px){
-  .last-supper{
-  width:30vw;  
-  height: 15vw;
-  margin-top: 4vw;
-  margin-left:8vw;
-
-}
-}
-
-
-@media (max-width: 576px) {
-  .madonna{
-    width: 40vw;
-    height: 60vw;
-    margin-top:10vw;
-    
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .madonna{
-    width: 30vw;
-    height: 20vw;
-    margin-top:10vw;
-    
-  }
-}
-
- @media (min-width: 701px) and (max-width: 992px) {
-  .madonna {
-    width: 40vw;
-    height: 40vw;
-    margin-top:5vw;
-  
-  }
-}
-
-@media (min-width: 992px){
-  .madonna{
-  width:30vw;  
-  height: 30vw;
-  margin-top: 4vw;
-  
-
-}
-}
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -1px) rotate(-1deg); }
-  20% { transform: translate(-1px, 1px) rotate(1deg); }
-  30% { transform: translate(1px, 1px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 1px) rotate(0deg); }
-  60% { transform: translate(-1px, -1px) rotate(-1deg); }
-  70% { transform: translate(1px, 1px) rotate(1deg); }
-  80% { transform: translate(-1px, 1px) rotate(0deg); }
-  90% { transform: translate(1px, -1px) rotate(1deg); }
-  100% { transform: translate(1px, 1px) rotate(0deg); }
-}
-
 .david {
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url('../assets/img/davidefault.svg');
-
 }
+
 .sarcophagus {
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url('../assets/img/sarcophagudefault.svg');
 }
 
-.david:hover, .sarcophagus:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
- 
-
-
-@media (max-width: 576px) {
-  .david{
-    width: 60vw;  
-    height: 70vw;
-    
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .david {
-    width: 60vw;
-    height: 70vw;
-  }
-}
-
- @media (min-width: 701px) and (max-width: 992px) {
-  .david{
-    width: 40vw;
-    height: 50vw;
-  }
-}
-
-@media (min-width: 992px){
-  .david{
-  width:30vw;  
-  height: 30vw;
-  margin-top: 4vw;
-  margin-bottom: 2.5vw;
-  margin-left:2vw;
-
-}
-}
-
-@media (max-width: 576px) {
-  .sarcophagus{
-    width: 50vw;  
-    height: 60vw;
-    
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .sarcophagus {
-    width: 50vw;
-    height: 60vw;
-  }
-}
-
- @media (min-width: 701px) and (max-width: 992px) {
-  .sarcophagus{
-    width: 40vw;
-    height: 50vw;
-  }
-}
-
-@media (min-width: 992px){
-  .sarcophagus{
-  width:30vw;  
-  height: 30vw;
-  margin-top: 4vw;
-  margin-bottom: 2.5vw;
-  margin-left:2vw;
-
-}
-}
-
 .judith {
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url('../assets/img/judithdefault.svg');
 }
 
-.judith:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
-
-
 .general {
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url('../assets/img/generaldefault.svg');
 }
 
-.general:hover {
+.verrocchio {
+  background-image: url('../assets/img/verrocchiofuturista.svg');
+  filter: grayscale(80%);
+}
+
+.donatello {
+  background-image: url('../assets/img/Donatellofuturism.svg');
+  filter: grayscale(80%);
+}
+
+.leonardo {
+  background-image: url('../assets/img/Leonardofuturism.svg');
+  filter: grayscale(80%);
+}
+
+/* Effetto hover */
+.baptism:hover, .adoration:hover, .last-supper:hover, .madonna:hover, .david:hover, .sarcophagus:hover, .judith:hover, .general:hover, .verrocchio:hover, .donatello:hover, .leonardo:hover {
   transform: scale(1.2);
   z-index: 3;
 }
 
+.verrocchio:hover, .donatello:hover, .leonardo:hover {
+  z-index: 10000;
+}
+
+/* Media queries */
 @media (max-width: 576px) {
-  .judith{
-    width: 60vw;  
-    height: 70vw;
-    
+  .baptism, .david, .judith {
+      width: 60vw;
+      height: 70vw;
   }
-}
-@media (min-width: 577px) and (max-width: 700px) {
-  .judith {
-    width: 60vw;
-    height: 70vw;
+
+  .adoration {
+      width: 60vw;
+      height: 60vw;
+      margin-top: 5vw;
   }
-}
 
- @media (min-width: 701px) and (max-width: 992px) {
-  .judith{
-    width: 40vw;
-    height: 50vw;
+  .last-supper {
+      width: 60vw;
+      height: 30vw;
+      margin-top: 10vw;
+      margin-left: 15vw;
   }
-}
 
-@media (min-width: 992px){
-  .judith{
-  width:30vw;  
-  height: 30vw;
-  margin-top: 4vw;
-  margin-bottom: 2.5vw;
-  margin-left:2vw;
-
-}
-}
-
-@media (max-width: 576px) {
-  .general{
-    width: 65vw;  
-    height: 60vw;
-    
+  .madonna {
+      width: 40vw;
+      height: 60vw;
+      margin-top: 10vw;
   }
-}
-@media (min-width: 577px) and (max-width: 700px) {
+
+  .sarcophagus {
+      width: 50vw;
+      height: 60vw;
+  }
+
   .general {
-    width: 50vw;
-    height: 45vw;
+      width: 65vw;
+      height: 60vw;
+  }
+
+  .verrocchio, .donatello, .leonardo {
+      width: 65vw;
+      height: 60vw;
+      margin-left: 16vw;
+      margin-top: -20vw;
   }
 }
 
- @media (min-width: 701px) and (max-width: 992px) {
-  .general{
-    width: 40vw;
-    height: 35vw;
-  }
-}
-
-@media (min-width: 992px){
-  .general{
-  width:30vw;  
-  height: 25vw;
-  margin-top: 4vw;
-  margin-left:2vw;
-}
-}
-
-.verrocchio {
-  background-repeat: no-repeat;
-  background-size: contain; 
-  filter: grayscale(80%); 
-  background-image: url('../assets/img/verrocchiofuturista.svg');
-}
-
-.verrocchio:hover {
-  transform: scale(1.2);
-  z-index: 10000; 
-}
-.donatello {
-  background-repeat: no-repeat;
-  background-size: contain;
-  filter: grayscale(80%);
-  background-image: url('../assets/img/Donatellofuturism.svg'); 
-}
-
-.donatello:hover {
-  transform: scale(1.2);
-  z-index: 10000; 
-}
-
-.leonardo {
-  background-repeat: no-repeat;
-  background-size: contain;
-  filter: grayscale(80%);
-  background-image: url('../assets/img/Leonardofuturism.svg'); 
-}
-
-.leonardo:hover {
-  transform: scale(1.2);
-  z-index: 10000; 
-}
-
-@media (max-width: 576px) {
-  .verrocchio{
-    width: 65vw;  
-    height: 60vw;
-    margin-left:16vw;
-    margin-top: -20vw;
-    margin-bottom: 3vw;
-    
-  }
-}
 @media (min-width: 577px) and (max-width: 700px) {
+  .baptism, .david, .judith {
+      width: 60vw;
+      height: 70vw;
+  }
+
+  .adoration {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 2vw;
+  }
+
+  .last-supper {
+      width: 40vw;
+      height: 20vw;
+      margin-top: 2vw;
+      margin-left: 10vw;
+  }
+
+  .madonna {
+      width: 30vw;
+      height: 20vw;
+      margin-top: 10vw;
+  }
+
+  .sarcophagus {
+      width: 50vw;
+      height: 60vw;
+  }
+
+  .general {
+      width: 50vw;
+      height: 45vw;
+  }
+
   .verrocchio {
-    width: 10vw;
-    height: 10vw;
+      width: 10vw;
+      height: 10vw;
   }
-}
 
- @media (min-width: 701px) and (max-width: 992px) {
-  .verrocchio{
-    margin-left: 15vw;
-    margin-top: -13vw;
-    margin-bottom: 2vw;
-    width: 40vw;
-    height: 35vw;
-  }
-}
-
-@media (min-width: 992px){
-  .verrocchio{
-    margin-left: 20vw;
-    margin-top:-8vw;
-    width: 40vw;
-    max-width: 22rem; 
-    height: 50vw;
-    max-height: 29rem; 
-}
-}
-
-@media (max-width: 576px) {
-  .donatello{
-    width: 65vw;  
-    height: 60vw;
-    margin-left: 16vw;
-    margin-bottom:8vw;
-    margin-top:-20vw;
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
   .donatello {
-    width: 50vw;
-    height: 45vw;
+      width: 50vw;
+      height: 45vw;
   }
-}
 
- @media (min-width: 701px) and (max-width: 992px) {
-  .donatello{
-    width: 40vw;
-    height: 35vw;
-  }
-}
-
-@media (min-width: 992px){
-  .donatello{
-    margin-left: 20vw;
-    margin-top: -8vw;
-    width: 50vw;
-    max-width: 22rem; 
-    height: 60vw;
-    max-height: 29rem;  
-}
-}
-
-@media (max-width: 576px) {
-  .leonardo{
-    width: 65vw;  
-    height: 60vw;
-    margin-left: 16vw;
-    margin-bottom:8vw;
-    margin-top:-20vw;
-    
-  }
-}
-@media (min-width: 577px) and (max-width: 700px) {
   .leonardo {
-    width: 50vw;
-    height: 45vw;
-    margin-top:-15vw;
-    margin-left: 20vw;
-    margin-bottom:5vw;
+      width: 50vw;
+      height: 45vw;
+      margin-top: -15vw;
+      margin-left: 20vw;
+      margin-bottom: 5vw;
   }
 }
 
- @media (min-width: 701px) and (max-width: 992px) {
-  .leonardo{
-    width: 50vw;
-    height: 45vw;
-    margin-left: 16vw;
-    margin-bottom:5vw;
-    margin-top:-10vw;
-    
+@media (min-width: 701px) and (max-width: 992px) {
+  .baptism, .david, .judith, .sarcophagus {
+      width: 40vw;
+      height: 50vw;
+  }
+
+  .adoration {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 2vw;
+  }
+
+  .last-supper {
+      width: 40vw;
+      height: 20vw;
+      margin-top: 4vw;
+  }
+
+  .madonna {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 5vw;
+  }
+
+  .general {
+      width: 40vw;
+      height: 35vw;
+  }
+
+  .verrocchio {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 15vw;
+      margin-top: -13vw;
+      margin-bottom: 2vw;
+  }
+
+  .donatello {
+      width: 40vw;
+      height: 35vw;
+  }
+
+  .leonardo {
+      width: 50vw;
+      height: 45vw;
+      margin-left: 16vw;
+      margin-bottom: 5vw;
+      margin-top: -10vw;
   }
 }
 
-@media (min-width: 992px){
-  .leonardo{
-    width: 40vw;
-    height: 35vw;
-    margin-left: 16vw;
-    margin-bottom:8vw;
-}
-}
+@media (min-width: 992px) {
+  .baptism, .david, .sarcophagus, .judith {
+      width: 30vw;
+      height: 30vw;
+      margin-top: 4vw;
+      margin-bottom: 2.5vw;
+      margin-left: 2vw;
+  }
 
+  .adoration, .madonna {
+      width: 30vw;
+      height: 30vw;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+
+  .last-supper {
+      width: 30vw;
+      height: 15vw;
+      margin-top: 4vw;
+      margin-left: 8vw;
+  }
+
+  .general {
+      width: 30vw;
+      height: 25vw;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+
+  .verrocchio, .donatello {
+      width: 50vw;
+      max-width: 22rem;
+      height: 60vw;
+      max-height: 29rem;
+      margin-left: 20vw;
+      margin-top: -8vw;
+  }
+
+  .leonardo {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 16vw;
+      margin-bottom: 8vw;
+  }
+}
 .vasaripaint {
   margin-right: 2.5rem;  
   background-repeat: no-repeat;
@@ -12260,23 +12138,86 @@ figcaption:nth-of-type(2) {
   transform: scale(1.1);
   z-index: 10000; 
 }
-
-@media (min-width: 992px) {
+@media (max-width: 576px) {
   .intro .vasaripaint {
     width: 75%;
+    margin-left: 5rem;
+  }
+  .intro .intro-text {
+    margin-top:-5rem;
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 80%; 
+    position: absolute;
+ 
+  }
+}
+
+@media (min-width: 577px) and (max-width: 700px) {
+  .intro .vasaripaint {
+    width: 75%;
+  }
+  .intro .intro-text {
+    margin-top:-23rem;
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%; 
+    position: absolute;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 991px) {
+ .intro .vasaripaint {
+    width: 75%;
+  }
+  .intro .intro-text {
+    margin-top:-20rem;
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%; 
+    position: absolute;
+  }
+}
+
+@media (min-width: 992px) and (max-width:1199px){
+  .intro .vasaripaint {
+    width: 50%;
     float: right;
   }
   .intro .intro-text {
     left: 0;
-    width: 60%;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    width: 65%;
     position: absolute;
   }
   .intro .intro-text .intro-button {
     width: 100%;
     left: 0;
     position: absolute;
-    bottom: -2rem;
+  
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .vasaripaint {
+    width: 70%;
+    float: right;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 5rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    
   }
 }
 
@@ -12387,50 +12328,137 @@ figcaption:nth-of-type(2) {
   font-family: "SquareFont";
   position: fixed;
   opacity: 0;
-  z-index: 9999; 
-  animation-duration: 4s; 
+  z-index: 9999;
+  animation-duration: 4s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  margin: 0;
+  border: none;
+  padding: 0;
 }
 
-.word1 {
-  left: 10%;
-  top: 20%;
-  font-size: 2em;
-  animation-name: fadeInOut1;
-  color:#fed231;
-  transform:rotate(20deg)
+@media (max-width: 576px) {
+  .word1 {
+    right: 90%;
+    top: 30%;
+    font-size: 2em;
+    animation-name: fadeInOut1;
+    color:#fed231;
+    transform:rotate(20deg);
+  }
+  
+  .word2 {
+    left: 70%;
+    top: 45%;
+    font-size: 1em;
+    animation-name: fadeInOut2;
+  }
+  
+  .word3 {
+    left: 30%;
+    top: 70%;
+    font-size: 3em;
+    animation-name: fadeInOut3;
+    color:#673d86;
+  }
+  
+  .word4 {
+    left: 60%;
+    top: 10%;
+    font-size: 3em;
+    animation: curveFadeInOut 4s infinite;
+  }
+  
+  .word5 {
+    right: 60%;
+    top: 40%;
+    font-size: 1em;
+    color:#7cb76c;
+    animation: curveFadeInOut2 4s infinite;
+  }
 }
 
-.word2 {
-  left: 70%;
-  top: 45%;
-  font-size: 1em;
-  animation-name: fadeInOut2;
+@media (min-width: 701px) and (max-width: 992px) {
+  .word1 {
+    right: 90%;
+    top: 30%;
+    font-size: 2em;
+    animation-name: fadeInOut1;
+    color:#fed231;
+    transform:rotate(20deg);
+  }
+  
+  .word2 {
+    left: 70%;
+    top: 45%;
+    font-size: 1em;
+    animation-name: fadeInOut2;
+  }
+  
+  .word3 {
+    left: 30%;
+    top: 70%;
+    font-size: 3em;
+    animation-name: fadeInOut3;
+    color:#673d86;
+  }
+  
+  .word4 {
+    left: 60%;
+    top: 10%;
+    font-size: 3em;
+    animation: curveFadeInOut 4s infinite;
+  }
+  
+  .word5 {
+    right: 60%;
+    top: 40%;
+    font-size: 1em;
+    color:#7cb76c;
+    animation: curveFadeInOut2 4s infinite;
+  }
+}
+@media (min-width: 992px){
+  .word1 {
+    right: 90%;
+    top: 30%;
+    font-size: 2em;
+    animation-name: fadeInOut1;
+    color:#fed231;
+    transform:rotate(20deg);
+  }
+  
+  .word2 {
+    left: 70%;
+    top: 45%;
+    font-size: 1em;
+    animation-name: fadeInOut2;
+  }
+  
+  .word3 {
+    left: 30%;
+    top: 70%;
+    font-size: 3em;
+    animation-name: fadeInOut3;
+    color:#673d86;
+  }
+  
+  .word4 {
+    left: 60%;
+    top: 10%;
+    font-size: 3em;
+    animation: curveFadeInOut 4s infinite;
+  }
+  
+  .word5 {
+    right: 60%;
+    top: 40%;
+    font-size: 1em;
+    color:#7cb76c;
+    animation: curveFadeInOut2 4s infinite;
+  }
 }
 
-.word3 {
-  left: 30%;
-  top: 70%;
-  font-size: 3em;
-  animation-name: fadeInOut3;
-  color:#673d86;
-}
-
-.word4 {
-  left: 60%;
-  top: 10%;
-  font-size: 3em;
-  animation: curveFadeInOut 4s infinite;
-}
-
-.word5 {
-  left: 60%;
-  top: 10%;
-  font-size: 1em;
-  color:#7cb76c;
-  animation: curveFadeInOut2 4s infinite;
-}
 @keyframes fadeInOut1 {
   0% { opacity: 0; }
   25% { opacity: 1; }
@@ -12530,3 +12558,19 @@ background-image: url('/assets/img/cursorefuturismo.svg');
   background-color: yellow !important;
   font-weight: bold !important;
   }
+
+
+  
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 1px) rotate(1deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(0deg); }
+  60% { transform: translate(-1px, -1px) rotate(-1deg); }
+  70% { transform: translate(1px, 1px) rotate(1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  90% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(1px, 1px) rotate(0deg); }
+}
