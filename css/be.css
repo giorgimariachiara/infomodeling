@@ -10858,7 +10858,6 @@ p {
   text-transform: uppercase;
   line-height: 1;
   margin-right: 3rem;
-  /* Altre proprietà comuni */
   padding-left: 2.5rem;
   padding-right: 4.5rem;
   padding-bottom: 4.5rem;
@@ -10866,7 +10865,6 @@ p {
 }
 @media (min-width: 400px){
   .site-heading {
-    /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
     background-size: 65%!important;
     padding-left: 2.5rem!important;
     padding-right: 4.5rem!important;
@@ -10987,7 +10985,6 @@ p {
   font-weight: 800;
 }
 .section-heading .section-heading-lower {
-  
   display: block;
   font-size: 2rem;
   font-weight: 100;
@@ -11008,7 +11005,7 @@ p {
 #mainNav {
   padding-top: 20rem;
   padding-bottom: 20rem;
-  font-family: "Copperplate";
+  font-family: "Copperplate"!important;
   font-size: 10rem !important;
   position: sticky;
   top: 0;
@@ -11101,27 +11098,6 @@ p {
 
 @media (min-width: 150px){
 
-  .navbar-brand{
-    float: left!important;
-    margin-top: -19rem!important;
-    margin-left:-30rem!important;
-    width: auto;
-    height: 6rem;
-    font-family: "Alexang";
-    font-size: 4rem;
-    color:#243F39 !important;
-  }
-.navbar-toggler{
-  margin-top:-20rem!important;
-
-}
-  .navbar-nav{
-    margin-left:-25rem!important;
-
-  }
-  .nav-link{
-    font-size:1.2rem!important;
-  }
   .container {
    display: flex;
    flex-direction: column;
@@ -11290,6 +11266,31 @@ nav{
 }
 }
 
+@media (min-width: 300px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1rem;
+  
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 0;
+    margin-top: 3rem;
+    max-width: 85vw;
+    margin-left:40px!important;
+  }
+  .product-item-title{
+    width: 500px;
+    height: 310px;
+    margin-left:40px;
+  }
+}
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
@@ -11307,13 +11308,18 @@ nav{
     margin-top: 3rem;
     max-width: 50vw;
   }
+  .product-item-title{
+    width: 800px;
+    height: 400px;
+  }
 }
+
 .product-item-title .bg-faded{
   background-image: url("/assets/img/titbe.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom:5rem;
-  margin-bottom: 5rem;
+  background-color: #FFFAF0 !important;
+  font-family: 'Alexang'!important;
 
 }
 .product-item-title h2:first-of-type{
@@ -11357,7 +11363,7 @@ font-size: 1rem !important;
   white-space: pre; 
 }
 .bg-faded {
-  background-color: #f6e1c5;
+  background-color: #f6e1c5!impo;
 }
 
 .list-hours {
@@ -11799,7 +11805,8 @@ font-size: 1rem !important;
 
  @media (min-width: 400px){
     .searchBar{
-      margin-left: 100px !important;
+      margin-left: 350px !important;
+      width: 200px;
     }
   }
 
@@ -11829,19 +11836,22 @@ font-size: 1rem !important;
 
 /* Stile per il conteggio delle occorrenze */
 #occurrences-count {
+  margin-top:40px!important;
   margin-right: 10px;
   font-weight: bold;
+  background-color: #D6C8AA;
 }
 
 /* Stile per i pulsanti di navigazione */
 #prev-button,
 #next-button {
-  background-color: #007BFF;
+  background-color: #243F39;
   color: #fff;
   border: none;
   border-radius: 4px;
   margin-left: 5px;
   cursor: pointer;
+  margin-top:10px;
 }
 
 /* Stile per gli elementi evidenziati */
@@ -11849,4 +11859,5 @@ font-size: 1rem !important;
   background-color: yellow !important;
   font-weight: bold !important;
 }
+
 
