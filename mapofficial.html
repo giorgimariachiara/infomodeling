@@ -48,14 +48,59 @@
     <script src="src/leaflet-search.js"></script>
     <script src="data/italy-prov.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
         // Inizializza la mappa
         var map = L.map('map').setView([41.9028, 12.4964], 6); // Centra la mappa su Roma
 
-        // Aggiungi una mappa di base
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        // Declare a variable to hold the current tile layer
+        var currentTileLayer;
+
+        // Function to change the tile layer
+        function changeTileLayer(newLayerURL, newAttribution, newMaxZoom) {
+            // Remove the existing layer if it exists
+            if (currentTileLayer) {
+                map.removeLayer(currentTileLayer);
+            }
+
+            // Add the new layer
+            currentTileLayer = L.tileLayer(newLayerURL, {
+                maxZoom: newMaxZoom,
+                attribution: newAttribution
+            }).addTo(map);
+        }
+
+        // Initially set to OpenStreetMap
+        changeTileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            19
+        );
+
+        // Add an event listener to your button
+        document.getElementById("changeLayerBtn").addEventListener("click", function() {
+            changeTileLayer(
+                'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+                'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+                19
+            );
+        });
+
+        // Event listeners for changing back to the initial map
+        document.querySelector('button[data-theme="theme6"]').addEventListener("click", function() {
+            changeTileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                19
+            );
+        });
+
+        document.querySelector('button[data-theme="theme1"]').addEventListener("click", function() {
+            changeTileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                19
+            );
+        });
+
 
         // Lista di posti con coordinate
         var places = [
@@ -174,6 +219,7 @@
         });
 
         map.addControl( searchControl );  //inizialize search control
+        });
         // ...
     </script>
 
@@ -182,7 +228,7 @@
         <button class="sub-btn" data-theme="theme6"><span class="btn-hover-text">2030</span></button>
     </div>
     <div class="btns-grid-item btns-item-2">
-        <button class="sub-btn" data-theme="theme5"><span class="btn-hover-text">XX</span></button>
+        <button  id="changeLayerBtn" class="sub-btn" data-theme="theme5"><span class="btn-hover-text">XX</span></button>
     </div>
     <div class="btns-grid-item btns-item-3">
         <button class="sub-btn" data-theme="theme4"><span class="btn-hover-text">Tema 2</span></button>
