@@ -10875,6 +10875,7 @@ p {
     padding-right: 4.5rem;
     padding-bottom: 4.5rem;
     margin-top: 2.5rem;
+ 
   }
   @media (min-width: 400px){
     .site-heading {
@@ -10894,6 +10895,7 @@ p {
       margin-left: 10rem!important;
       margin-top: 3rem!important;
       text-align: left!important;
+      
     
   
      
@@ -10996,12 +10998,15 @@ p {
   display: block;
   font-size: 1rem;
   font-weight: 800;
+
 }
 .section-heading .section-heading-lower {
   display: block;
   font-size: 2rem;
   font-weight: 100;
+ 
 }
+
 
 .bg-faded {
   background-color: #f6e1c5;
@@ -11178,7 +11183,23 @@ p {
        
        
       }
-      
+      .section-heading-upper{
+        font-family: "Copperplate";
+        writing-mode: vertical-lr; /* Verticale da sinistra a destra */
+        text-orientation: upright; /* Mantiene le lettere dritte */
+        height: 100%;
+        margin-top: 1rem;
+        margin-left:5rem;
+        
+        
+      }
+      .section-heading-lower{
+        font-family: "Copperplate";
+        margin-left:24rem;
+        margin-top: -13rem;
+        line-height: 2;
+        width: 20%;
+      }
 
   .footer{
     margin-top:40rem;
@@ -11218,10 +11239,24 @@ p {
     margin-bottom: 5rem;
 
   }
-  .section-heading-upper  .section-heading-lower{
-    font-family: "Alexang";
-
+  .section-heading-upper{
+    font-family: "Copperplate";
+    writing-mode: vertical-lr; /* Verticale da sinistra a destra */
+    text-orientation: upright; /* Mantiene le lettere dritte */
+    height: 80%;
+    margin-top: 1rem;
+    margin-left:5rem;
+    
+    
   }
+  .section-heading-lower{
+    font-family: "Copperplate";
+    margin-left:24rem;
+    margin-top: -13rem;
+    line-height: 2;
+    width: 20%;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -11252,10 +11287,21 @@ p {
         margin-top: 20rem;
       }
       .section-heading-upper{
-        font-family: "Alexang";
+        font-family: "Copperplate";
+        writing-mode: vertical-lr; /* Verticale da sinistra a destra */
+        text-orientation: upright; /* Mantiene le lettere dritte */
+        height: 80%;
+        margin-top: 1rem;
+        margin-left:5rem;
+        
+        
       }
       .section-heading-lower{
-        font-family: "Alexang";
+        font-family: "Copperplate";
+        margin-left:24rem;
+        margin-top: -13rem;
+        line-height: 2;
+        width: 20%;
       }
     
 }
@@ -11311,6 +11357,8 @@ p {
     width: 80%;
     
   }
+ 
+
 }
 
 .product-item-title .bg-faded{
@@ -11608,20 +11656,92 @@ p {
 /*immagini*/
 
 .verrocchio {
-
+position:relative;
   background-image: url('/assets/img/verrocchiobe.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  max-width: 500px;
-  max-height: 500px;
-}
+  z-index: 100000;
 
+  
+ 
+}
 .donatello{
+  position:relative;
+
   background-image: url('/assets/img/Donatellobe.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 5rem;
+  z-index: 100000;
+
+
 }
+.leonardo{
+  position:relative;
+
+  background-image: url('/assets/img/leonardobe.svg');
+  background-repeat: no-repeat;
+  z-index: 100000;
+
+  
+}
+
+
+@media (min-width: 400px){
+  .verrocchio {
+    width: 11rem;
+    height: 19rem;
+    margin-top:-15.85rem ;
+    margin-left:12.5rem;
+
+    
+  }
+  .donatello {
+    width: 10rem;
+    height: 10rem;
+  }
+  .leonardo {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+
+@media (min-width: 900px){
+  .verrocchio {
+    width: 14rem;
+    height: 19rem;
+    margin-top:-20.3rem ;
+    margin-left:19.8rem;
+    z-index: 100000;
+  }
+  .donatello {
+    max-width: 350px;
+    max-height:350px;
+  }
+  .leonardo {
+    max-width:350px;
+    max-height:350px;
+  }
+}
+@media (min-width: 1200px){
+  .verrocchio {
+    width: 14rem;
+    height: 23rem;
+    margin-top:-20.4rem ;
+    margin-left:19.7rem;
+    z-index: 100000;
+
+    
+  }
+  .donatello {
+    max-width: 650px;
+    max-height:650px;
+  }
+  .leonardo {
+    max-width:650px;
+    max-height:650px;
+  }
+}
+
+
 
 .vasaripaint {
   background-image: url('/assets/img/vasaripaint.jpg');
