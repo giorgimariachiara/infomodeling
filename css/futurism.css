@@ -11105,7 +11105,7 @@ body .section-heading .section-heading-lower {
   border-bottom: 0.3vw solid #000;     
   margin-top: 3vw;
   margin-bottom: 3.5vw;
-  transform: rotate(-5deg); 
+ 
   
 }
 
@@ -11176,6 +11176,7 @@ body .section-heading .section-heading-lower {
     border-bottom: 0.3vw solid #000;     
     margin-top: 3vw;
     margin-bottom: 3.5vw;
+    transform: rotate(-3deg); 
     
     
   }
@@ -11210,6 +11211,7 @@ body .section-heading .section-heading-lower {
     margin-right: 5vw; 
     padding-right: 2vw;     
     padding-bottom: 1.5vw; 
+   
   }
   
   .product-item-description .bg-faded p:nth-of-type(2), .product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9),.product-item-description .bg-faded p:nth-of-type(12),.product-item-description .bg-faded p:nth-of-type(15)  {
@@ -11218,7 +11220,7 @@ body .section-heading .section-heading-lower {
     border-bottom: 0.3vw solid #000;     
     margin-top: 3vw;
     margin-bottom: 3.5vw;
-    transform: rotate(-5deg); 
+    transform: rotate(-3deg); 
     
   }
   
@@ -11699,7 +11701,7 @@ figcaption{
 }
 
 figcaption:nth-of-type(2) {
-  margin-top: 20px;
+  
   margin-left: 13px !important;
 }
 
@@ -11879,8 +11881,8 @@ figcaption:nth-of-type(2) {
 
 @media (max-width: 576px) {
   .madonna{
-    width: 50vw;
-    height: 40vw;
+    width: 40vw;
+    height: 60vw;
     margin-top:10vw;
     
   }
@@ -11913,16 +11915,6 @@ figcaption:nth-of-type(2) {
 }
 }
 
-.sarcophagus {
-  margin-left: 5vw;
-  margin-top: 2vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 30vw;
-  height: 50vw;
-  background-image: url('../assets/img/sarcophagudefault.svg');
-}
-
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -1px) rotate(-1deg); }
@@ -11938,14 +11930,15 @@ figcaption:nth-of-type(2) {
 }
 
 .david {
-  margin-left: 5vw;
-  margin-top: 2vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30vw; 
-  height: 30vw;
   background-image: url('../assets/img/davidefault.svg');
 
+}
+.sarcophagus {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../assets/img/sarcophagudefault.svg');
 }
 
 .david:hover, .sarcophagus:hover {
@@ -11954,13 +11947,74 @@ figcaption:nth-of-type(2) {
 }
  
 
+
+@media (max-width: 576px) {
+  .david{
+    width: 60vw;  
+    height: 70vw;
+    
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .david {
+    width: 60vw;
+    height: 70vw;
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .david{
+    width: 40vw;
+    height: 50vw;
+  }
+}
+
+@media (min-width: 992px){
+  .david{
+  width:30vw;  
+  height: 30vw;
+  margin-top: 4vw;
+  margin-bottom: 2.5vw;
+  margin-left:2vw;
+
+}
+}
+
+@media (max-width: 576px) {
+  .sarcophagus{
+    width: 50vw;  
+    height: 60vw;
+    
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .sarcophagus {
+    width: 50vw;
+    height: 60vw;
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .sarcophagus{
+    width: 40vw;
+    height: 50vw;
+  }
+}
+
+@media (min-width: 992px){
+  .sarcophagus{
+  width:30vw;  
+  height: 30vw;
+  margin-top: 4vw;
+  margin-bottom: 2.5vw;
+  margin-left:2vw;
+
+}
+}
+
 .judith {
-  margin-left: 5vw;
-  margin-top: 2vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30vw;
-  height: 40vw;
   background-image: url('../assets/img/judithdefault.svg');
 }
 
@@ -11971,12 +12025,8 @@ figcaption:nth-of-type(2) {
 
 
 .general {
-  margin-left: 5vw;
-  margin-top: 6vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30vw;
-  height: 30vw;
   background-image: url('../assets/img/generaldefault.svg');
 }
 
@@ -11985,51 +12035,82 @@ figcaption:nth-of-type(2) {
   z-index: 3;
 }
 
-@media (max-width: 768px) {
-  .sarcophagus{
-    width: 60vw;
-    height: 70vw;
-  }
-  .david{
-    width: 60vw;
-    height: 70vw;
-  }
+@media (max-width: 576px) {
   .judith{
-    width: 60vw;
+    width: 60vw;  
     height: 70vw;
+    
   }
-  .general{
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .judith {
     width: 60vw;
     height: 70vw;
   }
 }
 
+ @media (min-width: 701px) and (max-width: 992px) {
+  .judith{
+    width: 40vw;
+    height: 50vw;
+  }
+}
+
+@media (min-width: 992px){
+  .judith{
+  width:30vw;  
+  height: 30vw;
+  margin-top: 4vw;
+  margin-bottom: 2.5vw;
+  margin-left:2vw;
+
+}
+}
+
+@media (max-width: 576px) {
+  .general{
+    width: 65vw;  
+    height: 60vw;
+    
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .general {
+    width: 50vw;
+    height: 45vw;
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .general{
+    width: 40vw;
+    height: 35vw;
+  }
+}
+
+@media (min-width: 992px){
+  .general{
+  width:30vw;  
+  height: 25vw;
+  margin-top: 4vw;
+  margin-left:2vw;
+}
+}
+
 .verrocchio {
-  margin-left: 20vw;
-  margin-top:-8vw;
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 40vw;
-  max-width: 22rem; 
-  height: 50vw;
-  max-height: 29rem;  
+  background-size: contain; 
   filter: grayscale(80%); 
   background-image: url('../assets/img/verrocchiofuturista.svg');
 }
 
 .verrocchio:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   z-index: 10000; 
 }
 .donatello {
-  margin-left: 20vw;
-  margin-top: -8vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50vw;
-  max-width: 22rem; 
-  height: 60vw;
-  max-height: 29rem;  
   filter: grayscale(80%);
   background-image: url('../assets/img/Donatellofuturism.svg'); 
 }
@@ -12040,14 +12121,8 @@ figcaption:nth-of-type(2) {
 }
 
 .leonardo {
-  margin-left: 20vw;
-  margin-top: -8vw;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50vw;
-  max-width: 22rem; 
-  height: 60vw;
-  max-height: 29rem;  
   filter: grayscale(80%);
   background-image: url('../assets/img/Leonardofuturism.svg'); 
 }
@@ -12057,21 +12132,117 @@ figcaption:nth-of-type(2) {
   z-index: 10000; 
 }
 
-@media (max-width: 768px) {
-  .donatello{
-    width: 70vw;
-    height: 70vw;
-    margin-left: 15vw;
-    margin-bottom:10vw;
-  }
+@media (max-width: 576px) {
   .verrocchio{
-    width: 60vw;
-    height: 70vw;
+    width: 65vw;  
+    height: 60vw;
+    margin-left:16vw;
+    margin-top: -20vw;
+    margin-bottom: 3vw;
+    
   }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .verrocchio {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .verrocchio{
+    margin-left: 15vw;
+    margin-top: -13vw;
+    margin-bottom: 2vw;
+    width: 40vw;
+    height: 35vw;
+  }
+}
+
+@media (min-width: 992px){
+  .verrocchio{
+    margin-left: 20vw;
+    margin-top:-8vw;
+    width: 40vw;
+    max-width: 22rem; 
+    height: 50vw;
+    max-height: 29rem; 
+}
+}
+
+@media (max-width: 576px) {
+  .donatello{
+    width: 65vw;  
+    height: 60vw;
+    margin-left: 16vw;
+    margin-bottom:8vw;
+    margin-top:-20vw;
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .donatello {
+    width: 50vw;
+    height: 45vw;
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .donatello{
+    width: 40vw;
+    height: 35vw;
+  }
+}
+
+@media (min-width: 992px){
+  .donatello{
+    margin-left: 20vw;
+    margin-top: -8vw;
+    width: 50vw;
+    max-width: 22rem; 
+    height: 60vw;
+    max-height: 29rem;  
+}
+}
+
+
+@media (max-width: 576px) {
   .leonardo{
-    width: 60vw;
-    height: 70vw;
+    width: 65vw;  
+    height: 60vw;
+    margin-left: 16vw;
+    margin-bottom:8vw;
+    margin-top:-20vw;
+    
   }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .leonardo {
+    width: 50vw;
+    height: 45vw;
+    margin-top:-15vw;
+    margin-left: 20vw;
+    margin-bottom:5vw;
+  }
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .leonardo{
+    width: 50vw;
+    height: 45vw;
+    margin-left: 16vw;
+    margin-bottom:5vw;
+    margin-top:-10vw;
+    
+  }
+}
+
+@media (min-width: 992px){
+  .leonardo{
+    width: 40vw;
+    height: 35vw;
+    margin-left: 16vw;
+    margin-bottom:8vw;
+}
 }
 
 .vasaripaint {
@@ -12355,4 +12526,8 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 
-
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+  }
