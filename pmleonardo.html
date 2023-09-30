@@ -50,13 +50,6 @@
                 </div>
             </div>
         </nav>
-        
-        <div class="searchBar">
-            <input type="text" id="search-input" placeholder="Cerca...">
-            <span id="occurrences-count">0 di 0</span>
-            <button id="prev-button">&uarr;</button>
-            <button id="next-button">&darr;</button>            
-    </div>
 
 
         <section class="page-section">
@@ -75,6 +68,23 @@
                         
                             <!-- Nested Accordion Starts Here -->
                             <div class="accordion" id="nestedAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSearchBar">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSearchBar" aria-expanded="true" aria-controls="collapseSearchBar">
+                                            Search Bar
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSearchBar" class="accordion-collapse collapse" aria-labelledby="headingSearchBar">
+                                        <div class="accordion-body">
+                                            <div class="searchBar">
+                                                <input type="text" id="search-input" placeholder="Cerca...">
+                                                <span id="occurrences-count">0 di 0</span>
+                                                <button id="prev-button">&uarr;</button>
+                                                <button id="next-button">&darr;</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">

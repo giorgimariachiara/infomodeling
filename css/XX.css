@@ -11486,3 +11486,10 @@ header {
   background-color: white;  /* Sfondo bianco al passaggio del mouse */
   color: black;             /* Testo nero al passaggio del mouse */
 }
+
+/* Stile per la barra di ricerca */
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}

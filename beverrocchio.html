@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/styles.css">
+        <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/newbe.css">
 
         <!-- Font Awesome CSS Link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -51,13 +51,7 @@
             </div>
         </nav>
 
-        <div class="searchBar">
-            <input type="text" id="search-input" placeholder="Cerca...">
-            <span id="occurrences-count">0 di 0</span>
-            <button id="prev-button">&uarr;</button>
-            <button id="next-button">&darr;</button>            
-    </div>
-
+       
     
         <section class="page-section">
         <!-- Wrapping starts here -->
@@ -73,52 +67,68 @@
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                         
-                            <!-- Nested Accordion Starts Here -->
-                            <div class="accordion" id="nestedAccordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                            Highlight Metadata in the text
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-                                        <div class="accordion-body">
-                                            <!-- Content for 'Highlight Metadata in the text' -->
-                                            <div>
-                                                <input type="checkbox" id="placeNames" name="highlight" value="PlaceNames">
-                                                <label for="placeNames">Place Names</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="personNames" name="highlight" value="PersonNames">
-                                                <label for="personNames">Person Names</label>
-                                            </div>
+                        <!-- Nested Accordion Starts Here -->
+                        <div class="accordion" id="nestedAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSearchBar">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSearchBar" aria-expanded="true" aria-controls="collapseSearchBar">
+                                        Search Bar
+                                    </button>
+                                </h2>
+                                <div id="collapseSearchBar" class="accordion-collapse collapse" aria-labelledby="headingSearchBar">
+                                    <div class="accordion-body">
+                                        <div class="searchBar">
+                                            <input type="text" id="search-input" placeholder="Cerca...">
+                                            <span id="occurrences-count">0 di 0</span>
+                                            <button id="prev-button">&uarr;</button>
+                                            <button id="next-button">&darr;</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                            List Metadata Below
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        Highlight Metadata in the text
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                    <div class="accordion-body">
+                                        <!-- Content for 'Highlight Metadata in the text' -->
+                                        <div>
+                                            <input type="checkbox" id="placeNames" name="highlight" value="PlaceNames">
+                                            <label for="placeNames">Place Names</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="personNames" name="highlight" value="PersonNames">
+                                            <label for="personNames">Person Names</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                        List Metadata Below
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" >
+                                    <div class="accordion-body">
+                                        <!-- Content for 'List Metadata Below' -->
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
                                         <div class="accordion-body">
                                             <!-- Content for 'List Metadata Below' -->
-                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
-                                            <div class="accordion-body">
-                                                <!-- Content for 'List Metadata Below' -->
-                                                <div id="placeNameTitle" style="display:none;">Place Names List:</div>
-                                                <ul id="placeNameList"></ul>
-                                                <div id="personNameTitle" style="display:none;">Person Names List:</div>
-                                                <ul id="personNameList"></ul>
-                                            </div>
-                                        </div>
+                                            <div id="placeNameTitle" style="display:none;">Place Names List:</div>
+                                            <ul id="placeNameList"></ul>
+                                            <div id="personNameTitle" style="display:none;">Person Names List:</div>
+                                            <ul id="personNameList"></ul>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
-                        
                             </div>
-                            <!-- Nested Accordion Ends Here -->
+                        </div>
+                        <!-- Nested Accordion Ends Here -->
                         </div>
                         </div>
                     </div>
