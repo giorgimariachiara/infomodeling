@@ -228,28 +228,6 @@ document.getElementById('next-button').addEventListener('click', () => {
   }
 });*/
 
-function removeFuturismEffects() {
-    const floatingWords = document.querySelectorAll('.floating-word');
-    floatingWords.forEach(word => word.remove());
-}
-
-function isFuturismActive(stylesheet) {
-    return stylesheet.includes('futurism.css');
-}
-
-function changeStylesheet(newStylesheet) {
-    document.getElementById('themeStylesheet').href = newStylesheet;
-    // Save the stylesheet to localStorage
-    localStorage.setItem('currentStylesheet', newStylesheet);
-}
-
-function toggleEffectsBasedOnStylesheet(newStylesheet) {
-    if (isFuturismActive(newStylesheet)) {
-        // Activate futurism effects here
-    } else {
-        removeFuturismEffects();
-    }
-}
 
 function initializeThemeButtons() {
     const themeMapping = {
@@ -297,34 +275,58 @@ function popupfunction() {
     }
 }
 //ends popup script
+function removeFuturismEffects() {
+    const floatingWords = document.querySelectorAll('.floating-word');
+    floatingWords.forEach(word => word.remove());
+}
 
+function isFuturismActive(stylesheet) {
+    return stylesheet.includes('futurism.css');
+}
 
-const wordText = "click";
+function changeStylesheet(newStylesheet) {
+    document.getElementById('themeStylesheet').href = newStylesheet;
+    localStorage.setItem('currentStylesheet', newStylesheet);
+}
 
 function createWord(className) {
     const word = document.createElement("div");
-    word.textContent = wordText;
+    word.textContent = "click";
     word.classList.add('floating-word', className);
     document.body.appendChild(word);
+    return word;
 }
 
 function randomizeWordPosition(wordElement) {
-    const randomTop = Math.random() * (window.innerHeight - 100);
-    const randomLeft = Math.random() * (window.innerWidth - 100);
-
+    const randomTop = Math.random() * (window.innerHeight - wordElement.offsetHeight);
+    const randomLeft = Math.random() * (window.innerWidth - wordElement.offsetWidth);
     wordElement.style.top = `${randomTop}px`;
     wordElement.style.left = `${randomLeft}px`;
 }
 
 function activateFuturismEffects() {
-  for (let i = 1; i <= 7; i++) {
-      const className = `word${i}`;
-      createWord(className);
-      const wordElement = document.querySelector(`.${className}`);
-      randomizeWordPosition(wordElement);
-  }
+    for (let i = 1; i <= 7; i++) {
+        const className = `word${i}`;
+        const wordElement = createWord(className); 
+        randomizeWordPosition(wordElement);
+    }
 }
 
+function toggleEffectsBasedOnStylesheet(newStylesheet) {
+    if (isFuturismActive(newStylesheet)) {
+        activateFuturismEffects();
+    } else {
+        removeFuturismEffects();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedStylesheet = localStorage.getItem('currentStylesheet');
+    if (savedStylesheet) {
+        changeStylesheet(savedStylesheet);
+        toggleEffectsBasedOnStylesheet(savedStylesheet);
+    }
+});
 
 //effetto titolo futurismo
 const siteHeadingUpper = document.querySelector(".site-heading-upper");
