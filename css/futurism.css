@@ -12172,37 +12172,223 @@ background-image: url('/assets/img/cursorefuturismo.svg');
   color: black;            
 }
 
+
 /* Stile per la barra di ricerca */
   .searchBar{
     position:fixed;
     z-index: 10000;
+    background-color: #85c06c;
+    border: 2px solid #673d86;
+  
   }
 #search-input {
   float: right;
-  padding: 5px;
+  padding: 0.5rem;
   border: 1px solid #ccc;
   font-size: 16px;
 }
 
 /* Stile per il conteggio delle occorrenze */
 #occurrences-count {
-  margin-right: 10px;
+ margin-left: 2rem;
   font-weight: bold;
+  color:black;
 }
 
 /* Stile per i pulsanti di navigazione */
 #prev-button,
 #next-button {
-  background-color: #007BFF;
+  background-color: #673d86;
+  margin-right: 1rem;
   color: #fff;
   border: none;
-  margin-left: 5px;
   cursor: pointer;
+  margin-top:0.5rem;
 }
 
 /* Stile per gli elementi evidenziati */
 .highlight {
   background-color: yellow !important;
   font-weight: bold !important;
+}
+
+
+
+@media (max-width: 576px) {
+  .searchBar{
+    position:fixed;
+    z-index: 10000;
+    background-color: #85c06c;
+    margin-left:3rem;
+    padding:0.5rem;
+    border: 2px solid #673d86;
+  
+  }
+#search-input {
+  float: right;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Stile per il conteggio delle occorrenze */
+#occurrences-count {
+ margin-left: 2rem;
+  font-weight: bold;
+ 
+  color:black;
+}
+
+/* Stile per i pulsanti di navigazione */
+#prev-button,
+#next-button {
+  background-color: #673d86;
+  margin-right: 1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top:0.5rem;
+}
+
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
+
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .searchBar{
+    position:fixed;
+    z-index: 10000;
+    background-color: #85c06c;
+    margin-left:3rem;
+    padding:0.5rem;
+    border: 2px solid #673d86;
+  
+  }
+#search-input {
+  float: right;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Stile per il conteggio delle occorrenze */
+#occurrences-count {
+ margin-left: 2rem;
+  font-weight: bold;
+ 
+  color:black;
+}
+
+/* Stile per i pulsanti di navigazione */
+#prev-button,
+#next-button {
+  background-color: #673d86;
+  margin-right: 1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top:0.5rem;
+}
+
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
+
+  
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .searchBar{
+    position:fixed;
+    z-index: 10000;
+    background-color: #85c06c;
+    margin-left:3rem;
+    padding:0.5rem;
+    border: 2px solid #673d86;
+  
+  }
+#search-input {
+  float: right;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Stile per il conteggio delle occorrenze */
+#occurrences-count {
+ margin-left: 2rem;
+  font-weight: bold;
+ 
+  color:black;
+}
+
+/* Stile per i pulsanti di navigazione */
+#prev-button,
+#next-button {
+  background-color: #673d86;
+  margin-right: 1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top:0.5rem;
+}
+
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
+
+}
+
+@media (min-width: 993px){
+  .searchBar{
+    position:fixed;
+    z-index: 10000;
+    background-color: #85c06c;
+    margin-left:3rem;
+    padding:0.5rem;
+    border: 2px solid #673d86;
+    margin-top: -2rem;
+  
+  }
+#search-input {
+  float: right;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Stile per il conteggio delle occorrenze */
+#occurrences-count {
+ margin-left: 2rem;
+  font-weight: bold;
+ 
+  color:black;
+}
+
+/* Stile per i pulsanti di navigazione */
+#prev-button,
+#next-button {
+  background-color: #673d86;
+  margin-right: 1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top:0.5rem;
+}
+
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
+
+  
 }
 

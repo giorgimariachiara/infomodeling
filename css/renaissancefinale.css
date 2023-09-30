@@ -11827,11 +11827,6 @@ p {
 }
 
 .madonna {
-  width: 30vw;
-  height: 44vw;
-  margin-top: 4vw;
-  margin-left: 7vw;
-  margin-bottom: 1.5vw;
   background-image: url('../assets/img/madonnarenaissace.svg');
   background-repeat: no-repeat;
   background-size: 100%;
