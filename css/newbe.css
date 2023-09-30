@@ -11021,7 +11021,7 @@ p {
   background-color: #DBB2AB;
   font-family: 'Copperplate'!important;
   position: sticky;
-   top: 0;
+  top: 0;
   z-index: 1000;
 
 }
@@ -11032,28 +11032,19 @@ p {
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color: #243F39!important;
-  font-weight: 800;
   font-family: 'Copperplate'!important;
 
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
 }
-@media (min-width: 400px){
-.navbar{
-    font-family: 'Copperplate'!important;
-    
-}
 
-}
+
 @media (min-width: 992px) {
     nav{
         width: auto;
-        height: 9.7rem;
         background-color: rgba(219, 178, 171, 0.8);
         margin-top: -7rem;
-    
-    
       }
       
     #mainNav{
@@ -11316,7 +11307,10 @@ p {
     width: 800px;
     height: 400px;
   }
-
+  .product-item-title .bg-faded{
+    width: 80%;
+    
+  }
 }
 
 .product-item-title .bg-faded{
@@ -11693,10 +11687,13 @@ p {
   display: inline;
 }
 
-
+.donatello{
+  background-image: url('/assets/img/donatello.JPG');
+ 
+}
 
 .vasaripaint {
-  background-image: url('../assets/img/vasaripaintfuturism.svg');
+  background-image: url('/assets/img/vasaripaint.jpg');
 }
 @media (min-width: 992px) {
   .intro .vasaripaint {
@@ -11848,7 +11845,7 @@ p {
   width: 40vw;
   height: 30vw;
   margin-left: 7vw;
-  background-image: url('../assets/img/davidefault.svg');
+  background-image: url('/assets/img/davidefault.svg');
   background-repeat: no-repeat;
   background-size: contain;
   padding: 0;
@@ -12008,84 +12005,21 @@ p {
 /* Ends Styles for PopUp */
 
  /* Stile per la barra di ricerca */
- .searchBar{
-  z-index: 10000;
-}
 
-@media (min-width: 400px){
-    .searchBar{
-        position:absolute;
-        margin-top: 450px;
-        margin-left: 100px;
-        width: 80%;
-    }
-   
-    #prev-button,
-   #next-button {
-    margin-top:14px;
-    width: 10%;
-}
-#search-input{
-    width:40%!important;
-  }
-  }
-
-@media(min-width: 720px){
-  .searchBar{
-    position:fixed;
-    margin-left:2rem!important;
-    margin-top:60px;
-    width: 25%;
-  }
-  #search-input{
-    width:30%;
-  }
-  
-}
-
-
-@media(min-width: 1000px){
-    .searchBar{
-        position:fixed;
-        margin-left:2rem!important;
-        margin-top:60px;
-        width: 30%;
-      }
-      #search-input{
-        width: 40%;
-      }
-      
-    
-  }
-#search-input {
-float: right;
-margin-top: 10px;
-margin-right: 10px;
-padding: 5px;
-border: 1px solid #ccc;
-border-radius: 4px;
-font-size: 16px;
-}
-
-/* Stile per il conteggio delle occorrenze */
-#occurrences-count {
-    margin-top:40px!important;
-    margin-right: 10px;
-    font-weight: bold;
-    background-color: #D6C8AA;
-}
 
 /* Stile per i pulsanti di navigazione */
 #prev-button,
 #next-button {
+    margin-top:5px;
     background-color: #243F39;
     color: #fff;
-border: none;
-border-radius: 4px;
-margin-left: 5px;
+    border: none;
+
 cursor: pointer;
 }
-
+#search-input{
+  width:100%;
+}
 /* Stile per gli elementi evidenziati */
 .highlight {
 background-color: yellow !important;
