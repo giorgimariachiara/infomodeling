@@ -85,8 +85,75 @@ $(document).ready(function() {
   });
 });
 
+let searchTerm = '';
+let matchingElements = [];
+let currentIndex = -1;
 
+function performSearch() {
+    searchTerm = $('#search-input').val().toLowerCase();
+    matchingElements = [];
 
+    if (searchTerm) {
+        $('.personName, .placeName').each(function() {
+            const text = $(this).text().toLowerCase();
+            if (text.includes(searchTerm)) {
+                matchingElements.push(this);
+            }
+        });
+
+        if (matchingElements.length > 0) {
+            currentIndex = 0;
+            clearHighlights();
+            scrollCurrentOccurrenceIntoView();
+            updateOccurrenceCount();
+        } else {
+            currentIndex = -1;
+            clearHighlights();
+            updateOccurrenceCount();
+        }
+    } else {
+        currentIndex = -1;
+        clearHighlights();
+        updateOccurrenceCount();
+    }
+}
+
+function clearHighlights() {
+    $(matchingElements).removeClass('highlight');
+}
+
+function scrollCurrentOccurrenceIntoView() {
+    if (currentIndex >= 0 && currentIndex < matchingElements.length) {
+        const element = matchingElements[currentIndex];
+        $(element).addClass('highlight');
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function updateOccurrenceCount() {
+    $('#occurrences-count').text(`${currentIndex + 1} di ${matchingElements.length}`);
+}
+
+$('#search-input').on('input', performSearch);
+
+$('#prev-button').on('click', function() {
+    if (matchingElements.length > 0) {
+        currentIndex = (currentIndex - 1 + matchingElements.length) % matchingElements.length;
+        clearHighlights();
+        scrollCurrentOccurrenceIntoView();
+        updateOccurrenceCount();
+    }
+});
+
+$('#next-button').on('click', function() {
+    if (matchingElements.length > 0) {
+        currentIndex = (currentIndex + 1) % matchingElements.length;
+        clearHighlights();
+        scrollCurrentOccurrenceIntoView();
+        updateOccurrenceCount();
+    }
+});
+/*
 let searchTerm = '';
 let matchingElements = [];
 let currentIndex = -1;
@@ -159,26 +226,7 @@ document.getElementById('next-button').addEventListener('click', () => {
     scrollCurrentOccurrenceIntoView();
     updateOccurrenceCount();
   }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});*/
 
 function removeFuturismEffects() {
     const floatingWords = document.querySelectorAll('.floating-word');
