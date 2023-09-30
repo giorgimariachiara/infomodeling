@@ -11314,7 +11314,7 @@ p {
 }
 
 .product-item-title .bg-faded{
-    background-image: url("/assets/img/titbe2.svg");
+    background-image: url("/assets/img/titbe.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #FFFAF0 !important;
@@ -11608,32 +11608,24 @@ p {
 /*immagini*/
 
 .verrocchio {
-  width: 40vw;
-  height: 34vw;
-  margin-left: 20vw;
-  background-image: url('../assets/img/verrocchiodefault.svg');
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/img/verrocchiobe.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
+  background-size: cover;
+  margin-top: 5rem;
+  z-index: 10000;
+ 
 }
 
-@media (max-width: 768px) {
-  .verrocchio {
-    width: 50vw;
-    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-top: 6vw;
-    margin-left: 10vw;
-  }
-}
+.donatello{
+  background-image: url('/assets/img/Donatellobe.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 5rem;
+  z-index: 10000;
 
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .verrocchio {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-top: 8vw;
-    margin-left: 15vw;
-  }
+
 }
 
 
@@ -11687,10 +11679,6 @@ p {
   display: inline;
 }
 
-.donatello{
-  background-image: url('/assets/img/donatello.JPG');
- 
-}
 
 .vasaripaint {
   background-image: url('/assets/img/vasaripaint.jpg');
