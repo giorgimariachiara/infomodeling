@@ -11577,3 +11577,10 @@ header {
   color: #000;
 }
 
+
+/* Stile per la barra di ricerca */
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
