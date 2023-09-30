@@ -11409,7 +11409,6 @@ body .section-heading .section-heading-lower {
   
 }
 
-
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -11706,21 +11705,18 @@ body .section-heading .section-heading-lower {
 }
 
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
-
-
 .site-heading-upper {
-  font-family:"Roboto";
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  position: relative;
-  text-align: center; /* Cambia da flex a text-align per centrare il testo */
-  padding: 0.5em 0;
-  word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
-  margin-left: 18%;
-  margin-right: 10%;
-  
-}
-
+   
+    font-family:"Roboto";
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    position: relative;
+    text-align: center; /* Cambia da flex a text-align per centrare il testo */
+    padding: 0.5em 0;
+    word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
 
 .overlap {
   position: relative;
