@@ -10870,50 +10870,13 @@ p {
     background-position: center center;
     text-transform: uppercase;
     line-height: 1;
-    margin-right: 3rem;
-    padding-left: 2.5rem;
-    padding-right: 4.5rem;
-    padding-bottom: 4.5rem;
-    margin-top: 2.5rem;
+  
+   
  
   }
-  @media (min-width: 400px){
-    .site-heading {
-      background-size: 65%!important;
-      padding-left: 2.5rem!important;
-      padding-right: 4.5rem!important;
-      padding-bottom: 9rem!important;
-      margin-top: 2.5rem!important;
-  }
-    .site-heading .site-heading-upper {
-      display: block!important;
-      font-family: "Copperplate"!important;
-      font-size: 3rem !important;
-      color: #243F39 !important;
-      font-weight: lighter!important;
-      width: 30%!important;
-      margin-left: 10rem!important;
-      margin-top: 3rem!important;
-      text-align: left!important;
-      
-    
+
   
-     
-    }
-    .site-heading .site-heading-lower {
-      width: auto!important;
-      font-size: 10rem!important;
-      line-height: 1rem!important;
-      font-family: "Alexang"!important;
-      font-style: normal!important;
-      color: #243F39!important ;
-      font-weight: 100!important;
-      border-bottom: 3px ridge  #243F39!important;
-     margin-top: 5rem!important;
-    }
-  }
-  
-  @media (min-width: 600px){
+  @media (min-width: 992px){
     .site-heading {
       /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
       background-size: 70%!important;
@@ -10921,7 +10884,7 @@ p {
       padding-right: 7rem!important;
       padding-bottom: 18rem!important;
       margin-top: 5rem!important;
-  
+      margin-left:1rem!important;
     }
     .site-heading .site-heading-upper {
       display: block!important;
@@ -10930,10 +10893,8 @@ p {
       color: #243F39 !important;
       font-weight: lighter!important;
       width: 40%!important;
-      margin-left: 7rem!important;
-      margin-top: 3rem!important;
-      text-align: left!important;
-      margin-left: 12rem!important;
+      margin-top: 5rem!important;
+      margin-left:15rem!important;
   
      
     }
@@ -10947,43 +10908,32 @@ p {
       font-weight: 100!important;
       border-bottom: 3px ridge  #243F39!important;
      margin-top: 5rem!important;
-  
     }
   }
   
   
-  @media (min-width: 1250px){
-    .site-heading {
-      /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
-      background-size: 100%!important;
-      padding-left: 5.5rem!important;
-      padding-right: 7rem!important;
-      padding-bottom: 18rem!important;
-      margin-top: 5rem!important;
+  @media (min-width: 1080px){
+
+    .site-heading .site-heading-upper {
+      margin-top:5rem!important;
+
+      margin-left:17.5rem!important;  
+      width: 40%!important;
+     
+    }
+
   }
-  .site-heading .site-heading-upper {
-    display: block;
-    font-family: "Copperplate";
-    font-size: 3.2rem;
-    color: #243F39 !important;
-    text-align: left;
-    font-weight: lighter;
-    width: 40%;
-    margin-left: 18.5rem;
-    margin-top: 3rem;
-   
-  }
-  .site-heading .site-heading-lower {
-    width: auto;
-    font-size: 12rem;
-    line-height: 4rem;
-    font-family: "Alexang";
-    font-style: normal;
-    color: #243F39 ;
-    font-weight: 100;
-    border-bottom: 3px ridge  #243F39;
-   margin-top: 5rem;
-  }
+  
+    
+  @media (min-width: 1280px){
+
+    .site-heading .site-heading-upper {
+      margin-top:5rem!important;
+      margin-left:26rem!important;  
+      width: 30%!important;
+     
+    }
+
   }
   
 .page-section {
@@ -11048,8 +10998,10 @@ p {
 @media (min-width: 992px) {
     nav{
         width: auto;
+        height: 10.5rem!important;
         background-color: rgba(219, 178, 171, 0.8);
         margin-top: -7rem;
+        
       }
       
     #mainNav{
@@ -11072,11 +11024,11 @@ p {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1180px) {
     nav{
         margin-top: -1rem;
         width: auto;
-        height: 13rem;
+        height: 13rem!important;
       }
     #mainNav{
         background-image: url('/assets/img/bannerbe.svg');   
@@ -11220,10 +11172,7 @@ p {
     }
   }
   
-  .vasaripaint {
-    background-image: url('/assets/img/vasaripaint.jpg');
-  }
-  
+ 
 
 @media (min-width: 500px){
 
@@ -11237,13 +11186,10 @@ p {
    .vasaripaint {
         background-image: url("/assets/img/vasaripaint.jpg");
         width: 100%;
-        margin-bottom: 10rem;
-        margin-left:10rem;
-        padding: 0.3rem;
-        border-style: double;
+        margin-bottom: 30rem;
+        margin-left:30rem;
         border-width: 0.7rem;
         border-color: #243F39;
-        filter: grayscale(100%);
       }
       .intro .intro-text {
         left: 0;
@@ -11552,6 +11498,8 @@ p {
       width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
   }
 }
+
+
 
 
 /*
