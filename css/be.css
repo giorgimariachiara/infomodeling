@@ -11176,15 +11176,20 @@ p {
       height: 10rem;
       margin-top:-15.5rem ;
       margin-left:16.5rem;
-  
     }
     .donatello {
-      width: 10rem;
+      display:block;
+      width: 9rem;
       height: 10rem;
+      margin-top:-15.5rem ;
+      margin-left:16.5rem;
     }
     .leonardo {
-      width: 10rem;
+      display:block;
+      width: 9rem;
       height: 10rem;
+      margin-top:-15.5rem ;
+      margin-left:16.5rem;
     }
   }
   
@@ -11200,12 +11205,18 @@ p {
   
     }
     .donatello {
-      max-width: 650px;
-      max-height:650px;
+      display:block;
+      width: 15rem;
+      height: 13rem;
+      margin-top:-20rem ;
+      margin-left:25rem;
     }
     .leonardo {
-      max-width:650px;
-      max-height:650px;
+      display:block;
+      width: 15rem;
+      height: 13rem;
+      margin-top:-20rem ;
+      margin-left:25rem;
     }
   }
   
