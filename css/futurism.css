@@ -11281,8 +11281,6 @@ body .section-heading .section-heading-lower {
   border-bottom: 0.3vw solid #000;     
   margin-top: 3vw;
   margin-bottom: 3.5vw;
- 
-  
 }
 
 .product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
@@ -11421,6 +11419,38 @@ body .section-heading .section-heading-lower {
   
 }
 
+
+.product-item-description .bg-faded p:nth-of-type(1) .fut, 
+.product-item-description .bg-faded p:nth-of-type(4) .fut, 
+.product-item-description .bg-faded p:nth-of-type(8) .fut, 
+.product-item-description .bg-faded p:nth-of-type(11) .fut, 
+.product-item-description .bg-faded p:nth-of-type(18) .fut,
+.product-item-description .bg-faded p:nth-of-type(3) .fut,
+.product-item-description .bg-faded p:nth-of-type(14) .fut  {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.product-item-description .bg-faded p:nth-of-type(2) .fut, 
+.product-item-description .bg-faded p:nth-of-type(5) .fut,
+.product-item-description .bg-faded p:nth-of-type(6) .fut 
+.product-item-description .bg-faded p:nth-of-type(9) .fut, 
+.product-item-description .bg-faded p:nth-of-type(12) .fut, 
+.product-item-description .bg-faded p:nth-of-type(15) .fut,
+.product-item-description .bg-faded p:nth-of-type(16) .fut {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product-item-description .bg-faded p:nth-of-type(7) .fut, 
+.product-item-description .bg-faded p:nth-of-type(10) .fut,
+.product-item-description .bg-faded p:nth-of-type(17) .fut,
+.product-item-description .bg-faded p:nth-of-type(13) .fut{
+  font-weight: bold;
+  font-size: 1.7rem;
+
+
+}
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
