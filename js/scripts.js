@@ -361,6 +361,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 // Function to load saved stylesheet from localStorage
 function loadSavedStylesheet() {
     const savedStylesheet = localStorage.getItem('currentStylesheet');
