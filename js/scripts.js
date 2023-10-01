@@ -229,6 +229,12 @@ document.getElementById('next-button').addEventListener('click', () => {
 });*/
 
 
+function changeStylesheet(newStylesheet) {
+  document.getElementById('themeStylesheet').href = newStylesheet;
+  // Save the stylesheet to localStorage
+  localStorage.setItem('currentStylesheet', newStylesheet);
+}
+
 function initializeThemeButtons() {
     const themeMapping = {
         'theme1': 'css/renaissancefinale.css',
@@ -275,6 +281,52 @@ function popupfunction() {
     }
 }
 //ends popup script
+
+
+// effetto click futurismo 
+
+function removeFuturismEffects() {
+  const floatingWords = document.querySelectorAll('.floating-word');
+  floatingWords.forEach(word => word.remove());
+}
+
+function isFuturismActive(stylesheet) {
+  return stylesheet.includes('futurism.css');
+}
+
+function toggleEffectsBasedOnStylesheet(newStylesheet) {
+  if (isFuturismActive(newStylesheet)) {
+      // Activate futurism effects here
+  } else {
+      removeFuturismEffects();
+  }
+}
+
+const wordText = "click";
+
+function createWord(className) {
+    const word = document.createElement("div");
+    word.textContent = wordText;
+    word.classList.add('floating-word', className);
+    document.body.appendChild(word);
+}
+
+function randomizeWordPosition(wordElement) {
+    const randomTop = Math.random() * (window.innerHeight - 100);
+    const randomLeft = Math.random() * (window.innerWidth - 100);
+
+    wordElement.style.top = `${randomTop}px`;
+    wordElement.style.left = `${randomLeft}px`;
+}
+
+function activateFuturismEffects() {
+  for (let i = 1; i <= 7; i++) {
+      const className = `word${i}`;
+      createWord(className);
+      const wordElement = document.querySelector(`.${className}`);
+      randomizeWordPosition(wordElement);
+  }
+}
 
 //effetto titolo futurismo
 const siteHeadingUpper = document.querySelector(".site-heading-upper");
@@ -345,33 +397,4 @@ const siteHeadingUpper = document.querySelector(".site-heading-upper");
                     wrapAlternateLettersInSpans(navLink);
                 });
             });
-
-//fiori animazione
-document.addEventListener('DOMContentLoaded', function() {
-  const siteHeading = document.querySelector('.site-heading');
-
-  function animateBackgroundImage() {
-      setTimeout(function() {
-          siteHeading.style.backgroundSize = '100%'; // Imposta la dimensione finale desiderata
-      }, 100); // Ritarda l'animazione di 100 millisecondi
-  }
-
-  // Avvia l'animazione quando il documento è pronto
-  animateBackgroundImage();
-});
-
-
-
-// Function to load saved stylesheet from localStorage
-function loadSavedStylesheet() {
-    const savedStylesheet = localStorage.getItem('currentStylesheet');
-    if (savedStylesheet) {
-        changeStylesheet(savedStylesheet);
-        toggleEffectsBasedOnStylesheet(savedStylesheet);
-    }
-}
-
-// Load saved stylesheet
-loadSavedStylesheet();
-
 
