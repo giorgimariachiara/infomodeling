@@ -11867,8 +11867,119 @@ font-size: 2rem;
   
   #search-input {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--bs-gold);
     font-size: 1rem;
+    background-color: #dfd9c8;
   }
 
+  #search-input:focus {
+    outline: 2px solid var(--bs-gold);
+    color: var(--bs-gold);
+    background-color: #dfd9c8;
+  }
 
+  .searchBar #search-input {
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  .vasaripaint{
+    margin-right:40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70vw;
+    max-width: 750px;
+    height: 50vw;
+    max-height:940px;
+    background-image: url('../assets/img/vasaripaintrenaissance.svg');
+    padding: 0;
+  }
+  
+  @media (max-width: 576px) {
+    .intro .vasaripaint {
+      width: 75%;
+      margin-left: 6rem;
+    }
+    .intro .intro-text {
+      
+      width: 100%;
+    }
+    .intro .intro-text .intro-button {
+      width: 80%; 
+      position: absolute;
+   
+    }
+  }
+  
+  @media (min-width: 577px) and (max-width: 700px) {
+    .intro .vasaripaint {
+      width: 75%;
+      margin-left: 5rem;
+    }
+    .intro .intro-text {
+      
+      width: 100%;
+    }
+    .intro .intro-text .intro-button {
+      width: 100%; 
+      position: absolute;
+      
+    }
+  }
+  
+  @media (min-width: 701px) and (max-width: 991px) {
+   .intro .vasaripaint {
+      width: 80%;
+      margin-left: 5rem;
+    }
+    .intro .intro-text {
+     
+      width: 100%;
+      margin-top:-3rem;
+    }
+    .intro .intro-text .intro-button {
+      width: 100%; 
+      position: absolute;
+     
+      
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width:1199px){
+    .intro .vasaripaint {
+      width: 50%;
+      float: right;
+      margin-top: -2rem;
+    }
+    .intro .intro-text {
+      left: 0;
+      width: 50%;
+      position: absolute;
+    }
+    .intro .intro-text .intro-button {
+      width: 100%;
+      left: 0;
+      position: absolute;
+    
+      
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .intro .vasaripaint {
+      width: 60%;
+      float: right;
+      margin-top: -3rem;
+    }
+    .intro .intro-text {
+      left: 0;
+      width: 50%;
+      position: absolute;
+    }
+    .intro .intro-text .intro-button {
+      width: 100%;
+      left: 0;
+      position: absolute;
+      
+    }
+  }
