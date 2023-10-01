@@ -2773,7 +2773,7 @@ textarea.form-control-lg {
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
-  --bs-btn-color: #212529;
+  --bs-btn-color:  #243F39;
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
   --bs-btn-border-color: transparent;
@@ -2788,7 +2788,7 @@ textarea.form-control-lg {
   font-size: var(--bs-btn-font-size);
   font-weight: var(--bs-btn-font-weight);
   line-height: var(--bs-btn-line-height);
-  color: var(--bs-btn-color);
+  color: #AF4751!important;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -2798,7 +2798,7 @@ textarea.form-control-lg {
           user-select: none;
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
-  background-color: var(--bs-btn-bg);
+  background-color: #AF4751!important;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {

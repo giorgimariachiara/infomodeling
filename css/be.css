@@ -2873,19 +2873,19 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #e6a756;
-  --bs-btn-border-color: #e6a756;
+  --bs-btn-bg: #AF4751;
+  --bs-btn-border-color:#AF4751;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #eab46f;
-  --bs-btn-hover-border-color: #e9b067;
+  --bs-btn-hover-bg:#AF4751;
+  --bs-btn-hover-border-color: #AF4751;
   --bs-btn-focus-shadow-rgb: 196, 142, 73;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ebb978;
-  --bs-btn-active-border-color: #e9b067;
+  --bs-btn-active-bg: #AF4751;
+  --bs-btn-active-border-color: #AF4751;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #e6a756;
-  --bs-btn-disabled-border-color: #e6a756;
+  --bs-btn-disabled-bg: #AF4751;
+  --bs-btn-disabled-border-color: #AF4751;
 }
 
 .btn-secondary {
@@ -11091,9 +11091,7 @@ p {
   background-color: rgba(47, 23, 15, 0.9);
 }
 
-.intro {
-  position: relative;
-}
+
 /*immagini*/
 
 .verrocchio {
@@ -11171,47 +11169,46 @@ p {
       margin-left:25rem;
     }
   }
+
+  .vasaripaint {
+    background-image: url('/assets/img/vasaripaintbe.png')!important;
+    background-repeat: no-repeat;
+   background-size: contain;
+   
+  }
+
+  .container {
+    width: auto!important;
+    height: auto!important;
+    display: flex!important;
+
   
+ }
  
 
 @media (min-width: 500px){
 
-    .container {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+  .container{
+    display: flex!important;
+    flex-direction: column!important;
+    align-items: center!important;
+}
+  .vasaripaint{
+    width: auto!important;
+    height: 30rem!important;
+    margin-top:20rem;
+   margin-left: 2.5rem!important;
+   margin-bottom:2rem!important;
+  }
    
+  .intro-text{
+    width: 70%!important;
+    background-color: #FFFAF0!important;
+    margin-left:5rem;
+    margin-top:-55rem;
+
   }
   
-   .vasaripaint {
-        background-image: url("/assets/img/vasaripaint.jpg");
-        width: 100%;
-        margin-bottom: 30rem;
-        margin-left:30rem;
-        border-width: 0.7rem;
-        border-color: #243F39;
-      }
-      .intro .intro-text {
-        left: 0;
-        margin-left:2rem;
-        width: 100%;
-        margin-top: 3rem;
-        position: absolute;
-        font-family: "Alexang";
-        background-color: transparent;
-        border: 1rem #243F39 ridge;
-  
-        
-      }
-      .intro .intro-text .intro-button {
-        width: 100%;
-        margin-top:1rem;
-        bottom: 1rem;
-        font-family: "Alexang";
-       
-       
-      }
-
       .product-item .product-item-title {
         position: relative;
         z-index: 2;
@@ -11237,9 +11234,11 @@ p {
       }
       .product-item-title .bg-faded{
         width: 100%;
+        
+       
       }
   
-      .section-heading-upper{
+      .product-item-title .section-heading-upper{
         font-family: "OTP";
         writing-mode: vertical-lr; /* Verticale da sinistra a destra */
         text-orientation: upright; /* Mantiene le lettere dritte */
@@ -11248,10 +11247,10 @@ p {
         margin-left:5.8rem;      
       }
 
-      .section-heading-lower{
+      .product-item-title .section-heading-lower{
         font-family: "Copperplate";
         text-transform: lowercase;
-       font-size: 8px!important;
+       font-size: 1rem!important;
         margin-left:1rem;
         margin-top: -0.5rem;
         line-height: 1.5;
@@ -11272,38 +11271,24 @@ p {
   
   }
 @media (min-width: 992px) {
-    .intro .vasaripaint {
-        background-image: url("/assets/img/vasaripaint.jpg");
-        width: 100%;
-        float: right;
-        padding: 0.3rem;
-        border-style: double;
-        border-width: 0.7rem;
-        border-color: #243F39;
-        filter: grayscale(100%);
-        margin-left:10rem;
-      }
- 
-  .intro .intro-text {
-    left: 0;
-    width: 30%;
-    height:100%;
-    margin-top: 0.2rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
-    position: absolute;
-    background-color: transparent;
-    border: 1rem #243F39 ridge;
+  
 
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: 1rem;
-    margin-bottom: 5rem;
+.vasaripaint{
+  width: 100%!important;
+  height: 30rem!important;
+  margin-left:16rem!important;
+  
+}
 
-  }
+.intro-text{
+  width: 60%;
+  height:30rem;
+  margin-top:-32rem!important;
+  margin-left:-8rem;
+  background-color: #FFFAF0!important;
+
+}
+
 
   .product-item .product-item-title {
     position: relative;
@@ -11335,7 +11320,7 @@ p {
     
   }
  
-  .section-heading-upper{
+  .product-item-title .section-heading-upper{
     font-family: "Copperplate";
     writing-mode: vertical-lr; /* Verticale da sinistra a destra */
     text-orientation: upright; /* Mantiene le lettere dritte */
@@ -11347,11 +11332,11 @@ p {
 
 
  
-  .section-heading-lower{
+  .product-item-title .section-heading-lower{
     position:absolute;
     font-family: "Copperplate";
     text-transform: lowercase;
-    font-size: 8px!important;
+    font-size: 1rem!important;
     margin-left: -7rem!important;
      margin-top: 1.2rem;
     line-height: 1.5;
@@ -11418,7 +11403,7 @@ p {
     white-space: pre; 
   }
   .bg-faded {
-    background-color: #f6e1c5;
+    background-color:#FFFAF0!important;
   }
   
 
