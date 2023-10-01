@@ -11588,8 +11588,7 @@ p {
     }
 }
 
-@media (max-width: 576px) {
-   
+@media (max-width: 576px) {  
     .general {
         width: 20rem;
         height: 15rem;
@@ -11871,3 +11870,5 @@ font-size: 2rem;
     border: 1px solid #ccc;
     font-size: 1rem;
   }
+
+
