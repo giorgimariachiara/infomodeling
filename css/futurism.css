@@ -4356,7 +4356,7 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
 }
 
 input[type="checkbox"] {
-  margin-right: 0.5rem;
+ 
   cursor: pointer;
 }
 label {
@@ -4369,7 +4369,7 @@ label {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   color: #fff; 
   text-align: left;
   background: var(--bs-accordion-btn-bg);
@@ -4378,16 +4378,28 @@ label {
   transition: var(--bs-accordion-transition);
   font-family: 'SquareFont';
   border: 2px solid var(--bs-accordion-border-color);
-  letter-spacing: 10px; 
+  letter-spacing: 0.7rem; 
+  font-size:1rem;
+ 
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
     transition: none;
   }
 }
+
+@media (min-width: 768px){
+  .accordion-item:not(:first-child) .accordion-button {
+    letter-spacing: 0.2rem;
+}
+.accordion-item:first-child .accordion-button {
+  letter-spacing: 0.5rem;
+}
+}
 .accordion-button span {
-  font-size: 1.2em; 
-  transform: rotate(10deg) /* Rende le lettere all'interno di <span> più grandi */
+  font-size: 1r.2em; 
+  font-weight: bold;
+  transform: rotate(10deg);/* Rende le lettere all'interno di <span> più grandi */
 }
 .accordion-button:not(.collapsed) {
   background: var(--bs-accordion-active-bg);
@@ -11269,8 +11281,6 @@ body .section-heading .section-heading-lower {
   border-bottom: 0.3vw solid #000;     
   margin-top: 3vw;
   margin-bottom: 3.5vw;
- 
-  
 }
 
 .product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
@@ -11409,6 +11419,38 @@ body .section-heading .section-heading-lower {
   
 }
 
+
+.product-item-description .bg-faded p:nth-of-type(1) .fut, 
+.product-item-description .bg-faded p:nth-of-type(4) .fut, 
+.product-item-description .bg-faded p:nth-of-type(8) .fut, 
+.product-item-description .bg-faded p:nth-of-type(11) .fut, 
+.product-item-description .bg-faded p:nth-of-type(18) .fut,
+.product-item-description .bg-faded p:nth-of-type(3) .fut,
+.product-item-description .bg-faded p:nth-of-type(14) .fut  {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.product-item-description .bg-faded p:nth-of-type(2) .fut, 
+.product-item-description .bg-faded p:nth-of-type(5) .fut,
+.product-item-description .bg-faded p:nth-of-type(6) .fut 
+.product-item-description .bg-faded p:nth-of-type(9) .fut, 
+.product-item-description .bg-faded p:nth-of-type(12) .fut, 
+.product-item-description .bg-faded p:nth-of-type(15) .fut,
+.product-item-description .bg-faded p:nth-of-type(16) .fut {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product-item-description .bg-faded p:nth-of-type(7) .fut, 
+.product-item-description .bg-faded p:nth-of-type(10) .fut,
+.product-item-description .bg-faded p:nth-of-type(17) .fut,
+.product-item-description .bg-faded p:nth-of-type(13) .fut{
+  font-weight: bold;
+  font-size: 1.7rem;
+
+
+}
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -12536,7 +12578,6 @@ background-image: url('/assets/img/cursorefuturismo.svg');
   font-family: "Roboto";
   text-transform: uppercase;
   text-align: center;
-
 }
 
 .leaflet-popup-tip {
@@ -12548,15 +12589,60 @@ background-image: url('/assets/img/cursorefuturismo.svg');
   color: black;            
 }
 
-
 /* Stile per gli elementi evidenziati */
 .highlight {
   background-color: yellow !important;
   font-weight: bold !important;
+}
+
+#occurrences-count {
+  font-family: "Roboto";
+  color: black;
+  background-color: white;
+  margin-left: 0.5rem;
+}
+
+#search-input {
+  font-family: "SquareFont";
+  background-color: #7cb76c;
+  color: black;
+  outline: 4px solid #673d86;
+}
+
+#search-input:focus {
+  outline: 4px solid #7cb76c;
+  color: white;
+  letter-spacing: 0.2rem;
+  background-color: #673d86;
+}
+
+#prev-button, #next-button {
+  background-color: #673d86;
+  color: white;
+  margin-top: 1rem;
+}
+
+.searchBar #search-input {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+  #search-input {
+    margin-right: 2rem;
   }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  #search-input {
+    margin-right: 2rem;
+  }
+}
 
 
-  
+
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -1px) rotate(-1deg); }
