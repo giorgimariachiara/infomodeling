@@ -63,6 +63,10 @@ $(document).ready(function() {
           $("#personNameTitle").hide();
       }
   });
+
+    // Load saved stylesheet
+    loadSavedStylesheet();
+
 });
 
 let searchTerm = '';
@@ -314,5 +318,3 @@ function loadSavedStylesheet() {
     }
 }
 
-// Load saved stylesheet
-loadSavedStylesheet();
