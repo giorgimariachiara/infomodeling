@@ -11027,7 +11027,7 @@ p {
   font-family: 'Copperplate'!important;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100000000;
 
 }
 #mainNav .navbar-brand {
@@ -11142,8 +11142,79 @@ p {
 .intro {
   position: relative;
 }
+/*immagini*/
 
-@media (min-width: 400px){
+.verrocchio {
+  position:relative;
+    background-image: url('/assets/img/verrocchiobe.svg');
+    background-repeat: no-repeat;
+    z-index: 100000;
+  
+    
+   
+  }
+  .donatello{
+    position:relative;
+    background-image: url('/assets/img/Donatellobe.svg');
+    background-repeat: no-repeat;
+    z-index: 100000;
+  
+  
+  }
+  .leonardo{
+    position:relative;
+    background-image: url('/assets/img/leonardobe.svg');
+    background-repeat: no-repeat;
+    z-index: 100000;
+  }
+  
+  
+  @media (min-width: 500px){
+    .verrocchio {
+      display:block;
+      width: 9rem;
+      height: 10rem;
+      margin-top:-15.5rem ;
+      margin-left:16.5rem;
+  
+    }
+    .donatello {
+      width: 10rem;
+      height: 10rem;
+    }
+    .leonardo {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+  
+  
+  
+  @media (min-width: 992px){
+    .verrocchio {
+      display:block;
+      width: 15rem;
+      height: 13rem;
+      margin-top:-20rem ;
+      margin-left:25rem;
+  
+    }
+    .donatello {
+      max-width: 650px;
+      max-height:650px;
+    }
+    .leonardo {
+      max-width:650px;
+      max-height:650px;
+    }
+  }
+  
+  .vasaripaint {
+    background-image: url('/assets/img/vasaripaint.jpg');
+  }
+  
+
+@media (min-width: 500px){
 
     .container {
      display: flex;
@@ -11183,23 +11254,60 @@ p {
        
        
       }
+
+      .product-item .product-item-title {
+        position: relative;
+        z-index: 2;
+        margin-bottom: -1rem;
+      
+      }
+      .product-item .product-item-img {
+        position: relative;
+        z-index: 0;
+        max-width: 60vw;
+      }
+      .product-item .product-item-description {
+        position: relative;
+        z-index: 0;
+        margin-top: 8rem;
+        width: 85%;
+        margin-left:4.3rem!important;
+      }
+      .product-item-title{
+        width: 500px;
+        height: 310px;
+        margin-left:5rem;
+      }
+      .product-item-title .bg-faded{
+        width: 100%;
+      }
+  
       .section-heading-upper{
-        font-family: "Copperplate";
+        font-family: "OTP";
         writing-mode: vertical-lr; /* Verticale da sinistra a destra */
         text-orientation: upright; /* Mantiene le lettere dritte */
         height: 100%;
-        margin-top: 1rem;
-        margin-left:5rem;
-        
-        
+        margin-top: -1.7rem;
+        margin-left:5.8rem;      
       }
+
       .section-heading-lower{
         font-family: "Copperplate";
-        margin-left:24rem;
-        margin-top: -13rem;
-        line-height: 2;
-        width: 20%;
+        text-transform: lowercase;
+       font-size: 8px!important;
+        margin-left:1rem;
+        margin-top: -0.5rem;
+        line-height: 1.5;
+        width: 99%;
       }
+
+    .lifeof::after {
+    content: "\A\A\A\A\A\A\A\A\A\A\A ";
+    white-space: pre;
+}
+.product-item-description p{
+  padding-top: 1rem!important;
+}
 
   .footer{
     margin-top:40rem;
@@ -11239,100 +11347,7 @@ p {
     margin-bottom: 5rem;
 
   }
-  .section-heading-upper{
-    font-family: "Copperplate";
-    writing-mode: vertical-lr; /* Verticale da sinistra a destra */
-    text-orientation: upright; /* Mantiene le lettere dritte */
-    height: 80%;
-    margin-top: 1rem;
-    margin-left:5rem;
-    
-    
-  }
-  .section-heading-lower{
-    font-family: "Copperplate";
-    margin-left:24rem;
-    margin-top: -13rem;
-    line-height: 2;
-    width: 20%;
-  }
 
-}
-
-@media (min-width: 1200px) {
-    .intro .intro-text {
-        width: 30%;
-        height: auto;
-        margin-right: 5rem;
-        background-color: transparent;
-        border: 1rem #243F39 ridge;
-        margin-bottom: 10rem!important;
-        padding-bottom:15rem;
-    
-      }
-      .intro .vasaripaint{
-        background-image: url("/assets/img/vasaripaint.jpg");
-        width: 100%;
-        padding: 0.3rem;
-        margin-right: 5rem;
-        margin-left: 5rem;
-        border-style: double;
-        border-width: 0.7rem;
-        border-color: #243F39;
-        filter: grayscale(100%);
-    
-      }
-      .intro .intro-text .intro-button {
-        width: 100%;
-        margin-top: 20rem;
-      }
-      .section-heading-upper{
-        font-family: "Copperplate";
-        writing-mode: vertical-lr; /* Verticale da sinistra a destra */
-        text-orientation: upright; /* Mantiene le lettere dritte */
-        height: 80%;
-        margin-top: 1rem;
-        margin-left:5rem;
-        
-        
-      }
-      .section-heading-lower{
-        font-family: "Copperplate";
-        margin-left:24rem;
-        margin-top: -13rem;
-        line-height: 2;
-        width: 20%;
-      }
-    
-}
-
-@media (min-width: 300px) {
-    .product-item .product-item-title {
-      position: relative;
-      z-index: 2;
-      margin-bottom: -1rem;
-    
-    }
-    .product-item .product-item-img {
-      position: relative;
-      z-index: 0;
-      max-width: 60vw;
-    }
-    .product-item .product-item-description {
-      position: relative;
-      z-index: 0;
-      margin-top: 3rem;
-      max-width: 85vw;
-      margin-left:40px!important;
-    }
-    .product-item-title{
-      width: 500px;
-      height: 310px;
-      margin-left:40px;
-    }
-  }
-
-@media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
@@ -11346,8 +11361,13 @@ p {
   .product-item .product-item-description {
     position: relative;
     z-index: 0;
-    margin-top: 3rem;
-    max-width: 50vw;
+    margin-left:8rem!important;
+    margin-top: 10rem;
+
+    width: 80%;
+  }
+  .product-item-description p{
+    padding-top: 1rem!important;
   }
   .product-item-title{
     width: 800px;
@@ -11358,8 +11378,38 @@ p {
     
   }
  
+  .section-heading-upper{
+    font-family: "Copperplate";
+    writing-mode: vertical-lr; /* Verticale da sinistra a destra */
+    text-orientation: upright; /* Mantiene le lettere dritte */
+    width: 100%;
+    height: 80%;
+    margin-top: -1rem;
+    margin-left:9rem;
+  }
+
+
+ 
+  .section-heading-lower{
+    position:absolute;
+    font-family: "Copperplate";
+    text-transform: lowercase;
+    font-size: 8px!important;
+    margin-left: -7rem!important;
+     margin-top: 1.2rem;
+    line-height: 1.5;
+    width: 99%;
+  }
+
+  .lifeof::after {
+    content: "\A\A\A\A\A\A\A\A\A\A\A\A\A ";
+    white-space: pre;
+}
 
 }
+
+
+
 
 .product-item-title .bg-faded{
     background-image: url("/assets/img/titbe.svg");
@@ -11473,7 +11523,8 @@ p {
   flex: 3;  /* Takes 3/4 of the container width */
 }
 
-@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+
+@media (max-width: 770px) { /* Puoi regolare questo breakpoint come necessario */
   .content-wrapper {
       flex-direction: column;
   }
@@ -11652,102 +11703,6 @@ p {
 .sub-btn:hover .btn-hover-text {
   display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
 }
-
-/*immagini*/
-
-.verrocchio {
-position:relative;
-  background-image: url('/assets/img/verrocchiobe.svg');
-  background-repeat: no-repeat;
-  z-index: 100000;
-
-  
- 
-}
-.donatello{
-  position:relative;
-
-  background-image: url('/assets/img/Donatellobe.svg');
-  background-repeat: no-repeat;
-  z-index: 100000;
-
-
-}
-.leonardo{
-  position:relative;
-
-  background-image: url('/assets/img/leonardobe.svg');
-  background-repeat: no-repeat;
-  z-index: 100000;
-
-  
-}
-
-
-@media (min-width: 400px){
-  .verrocchio {
-    width: 11rem;
-    height: 19rem;
-    margin-top:-15.85rem ;
-    margin-left:12.5rem;
-
-    
-  }
-  .donatello {
-    width: 10rem;
-    height: 10rem;
-  }
-  .leonardo {
-    width: 10rem;
-    height: 10rem;
-  }
-}
-
-
-@media (min-width: 900px){
-  .verrocchio {
-    width: 14rem;
-    height: 19rem;
-    margin-top:-20.3rem ;
-    margin-left:19.8rem;
-    z-index: 100000;
-  }
-  .donatello {
-    max-width: 350px;
-    max-height:350px;
-  }
-  .leonardo {
-    max-width:350px;
-    max-height:350px;
-  }
-}
-@media (min-width: 1200px){
-  .verrocchio {
-    width: 14rem;
-    height: 23rem;
-    margin-top:-20.4rem ;
-    margin-left:19.7rem;
-    z-index: 100000;
-
-    
-  }
-  .donatello {
-    max-width: 650px;
-    max-height:650px;
-  }
-  .leonardo {
-    max-width:650px;
-    max-height:650px;
-  }
-}
-
-
-
-.vasaripaint {
-  background-image: url('/assets/img/vasaripaint.jpg');
-}
-
-
 
 
 .decorative-img{
