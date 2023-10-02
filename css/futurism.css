@@ -12284,23 +12284,28 @@ figcaption:nth-of-type(2) {
 .btns-grid-container {
   display: grid;
   position: fixed;
-  right: 0.6rem;  /* 10px convertito in rem */
-  bottom: 0.6rem;  /* 10px convertito in rem */
-  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 0.3125rem;  /* 5px convertito in rem */
-  z-index: 9999;  /* This will ensure it's on top of most other elements */
+  right: 0.6rem;  
+  bottom: 0.6rem;  
+  grid-template-rows: repeat(8, auto);  
+  gap: 0.3125rem;  
+  z-index: 9999;  
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 3.75rem;  /* 60px convertito in rem */
-  height: 3.75rem;  /* 60px convertito in rem */
-  border: 0.4375rem solid #8bc276;  /* 7px convertito in rem */
+  width: 3.75rem;  
+  height: 3.75rem; 
+  border: 0.2rem solid #8bc276;  
   background-color: rgba(247,230,186);  
   color: #fff;
   cursor: pointer;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #e77f3d;  /* Adjust hover color as required */
+  border: 0.2rem solid rgba(247,230,186);  
+  background-color: #8bc276 ;   
 }
 
 .sub-btn[data-theme] {
@@ -12308,7 +12313,7 @@ figcaption:nth-of-type(2) {
 }
 
 #stylesBtn {
-  background-image: url('../assets/img/paint.png');
+  background-image: url('../assets/img/old.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12343,25 +12348,26 @@ figcaption:nth-of-type(2) {
 }
 
 #toTopBtn .btn-icon {
-  color: #673d86; /* Questo è un esempio di colore viola. Puoi sostituirlo con il codice esatto del colore viola che desideri. */
+  color: #673d86; 
 }
 
 .sub-btn {
-  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+  position: relative; 
 }
 
 .btn-hover-text {
   display: none;  
   position: absolute;
   top: 0;  
-  left: 10%;
+  left: 50%;
   transform: translateX(-100%); 
   font-size: 1.1rem; 
   background-color: rgba(247,230,186);
   font-family: "SquareFont"; 
   color: #da7634; 
   font-weight: bold;
-  padding: 0.1rem 0.3rem; 
+  padding: 0.1rem 0.6rem; 
+  margin: 2px;
 }
 
 .sub-btn:hover .btn-hover-text {
