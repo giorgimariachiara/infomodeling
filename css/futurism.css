@@ -12386,9 +12386,10 @@ figcaption:nth-of-type(2) {
   display: inline;
 }
 
+
 /*prova effetto parole*/
 .floating-word {
-  color:white;
+  color: white;
   font-family: "SquareFont";
   position: fixed;
   opacity: 0;
@@ -12401,128 +12402,43 @@ figcaption:nth-of-type(2) {
   padding: 0;
 }
 
-@media (max-width: 576px) {
-  .word1 {
-    right: 90%;
-    top: 30%;
-    font-size: 2em;
-    animation-name: fadeInOut1;
-    color:#fed231;
-    transform:rotate(20deg);
-  }
-  
-  .word2 {
-    left: 70%;
-    top: 45%;
-    font-size: 1em;
-    animation-name: fadeInOut2;
-  }
-  
-  .word3 {
-    left: 30%;
-    top: 70%;
-    font-size: 3em;
-    animation-name: fadeInOut3;
-    color:#673d86;
-  }
-  
-  .word4 {
-    left: 60%;
-    top: 10%;
-    font-size: 3em;
-    animation: curveFadeInOut 4s infinite;
-  }
-  
-  .word5 {
-    right: 60%;
-    top: 40%;
-    font-size: 1em;
-    color:#7cb76c;
-    animation: curveFadeInOut2 4s infinite;
-  }
+.word1, .word6, .word7 {
+  font-size: 2em;
+  color: #fed231;
+  transform: rotate(20deg);
+  animation-name: fadeInOut1;
 }
 
-@media (min-width: 701px) and (max-width: 992px) {
-  .word1 {
-    right: 90%;
-    top: 30%;
-    font-size: 2em;
-    animation-name: fadeInOut1;
-    color:#fed231;
-    transform:rotate(20deg);
-  }
-  
-  .word2 {
-    left: 70%;
-    top: 45%;
-    font-size: 1em;
-    animation-name: fadeInOut2;
-  }
-  
-  .word3 {
-    left: 30%;
-    top: 70%;
-    font-size: 3em;
-    animation-name: fadeInOut3;
-    color:#673d86;
-  }
-  
-  .word4 {
-    left: 60%;
-    top: 10%;
-    font-size: 3em;
-    animation: curveFadeInOut 4s infinite;
-  }
-  
-  .word5 {
-    right: 60%;
-    top: 40%;
-    font-size: 1em;
-    color:#7cb76c;
-    animation: curveFadeInOut2 4s infinite;
-  }
-}
-@media (min-width: 992px){
-  .word1 {
-    right: 90%;
-    top: 30%;
-    font-size: 2em;
-    animation-name: fadeInOut1;
-    color:#fed231;
-    transform:rotate(20deg);
-  }
-  
-  .word2 {
-    left: 70%;
-    top: 45%;
-    font-size: 1em;
-    animation-name: fadeInOut2;
-  }
-  
-  .word3 {
-    left: 30%;
-    top: 70%;
-    font-size: 3em;
-    animation-name: fadeInOut3;
-    color:#673d86;
-  }
-  
-  .word4 {
-    left: 60%;
-    top: 10%;
-    font-size: 3em;
-    animation: curveFadeInOut 4s infinite;
-  }
-  
-  .word5 {
-    right: 60%;
-    top: 40%;
-    font-size: 1em;
-    color:#7cb76c;
-    animation: curveFadeInOut2 4s infinite;
-  }
+.word2 {
+  font-size: 1em;
+  animation-name: fadeInOut2;
 }
 
+.word3 {
+  font-size: 3em;
+  animation-name: fadeInOut3;
+  color: #673d86;
+}
+
+.word4 {
+  font-size: 3em;
+  animation: curveFadeInOut 4s infinite;
+}
+
+.word5 {
+  font-size: 1em;
+  color: #7cb76c;
+  animation: curveFadeInOut2 4s infinite;
+}
+
+.word6 {
+  font-size: 1.5em;
+  animation: curveFadeInOut2 4s infinite;
+}
+
+.word7 {
+  animation: curveFadeInOut 4s infinite;
+}
 @keyframes fadeInOut1 {
   0% { opacity: 0; }
   25% { opacity: 1; }
