@@ -80,36 +80,37 @@
 }
  */
 
-
  @font-face {
-  font-family: 'Flowers';
-  src: url('/assets/fonts/Flowers.ttf') format('truetype');
-}
+    font-family: 'Flowers';
+    src: url('/assets/fonts/Flowers.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family:'Legrand';
+    src: url('/assets/fonts/Legrand-0l8d.ttf') format('truetype');
+  }
+  @font-face {
+    font-family:'Cocotte Regular';
+    src: url('/assets/fonts/Cocotte/Cocotte-Regular-trial.ttf') format('truetype');
+  }
+  @font-face {
+    font-family:'Copperplate';
+    src: url('/assets/fonts/copperplate.ttf') format('truetype');
+  }
+  @font-face {
+    font-family:'FloralCapital';
+    src: url('/assets/fonts/FloralCapitals.ttf') format('truetype');
+  }
+  @font-face {
+    font-family:'Alexang';
+    src: url('/assets/fonts/alexang-display.regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family:'OTP';
+    src: url('/assets/fonts/OPTIKiteLight.otf') format('truetype');
+  }
 
-@font-face {
-  font-family:'Legrand';
-  src: url('/assets/fonts/Legrand-0l8d.ttf') format('truetype');
-}
-@font-face {
-  font-family:'Cocotte Regular';
-  src: url('/assets/fonts/Cocotte/Cocotte-Regular-trial.ttf') format('truetype');
-}
-@font-face {
-  font-family:'Copperplate';
-  src: url('/assets/fonts/copperplate.ttf') format('truetype');
-}
-@font-face {
-  font-family:'FloralCapital';
-  src: url('/assets/fonts/FloralCapitals.ttf') format('truetype');
-}
-@font-face {
-  font-family:'Alexang';
-  src: url('/assets/fonts/alexang-display.regular.ttf') format('truetype');
-}
-@font-face {
-  font-family:'OTP';
-  src: url('/assets/fonts/OPTIKiteLight.otf') format('truetype');
-}
+
 *,
 *::before,
 *::after {
@@ -123,19 +124,14 @@
 }
 
 body {
-  margin: 0;
-  font-family: "Copperplate";
-  font-size: 1rem;
-  background-image: url('/assets/img/bebg.svg')!important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-/*
-p::first-letter {
-  font-family: "FloralCapital"; 
-  font-size: 7rem;
-}
-*/
+    margin: 0;
+    font-family: "Copperplate";
+    font-size: 1rem;
+    background-image: url('/assets/img/bebg.svg')!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -673,7 +669,31 @@ progress {
   margin-left: auto;
 }
 
-
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -2853,19 +2873,19 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: transparent;
-  --bs-btn-border-color: #CAC0CD;
-  --bs-btn-hover-color: #AF4751;
-  --bs-btn-hover-bg:transparent;
-  --bs-btn-hover-border-color: #CAC0CD;
+  --bs-btn-bg: #AF4751;
+  --bs-btn-border-color:#AF4751;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg:#AF4751;
+  --bs-btn-hover-border-color: #AF4751;
   --bs-btn-focus-shadow-rgb: 196, 142, 73;
-  --bs-btn-active-color: #AF4751;
-  --bs-btn-active-bg: #CAC0CD;
-  --bs-btn-active-border-color: #CAC0CD;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #AF4751;
+  --bs-btn-active-border-color: #AF4751;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #AF4751;
-  --bs-btn-disabled-bg: #CAC0CD;
-  --bs-btn-disabled-border-color: #CAC0CD;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #AF4751;
+  --bs-btn-disabled-border-color: #AF4751;
 }
 
 .btn-secondary {
@@ -3618,7 +3638,7 @@ textarea.form-control-lg {
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
-  --bs-nav-link-disabled-color:#CAC0CD;
+  --bs-nav-link-disabled-color: #6c757d;
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -3690,7 +3710,7 @@ textarea.form-control-lg {
 .nav-pills {
   --bs-nav-pills-border-radius: 0.375rem;
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #E49462;
+  --bs-nav-pills-link-active-bg: #e6a756;
 }
 .nav-pills .nav-link {
   background: none;
@@ -3749,7 +3769,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
-  --bs-navbar-toggler-icon-bg: url("/assets/img/icons8-menu.svg");
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
@@ -3853,7 +3873,7 @@ textarea.form-control-lg {
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  background-image: url("/assets/img/icons8-menu.svg");
+  background-image: var(--bs-navbar-toggler-icon-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -4153,7 +4173,7 @@ textarea.form-control-lg {
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
-  --bs-navbar-toggler-icon-bg: url("/assets/img/icons8-menu.svg");
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .card {
@@ -10835,12 +10855,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
 
 p {
   line-height: 1.75;
@@ -10850,150 +10864,89 @@ p {
   color: #f6e1c5;
 }
 
-
 .site-heading {
-  background-image: url("/assets/img/corniceverde.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-right: 3rem;
-  /* Altre proprietà comuni */
-  padding-left: 2.5rem;
-  padding-right: 4.5rem;
-  padding-bottom: 4.5rem;
-  margin-top: 2.5rem;
-}
-@media (min-width: 400px){
-  .site-heading {
-    /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
-    background-size: 65%!important;
-    padding-left: 2.5rem!important;
-    padding-right: 4.5rem!important;
-    padding-bottom: 9rem!important;
-    margin-top: 2.5rem!important;
-}
-  .site-heading .site-heading-upper {
-    display: block!important;
-    font-family: "Copperplate"!important;
-    font-size: 3rem !important;
-    color: #243F39 !important;
-    font-weight: lighter!important;
-    width: 30%!important;
-    margin-left: 10rem!important;
-    margin-top: 3rem!important;
-    text-align: left!important;
+    background-image: url("/assets/img/corniceverde.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-transform: uppercase;
+    line-height: 1;
   
-
    
-  }
-  .site-heading .site-heading-lower {
-    width: auto!important;
-    font-size: 10rem!important;
-    line-height: 1rem!important;
-    font-family: "Alexang"!important;
-    font-style: normal!important;
-    color: #243F39!important ;
-    font-weight: 100!important;
-    border-bottom: 3px ridge  #243F39!important;
-   margin-top: 5rem!important;
-  }
-}
-
-@media (min-width: 600px){
-  .site-heading {
-    /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
-    background-size: 70%!important;
-    padding-left: 5rem!important;
-    padding-right: 7rem!important;
-    padding-bottom: 18rem!important;
-    margin-top: 5rem!important;
-
-  }
-  .site-heading .site-heading-upper {
-    display: block!important;
-    font-family: "Copperplate"!important;
-    font-size: 2rem!important;
-    color: #243F39 !important;
-    font-weight: lighter!important;
-    width: 40%!important;
-    margin-left: 7rem!important;
-    margin-top: 3rem!important;
-    text-align: left!important;
-    margin-left: 12rem!important;
-
-   
-  }
-  .site-heading .site-heading-lower {
-    width: auto!important;
-    font-size: 10rem!important;
-    line-height: 2rem;
-    font-family: "Alexang"!important;
-    font-style: normal!important;
-    color: #243F39!important ;
-    font-weight: 100!important;
-    border-bottom: 3px ridge  #243F39!important;
-   margin-top: 5rem!important;
-
-  }
-}
-
-
-@media (min-width: 1250px){
-  .site-heading {
-    /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
-    background-size: 100%!important;
-    padding-left: 5.5rem!important;
-    padding-right: 7rem!important;
-    padding-bottom: 18rem!important;
-    margin-top: 5rem!important;
-}
-.site-heading .site-heading-upper {
-  display: block;
-  font-family: "Copperplate";
-  font-size: 3.2rem;
-  color: #243F39 !important;
-  text-align: left;
-  font-weight: lighter;
-  width: 40%;
-  margin-left: 18.5rem;
-  margin-top: 3rem;
  
-}
-.site-heading .site-heading-lower {
-  width: auto;
-  font-size: 12rem;
-  line-height: 4rem;
-  font-family: "Alexang";
-  font-style: normal;
-  color: #243F39 ;
-  font-weight: 100;
-  border-bottom: 3px ridge  #243F39;
- margin-top: 5rem;
-}
-}
+  }
 
+  
+  @media (min-width: 992px){
+    .site-heading {
+      /* Sovrascrivi solo le proprietà specifiche per questa dimensione dello schermo */
+      background-size: 70%!important;
+      padding-left: 5rem!important;
+      padding-right: 7rem!important;
+      padding-bottom: 18rem!important;
+      margin-top: 5rem!important;
+      margin-left:1rem!important;
+    }
+    .site-heading .site-heading-upper {
+      display: block!important;
+      font-family: "Copperplate"!important;
+      font-size: 2rem!important;
+      color: #243F39 !important;
+      font-weight: lighter!important;
+      width: 40%!important;
+      margin-top: 5rem!important;
+      margin-left:15rem!important;
+  
+     
+    }
+    .site-heading .site-heading-lower {
+      width: auto!important;
+      font-size: 10rem!important;
+      line-height: 2rem;
+      font-family: "Alexang"!important;
+      font-style: normal!important;
+      color: #243F39!important ;
+      font-weight: 100!important;
+      border-bottom: 3px ridge  #243F39!important;
+     margin-top: 5rem!important;
+    }
+  }
+  
+  
+  @media (min-width: 1080px){
+
+    .site-heading .site-heading-upper {
+      margin-top:5rem!important;
+
+      margin-left:17.5rem!important;  
+      width: 40%!important;
+     
+    }
+
+  }
+  
+    
+  @media (min-width: 1280px){
+
+    .site-heading .site-heading-upper {
+      margin-top:5rem!important;
+      margin-left:26rem!important;  
+      width: 30%!important;
+     
+    }
+
+  }
+  
 .page-section {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
-.section-heading {
-  text-transform: uppercase;
-}
-.section-heading .section-heading-upper {
-  display: block;
-  font-size: 1rem;
-  font-weight: 800;
-}
-.section-heading .section-heading-lower {
-  
-  display: block;
-  font-size: 2rem;
-  font-weight: 100;
-}
 
 
+.bg-faded {
+  background-color: #f6e1c5;
+
+}
 
 .btn-xl {
   font-weight: 700;
@@ -11004,47 +10957,73 @@ p {
   padding-right: 2rem;
 }
 
-
 #mainNav {
-  padding-top: 20rem;
-  padding-bottom: 20rem;
-  font-family: "Copperplate";
-  font-size: 10rem !important;
+  background-color: #DBB2AB;
+  font-family: 'Copperplate'!important;
   position: sticky;
   top: 0;
-  z-index: 1000;  /* To ensure it stays above other elements */
+  z-index: 100000000;
+
 }
 #mainNav .navbar-brand {
   color: #e6a756;
+  font-family: 'Copperplate'!important;
+
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color:  #243F39;
+  color: #243F39!important;
+  font-family: 'Copperplate'!important;
 
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
 }
+
+
 @media (min-width: 992px) {
-  
+    nav{
+        width: auto;
+        height: 10.5rem!important;
+        background-color: rgba(219, 178, 171, 0.8);
+        margin-top: -7rem;
+        
+      }
+      
+    #mainNav{
+        background-image: url('/assets/img/bannerbe.svg');   
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:center;
+        padding-top: 20rem;
+        padding-bottom: 20rem;
+    }
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 1.3rem;
- 
+    font-size: 1rem!important;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
     color: #e6a756;
-  
   }
 
-
 }
-@media (min-width: 1200px) {
-  
+
+@media (min-width: 1180px) {
+    nav{
+        margin-top: -1rem;
+        width: auto;
+        height: 13rem!important;
+      }
+    #mainNav{
+        background-image: url('/assets/img/bannerbe.svg');   
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position:center;
+       
+    }
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 1.5rem;
- 
+    font-size: 1.2rem!important;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: rgba(255, 255, 255, 0.4);
@@ -11052,7 +11031,9 @@ p {
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
     color: #e6a756;
   }
+
 }
+
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
@@ -11095,201 +11076,301 @@ p {
   background-color: rgba(47, 23, 15, 0.9);
 }
 
-.intro {
-  position: relative;
-}
 
-@media (min-width: 150px){
+/*immagini*/
 
-  .navbar-brand{
-    float: left!important;
-    margin-top: -19rem!important;
-    margin-left:-30rem!important;
-    width: auto;
-    height: 6rem;
-    font-family: "Alexang";
-    font-size: 4rem;
-    color:#243F39 !important;
-  }
-.navbar-toggler{
-  margin-top:-20rem!important;
-
-}
-  .navbar-nav{
-    margin-left:-25rem!important;
-
-  }
-  .nav-link{
-    font-size:1.2rem!important;
-  }
-  .container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- 
-}
-
- .vasaripaint {
-      background-image: url("/assets/img/vasaripaint.jpg");
-      width: 100%;
-      margin-bottom: 10rem;
-      margin-left:10rem;
-      padding: 0.3rem;
-      border-style: double;
-      border-width: 0.7rem;
-      border-color: #243F39;
-      filter: grayscale(100%);
-    }
-    .intro .intro-text {
-      left: 0;
-      margin-left:2rem;
-      width: 100%;
-      margin-top: 3rem;
-      position: absolute;
-      font-family: "Alexang";
-      background-color: transparent;
-      border: 1rem #243F39 ridge;
-
-      
-    }
-    .intro .intro-text .intro-button {
-      width: 100%;
-      margin-top:1rem;
-      bottom: 1rem;
-      font-family: "Alexang";
-     
-     
-    }
+.verrocchio {
+  position:relative;
+    background-image: url('/assets/img/verrocchiobe.svg');
+    background-repeat: no-repeat;
+    z-index: 100000;
+  
     
    
+  }
+  .donatello{
+    position:relative;
+    background-image: url('/assets/img/Donatellobe.svg');
+    background-repeat: no-repeat;
+    z-index: 100000;
+  
+  
+  }
+  .leonardo{
+    position:relative;
+    background-image: url('/assets/img/leonardobe.svg');
+    background-repeat: no-repeat;
+    z-index: 100000;
+  }
+  
+  
+  @media (min-width: 500px){
+    .verrocchio {
+      display:block;
+      width: 9rem;
+      height: 10rem;
+      margin-top:-15.5rem ;
+      margin-left:16.5rem;
+    }
+    .donatello {
+      display:block;
+      width: 9rem;
+      height: 10rem;
+      margin-top:-15.5rem ;
+      margin-left:16.5rem;
+    }
+    .leonardo {
+      display:block;
+      width: 9rem;
+      height: 10rem;
+      margin-top:-15.5rem ;
+      margin-left:16.5rem;
+    }
+  }
+  
+  
+  
+  @media (min-width: 992px){
+    .verrocchio {
+      display:block;
+      width: 15rem;
+      height: 13rem;
+      margin-top:-20rem ;
+      margin-left:25rem;
+  
+    }
+    .donatello {
+      display:block;
+      width: 15rem;
+      height: 13rem;
+      margin-top:-20rem ;
+      margin-left:25rem;
+    }
+    .leonardo {
+      display:block;
+      width: 15rem;
+      height: 13rem;
+      margin-top:-20rem ;
+      margin-left:25rem;
+    }
+  }
 
-.footer{
-  margin-top:40rem;
+  .vasaripaint {
+    background-image: url('/assets/img/vasaripaintbe.png')!important;
+    background-repeat: no-repeat;
+   background-size: contain;
+   
+  }
+
+
+.container .intro {
+  background-color:#FFFAF0!important;
 }
 
+.intro .intro-text{
+  background-color: transparent!important;
 }
+
+
+ .intro-text .section-heading-lower{
+ text-decoration:underline;
+ text-transform: lowercase;
+  font-family: "alexang";
+ }
+
+ .intro-text p {
+  font-family: 'OTP';
+ }
+
+ .intro-text .section-heading-upper::after{
+  content: "\A\A ";
+  white-space: pre;
+    }
+    .intro-text .section-heading-lower::after{
+      content: "\A\A ";
+      white-space: pre;
+        }
+
+@media (min-width: 500px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vasaripaint {
+    width: auto;
+    height: 30rem;
+    text-align:center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right:2rem;
+    margin-bottom: 2rem;
+   
+    /* Aggiungi altre regole specifiche, se necessario */
+  }
+
+  .intro-text {
+    width: 70%;
+   
+    margin-left: 5rem;
+   }
+
+}
+
+@media (min-width: 768px) {
+  .vasaripaint{
+    margin-left:7rem;
+  }
+  .intro .intro-text{
+    margin-left: 7rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+
+  .intro .vasaripaint {
+    width: 25rem!important;
+    height: 25rem;
+    float: right;
+    margin-top: 1rem;
+    position: relative; /* Aggiungi questa proprietà */
+
+    
+  }
+  .intro .vasaripaint::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -3rem; /* Spazio a sinistra */
+    width: 3px; /* Larghezza del bordo */
+    height: 116%; /* Altezza uguale all'elemento */
+    background-color: black; /* Colore del bordo nero */
+    z-index: 1; /* Porta il bordo sotto .vasaripaint */
+  }
+  .intro .intro-text {
+    left: 0.5rem;
+    width: 35%;
+    height: 85%;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    height: 70%;
+    left: 0;
+    position: absolute;
+
+  }
+
+  .container .intro{
+    padding-bottom:2rem;
+    margin-top:2rem;
+     width: 100%;
+     border-bottom: 3px solid black;
+  }
+
 
   
  
-  
-@media (min-width: 992px) {
-  .intro .vasaripaint {
-    background-image: url("/assets/img/vasaripaint.jpg");
-    width: 100%;
-    float: right;
-    padding: 0.3rem;
-    border-style: double;
-    border-width: 0.7rem;
-    border-color: #243F39;
-    filter: grayscale(100%);
-    margin-left:10rem;
+}
+@media (min-width: 1200px){
+
+.intro .intro-text {
+    left: 2rem;
+    width: 35%;
+    height: 60%;
+    margin-top:2rem;
+    
+
   }
-  .intro .intro-text {
-    left: 0;
-    width: 30%;
-    height:100%;
-    margin-top: 0.2rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
+.intro .vasaripaint {
+    left: -2rem; /* Spazio a sinistra */
+    width: 28rem!important;
+    height: 28rem;
+    margin-top:2rem;
+
+  }
+
+  .intro .vasaripaint::before {
+    content: "";
     position: absolute;
-    background-color: transparent;
-    border: 1rem #243F39 ridge;
-
+    top: 0;
+    left: -5rem; /* Spazio a sinistra */
+    height: 115%; /* Altezza uguale all'elemento */
+    background-color: black; /* Colore del bordo nero */
+    z-index: 1; /* Porta il bordo sotto .vasaripaint */
   }
-  .intro .intro-text .intro-button {
+
+  .container .intro{
+    margin-bottom:-5rem!important;
+    margin-top:1rem!important;
+  }
+
+}
+
+
+@media (min-width: 500px){
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1rem;
+  
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 0;
+    margin-top: 8rem;
+    width: 85%;
+    margin-left:4.3rem!important;
+  }
+  .product-item-title{
+    width: 500px;
+    height: 310px;
+    margin-left:5rem;
+  }
+  .product-item-title .bg-faded{
     width: 100%;
-    left: 0;
+  }
+
+  .product-item-title .section-heading-upper{
+    font-family: "OTP";
+    writing-mode: vertical-lr; /* Verticale da sinistra a destra */
+    text-orientation: upright; /* Mantiene le lettere dritte */
+    height: 100%;
+    font-size:1.2rem!important;
+    margin-top: -1.7rem;
+    margin-left:5.6rem;      
+  }
+
+  .product-item-title .section-heading-lower{
+    font-family: "Copperplate";
+    text-transform: lowercase;
+    font-weight: lighter;
+   font-size: 0.8rem!important;
+    margin-top: -0.5rem!important;
+    margin-left: 1rem;
     position: absolute;
-    bottom: 1rem;
-    margin-bottom: 5rem;
-
   }
 
+  .lifeof::after {
+   content: "\A\A\A\A\A\A\A\A\A ";
+   white-space: pre;
+    }
+    .product-item-description p{
+     padding-top: 1rem!important;
+    }
 
-  .section-heading-upper{
-    font-family: "Alexang";
-  }
-  .section-heading-lower{
-    font-family: "Alexang";
-  }
+    .footer{
+     margin-top:40rem;
+     }
 
-
-  nav{
-    width: auto;
-    height: 9.5rem;
-    background-color: rgba(219, 178, 171, 0.8);
-    margin-top: -10rem;
-
-  }
-  
-  #mainNav{
-    background-image: url('/assets/img/bannerbe.svg');   
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-   
-  }
-.nav-link{
- font-size: 1rem!important;
-}
-
-  
-
-}
-
-
-@media (min-width: 1200px) {
-  .intro .intro-text {
-    width: 30%;
-    height: auto;
-    margin-right: 5rem;
-    background-color: transparent;
-    border: 1rem #243F39 ridge;
-    margin-bottom: 10rem!important;
-    padding-bottom:15rem;
-
-  }
-  .intro .vasaripaint{
-    background-image: url("/assets/img/vasaripaint.jpg");
-    width: 100%;
-    padding: 0.3rem;
-    margin-right: 5rem;
-    margin-left: 5rem;
-    border-style: double;
-    border-width: 0.7rem;
-    border-color: #243F39;
-    filter: grayscale(100%);
-
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    margin-top: 20rem;
-  }
-  .section-heading-upper{
-    font-family: "Alexang";
-  }
-  .section-heading-lower{
-    font-family: "Alexang";
-  }
-
-nav{
-  margin-top: -4rem;
-  width: auto;
-  height: 13rem;
-}
-  #mainNav{
-    background-image: url('/assets/img/bannerbe.svg');   
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position:center;
-   
-  }
-
-.nav-link{
-  font-size:1.2rem!important;
-}
-}
-
+   }
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
@@ -11304,61 +11385,109 @@ nav{
   .product-item .product-item-description {
     position: relative;
     z-index: 0;
-    margin-top: 3rem;
-    max-width: 50vw;
+    margin-left:8rem!important;
+    margin-top: 10rem;
+
+    width: 80%;
   }
+  .product-item-description p{
+    padding-top: 1rem!important;
+  }
+  .product-item-title{
+    width: 800px;
+    height: 400px;
+  }
+  .product-item-title .bg-faded{
+    width: 80%;
+    
+  }
+ 
+  .product-item-title .section-heading-upper{
+    font-family: "Copperplate";
+    writing-mode: vertical-lr; /* Verticale da sinistra a destra */
+    text-orientation: upright; /* Mantiene le lettere dritte */
+    width: 100%;
+    height: 80%;
+    margin-top: -1rem;
+    margin-left:9rem;
+  }
+
+
+ 
+  .product-item-title .section-heading-lower{
+    position:absolute;
+    font-family: "Copperplate";
+    text-transform: lowercase;
+    font-size: 1rem!important;
+    margin-left: -7rem!important;
+     margin-top: 1rem!important;
+    line-height: 1.5;
+    width: 99%;
+  }
+
+  .lifeof::after {
+    content: "\A\A\A\A\A\A\A\A\A\A\A\A\A ";
+    white-space: pre;
 }
+
+}
+
+
+
+
 .product-item-title .bg-faded{
-  background-image: url("/assets/img/titbe.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom:5rem;
-  margin-bottom: 5rem;
-
-}
-.product-item-title h2:first-of-type{
- padding-top: 2rem;
-
-}
-
-h2 span.section-heading-lower{
-font-size: 1rem !important;
-}
-.product-item .bg-faded{
-  font-family: "Copperplate";
-  text-decoration: none !important;
-}
-.product-item-description .bg-faded{
-  background-color: #FFFAF0 !important;
-}
-.product-item-description p {
-  /* Imposta la larghezza massima per i paragrafi */
-  max-width: 100%;
-  /* Utilizza colonne, suddividendo i paragrafi in due colonne */
-  column-count: 2;
-  /* Aggiungi spazio tra le colonne se lo desideri */
-  column-gap: 20px; /* Modifica il valore a tuo piacimento */
-  font-family: "OTP" !important;
-  text-align: justify;
-}
-.product-item-description p:first-of-type::first-letter{
- font-family: "FloralCapital" !important;
- font-size: 6rem !important;
- line-height:1px ;
-}
-.product-item-description p:last-child {
-  break-inside: avoid;
-}
-
-.product-item-description p::after {
-  font-family: "OTP" !important;
-  content: "\A ❊ ❊ ❊ ";
-  font-size: 1.5rem;
-  white-space: pre; 
-}
-.bg-faded {
-  background-color: #f6e1c5;
-}
+    background-image: url("/assets/img/titbe.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #FFFAF0 !important;
+    font-family: 'Alexang'!important;
+  
+  }
+  .product-item-title h2:first-of-type{
+   padding-top: 2rem;
+  
+  }
+  
+  h2 span.section-heading-lower{
+  font-size: 1rem !important;
+  }
+  .product-item .bg-faded{
+    font-family: "Copperplate";
+    text-decoration: none !important;
+  }
+  .product-item-description .bg-faded{
+    background-color: #FFFAF0 !important;
+  }
+  
+  .product-item-description p {
+    /* Imposta la larghezza massima per i paragrafi */
+    max-width: 100%;
+    /* Utilizza colonne, suddividendo i paragrafi in due colonne */
+    column-count: 2;
+    /* Aggiungi spazio tra le colonne se lo desideri */
+    column-gap: 20px; /* Modifica il valore a tuo piacimento */
+    font-family: "OTP" !important;
+    text-align: justify;
+  }
+  .product-item-description p:first-of-type::first-letter{
+   font-family: "FloralCapital" !important;
+   font-size: 6rem !important;
+   line-height:1px ;
+  }
+  .product-item-description p:last-child {
+    break-inside: avoid;
+  }
+  
+  .product-item-description p::after {
+    font-family: "OTP" !important;
+    content: "\A ❊ ❊ ❊ ";
+    font-size: 1.5rem;
+    white-space: pre; 
+  }
+  .bg-faded {
+    background-color:#FFFAF0!important;
+  }
+  
 
 .list-hours {
   font-size: 0.9rem;
@@ -11418,7 +11547,8 @@ font-size: 1rem !important;
   flex: 3;  /* Takes 3/4 of the container width */
 }
 
-@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+
+@media (max-width: 770px) { /* Puoi regolare questo breakpoint come necessario */
   .content-wrapper {
       flex-direction: column;
   }
@@ -11435,6 +11565,8 @@ font-size: 1rem !important;
       width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
   }
 }
+
+
 
 
 /*
@@ -11508,13 +11640,6 @@ font-size: 1rem !important;
 }
 
 
-#mainNav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;  /* To ensure it stays above other elements */
-}
-
-
 
 .highlight-place {
     background-color: #6caedf;
@@ -11522,7 +11647,6 @@ font-size: 1rem !important;
 .highlight-person {
     background-color: #a1d490;
 }
-
 .btns-grid-container {
   display: grid;
   position: fixed;
@@ -11532,7 +11656,6 @@ font-size: 1rem !important;
   gap: 5px;  /* Spacing between buttons */
   z-index: 9999;  /* This will ensure it's on top of most other elements */
 }
-
 .sub-btn, #stylesBtn, #toTopBtn {
   width: 50px;  /* Adjust width as required */
   height: 50px;  /* Adjust height as required */
@@ -11542,7 +11665,6 @@ font-size: 1rem !important;
   color: #fff;
   cursor: pointer;
 }
-
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
   background-color: #555;  /* Adjust hover color as required */
 }
@@ -11608,18 +11730,6 @@ font-size: 1rem !important;
   display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
 }
 
-/*immagini*/
-
-.verrocchio{
-  width: 70vw;
-  max-width: 750px;
-  height: 50vw;
-  max-height:940px;
-  background-image: url('../assets/img/verrocchiodefault.svg');
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-
 
 .decorative-img{
   display: none;
@@ -11628,7 +11738,6 @@ font-size: 1rem !important;
 #miaLettera{
   display:none;
 }
-
 
 .letteraT {
   display: inline;
@@ -11644,209 +11753,105 @@ font-size: 1rem !important;
 
 
 
+.figcaption{
+  text-align: center;
+  margin-bottom:15px;
 
-
-/* bottoni stili */
-
-.btns-grid-container {
-  display: grid;
-  position: fixed;
-  right: 10px;  
-  bottom: 10px;  /* Adjust as per requirement */
-  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 5px;  /* Spacing between buttons */
-  z-index: 9999;  /* This will ensure it's on top of most other elements */
-}
-.sub-btn, #stylesBtn, #toTopBtn {
-  width: 50px;  /* Adjust width as required */
-  height: 50px;  /* Adjust height as required */
-  border: none;
-  border-radius: 50%;  /* To make them round */
-  background-color: rgba(47, 23, 15, 0.9);  /* Adjust color as required */
-  color: #fff;
-  cursor: pointer;
-}
-.sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #555;  /* Adjust hover color as required */
-}
-
-.sub-btn[data-theme] {
-  display: none;
-}
-#stylesBtn {
-  width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
-  height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
-  background-image: url('../assets/img/brush.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sub-btn[data-theme="theme3"] {
-  background-image: url('../assets/img/heptagon.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sub-btn[data-theme="theme1"] {
-  background-image: url('../assets/img/vitruvian-man.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sub-btn[data-theme="theme6"] {
-  background-image: url('../assets/img/brain.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sub-btn[data-theme="theme5"] {
-  background-image: url('../assets/img/late90.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sub-btn {
-  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
-}
-
-.btn-hover-text {
-  display: none;  /* Inizialmente, il testo non sarà visibile */
-  position: absolute;
-  top: 0;  /* Posiziona il testo in alto */
-  left: 10%;
-  transform: translateX(-100%); /* Centra orizzontalmente il testo */
-  font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
-  background-color: rgba(0,0,0,0.6);  /* Sfondo semi-trasparente */
-  color: white;  /* Colore del testo */
-  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
-  border-radius: 0.3rem;  /* Angoli arrotondati */
-}
-
-.sub-btn:hover .btn-hover-text {
-  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
 }
 
 
-.decorative-img {
-  display: none;
-}
-
-#miaLettera {
-  display: none;
-}
-
-
+/*map css */
 
 #map {
-  width: 100%;
-  height: 800px;
-  }
-  
-  .custom-marker {
-   
-    /* Specifica l'immagine SVG personalizzata come sfondo */
-    background-image: url('/assets/img/my-costum-icon.svg');
-    /* Specifica l'ancoraggio dell'icona (opzionale) */
-     background-repeat: no-repeat;
-     background-position-x: center;
-     background-position-y: center;
-     background-size: 100%;
-  
-  }
-  
-  /* Stile generale del popup */
-  .leaflet-popup {  
-    background-color: #6aa024; /* Colore di sfondo */
-    border: 2px solid #333; /* Bordo */
-    border-radius: 5px; /* Angoli arrotondati */
-    padding: 10px; /* Spaziatura interna */
-    font-family: Arial, sans-serif; /* Tipo di carattere */
-  }
-  
-  .leaflet-popup-content-wrapper {
-    background-color: #e686b9; /* New background color */
-    border: 2px solid #333; /* Border color */
-    border-radius: 5px; /* Border radius */
-    padding: 10px; /* Padding inside the popup */
-    font-family: Arial, sans-serif; /* Font family */
-  }
-  
-  /* Stile del titolo del popup */
-  .leaflet-popup b {
-    color: #000000; /* Colore del titolo */
-    font-size: 18px; /* Dimensione del titolo */
-  }
-  
-  /* Stile del testo del popup */
-  .leaflet-popup p {
-    color: #f1a1a1; /* Colore del testo */
-    font-size: 14px; /* Dimensione del testo */
-  }
-  
-  /* Style for the secondary name */
-  .secondary-name {
-    color: #1121ad; /* Change the text color */
-    font-size: 12px; /* Change the font size */
-    /* Add other styles as needed */
-  }
-
-
-
- @media (min-width: 400px){
-    .searchBar{
-      margin-left: 100px !important;
+    width: 100%;
+    height: 800px;
     }
-  }
+    
+    .custom-marker {
+     
+      /* Specifica l'immagine SVG personalizzata come sfondo */
+      background-image: url('/assets/img/my-costum-icon.svg');
+      /* Specifica l'ancoraggio dell'icona (opzionale) */
+       background-repeat: no-repeat;
+       background-position-x: center;
+       background-position-y: center;
+       background-size: 100%;
+    
+    }
+    
+    /* Stile generale del popup */
+    .leaflet-popup {  
+      background-color: #6aa024; /* Colore di sfondo */
+      border: 2px solid #333; /* Bordo */
+      border-radius: 5px; /* Angoli arrotondati */
+      padding: 10px; /* Spaziatura interna */
+      font-family: Arial, sans-serif; /* Tipo di carattere */
+    }
+    
+    .leaflet-popup-content-wrapper {
+      background-color: #e686b9; /* New background color */
+      border: 2px solid #333; /* Border color */
+      border-radius: 5px; /* Border radius */
+      padding: 10px; /* Padding inside the popup */
+      font-family: Arial, sans-serif; /* Font family */
+    }
+    
+    /* Stile del titolo del popup */
+    .leaflet-popup b {
+      color: #000000; /* Colore del titolo */
+      font-size: 18px; /* Dimensione del titolo */
+    }
+    
+    /* Stile del testo del popup */
+    .leaflet-popup p {
+      color: #f1a1a1; /* Colore del testo */
+      font-size: 14px; /* Dimensione del testo */
+    }
+    
+    /* Style for the secondary name */
+    .secondary-name {
+      color: #1121ad; /* Change the text color */
+      font-size: 12px; /* Change the font size */
+      /* Add other styles as needed */
+    }
+  
 
-@media(min-width: 900px){
-  .searchBar{
-    margin-left:30px;
-  }
-}
 
-
-  /* Stile per la barra di ricerca */
-  .searchBar{
-    margin-left: 50rem;
-    margin-top:-30rem;
-    position:fixed;
-    z-index: 10000;
-  }
-#search-input {
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 5px;
+/* Styles for PopUp */
+/* Hide the popup by default */
+.popuptextright {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 10px;
+  z-index: 1;
 }
 
-/* Stile per il conteggio delle occorrenze */
-#occurrences-count {
-  margin-right: 10px;
-  font-weight: bold;
+/* Style for the clickable element */
+.popupright {
+  cursor: pointer;
 }
+/* Ends Styles for PopUp */
+
+ /* Stile per la barra di ricerca */
+
 
 /* Stile per i pulsanti di navigazione */
 #prev-button,
 #next-button {
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  margin-left: 5px;
-  cursor: pointer;
-}
+    margin-top:5px;
+    background-color: #243F39;
+    color: #fff;
+    border: none;
 
+cursor: pointer;
+}
+#search-input{
+  width:100%;
+}
 /* Stile per gli elementi evidenziati */
 .highlight {
-  background-color: yellow !important;
-  font-weight: bold !important;
+background-color: yellow !important;
+font-weight: bold !important;
 }
-

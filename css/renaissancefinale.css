@@ -10868,7 +10868,7 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
 }
 .site-heading .site-heading-lower {
   font-size: 5rem;
@@ -11258,45 +11258,61 @@ box-shadow:
 .intro {
   position: relative;
 }
-@media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    float: right;
-  }
-  .intro .intro-text {
-    left: 0;
-    width: 60%;
-    margin-top: 3rem;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-  }
-}
-@media (min-width: 1200px) {
-  .intro .intro-text {
-    width: 45%;
-  }
-}
 .intro-text p{
   color:var(--bs-gold);
   text-align:center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 993px) {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
     margin-bottom: -1rem;
     
   }
-  .product-item .product-item-img {
+  .product-item .product-item-description {
     position: relative;
     z-index: 0;
+    margin-top: 3rem;
+    max-width: 50vw;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 992px)  {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1rem;
+    
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 0;
+    margin-top: 3rem;
     max-width: 60vw;
+  }
+}
+@media (min-width: 577px) and (max-width: 700px)  {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1rem;
+    
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 0;
+    margin-top: 3rem;
+    max-width: 70vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1rem;
+    
   }
   .product-item .product-item-description {
     position: relative;
@@ -11330,10 +11346,6 @@ box-shadow:
     width: 50%;
     font-size: 1.1rem;
   }
-}
-
-.address strong {
-  font-size: 1.2rem;
 }
 
 .sticky-accordion {
@@ -11481,12 +11493,105 @@ box-shadow:
   height: auto;
   display:block;
 }
+
+
+@media (max-width: 576px) {
+  .decorative-img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 5.625rem;
+    height: auto;
+    display:block;
+  }
+  
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .decorative-img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 5.625rem;
+    height: auto;
+    display:block;
+  }
+  
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .decorative-img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 5rem;
+    height: auto;
+    display:block;
+  }
+  
+}
+
+@media (min-width: 992px){
+  .decorative-img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 5.625rem;
+    height: auto;
+    display:block;
+  }
+  
+}
+
 #miaLettera {
   float: left;
   width: 20rem;
   height: auto;
   margin-right: 1rem;
+  margin-left: 0.3rem;
   display: block;
+}
+@media (max-width: 576px) {
+  #miaLettera {
+    float: left;
+    width: 20rem;
+    height: auto;
+    margin-right: 1rem;
+    display: block;
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  #miaLettera {
+    float: left;
+    width: 20rem;
+    height: auto;
+    margin-right: 1rem;
+    display: block;
+  }
+  
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  #miaLettera {
+    float: left;
+    width: 16rem;
+    height: auto;
+    margin-right: 1rem;
+    
+    display: block;
+  }
+  
+}
+
+@media (min-width: 993px){
+  #miaLettera {
+    float: left;
+    width: 20rem;
+    height: auto;
+    margin-right: 1rem;
+    
+    display: block;
+  }
+  
 }
 
 .bg-faded p {
@@ -11494,6 +11599,35 @@ box-shadow:
   margin-left: 2rem; 
 }
 
+ @media (max-width: 576px) {
+  .bg-faded p {
+    overflow: hidden; 
+      margin-right: 1rem;
+      margin-left: 1rem;
+  }
+}
+
+
+@media (min-width: 577px) and (max-width: 700px) {
+  .bg-faded p {
+    overflow: hidden; 
+      margin-right: 0.5rem;
+      margin-left: 0.7rem;
+  }
+}
+@media (min-width: 701px) and (max-width: 992px) {
+  .bg-faded p {
+    overflow: hidden; 
+      margin-right: 1.5rem;
+      margin-left: 1.7rem;
+  }
+}
+@media (min-width: 993px) {
+  .bg-faded p {
+    overflow: hidden; 
+    margin-left: 2rem; 
+  }
+}
 @media only screen and (max-width: 768px) {
   #miaLettera {
     width: 15rem; 
@@ -11536,31 +11670,18 @@ p {
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .bg-faded p {
-      margin-right: 1rem;
-      margin-left: 1rem;
-  }
-}
 
-/* Adatta ulteriormente il margine destro per schermi ancora più piccoli */
-@media (max-width: 576px) {
-  .bg-faded p {
-      margin-right: 0.5rem;
-      margin-left: 0.7rem;
-  }
-}
 /*immagini*/
 
 .david {
-  width: 30vw;
-  height: 44vw;
+  width: 20vw;
+  height: 29vw;
   margin-top: 4vw;
-  margin-left: 7vw;
+  margin-left: 10vw;
   margin-bottom: 1.5vw;
   background-image: url('../assets/img/pic.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
   border: 0.4vw solid var(--bs-gold);
   box-shadow: 
       0 0 0 0.1vw #674e29,
@@ -11568,25 +11689,76 @@ p {
   padding: 0;
 }
 
-
-@media (max-width: 768px) {
+@media (min-width: 992px){
   .david {
-    width: 50vw;  /* Aumenta la larghezza per adattarsi meglio a schermi più piccoli */
-    height: 74vw; /* Aumenta l'altezza proporzionalmente */
+  width: 20vw;
+  height: 29vw;
+  margin-top: 4vw;
+  margin-left: 10vw;
+  margin-bottom: 1.5vw;
+  background-image: url('../assets/img/pic.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+}
+}
+
+@media (max-width: 576px) {
+  .david {
+      width: 30vw;  
+      height: 20vw; 
+      margin-top: 6vw;
+      margin-left: 10vw;
+      margin-bottom: 2.5vw;
+      background-image: url('../assets/img/pic.svg');
+    background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+    
+  }
+}
+@media (max-width: 700px) {
+  .david {
+    width: 30vw;  
+    height: 14vw; 
     margin-top: 6vw;
     margin-left: 10vw;
     margin-bottom: 2.5vw;
+    background-image: url('../assets/img/pic.svg');
+    background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
   }
 }
 
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
+ @media (max-width: 992px) {
   .david {
-    width: 80vw;  /* Aumenta ulteriormente la larghezza per schermi molto piccoli */
-    height: 120vw;
+    width: 30vw;  
+    height: 50vw;
     margin-top: 8vw;
     margin-left: 5vw;
     margin-bottom: 3.5vw;
+    background-image: url('../assets/img/pic.svg');
+    background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
+
   }
 }
 
@@ -11628,14 +11800,9 @@ p {
 }
 
 .madonna {
-  width: 30vw;
-  height: 44vw;
-  margin-top: 4vw;
-  margin-left: 7vw;
-  margin-bottom: 1.5vw;
   background-image: url('../assets/img/madonnarenaissace.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
   border: 0.4vw solid var(--bs-gold);
   box-shadow: 
       0 0 0 0.1vw #674e29,
@@ -11643,6 +11810,79 @@ p {
   padding: 0;
 }
 
+
+@media (max-width: 576px) {
+  .madonna {
+    width: 30vw;
+    height: 44vw;
+    margin-top: 4vw;
+    margin-left: 4vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/madonnarenaissace.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .madonna {
+    width: 30vw;
+    height: 44vw;
+    margin-top: 4vw;
+    margin-left: 7vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/madonnarenaissace.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+  
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .madonna {
+    width: 30vw;
+    height: 44vw;
+    margin-top: 4vw;
+    margin-left: 7vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/madonnarenaissace.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px){
+  .madonna {
+    width: 30vw;
+    height: 44vw;
+    margin-top: 4vw;
+    margin-left: 7vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/madonnarenaissace.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+  
+}
 
 @media (max-width: 768px) {
   .madonna {
@@ -11666,14 +11906,14 @@ p {
 }
 
 .last-supper {
-  width: 30vw;
-  height: 44vw;
+  width: 40vw;
+  height: 24vw;
   margin-top: 4vw;
   margin-left: 7vw;
   margin-bottom: 1.5vw;
   background-image: url('../assets/img/last-supperrenaissance.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
   border: 0.4vw solid var(--bs-gold);
   box-shadow: 
       0 0 0 0.1vw #674e29,
@@ -11682,26 +11922,81 @@ p {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .last-supper {
-    width: 50vw;  /* Aumenta la larghezza per adattarsi meglio a schermi più piccoli */
-    height: 10vw; /* Aumenta l'altezza proporzionalmente */
-    margin-top: 6vw;
-    margin-left: 10vw;
-    margin-bottom: 2.5vw;
+    width: 45vw;
+    height: 20vw;
+    margin-top: 4vw;
+    margin-left: 5vw;
+    margin-bottom:3vw;
+    background-image: url('../assets/img/last-supperrenaissance.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
   }
+  
+}
+@media (min-width: 577px) and (max-width: 700px) {
+  .last-supper {
+    width: 20vw;
+    height: 44vw;
+    margin-top: 4vw;
+    margin-left: 7vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/last-supperrenaissance.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+  
 }
 
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
+ @media (min-width: 701px) and (max-width: 992px) {
   .last-supper {
-    width: 80vw;  /* Aumenta ulteriormente la larghezza per schermi molto piccoli */
-    height: 120vw;
-    margin-top: 8vw;
-    margin-left: 5vw;
-    margin-bottom: 3.5vw;
+    width: 25vw;
+    height: 44vw;
+    margin-top: 4vw;
+    margin-left: 4vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/last-supperrenaissance.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
   }
+  
 }
+
+@media (min-width: 993px){
+  .last-supper {
+    width: 35vw;
+  height: 17vw;
+    margin-top: 4vw;
+    margin-left: 3.6vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/last-supperrenaissance.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+  
+}
+
 
 .adortion {
   width: 30vw;
@@ -11744,42 +12039,50 @@ p {
 
 
 .baptism {
-  width: 30vw;
-  height: 44vw;
-  margin-top: 4vw;
-  margin-left: 7vw;
-  margin-bottom: 1.5vw;
   background-image: url('../assets/img/baptismrenaissance.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  border: 0.4vw solid var(--bs-gold);
-  box-shadow: 
-      0 0 0 0.1vw #674e29,
-      0 0 0 0.9vw var(--bs-gold);
-  padding: 0;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  .baptism{
+    width: 45vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 50vw;
+    margin-top: 8vw;
+    margin-left: 8vw;
+    margin-bottom: 3.5vw;   
+  }
+}
+@media (min-width: 577px) and (max-width: 700px) {
   .baptism {
-    width: 50vw;
-    height: 70vw; /* Aumenta l'altezza proporzionalmente */
+    width: 50vw;  
+    height: 56vw; 
     margin-top: 6vw;
-    margin-left: 10vw;
+    margin-left: 9vw;
     margin-bottom: 2.5vw;
   }
 }
 
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
+ @media (min-width: 701px) and (max-width: 992px) {
   .baptism {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw;
+    width: 40vw;  
+    height: 45vw;
     margin-top: 8vw;
-    margin-left: 5vw;
+    margin-left: 7vw;
     margin-bottom: 3.5vw;
   }
 }
+
+@media (min-width: 992px){
+  .baptism{
+  width:30vw;  
+  height: 35vw;
+  margin-top: 4vw;
+  margin-left: 6vw;
+  margin-bottom: 2.5vw;
+}
+}
+
 
 .judith {
   width: 20vw;
@@ -11789,7 +12092,7 @@ p {
   margin-bottom: 1.5vw;
   background-image: url('../assets/img/judithdefault.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
   border: 0.4vw solid var(--bs-gold);
   box-shadow: 
       0 0 0 0.1vw #674e29,
@@ -11797,59 +12100,149 @@ p {
   padding: 0;
 }
 
-@media (max-width: 768px) {
+
+@media (min-width: 992px){
   .judith {
-    width: 50vw;
-    height: 70vw; /* Aumenta l'altezza proporzionalmente */
+    width: 20vw;
+    height: 40vw;
+    margin-top: 4vw;
+    margin-left: 12vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/judithdefault.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+  
+}
+@media (min-width: 501px) and (max-width: 700px) {
+  .judith {
+    width: 30vw;
+    height: 60vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 6vw;
+    margin-left: 20vw;
+    margin-bottom: 2.5vw;
+     background-image: url('../assets/img/judithdefault.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding:0;
+  }
+}
+
+
+@media (min-width: 701px) and (max-width: 992px) {
+  .judith {
+    width: 30vw;
+    height: 60vw; /* Aumenta l'altezza proporzionalmente */
     margin-top: 6vw;
     margin-left: 10vw;
     margin-bottom: 2.5vw;
+     background-image: url('../assets/img/judithdefault.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+  box-shadow: 
+      0 0 0 0.1vw #674e29,
+      0 0 0 0.9vw var(--bs-gold);
+  padding:0;
   }
 }
 
 /* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .judith {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw;
+    width: 40vw;  
+    height: 85vw;
     margin-top: 8vw;
-    margin-left: 5vw;
+    margin-left: 14vw;
     margin-bottom: 3.5vw;
+    background-image: url('../assets/img/judithdefault.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
   }
 }
 
 .general {
   width: 30vw;
-  height: 23vw;
+  height: 22vw;
   margin-top: 4vw;
-  margin-left: 7vw;
+  margin-left: 6.3vw;
   margin-bottom: 1.5vw;
   background-image: url('../assets/img/generaldefault.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  box-sizing: border-box;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
   padding: 0;
 }
 
+@media  (min-width: 992px){
+  .general {
+    width: 30vw;
+    height: 22vw;
+    margin-top: 4vw;
+    margin-left: 5.3vw;
+    margin-bottom: 1.5vw;
+    background-image: url('../assets/img/generaldefault.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0.4vw solid var(--bs-gold);
+      box-shadow: 
+          0 0 0 0.1vw #674e29,
+          0 0 0 0.9vw var(--bs-gold);
+    padding: 0;
+  }
+}
 
-@media (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 992px){
   .general {
     width: 50vw;
-    height: 70vw; /* Aumenta l'altezza proporzionalmente */
-    margin-top: 6vw;
-    margin-left: 10vw;
+    height: 37vw; /* Aumenta l'altezza proporzionalmente */
+    margin-top: 5vw;
+    margin-left: 3vw;
     margin-bottom: 2.5vw;
+    background-image: url('../assets/img/generaldefault.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
   }
 }
 
 /* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .general {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw;
+    width: 65vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
+    height: 50vw;
     margin-top: 8vw;
-    margin-left: 5vw;
+    margin-left: 3vw;
     margin-bottom: 3.5vw;
+    background-image: url('../assets/img/generaldefault.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0.4vw solid var(--bs-gold);
+    box-shadow: 
+        0 0 0 0.1vw #674e29,
+        0 0 0 0.9vw var(--bs-gold);
+  padding: 0;
   }
 }
 
@@ -11863,64 +12256,95 @@ p {
   height: 50vw;
   max-height:940px;
   background-image: url('../assets/img/vasaripaintrenaissance.svg');
-  background-size: contain;
   padding: 0;
 }
 
-@media (max-width: 576px){
- .intro .vasaripaint{
-  margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        /* o qualsiasi altra larghezza desideri */
-    }
-
- 
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-    color: var(--bs-gold)
-  }
-}
-
-/* Medio - Tablet */
-@media (min-width: 577px) and (max-width: 992px) {
-  .intro .vasaripaint{
-    margin-left: auto;
-          margin-right: auto;
-          width: 50%;
-          /* o qualsiasi altra larghezza desideri */
-      }
-
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-    color: var(--bs-gold)
-  }
-}
-
-
-@media (min-width: 992px) {
+@media (max-width: 576px) {
   .intro .vasaripaint {
     width: 75%;
+    margin-left: 6rem;
+  }
+  .intro .intro-text {
+    
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 80%; 
+    position: absolute;
+ 
+  }
+}
+
+@media (min-width: 577px) and (max-width: 700px) {
+  .intro .vasaripaint {
+    width: 75%;
+    margin-left: 5rem;
+  }
+  .intro .intro-text {
+    
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%; 
+    position: absolute;
+    
+  }
+}
+
+@media (min-width: 701px) and (max-width: 991px) {
+ .intro .vasaripaint {
+    width: 80%;
+    margin-left: 5rem;
+  }
+  .intro .intro-text {
+   
+    width: 100%;
+    margin-top:-3rem;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%; 
+    position: absolute;
+   
+    
+  }
+}
+
+@media (min-width: 992px) and (max-width:1199px){
+  .intro .vasaripaint {
+    width: 50%;
     float: right;
+    margin-top: -2rem;
   }
   .intro .intro-text {
     left: 0;
-    width: 45%;
-    margin-top: 3rem;
+    width: 50%;
     position: absolute;
   }
   .intro .intro-text .intro-button {
     width: 100%;
     left: 0;
     position: absolute;
-    bottom: -2rem;
-    color: var(--bs-gold)
+  
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .vasaripaint {
+    width: 60%;
+    float: right;
+    margin-top: -3rem;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 50%;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    
   }
 }
 
@@ -11939,7 +12363,6 @@ figcaption {
   margin-left: 3rem !important;
 }
 
-
 .letteraT {
   display: none;
 }
@@ -11952,42 +12375,10 @@ figcaption {
   display: none;
 }
 
-
 /*map css */
 
 #filters {
   margin-bottom: 10px;
-}
-
- /* Stili della sidebar */
- #sidebar {
-  width: 300px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  display: none;
-}
-#sidebar.open {
-  display: block;
-  width: 200px;
-
-}
-
-/* Stili del pulsante per aprire/chiudere la sidebar */
-#toggle-sidebar {
-  margin-top: 100px;
-  position: absolute;
-  top: 10px;
-  right: 330px;
-  background-color: #0074D9;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-
 }
 
 #map {
@@ -12003,4 +12394,28 @@ background-image: url('../assets/img/markermapparinascimento.svg');
  background-position-x: center;
  background-position-y: center;
  background-size: 100%;
+}
+
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
+
+#prev-button,
+#next-button {
+  background-color:var(--bs-gold);
+  color: #fff;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#occurrences-count{
+  font-family: "Cinzel";
+}
+
+#search-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }

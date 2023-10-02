@@ -93,7 +93,7 @@
 
 @font-face {
   font-family: 'SquareFont';
-  src: url('/assets/fonts/Square.ttf') format('truetype');
+  src: url('./assets/fonts/Square.ttf') format('truetype');
 }
 
 body {
@@ -4356,7 +4356,7 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
 }
 
 input[type="checkbox"] {
-  margin-right: 0.5rem;
+ 
   cursor: pointer;
 }
 label {
@@ -4369,7 +4369,7 @@ label {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   color: #fff; 
   text-align: left;
   background: var(--bs-accordion-btn-bg);
@@ -4378,16 +4378,28 @@ label {
   transition: var(--bs-accordion-transition);
   font-family: 'SquareFont';
   border: 2px solid var(--bs-accordion-border-color);
-  letter-spacing: 10px; 
+  letter-spacing: 0.7rem; 
+  font-size:1rem;
+ 
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
     transition: none;
   }
 }
+
+@media (min-width: 768px){
+  .accordion-item:not(:first-child) .accordion-button {
+    letter-spacing: 0.2rem;
+}
+.accordion-item:first-child .accordion-button {
+  letter-spacing: 0.5rem;
+}
+}
 .accordion-button span {
-  font-size: 1.2em; 
-  transform: rotate(10deg) /* Rende le lettere all'interno di <span> più grandi */
+  font-size: 1r.2em; 
+  font-weight: bold;
+  transform: rotate(10deg);/* Rende le lettere all'interno di <span> più grandi */
 }
 .accordion-button:not(.collapsed) {
   background: var(--bs-accordion-active-bg);
@@ -11033,7 +11045,7 @@ body .section-heading .section-heading-lower {
   font-size: 4rem;
   font-weight: 100;
   margin-top: 40px;
-  margin-bottom: 170px;
+  
   font-family: "SquareFont";
   transform: rotate(10deg);
   color: #df3a1e;
@@ -11049,7 +11061,153 @@ body .section-heading .section-heading-lower {
   color:#df3a1e;
 }
 
+@media (max-width: 576px) {
+  .intro .bg-faded {
+    position: relative;
+  }
 
+  .intro .bg-faded::before {
+    content: "";
+    position: absolute;
+    top: -10vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eedfb2;
+    clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
+    z-index: 0;
+  }
+
+  .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
+    position: relative;
+    z-index: 2;
+  }
+
+  .intro-text .section-heading-lower {
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 700px) {
+  .intro .bg-faded {
+    position: relative;
+  }
+
+  .intro .bg-faded::before {
+    content: "";
+    position: absolute;
+   
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eedfb2;
+    clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
+    z-index: 0;
+  }
+
+  .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 992px) {
+  .baptism, .david, .judith, .sarcophagus {
+      width: 40vw;
+      height: 50vw;
+  }
+
+  .adoration {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 2vw;
+  }
+
+  .last-supper {
+      width: 40vw;
+      height: 20vw;
+      margin-top: 4vw;
+  }
+
+  .madonna {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 5vw;
+  }
+
+  .general {
+      width: 40vw;
+      height: 35vw;
+  }
+
+  .verrocchio {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 15vw;
+      margin-top: -13vw;
+      margin-bottom: 2vw;
+  }
+
+  .donatello {
+      width: 40vw;
+      height: 35vw;
+  }
+
+  .leonardo {
+      width: 50vw;
+      height: 45vw;
+      margin-left: 16vw;
+      margin-bottom: 5vw;
+      margin-top: -10vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .baptism, .david, .sarcophagus, .judith {
+      width: 30vw;
+      height: 30vw;
+      margin-top: 4vw;
+      margin-bottom: 2.5vw;
+      margin-left: 2vw;
+  }
+
+  .adoration, .madonna {
+      width: 30vw;
+      height: 30vw;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+
+  .last-supper {
+      width: 30vw;
+      height: 15vw;
+      margin-top: 4vw;
+      margin-left: 8vw;
+  }
+
+  .general {
+      width: 30vw;
+      height: 25vw;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+
+  .verrocchio, .donatello {
+      width: 50vw;
+      max-width: 22rem;
+      height: 60vw;
+      max-height: 29rem;
+      margin-left: 20vw;
+      margin-top: -8vw;
+  }
+
+  .leonardo {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 16vw;
+      margin-bottom: 8vw;
+  }
+}
 .section-heading-lower span {
   font-family: 'Cinzel'; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
@@ -11105,15 +11263,13 @@ body .section-heading .section-heading-lower {
   border-bottom: 0.3vw solid #000;     
   margin-top: 3vw;
   margin-bottom: 3.5vw;
-  transform: rotate(-5deg); 
-  
 }
 
 .product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
   text-align: right;         
   border-top: 0.4vw solid #000; 
   border-left: 1.2vw solid #000;   
-  margin-top: 3vw;
+  margin-top: 5vw;
   margin-bottom: 3.5vw;
   transform: rotate(5deg); 
 }
@@ -11128,37 +11284,155 @@ body .section-heading .section-heading-lower {
   margin-top: 1.75vw;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 576px) {
+ 
+}
+@media (min-width: 577px) and (max-width: 700px) {
   .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8),.product-item-description .bg-faded p:nth-of-type(11),.product-item-description .bg-faded p:nth-of-type(18) {
-      margin-right: 2vw; 
-      padding-right: 1vw;
-      padding-bottom: 1vw; 
-  }
+    margin-right: 2vw; 
+    padding-right: 1vw;
+    padding-bottom: 1vw; 
+}
 
-  .product-item-description .bg-faded p:nth-of-type(2),.product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9), .product-item-description .bg-faded p:nth-of-type(12) , .product-item-description .bg-faded p:nth-of-type(15) {
-      margin-top: 4vw;
-      margin-bottom: 2vw;
-  }
+.product-item-description .bg-faded p:nth-of-type(2),.product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9), .product-item-description .bg-faded p:nth-of-type(12) , .product-item-description .bg-faded p:nth-of-type(15) {
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    font-size: 1rem;
+    transform: rotate(-2deg); 
+}
 
-  .product-item-description .bg-faded p:nth-of-type(3),  .product-item-description .bg-faded p:nth-of-type(10),.product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17), .product-item-description .bg-faded p:nth-of-type(19) {
-      margin-top: 7vw;
-      margin-bottom: 2vw;
-  }
+.product-item-description .bg-faded p:nth-of-type(3),  .product-item-description .bg-faded p:nth-of-type(10),.product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17), .product-item-description .bg-faded p:nth-of-type(19) {
+    margin-top: 7vw;
+    margin-bottom: 2vw;
+}
 
-  .product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7),.product-item-description .bg-faded p:nth-of-type(14) ,.product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20){
-      margin-left: 6vw;
-      margin-top:5vw;
-      padding-right: 1vw;
-      padding-left: 3vw;
+.product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7),.product-item-description .bg-faded p:nth-of-type(14) ,.product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20){
+    margin-left: 6vw;
+    margin-top:5vw;
+    padding-right: 1vw;
+    padding-left: 3vw;
+}
+}
+
+ @media (min-width: 701px) and (max-width: 992px) {
+  .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8), .product-item-description .bg-faded p:nth-of-type(11), .product-item-description .bg-faded p:nth-of-type(18){
+    text-align: left;         
+    border-right: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000; 
+    margin-top: 1vw;
+    margin-right: 5vw; 
+    padding-right: 2vw;     
+    padding-bottom: 1.5vw; 
   }
+  
+  .product-item-description .bg-faded p:nth-of-type(2), .product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9),.product-item-description .bg-faded p:nth-of-type(12),.product-item-description .bg-faded p:nth-of-type(15)  {
+    text-align: center;         
+    border-top: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000;     
+    margin-top: 3vw;
+    margin-bottom: 3.5vw;
+    transform: rotate(-3deg); 
+    
+    
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
+    text-align: right;         
+    border-top: 0.4vw solid #000; 
+    border-left: 1.2vw solid #000;   
+    margin-top: 5vw;
+    margin-bottom: 3.5vw;
+    transform: rotate(5deg); 
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7), .product-item-description .bg-faded p:nth-of-type(14), .product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20) {
+    text-align: left;         
+    border-left: 1vw solid #000; 
+    border-right: 0.3vw solid #000; 
+    margin-left: 11.5vw;
+    padding-right: 2vw;     
+    padding-left: 6vw;
+    margin-top: 1.75vw;
+  }
+  
+ }
+
+@media (min-width: 992px){
+  .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8), .product-item-description .bg-faded p:nth-of-type(11), .product-item-description .bg-faded p:nth-of-type(18){
+    text-align: left;         
+    border-right: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000; 
+    margin-top: 1vw;
+    margin-right: 5vw; 
+    padding-right: 2vw;     
+    padding-bottom: 1.5vw; 
+   
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(2), .product-item-description .bg-faded p:nth-of-type(5), .product-item-description .bg-faded p:nth-of-type(9),.product-item-description .bg-faded p:nth-of-type(12),.product-item-description .bg-faded p:nth-of-type(15)  {
+    text-align: center;         
+    border-top: 1vw solid #000; 
+    border-bottom: 0.3vw solid #000;     
+    margin-top: 3vw;
+    margin-bottom: 3.5vw;
+    transform: rotate(-3deg); 
+    
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(3), .product-item-description .bg-faded p:nth-of-type(10) , .product-item-description .bg-faded p:nth-of-type(13), .product-item-description .bg-faded p:nth-of-type(17),.product-item-description .bg-faded p:nth-of-type(19) {
+    text-align: right;         
+    border-top: 0.4vw solid #000; 
+    border-left: 1.2vw solid #000;   
+    margin-top: 5vw;
+    margin-bottom: 3.5vw;
+    transform: rotate(5deg); 
+  }
+  
+  .product-item-description .bg-faded p:nth-of-type(6), .product-item-description .bg-faded p:nth-of-type(7), .product-item-description .bg-faded p:nth-of-type(14), .product-item-description .bg-faded p:nth-of-type(16), .product-item-description .bg-faded p:nth-of-type(20) {
+    text-align: left;         
+    border-left: 1vw solid #000; 
+    border-right: 0.3vw solid #000; 
+    margin-left: 11.5vw;
+    padding-right: 2vw;     
+    padding-left: 6vw;
+    margin-top: 1.75vw;
+  }
+  
 }
 
 
-figcaption:nth-of-type(2) {
-  margin-top: 20px;
-  margin-left: 160px !important;
+.product-item-description .bg-faded p:nth-of-type(1) .fut, 
+.product-item-description .bg-faded p:nth-of-type(4) .fut, 
+.product-item-description .bg-faded p:nth-of-type(8) .fut, 
+.product-item-description .bg-faded p:nth-of-type(11) .fut, 
+.product-item-description .bg-faded p:nth-of-type(18) .fut,
+.product-item-description .bg-faded p:nth-of-type(3) .fut,
+.product-item-description .bg-faded p:nth-of-type(14) .fut  {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
+.product-item-description .bg-faded p:nth-of-type(2) .fut, 
+.product-item-description .bg-faded p:nth-of-type(5) .fut,
+.product-item-description .bg-faded p:nth-of-type(6) .fut 
+.product-item-description .bg-faded p:nth-of-type(9) .fut, 
+.product-item-description .bg-faded p:nth-of-type(12) .fut, 
+.product-item-description .bg-faded p:nth-of-type(15) .fut,
+.product-item-description .bg-faded p:nth-of-type(16) .fut {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product-item-description .bg-faded p:nth-of-type(7) .fut, 
+.product-item-description .bg-faded p:nth-of-type(10) .fut,
+.product-item-description .bg-faded p:nth-of-type(17) .fut,
+.product-item-description .bg-faded p:nth-of-type(13) .fut{
+  font-weight: bold;
+  font-size: 1.7rem;
+
+
+}
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -11214,7 +11488,14 @@ figcaption:nth-of-type(2) {
 
 .footer {
   background-color: rgba(247,230,186, 0.8);
+  font-family:"Roboto";
 }
+@media (min-width: 800px) {
+  .footer {
+    margin-top: 10rem;
+  }
+}
+
 .intro {
   position: relative;
 }
@@ -11239,39 +11520,6 @@ figcaption:nth-of-type(2) {
   z-index: 1;
 }
 
-
-@media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    float: right;
-  }
-  .intro .intro-text {
-    left: 0;
-    width: 60%;
-    margin-top: 3rem;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .intro .intro-text {
-
-    margin-top: 0;
-    
-  }
-}
-@media (min-width: 1200px) {
-  .intro .intro-text {
-    width: 45%;
-  }
-}
-
 @media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
@@ -11285,8 +11533,7 @@ figcaption:nth-of-type(2) {
   }
   .product-item .product-item-description {
     position: relative;
-    z-index: 0;
-    
+    z-index: 0;   
     max-width: 50vw;
   }
 }
@@ -11368,62 +11615,6 @@ figcaption:nth-of-type(2) {
       width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
   }
 }
-
-/*
-.toggle-btn {
-    position: absolute;  
-    top: 0;  
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}  */
-
-
-/* Change from sticky to absolute positioning */
-/* Align to the top */
-/* Align to the left at 50% of the container width */
-/* Center the element */
-/*
-.toggle-btn {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
- /* Use absolute positioning */
- /* Align it to the right */
- /*
-.toggle-btn {
-    position: sticky; 
-    top: 150px;
-    right: auto;  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-
-.toggle-btn-2 {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
 
 .button-container {
   position: sticky;
@@ -11544,37 +11735,18 @@ figcaption:nth-of-type(2) {
 }
 
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
-
-
 .site-heading-upper {
-  font-family:"Roboto";
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
-  position: relative;
-  text-align: center; /* Cambia da flex a text-align per centrare il testo */
-  padding: 0.5em 0;
-  word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
-  margin-left: 18%;
-  margin-right: 10%;
-  
-}
-
-.site-heading-upper::before, .site-heading-upper::after {
-  content: "";
-  width: 20%;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-}
-
-.site-heading-upper::before {
-  left: -25%;
-}
-
-.site-heading-upper::after {
-  right: -25%;
-}
+   
+    font-family:"Roboto";
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    position: relative;
+    text-align: center; /* Cambia da flex a text-align per centrare il testo */
+    padding: 0.5em 0;
+    word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
 
 .overlap {
   position: relative;
@@ -11657,18 +11829,21 @@ figcaption:nth-of-type(2) {
   }
 
   .section-heading-lower > span {
-      margin-top: 10px;  /* aggiungi un po' di spazio tra le righe */
+      margin-top: 10px;  
   }
 }
 
 figcaption{
   font-family: 'Roboto';
   transform: rotate(180deg);
-    display: inline-block;
-    position: relative; /* o "absolute", dipende dalla tua struttura */
-   
+  display: inline-block;
+  position: relative; /* o "absolute", dipende dalla tua struttura */
   margin-top: 1rem;
+}
 
+figcaption:nth-of-type(2) {
+  
+  margin-left: 13px !important;
 }
 
 .highlight-place {
@@ -11715,239 +11890,290 @@ figcaption{
 #miaLettera {
   display: none;
 }
-
 /* CSS per schermi di dimensioni standard */
-.baptism, .adoration, .last-supper, .madonna {
+.baptism, .adoration, .last-supper, .madonna, .david, .sarcophagus, .judith, .general, .verrocchio, .donatello, .leonardo {
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .baptism {
-  margin-left: 5vw;
-  width: 30vw;
-  height: 35vw;
   background-image: url('../assets/img/baptismfuturism.svg');
 }
 
 .adoration {
-  margin-left: 5vw;
-  margin-top: 5vw;
-  width: 30vw;
-  height: 30vw;
   background-image: url('../assets/img/adorationfuturism.svg');
 }
 
 .last-supper {
-  margin-left: 10vw;
-  margin-top: 3vw;
-  margin-bottom: 3vw;
-  width: 30vw;
-  height: 14vw;
   background-image: url('../assets/img/last-supperfuturismo.svg');
 }
 
 .madonna {
-  margin-left: 14vw;
-  width: 18vw;
-  height: 24vw;
   background-image: url('../assets/img/madonnadefault.svg');
 }
 
-/* Effetto hover */
-.baptism:hover, .adoration:hover, .last-supper:hover, .madonna:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
-
-/* Media query per schermi piccoli (ad esempio, meno di 768px) */
-@media (max-width: 768px) {
-  .baptism, .adoration, .last-supper, .madonna {
-    margin-left: 3vw;
-  }
-
-  .baptism {
-    width: 60vw;
-    height: 70vw;
-  }
-
-  .adortion {
-    width: 50vw;
-    height: 50vw;
-  }
-
-  .last-supper {
-    width: 60vw;
-    height: 28vw;
-  }
-
-  .madonna {
-    width: 56vw;
-    height: 76vw;
-  }
-
+.david {
+  background-image: url('../assets/img/davidefault.svg');
 }
 
 .sarcophagus {
-  margin-left: 5vw;
-  margin-top: 2vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 30vw;
-  height: 50vw;
   background-image: url('../assets/img/sarcophagudefault.svg');
 }
 
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -1px) rotate(-1deg); }
-  20% { transform: translate(-1px, 1px) rotate(1deg); }
-  30% { transform: translate(1px, 1px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 1px) rotate(0deg); }
-  60% { transform: translate(-1px, -1px) rotate(-1deg); }
-  70% { transform: translate(1px, 1px) rotate(1deg); }
-  80% { transform: translate(-1px, 1px) rotate(0deg); }
-  90% { transform: translate(1px, -1px) rotate(1deg); }
-  100% { transform: translate(1px, 1px) rotate(0deg); }
-}
-
-.david {
-  margin-left: 5vw;
-  margin-top: 2vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 30vw; 
-  height: 30vw;
-  background-image: url('../assets/img/davidefault.svg');
-
-}
-
-.david:hover, .sarcophagus:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
- 
-
 .judith {
-  margin-left: 5vw;
-  margin-top: 2vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 30vw;
-  height: 40vw;
   background-image: url('../assets/img/judithdefault.svg');
 }
 
-.judith:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
-
-
 .general {
-  margin-left: 5vw;
-  margin-top: 6vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 30vw;
-  height: 30vw;
   background-image: url('../assets/img/generaldefault.svg');
 }
 
-.general:hover {
+.verrocchio {
+  background-image: url('../assets/img/verrocchiofuturista.svg');
+  filter: grayscale(80%);
+}
+
+.donatello {
+  background-image: url('../assets/img/Donatellofuturism.svg');
+  filter: grayscale(80%);
+}
+
+.leonardo {
+  background-image: url('../assets/img/Leonardofuturism.svg');
+  filter: grayscale(80%);
+}
+
+/* Effetto hover */
+.baptism:hover, .adoration:hover, .last-supper:hover, .madonna:hover, .david:hover, .sarcophagus:hover, .judith:hover, .general:hover, .verrocchio:hover, .donatello:hover, .leonardo:hover {
   transform: scale(1.2);
   z-index: 3;
 }
 
-@media (max-width: 768px) {
-  .sarcophagus{
-    width: 60vw;
-    height: 70vw;
-  }
-  .david{
-    width: 60vw;
-    height: 70vw;
-  }
-  .judith{
-    width: 60vw;
-    height: 70vw;
-  }
-  .general{
-    width: 60vw;
-    height: 70vw;
-  }
+.verrocchio:hover, .donatello:hover, .leonardo:hover {
+  z-index: 10000;
 }
 
-.verrocchio {
-  margin-left: 20vw;
-  margin-top:-8vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 40vw;
-  max-width: 22rem; 
-  height: 50vw;
-  max-height: 29rem;  
-  filter: grayscale(80%); 
-  background-image: url('../assets/img/verrocchiofuturista.svg');
-}
-
-.verrocchio:hover {
-  transform: scale(1.4);
-  z-index: 10000; 
-}
-.donatello {
-  margin-left: 20vw;
-  margin-top: -8vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 50vw;
-  max-width: 22rem; 
-  height: 60vw;
-  max-height: 29rem;  
-  filter: grayscale(80%);
-  background-image: url('../assets/img/Donatellofuturism.svg'); 
-}
-
-.donatello:hover {
-  transform: scale(1.2);
-  z-index: 10000; 
-}
-
-.leonardo {
-  margin-left: 20vw;
-  margin-top: -8vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 50vw;
-  max-width: 22rem; 
-  height: 60vw;
-  max-height: 29rem;  
-  filter: grayscale(80%);
-  background-image: url('../assets/img/Leonardofuturism.svg'); 
-}
-
-.leonardo:hover {
-  transform: scale(1.2);
-  z-index: 10000; 
-}
-
-@media (max-width: 768px) {
-  .donatello{
-    width: 70vw;
-    height: 70vw;
-    margin-left: 15vw;
-    margin-bottom:10vw;
+/* Media queries */
+@media (max-width: 576px) {
+  .david, .judith {
+    width: 20rem;
+    height: 25rem;
   }
-  .verrocchio{
-    width: 60vw;
-    height: 70vw;
+
+  .baptism{
+    width: 20rem;
+    height: 20rem;
   }
-  .leonardo{
-    width: 60vw;
-    height: 70vw;
+
+  .adoration {
+    width: 20rem;
+    height: 25rem;
+      margin-top: 5vw;
+  }
+
+  .last-supper {
+    width: 20rem;
+    height: 10rem;
+      margin-top: 3rem;
+      margin-left: 2rem;
+  }
+
+  .madonna {
+    width: 18rem;
+    height: 20rem;
+      margin-top: 10vw;
+      margin-left: 2rem;
+  }
+
+  .sarcophagus {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .general {
+    width: 20rem;
+    height: 15rem;
+  }
+
+  .verrocchio, .donatello, .leonardo {
+      width: 65vw;
+      height: 60vw;
+      margin-left: 16vw;
+      margin-top: -20vw;
   }
 }
 
+@media (min-width: 577px) and (max-width: 700px) {
+  .david, .judith {
+    width: 10rem;
+    height: 20rem;
+  }
+  .baptism{
+    width: 20rem;
+    height: 25rem;
+  }
+
+  .adoration {
+    width: 20rem;
+    height: 25rem;
+      margin-top: 2vw;
+  }
+
+  .last-supper {
+    width: 20rem;
+    height: 10rem;
+      margin-top: 2vw;
+      margin-left: 5rem;
+  }
+
+  .madonna {
+    width: 18rem;
+    height: 20rem;
+      margin-top: 10vw;
+  }
+
+  .sarcophagus {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .general {
+    width: 25rem;
+    height: 15rem;
+  }
+
+  .verrocchio {
+      width: 10vw;
+      height: 10vw;
+  }
+
+  .donatello {
+      width: 50vw;
+      height: 45vw;
+  }
+
+  .leonardo {
+      width: 50vw;
+      height: 45vw;
+      margin-top: -15vw;
+      margin-left: 20vw;
+      margin-bottom: 5vw;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 992px) {
+  .baptism, .david, .judith, .sarcophagus {
+    width: 20rem;
+    height: 25rem;
+  }
+
+  .adoration {
+    width: 20rem;
+    height: 25rem;
+      margin-top: 2vw;
+  }
+
+  .last-supper {
+    width: 23rem;
+    height: 15rem;
+      margin-top: 4rem;
+      margin-left:4rem;
+  }
+
+  .madonna {
+    width: 20rem;
+    height: 25rem;
+      margin-top: 5vw;
+  }
+
+  .general {
+    width: 20rem;
+    height: 15rem;
+  }
+
+  .verrocchio {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 15vw;
+      margin-top: -13vw;
+      margin-bottom: 2vw;
+  }
+
+  .donatello {
+      width: 40vw;
+      height: 35vw;
+  }
+
+  .leonardo {
+      width: 50vw;
+      height: 45vw;
+      margin-left: 16vw;
+      margin-bottom: 5vw;
+      margin-top: -10vw;
+  }
+}
+
+@media (min-width: 992px) {
+   .judith {
+    width: 15rem;
+    height: 30rem;
+      margin-top: 4vw;
+      margin-bottom: 1.5vw;
+      margin-left: 2vw;
+  }
+
+  .baptism{
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .david, .sarcophagus{
+    width: 20rem;
+    height: 30rem;
+  }
+  .adoration{
+    width: 20rem;
+    height: 25rem;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+  .madonna{
+    width: 20rem;
+    height: 25rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+  }
+
+  .last-supper {
+    width: 27rem;
+    height: 13rem;
+      margin-top: 4rem;
+      margin-left: 8rem;
+  }
+
+  .general {
+    width: 30rem;
+    height: 20rem;
+      margin-top: 4vw;
+      margin-left: 2vw;
+  }
+
+  .verrocchio, .donatello {
+      width: 50vw;
+      max-width: 22rem;
+      height: 60vw;
+      max-height: 29rem;
+      margin-left: 20vw;
+      margin-top: -8vw;
+  }
+
+  .leonardo {
+      width: 40vw;
+      height: 35vw;
+      margin-left: 16vw;
+      margin-bottom: 8vw;
+  }
+}
 .vasaripaint {
   margin-right: 2.5rem;  
   background-repeat: no-repeat;
@@ -11964,23 +12190,83 @@ figcaption{
   transform: scale(1.1);
   z-index: 10000; 
 }
-
-@media (min-width: 992px) {
+@media (max-width: 576px) {
   .intro .vasaripaint {
     width: 75%;
+    margin-left: 5rem;
+  }
+  .intro .intro-text {
+    margin-top:-5rem;
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 80%; 
+    position: absolute;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 700px) {
+  .intro .vasaripaint {
+    width: 75%;
+  }
+  .intro .intro-text {
+    margin-top:-23rem;
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%; 
+    position: absolute;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 991px) {
+ .intro .vasaripaint {
+    width: 75%;
+  }
+  .intro .intro-text {
+    margin-top:-20rem;
+    width: 100%;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%; 
+    position: absolute;
+  }
+}
+
+@media (min-width: 992px) and (max-width:1199px){
+  .intro .vasaripaint {
+    width: 50%;
     float: right;
   }
   .intro .intro-text {
     left: 0;
-    width: 60%;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    width: 65%;
     position: absolute;
   }
   .intro .intro-text .intro-button {
     width: 100%;
     left: 0;
     position: absolute;
-    bottom: -2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .vasaripaint {
+    width: 70%;
+    float: right;
+  }
+  .intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 5rem;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    
   }
 }
 
@@ -11988,23 +12274,28 @@ figcaption{
 .btns-grid-container {
   display: grid;
   position: fixed;
-  right: 0.6rem;  /* 10px convertito in rem */
-  bottom: 0.6rem;  /* 10px convertito in rem */
-  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 0.3125rem;  /* 5px convertito in rem */
-  z-index: 9999;  /* This will ensure it's on top of most other elements */
+  right: 0.6rem;  
+  bottom: 0.6rem;  
+  grid-template-rows: repeat(8, auto);  
+  gap: 0.3125rem;  
+  z-index: 9999;  
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 3.75rem;  /* 60px convertito in rem */
-  height: 3.75rem;  /* 60px convertito in rem */
-  border: 0.4375rem solid #8bc276;  /* 7px convertito in rem */
+  width: 3.75rem;  
+  height: 3.75rem; 
+  border: 0.2rem solid #8bc276;  
   background-color: rgba(247,230,186);  
   color: #fff;
   cursor: pointer;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #e77f3d;  /* Adjust hover color as required */
+  border: 0.2rem solid rgba(247,230,186);  
+  background-color: #8bc276 ;   
 }
 
 .sub-btn[data-theme] {
@@ -12012,7 +12303,7 @@ figcaption{
 }
 
 #stylesBtn {
-  background-image: url('../assets/img/paint.png');
+  background-image: url('../assets/img/old.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12047,26 +12338,26 @@ figcaption{
 }
 
 #toTopBtn .btn-icon {
-  color: #673d86; /* Questo è un esempio di colore viola. Puoi sostituirlo con il codice esatto del colore viola che desideri. */
+  color: #673d86; 
 }
 
 .sub-btn {
-  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+  position: relative; 
 }
 
 .btn-hover-text {
   display: none;  
   position: absolute;
   top: 0;  
-  left: 10%;
+  left: 50%;
   transform: translateX(-100%); 
   font-size: 1.1rem; 
   background-color: rgba(247,230,186);
   font-family: "SquareFont"; 
   color: #da7634; 
   font-weight: bold;
-  padding: 0.1rem 0.3rem;  
-  
+  padding: 0.1rem 0.6rem; 
+  margin: 2px;
 }
 
 .sub-btn:hover .btn-hover-text {
@@ -12085,55 +12376,58 @@ figcaption{
   display: inline;
 }
 
+
 /*prova effetto parole*/
 .floating-word {
-  color:white;
+  color: white;
   font-family: "SquareFont";
   position: fixed;
   opacity: 0;
-  z-index: 9999; 
-  animation-duration: 4s; 
+  z-index: 9999;
+  animation-duration: 4s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  margin: 0;
+  border: none;
+  padding: 0;
 }
 
-.word1 {
-  left: 10%;
-  top: 20%;
+.word1, .word6, .word7 {
   font-size: 2em;
+  color: #fed231;
+  transform: rotate(20deg);
   animation-name: fadeInOut1;
-  color:#fed231;
-  transform:rotate(20deg)
 }
 
 .word2 {
-  left: 70%;
-  top: 45%;
   font-size: 1em;
   animation-name: fadeInOut2;
 }
 
 .word3 {
-  left: 30%;
-  top: 70%;
   font-size: 3em;
   animation-name: fadeInOut3;
-  color:#673d86;
+  color: #673d86;
 }
 
 .word4 {
-  left: 60%;
-  top: 10%;
   font-size: 3em;
   animation: curveFadeInOut 4s infinite;
 }
 
 .word5 {
-  left: 60%;
-  top: 10%;
   font-size: 1em;
-  color:#7cb76c;
+  color: #7cb76c;
   animation: curveFadeInOut2 4s infinite;
+}
+
+.word6 {
+  font-size: 1.5em;
+  animation: curveFadeInOut2 4s infinite;
+}
+
+.word7 {
+  animation: curveFadeInOut 4s infinite;
 }
 @keyframes fadeInOut1 {
   0% { opacity: 0; }
@@ -12209,22 +12503,129 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 .leaflet-popup-content-wrapper {
-  background-color: black; 
-  color: #ffffff; 
-  border: 2px solid #00ff00; 
   border-radius: 0;
   font-family: "Roboto";
   text-transform: uppercase;
   text-align: center;
-
+  border: 4px solid #7cb76c;
+  color: white;
+  letter-spacing: 0.2rem;
+  background-color: #673d86;
 }
 
 .leaflet-popup-tip {
-  background-color: #1a1a1a;
+  background-color: #7cb76c;
+}
+.leaflet-popup-tip:hover {
+  background-color: #673d86;
 }
 
 .leaflet-popup-content-wrapper:hover {
-  background-color: white;
-  color: black;            
+  background-color: #7cb76c;
+  color: black;          
+  border: 4px solid #673d86;  
 }
 
+#centerToMarkers{
+  margin: 2rem;
+  font-family: "Roboto";
+  color: white;
+  border: 4px solid #7cb76c;
+  background-color: #673d86;
+  text-transform: uppercase;
+  padding:0.5rem;
+    }
+
+#centerToMarkers:hover{
+  position: sticky;
+  font-family: "Roboto";
+  color: white;
+  border: 4px solid #7cb76c;
+  background-color: #673d86;
+  text-transform: uppercase;
+  
+  }
+
+  .leaflet-control-zoom a {
+    font-family: "Roboto";
+    color: white;
+    border: 2px solid #7cb76c;
+    background-color: #673d86;    
+}
+
+.leaflet-control-search .search-icon:before {
+ 
+  font-family: "Roboto";
+  color: white;
+  border: 2px solid #7cb76c;
+  background-color: #673d86;    
+}
+
+
+/* Stile per gli elementi evidenziati */
+.highlight {
+  background-color: yellow !important;
+  font-weight: bold !important;
+}
+
+#occurrences-count {
+  font-family: "Roboto";
+  color: black;
+  background-color: white;
+  margin-left: 0.5rem;
+}
+
+#search-input {
+  font-family: "SquareFont";
+  background-color: #7cb76c;
+  color: black;
+  outline: 4px solid #673d86;
+}
+
+#search-input:focus {
+  outline: 4px solid #7cb76c;
+  color: white;
+  letter-spacing: 0.2rem;
+  background-color: #673d86;
+}
+
+#prev-button, #next-button {
+  background-color: #673d86;
+  color: white;
+  margin-top: 1rem;
+}
+
+.searchBar #search-input {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+  #search-input {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  #search-input {
+    margin-right: 2rem;
+  }
+}
+
+
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 1px) rotate(1deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(0deg); }
+  60% { transform: translate(-1px, -1px) rotate(-1deg); }
+  70% { transform: translate(1px, 1px) rotate(1deg); }
+  80% { transform: translate(-1px, 1px) rotate(0deg); }
+  90% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(1px, 1px) rotate(0deg); }
+}
