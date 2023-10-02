@@ -93,7 +93,7 @@
 
 @font-face {
   font-family: 'SquareFont';
-  src: url('/assets/fonts/Square.ttf') format('truetype');
+  src: url('./assets/fonts/Square.ttf') format('truetype');
 }
 
 body {
