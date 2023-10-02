@@ -11310,6 +11310,24 @@ p {
 }
 
 
+ .section.heading .section-heading-upperD{
+  font-family: 'OTP'!important;
+  display: inline-block;
+  margin-left: 15rem!important;;
+
+  }
+  
+  .section-heading .section-heading-lowerD{
+   font-family: "Copperplate"!important;
+    text-transform: lowercase!important;
+    font-weight: lighter!important;
+   font-size: 0.8rem!important;
+    display:inline-block;
+   margin-left:10rem;
+
+
+}
+
 @media (min-width: 500px){
   .product-item .product-item-title {
     position: relative;
@@ -11854,4 +11872,10 @@ cursor: pointer;
 .highlight {
 background-color: yellow !important;
 font-weight: bold !important;
+}
+
+
+
+.magcov{
+  width: 100%;
 }
