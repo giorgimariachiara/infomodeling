@@ -11045,7 +11045,7 @@ body .section-heading .section-heading-lower {
   font-size: 4rem;
   font-weight: 100;
   margin-top: 40px;
-  margin-bottom: 170px;
+  
   font-family: "SquareFont";
   transform: rotate(10deg);
   color: #df3a1e;
@@ -11096,7 +11096,7 @@ body .section-heading .section-heading-lower {
   .intro .bg-faded::before {
     content: "";
     position: absolute;
-    top: -10vw;
+   
     left: 0;
     right: 0;
     bottom: 0;
@@ -11108,16 +11108,6 @@ body .section-heading .section-heading-lower {
   .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
     position: relative;
     z-index: 2;
-  }
-
-  .intro-text .section-heading-lower {
-    font-size: 2rem;
-    margin-top: 40px;
-    margin-bottom: 170px;
-  }
-
-  .intro-text .section-heading-upper {
-    font-size: 3rem;
   }
 }
 
