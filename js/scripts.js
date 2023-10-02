@@ -148,7 +148,7 @@ function changeStylesheet(newStylesheet) {
 
 function initializeThemeButtons() {
     const themeMapping = {
-        'theme1': 'css/renaissancefinale.css',
+        'theme1': 'css/newrenaissance.css',
         'theme2': 'css/be.css',
         'theme3': 'css/futurism.css',
         'theme4': 'css/pm.css',

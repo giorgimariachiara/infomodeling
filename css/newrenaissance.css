@@ -11824,11 +11824,9 @@ font-size: 2rem;
     display: none;
   }
 
-
-
   /*map css */
 
-#filters {
+  #filters {
     margin-bottom: 10px;
   }
   
@@ -11838,9 +11836,7 @@ font-size: 2rem;
   filter: sepia(0.6);
   }
   .custom-marker {
-  /* Specifica l'immagine SVG personalizzata come sfondo */
-  background-image: url('../assets/img/cursorerinascimento.svg');
-  /* Specifica l'ancoraggio dell'icona (opzionale) */
+  background-image: url('../assets/img/piuma.svg');
    background-repeat: no-repeat;
    background-position-x: center;
    background-position-y: center;
@@ -11848,8 +11844,7 @@ font-size: 2rem;
   }
   
   #centerToMarkers{
-    margin: 2rem;
-    
+    margin: 2rem; 
     font-family: "Cinzel";
     color: var(--bs-gold);
     border-color: var(--bs-gold);
@@ -11863,7 +11858,6 @@ font-size: 2rem;
     }
     
     .leaflet-control-search .search-icon:before {
-     
       font-size: 20px;
       color: var(--bs-gold);
       border-color: var(--bs-gold);
