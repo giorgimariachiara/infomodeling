@@ -11028,14 +11028,15 @@ p {
 
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
+  font-family:"Cinzel";
 }
 
 .intro {
   position: relative;
 }
 .intro-text p{
-    color:var(--bs-gold);
-    text-align:center;
+  color:var(--bs-gold);
+  text-align:center;
   }
 
   .product-item .product-item-title {
@@ -11625,8 +11626,6 @@ p {
     }
 }
 
-
-
   figcaption {
     font-family: 'Cinzel', serif;
     color: var(--bs-gold);
@@ -11682,8 +11681,8 @@ content: "The\AProject";
 visibility: visible; /* Mostra il pseudo-elemento */
 position: absolute;
 top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+left: 50%;
+transform: translate(-50%, -50%);
 white-space: pre-line;
 color:#536ba4;
 font-size: 2rem;
@@ -11707,8 +11706,10 @@ font-size: 2rem;
     font-size: 2rem;
   }
   
-  .intro .mb-3{margin-top:4rem;
-    margin-left:3rem;
+  .intro .mb-3{
+    margin-top:4rem;
+    margin-left: auto;
+    margin-right: auto;
     color:#92302b;
   }
 
@@ -11719,12 +11720,10 @@ font-size: 2rem;
     .intro-text .bg-faded {
       background-color: #dce0c0;
      }
-     
      .intro .section-heading-upper {
          visibility: hidden; /* Nasconde il testo originale */
          position: relative;
-         height: 4rem; /* Adatta in base alle tue esigenze */
-        
+         height: 4rem; /* Adatta in base alle tue esigenze */ 
      }
      
      .intro .section-heading-upper::before {
@@ -11836,11 +11835,8 @@ font-size: 2rem;
   filter: sepia(0.6);
   }
   .custom-marker {
-  background-image: url('../assets/img/piuma.svg');
-   background-repeat: no-repeat;
-   background-position-x: center;
-   background-position-y: center;
-   background-size: 100%;
+    background: url('../assets/img/quill.png') center center no-repeat;
+    background-size: 100%;
   }
   
   #centerToMarkers{
@@ -11918,13 +11914,12 @@ font-size: 2rem;
   }
 
   .vasaripaint{
-    margin-right:40px;
+    margin-left: auto;
+    margin-right: auto;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 70vw;
-    max-width: 750px;
-    height: 50vw;
-    max-height:940px;
+    width: 20rem;
+    height: 30rem;
     background-image: url('../assets/img/vasaripaintrenaissance.svg');
     padding: 0;
   }
@@ -11932,11 +11927,10 @@ font-size: 2rem;
   @media (max-width: 576px) {
     .intro .vasaripaint {
       width: 75%;
-      margin-left: 6rem;
     }
-    .intro .intro-text {
-      
+    .intro .intro-text { 
       width: 100%;
+     
     }
     .intro .intro-text .intro-button {
       width: 80%; 
@@ -11948,34 +11942,28 @@ font-size: 2rem;
   @media (min-width: 577px) and (max-width: 700px) {
     .intro .vasaripaint {
       width: 75%;
-      margin-left: 5rem;
     }
     .intro .intro-text {
-      
       width: 100%;
     }
     .intro .intro-text .intro-button {
       width: 100%; 
       position: absolute;
-      
     }
   }
   
   @media (min-width: 701px) and (max-width: 991px) {
    .intro .vasaripaint {
       width: 80%;
-      margin-left: 5rem;
     }
     .intro .intro-text {
-     
+
       width: 100%;
       margin-top:-3rem;
     }
     .intro .intro-text .intro-button {
       width: 100%; 
       position: absolute;
-     
-      
     }
   }
   

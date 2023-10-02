@@ -11258,7 +11258,6 @@ box-shadow:
 .intro {
   position: relative;
 }
-
 .intro-text p{
   color:var(--bs-gold);
   text-align:center;
