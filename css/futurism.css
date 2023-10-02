@@ -12571,23 +12571,64 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 .leaflet-popup-content-wrapper {
-  background-color: black; 
-  color: #ffffff; 
-  border: 2px solid #00ff00; 
   border-radius: 0;
   font-family: "Roboto";
   text-transform: uppercase;
   text-align: center;
+  border: 4px solid #7cb76c;
+  color: white;
+  letter-spacing: 0.2rem;
+  background-color: #673d86;
 }
 
 .leaflet-popup-tip {
-  background-color: #1a1a1a;
+  background-color: #7cb76c;
+}
+.leaflet-popup-tip:hover {
+  background-color: #673d86;
 }
 
 .leaflet-popup-content-wrapper:hover {
-  background-color: white;
-  color: black;            
+  background-color: #7cb76c;
+  color: black;          
+  border: 4px solid #673d86;  
 }
+
+#centerToMarkers{
+  margin: 2rem;
+  font-family: "Roboto";
+  color: white;
+  border: 4px solid #7cb76c;
+  background-color: #673d86;
+  text-transform: uppercase;
+  padding:0.5rem;
+    }
+
+#centerToMarkers:hover{
+  position: sticky;
+  font-family: "Roboto";
+  color: white;
+  border: 4px solid #7cb76c;
+  background-color: #673d86;
+  text-transform: uppercase;
+  
+  }
+
+  .leaflet-control-zoom a {
+    font-family: "Roboto";
+    color: white;
+    border: 2px solid #7cb76c;
+    background-color: #673d86;    
+}
+
+.leaflet-control-search .search-icon:before {
+ 
+  font-family: "Roboto";
+  color: white;
+  border: 2px solid #7cb76c;
+  background-color: #673d86;    
+}
+
 
 /* Stile per gli elementi evidenziati */
 .highlight {

@@ -11839,7 +11839,7 @@ font-size: 2rem;
   }
   .custom-marker {
   /* Specifica l'immagine SVG personalizzata come sfondo */
-  background-image: url('../assets/img/markermapparinascimento.svg');
+  background-image: url('../assets/img/cursorerinascimento.svg');
   /* Specifica l'ancoraggio dell'icona (opzionale) */
    background-repeat: no-repeat;
    background-position-x: center;
@@ -11847,6 +11847,46 @@ font-size: 2rem;
    background-size: 100%;
   }
   
+  #centerToMarkers{
+    margin: 2rem;
+    
+    font-family: "Cinzel";
+    color: var(--bs-gold);
+    border-color: var(--bs-gold);
+    background-color: #dfd9c8;
+      }
+    
+      .leaflet-control-zoom a {
+        color: var(--bs-gold);
+        border-color: var(--bs-gold);
+        background-color: #dfd9c8;
+    }
+    
+    .leaflet-control-search .search-icon:before {
+     
+      font-size: 20px;
+      color: var(--bs-gold);
+      border-color: var(--bs-gold);
+      background-color: #dfd9c8;
+    }
+    
+    .leaflet-popup-content-wrapper {
+      color: var(--bs-gold);
+      border: 2px solid var(--bs-gold);
+      background-color: #dfd9c8;  
+      border-radius: 0;   
+      font-family: "Cinzel"; 
+      padding: 0.5rem; 
+      box-shadow: none;
+      text-align: center;
+    }
+    
+    .leaflet-popup-tip {
+      background-color:  #dfd9c8;
+      border: 2px solid var(--bs-gold);
+    }
+
+  /*search bar*/
   .highlight {
     background-color: yellow !important;
     font-weight: bold !important;
@@ -11983,3 +12023,6 @@ font-size: 2rem;
       
     }
   }
+
+
+
