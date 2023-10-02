@@ -10941,21 +10941,6 @@ p {
   margin-bottom: 5rem;
 }
 
-.section-heading {
-  text-transform: uppercase;
-}
-.section-heading .section-heading-upper {
-  display: block;
-  font-size: 1rem;
-  font-weight: 800;
-
-}
-.section-heading .section-heading-lower {
-  display: block;
-  font-size: 2rem;
-  font-weight: 100;
- 
-}
 
 
 .bg-faded {
@@ -11177,119 +11162,216 @@ p {
    
   }
 
-  .container {
-    width: auto!important;
-    height: auto!important;
-    display: flex!important;
 
-  
+.container .intro {
+  background-color:#FFFAF0!important;
+}
+
+.intro .intro-text{
+  background-color: transparent!important;
+}
+
+
+ .intro-text .section-heading-lower{
+ text-decoration:underline;
+ text-transform: lowercase;
+  font-family: "alexang";
  }
- 
+
+ .intro-text p {
+  font-family: 'OTP';
+ }
+
+ .intro-text .section-heading-upper::after{
+  content: "\A\A ";
+  white-space: pre;
+    }
+    .intro-text .section-heading-lower::after{
+      content: "\A\A ";
+      white-space: pre;
+        }
 
 @media (min-width: 500px){
-
-  .container{
-    display: flex!important;
-    flex-direction: column!important;
-    align-items: center!important;
-}
-  .vasaripaint{
-    width: auto!important;
-    height: 30rem!important;
-    margin-top:20rem;
-   margin-left: 2.5rem!important;
-   margin-bottom:2rem!important;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .vasaripaint {
+    width: auto;
+    height: 30rem;
+    text-align:center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right:2rem;
+    margin-bottom: 2rem;
    
-  .intro-text{
-    width: 70%!important;
-    background-color: #FFFAF0!important;
-    margin-left:5rem;
-    margin-top:-55rem;
-
+    /* Aggiungi altre regole specifiche, se necessario */
   }
-  
-      .product-item .product-item-title {
-        position: relative;
-        z-index: 2;
-        margin-bottom: -1rem;
-      
-      }
-      .product-item .product-item-img {
-        position: relative;
-        z-index: 0;
-        max-width: 60vw;
-      }
-      .product-item .product-item-description {
-        position: relative;
-        z-index: 0;
-        margin-top: 8rem;
-        width: 85%;
-        margin-left:4.3rem!important;
-      }
-      .product-item-title{
-        width: 500px;
-        height: 310px;
-        margin-left:5rem;
-      }
-      .product-item-title .bg-faded{
-        width: 100%;
-        
-       
-      }
-  
-      .product-item-title .section-heading-upper{
-        font-family: "OTP";
-        writing-mode: vertical-lr; /* Verticale da sinistra a destra */
-        text-orientation: upright; /* Mantiene le lettere dritte */
-        height: 100%;
-        margin-top: -1.7rem;
-        margin-left:5.8rem;      
-      }
 
-      .product-item-title .section-heading-lower{
-        font-family: "Copperplate";
-        text-transform: lowercase;
-       font-size: 1rem!important;
-        margin-left:1rem;
-        margin-top: -0.5rem;
-        line-height: 1.5;
-        width: 99%;
-      }
+  .intro-text {
+    width: 70%;
+   
+    margin-left: 5rem;
+   }
 
-    .lifeof::after {
-    content: "\A\A\A\A\A\A\A\A\A\A\A ";
-    white-space: pre;
-}
-.product-item-description p{
-  padding-top: 1rem!important;
 }
 
-  .footer{
-    margin-top:40rem;
+@media (min-width: 768px) {
+  .vasaripaint{
+    margin-left:7rem;
   }
-  
+  .intro .intro-text{
+    margin-left: 7rem;
   }
+}
+
+
 @media (min-width: 992px) {
-  
 
-.vasaripaint{
-  width: 100%!important;
-  height: 30rem!important;
-  margin-left:16rem!important;
+  .intro .vasaripaint {
+    width: 25rem!important;
+    height: 25rem;
+    float: right;
+    margin-top: 1rem;
+    position: relative; /* Aggiungi questa proprietà */
+
+    
+  }
+  .intro .vasaripaint::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -3rem; /* Spazio a sinistra */
+    width: 3px; /* Larghezza del bordo */
+    height: 116%; /* Altezza uguale all'elemento */
+    background-color: black; /* Colore del bordo nero */
+    z-index: 1; /* Porta il bordo sotto .vasaripaint */
+  }
+  .intro .intro-text {
+    left: 0.5rem;
+    width: 35%;
+    height: 85%;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    height: 70%;
+    left: 0;
+    position: absolute;
+
+  }
+
+  .container .intro{
+    padding-bottom:2rem;
+    margin-top:2rem;
+     width: 100%;
+     border-bottom: 3px solid black;
+  }
+
+
   
+ 
+}
+@media (min-width: 1200px){
+
+.intro .intro-text {
+    left: 2rem;
+    width: 35%;
+    height: 60%;
+    margin-top:2rem;
+    
+
+  }
+.intro .vasaripaint {
+    left: -2rem; /* Spazio a sinistra */
+    width: 28rem!important;
+    height: 28rem;
+    margin-top:2rem;
+
+  }
+
+  .intro .vasaripaint::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5rem; /* Spazio a sinistra */
+    height: 115%; /* Altezza uguale all'elemento */
+    background-color: black; /* Colore del bordo nero */
+    z-index: 1; /* Porta il bordo sotto .vasaripaint */
+  }
+
+  .container .intro{
+    margin-bottom:-5rem!important;
+    margin-top:1rem!important;
+  }
+
 }
 
-.intro-text{
-  width: 60%;
-  height:30rem;
-  margin-top:-32rem!important;
-  margin-left:-8rem;
-  background-color: #FFFAF0!important;
 
-}
+@media (min-width: 500px){
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1rem;
+  
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 0;
+    margin-top: 8rem;
+    width: 85%;
+    margin-left:4.3rem!important;
+  }
+  .product-item-title{
+    width: 500px;
+    height: 310px;
+    margin-left:5rem;
+  }
+  .product-item-title .bg-faded{
+    width: 100%;
+  }
 
+  .product-item-title .section-heading-upper{
+    font-family: "OTP";
+    writing-mode: vertical-lr; /* Verticale da sinistra a destra */
+    text-orientation: upright; /* Mantiene le lettere dritte */
+    height: 100%;
+    font-size:1.2rem!important;
+    margin-top: -1.7rem;
+    margin-left:5.6rem;      
+  }
 
+  .product-item-title .section-heading-lower{
+    font-family: "Copperplate";
+    text-transform: lowercase;
+    font-weight: lighter;
+   font-size: 0.8rem!important;
+    margin-top: -0.5rem!important;
+    margin-left: 1rem;
+    position: absolute;
+  }
+
+  .lifeof::after {
+   content: "\A\A\A\A\A\A\A\A\A ";
+   white-space: pre;
+    }
+    .product-item-description p{
+     padding-top: 1rem!important;
+    }
+
+    .footer{
+     margin-top:40rem;
+     }
+
+   }
+@media (min-width: 992px) {
   .product-item .product-item-title {
     position: relative;
     z-index: 2;
@@ -11338,7 +11420,7 @@ p {
     text-transform: lowercase;
     font-size: 1rem!important;
     margin-left: -7rem!important;
-     margin-top: 1.2rem;
+     margin-top: 1rem!important;
     line-height: 1.5;
     width: 99%;
   }
