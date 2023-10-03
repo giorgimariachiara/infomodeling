@@ -11070,33 +11070,72 @@ margin-right:-10rem;
 
 }
 
-.donatello{
-  width: 60rem;
-  height: 70rem;
-  margin-bottom:-40rem;
-  background-image: url('/assets/img/Donatellopm.svg');
-  background-repeat: no-repeat;
-}
 
-.leonardopic{
-  width: 50rem;
-  height: 50rem;
-  text-align: left;
-  margin-bottom:-10rem;
-  margin-left:-20rem;
-  background-image: url('/assets/img/leonardo/leonardo.svg');
-  background-repeat: no-repeat;
-}
-
+/*immagini donatello issues*/
 .judith{
-  width: 40rem;
-  height: 50rem;
-  margin-left:-8rem;
-  margin-top: -10rem;
-  background-image: url('/assets/img/donatello/judith.svg');
+  position:relative;
+  background-image: url('/assets/img/judithdefault.svg');
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.general{
+  position:relative;
+  background-image: url('/assets/img/generaldefault.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
+/*immagini verrocchio issues*/
+
+.david{
+  position:relative;
+  background-image: url('/assets/img/davidefault.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; 
+}
+
+.sarcophagus{
+  position:relative;
+  background-image: url('/assets/img/pm/sarcophaguspm.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; 
+}
+/*immagini leonardo issues*/
+.baptism{
+  position:relative;
+  background-image: url('/assets/img/pm/baptismpm.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; 
+}
+
+.adoration{
+  position:relative;
+  background-image: url('/assets/img/adortiondefault.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; 
+}
+
+.last-supper{
+  position:relative;
+  background-image: url('/assets/img/last-supperdefault.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; 
+}
+
+.madonna{
+  position:relative;
+  background-image: url('/assets/img/madonnadefault.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+ 
+}
 
 
 .judith figcaption {
