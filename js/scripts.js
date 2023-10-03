@@ -75,12 +75,14 @@ let currentIndex = -1;
 
 function performSearch() {
     searchTerm = $('#search-input').val().toLowerCase();
+    clearHighlights();
     matchingElements = [];
 
     if (searchTerm) {
+        const searchTermRegex = new RegExp('\\b' + searchTerm + '\\b', 'i'); // Utilizza una regex per trovare corrispondenze esatte della parola
         $('.personName, .placeName').each(function() {
             const text = $(this).text().toLowerCase();
-            if (text.includes(searchTerm)) {
+            if (searchTermRegex.test(text)) {
                 matchingElements.push(this);
             }
         });
