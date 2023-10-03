@@ -11081,74 +11081,258 @@ p {
   position:relative;
   background-image: url('/assets/img/be/judithbe.png');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; 
   filter: grayscale(100%);
-  width: 100%;
-  height: 100%;
+  width: 20rem;
+  height: 38rem;
+  margin-bottom:1rem;
+
 }
 .general{
   position:relative;
   background-image: url('/assets/img/generaldefault.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   filter: grayscale(100%);
-  width: 100%;
-  height: 100%;
+  margin-bottom:1rem;
+  border: 1rem double #0c4128;
 }
 
+@media (min-width: 500px){
+  .judith{
+    margin-left:2rem!important;
+  }
+  .general{
+    width: 30rem;
+    height: 23rem;
+    
+
+  }
+}
+@media (min-width: 992px){
+  .judith{
+    margin-left:10rem!important;
+  }
+  .general{
+    width: 37rem;
+    height: 28.5rem;
+    margin-left:1rem;
+  }
+}
+@media (min-width: 1300px){
+  .general{
+    width: 43rem;
+    height: 33rem;
+  }
+}
 /*immagini verrocchio issues*/
 
 .david{
   position:relative;
   background-image: url('/assets/img/davidefault.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   filter: grayscale(100%);
-  width: 100%;
-  height: 100%; 
+  border: 1rem double #0c4128;
+  margin-bottom:1rem;  
 }
 
 .sarcophagus{
   position:relative;
   background-image: url('/assets/img/sarcophagudefault.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   filter: grayscale(100%);
   width: 100%;
   height: 100%; 
+  border: 1rem double #0c4128; 
+  margin-bottom:1rem;
+}
+
+
+@media (min-width: 500px){
+  .david{
+    width: 13.7rem;
+    height: 20rem;
+    margin-left:5rem;
+  }
+  .sarcophagus{
+  width: 28rem;
+  height: 36rem;
+  }   
+}
+@media (min-width: 900px){
+  .david{
+    margin-left:7rem;
+  }
+}
+@media (min-width:992px){
+  .sarcophagus{
+    width: 32rem;
+    height: 41.3rem;
+    margin-left:3rem;
+  }
+}
+@media (min-width: 1000px){
+  .david{
+    margin-left:13rem;
+  }
+}
+@media (min-width: 1300px){
+  .david{
+    margin-left:15rem;
+  }
+  .sarcophagus{
+    margin-left:6rem;
+  }  
 }
 /*immagini leonardo issues*/
 .baptism{
   position:relative;
   background-image: url('/assets/img/baptismdefault.svg');
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
+  background-size: contain;
+  border: 1rem double #0c4128;
   filter: grayscale(100%);
-  width: 100%;
-  height: 100%; 
+  margin-bottom:1rem;
 }
 
 .adoration{
   position:relative;
   background-image: url('/assets/img/adortiondefault.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  border: 1rem double #0c4128;
   filter: grayscale(100%);
-  width: 100%;
-  height: 100%; 
+  margin-bottom:1rem;
 }
 
 .last-supper{
   position:relative;
   background-image: url('/assets/img/last-supperdefault.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  border: 1rem double #0c4128;
   filter: grayscale(100%);
-  width: 100%;
-  height: 100%; 
+  margin-bottom:1rem;
 }
 
 .madonna{
   position:relative;
   background-image: url('/assets/img/madonnadefault.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  border: 1rem double #0c4128;
   filter: grayscale(100%);
-  width: 100%;
- 
+  margin-bottom:1rem;
 }
+
+@media (min-width: 500px){
+  .baptism{
+  width: 22.3rem;
+  height: 26rem;
+  margin-left:2rem;
+  }
+  .adoration{
+    width: 20.6rem;
+    height: 20rem;
+    margin-left:2rem;
+  }
+  .last-supper{
+    width: 26rem;
+    height: 14rem;
+  }
+  .madonna{
+    width: 17rem;
+    height: 22.5rem;
+    margin-left: 4rem;
+  }
+}
+@media (min-width: 900px){
+  .baptism{
+    width: 22.3rem;
+    height: 26rem;
+    margin-left:2rem;
+    }
+    .adoration{
+      width: 20.6rem;
+      height: 20rem;
+      margin-left:3.5rem;
+    }
+    .last-supper{
+      margin-left:1rem;
+    }
+    .madonna{
+      width: 17rem;
+      height: 22.5rem;
+      margin-left: 6rem;
+    }
+
+}
+@media (min-width:992px){
+  .baptism{
+    width: 22.3rem;
+    height: 26rem;
+    margin-left:8rem;
+    }
+    .adoration{
+      width: 23.4rem;
+      height: 23rem;
+      margin-left:8rem;
+    }
+    .last-supper{
+      width:35rem;
+      height:18.5rem;
+      margin-left:1rem;
+    }
+    .madonna{
+      width: 17rem;
+      height: 22.5rem;
+      margin-left: 8rem;
+    }
+}
+@media (min-width: 1000px){
+  .baptism{
+    width: 22.3rem;
+    height: 26rem;
+    margin-left:7rem;
+    }
+    .adoration{
+      width: 30rem;
+      height: 29.1rem;
+      margin-left:4rem;
+    }
+    .madonna{
+      width: 17rem;
+      height: 22.5rem;
+      margin-left: 10rem;
+    }
+}
+@media (min-width: 1300px){
+  .baptism{
+    width: 22.3rem;
+    height: 26rem;
+    margin-left:11rem;
+    }
+    .adoration{
+      width: 30rem;
+      height: 29.1rem;
+      margin-left:6rem;
+    }
+    .last-supper{
+      width:41.5rem;
+      height:22rem;
+      margin-left:1rem;
+    }
+    .madonna{
+      width: 17rem;
+      height: 22.5rem;
+      margin-left: 13rem;
+    }
+
+}
+
 /*immagini titoli issues*/
 
 .verrocchio {
@@ -11427,9 +11611,11 @@ p {
     margin-left:5rem;
   }
   .product-item-title .bg-faded{
-    width: 100%;
+    width: 100%
+   
   }
 
+ 
   .product-item-title .section-heading-upper{
     font-family: "OTP";
     writing-mode: vertical-lr; /* Verticale da sinistra a destra */
@@ -11526,7 +11712,6 @@ p {
 
 
 
-
 .product-item-title .bg-faded{
     background-image: url("/assets/img/be/titbe.svg");
     background-repeat: no-repeat;
@@ -11537,7 +11722,6 @@ p {
   }
   .product-item-title h2:first-of-type{
    padding-top: 2rem;
-  
   }
   
   h2 span.section-heading-lower{
@@ -11549,8 +11733,10 @@ p {
   }
   .product-item-description .bg-faded{
     background-color: #FFFAF0 !important;
+    height: 100%;
+    width: 99%;
   }
-  
+
   .product-item-description p {
     /* Imposta la larghezza massima per i paragrafi */
     max-width: 100%;
@@ -11844,11 +12030,12 @@ p {
 }
 
 
-
-.figcaption{
+figcaption {
   text-align: center;
   margin-bottom:15px;
-
+  text-transform: uppercase;
+  font-family: 'OTP'!important;
+  font-size: 0.6rem!important;
 }
 
 
