@@ -11265,7 +11265,7 @@ p {
 @media (max-width: 768px) {
   .verrocchio {
     width: 50vw;
-    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
+    height: 70vw;
     margin-top: 6vw;
     margin-left: 10vw;
   }

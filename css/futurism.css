@@ -4330,8 +4330,8 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
 }
 
 .accordion {
-  --bs-accordion-color: transparent;
-  --bs-accordion-bg: #000;
+  --bs-accordion-color: black;
+  --bs-accordion-bg: black;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: #673d86;
   --bs-accordion-border-width: 1px;
@@ -4346,14 +4346,14 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cf964d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-border-color: #f3d3ab;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #5a7db3;;
+  --bs-accordion-btn-focus-border-color: #673d86;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #85c06c;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-btn-hover-bg:  linear-gradient(45deg, #f27a0a, #f27a0a 25%, #85c06c 25%, #85c06c 50%, #da3035 50%, #da3035 75%, #673d86 75%);
   --bs-accordion-active-color: #5a7db3;
   --bs-accordion-active-bg: #85c06c;
-  flex:1;
+   flex:1;
 }
 
 input[type="checkbox"] {
@@ -4365,23 +4365,28 @@ label {
   color: #f7e6ba;
   font-family: "SquareFont";
 }
+
+
+@media (min-width: 480px) and (max-width: 768px) { 
+  label{
+color:black;
+  }
+}
 .accordion-button {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1.5rem 2rem;
+  padding:  var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
   color: #fff; 
   text-align: left;
   background: var(--bs-accordion-btn-bg);
-  transition: all 0.3s ease;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
   font-family: 'SquareFont';
-  border: 2px solid var(--bs-accordion-border-color);
-  letter-spacing: 0.7rem; 
+  border: 2px solid var(--bs-accordion-border-color); 
   font-size:1rem;
- 
+ letter-spacing: 0.3rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
@@ -4389,14 +4394,7 @@ label {
   }
 }
 
-@media (min-width: 768px){
-  .accordion-item:not(:first-child) .accordion-button {
-    letter-spacing: 0.2rem;
-}
-.accordion-item:first-child .accordion-button {
-  letter-spacing: 0.5rem;
-}
-}
+
 .accordion-button span {
   font-size: 1r.2em; 
   font-weight: bold;
@@ -4443,7 +4441,6 @@ label {
 }
 
 .accordion-item {
-
   background-color: transparent;
   border: none;
   margin-bottom: 10px;
@@ -4474,15 +4471,12 @@ label {
 }
 .accordion-collapse {
   background-color: transparent;
-  border-top: 2px solid #00FFFF; /* Questo aggiunge un bordo celeste sopra il contenuto dell'accordion */
-  
 }
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
-  background-color: transparent;
+  background-color: #85c06c;
   color: #f7e6ba;
   border-top: 2px solid var(--bs-accordion-border-color);
-
 }
 
 .accordion-flush .accordion-collapse {
@@ -4506,72 +4500,27 @@ label {
 #personNameList, #placeNameList, #personNameTitle, #placeNameTitle {
   font-family: "SquareFont";
   text-transform: uppercase;
-  text-align: center;
   color:black;
   background-color: #f9e8bc;
   border: 0.2rem solid #673D86;
   margin:0.5rem;
+  padding:1.5rem;
+  font-size: 1rem;
+  
 }
 
-#placeNameList > li {
-  color:#f9e8bc;
-  background-color: black;
-  border: 0.2rem  solid #673D86;
-  padding: 0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
-  margin: 0.3rem;
-}
+@media (min-width: 701px) and (max-width: 992px) {
+  #personNameList, #placeNameList, #personNameTitle, #placeNameTitle {
+    margin:0.5rem;
+    font-size: 0.7rem;  
+  }
 
-#placeNameList > li:hover {
-  color:black;
-  background-color: #f9e8bc;
-  border: 0.2rem  solid #673D86;
-  padding: 0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
-}
-
-#personNameList > li {
-  color:#f9e8bc;
-  background-color: black;
-  border: 0.2rem solid #673D86;
-  padding:0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
-  margin: 0.3rem;
-}
-
-#personNameList > li:hover {
-  color:black;
-  background-color: #f9e8bc;
-  border: 0.2rem solid #673D86;
-  padding: 0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
 }
 .accordion-body ul {
   list-style-type: square;
 }
-
-@media (min-width: 480px) and (max-width: 768px) { 
-  /* Questo stile verrà applicato solo per dimensioni dello schermo tra 480px e 768px. Adatta questi valori come necessario. */
-
-  #personNameList, #placeNameList {
-      font-size: 0.8rem; /* Adatta la dimensione del font */
-      margin: 0.2rem;
-      padding: 0.2rem;
-  }
-  #personNameList > li, #placeNameList > li {
-    font-size: 0.8rem; /* Adatta la dimensione del font */
-    margin: 0.2rem;
-    padding: 0.2rem;
-}
-
-
-  .accordion-body {
-      overflow: auto; /* Permette di fare scroll se il contenuto eccede le dimensioni del contenitore */
-  }
+.accordion-body {
+  overflow: auto; /* Permette di fare scroll se il contenuto eccede le dimensioni del contenitore */
 }
 .breadcrumb {
   --bs-breadcrumb-padding-x: 0;
@@ -11095,7 +11044,6 @@ body .section-heading .section-heading-lower {
   .intro .bg-faded::before {
     content: "";
     position: absolute;
-   
     left: 0;
     right: 0;
     bottom: 0;
@@ -11110,103 +11058,6 @@ body .section-heading .section-heading-lower {
   }
 }
 
-@media (min-width: 701px) and (max-width: 992px) {
-  .baptism, .david, .judith, .sarcophagus {
-      width: 40vw;
-      height: 50vw;
-  }
-
-  .adoration {
-      width: 40vw;
-      height: 40vw;
-      margin-top: 2vw;
-  }
-
-  .last-supper {
-      width: 40vw;
-      height: 20vw;
-      margin-top: 4vw;
-  }
-
-  .madonna {
-      width: 40vw;
-      height: 40vw;
-      margin-top: 5vw;
-  }
-
-  .general {
-      width: 40vw;
-      height: 35vw;
-  }
-
-  .verrocchio {
-      width: 40vw;
-      height: 35vw;
-      margin-left: 15vw;
-      margin-top: -13vw;
-      margin-bottom: 2vw;
-  }
-
-  .donatello {
-      width: 40vw;
-      height: 35vw;
-  }
-
-  .leonardo {
-      width: 50vw;
-      height: 45vw;
-      margin-left: 16vw;
-      margin-bottom: 5vw;
-      margin-top: -10vw;
-  }
-}
-
-@media (min-width: 992px) {
-  .baptism, .david, .sarcophagus, .judith {
-      width: 30vw;
-      height: 30vw;
-      margin-top: 4vw;
-      margin-bottom: 2.5vw;
-      margin-left: 2vw;
-  }
-
-  .adoration, .madonna {
-      width: 30vw;
-      height: 30vw;
-      margin-top: 4vw;
-      margin-left: 2vw;
-  }
-
-  .last-supper {
-      width: 30vw;
-      height: 15vw;
-      margin-top: 4vw;
-      margin-left: 8vw;
-  }
-
-  .general {
-      width: 30vw;
-      height: 25vw;
-      margin-top: 4vw;
-      margin-left: 2vw;
-  }
-
-  .verrocchio, .donatello {
-      width: 50vw;
-      max-width: 22rem;
-      height: 60vw;
-      max-height: 29rem;
-      margin-left: 20vw;
-      margin-top: -8vw;
-  }
-
-  .leonardo {
-      width: 40vw;
-      height: 35vw;
-      margin-left: 16vw;
-      margin-bottom: 8vw;
-  }
-}
 .section-heading-lower span {
   font-family: 'Cinzel'; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
@@ -11224,20 +11075,21 @@ body .section-heading .section-heading-lower {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%; /* Questo determina dove inizia la seconda parte del colore */
+    width: 90%; 
     height: 100%;
     background: linear-gradient(120deg, #f07a00,#f07a00 35%, #85c06c 15%, #85c06c 60%, #ffd333 40%, #ffd333 75%, #673d86 75%);
     clip-path:polygon(100% 0, 100% 71%, 53% 39%, 60% 66%, 30% 46%, 26% 69%, 11% 55%, 0% 70%, 0% 35%, 0 0);
     z-index: -1; /* Assicurati che sia dietro al testo */
 }
 
+
+
 @media (max-width: 992px) {
   .product-item .bg-faded::before {
         width: 50%;
         height: 100%;
         border:none;
-        /* puoi cambiare qualsiasi altro stile qui per adattarlo alle dimensioni dello schermo */
-    }
+  }
 }
 .product-item-description .bg-faded{
     background-color: #f7e6ba;
@@ -11597,21 +11449,38 @@ body .section-heading .section-heading-lower {
   justify-content: space-between;
 }
 
-@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+@media (min-width: 768px) { 
+  .content-wrapper {
+    display: flex;
+    flex-direction: row !important; 
+}
+.accordion {
+  flex: 1; 
+}
+.product-item-title .bg-faded{
+  margin-left:30rem;
+  width: 85%;
+}
+.main-content {
+  flex:3;
+ width: 70% !important; 
+}
+
+}
+
+@media (max-width: 768px) { 
   .content-wrapper {
       flex-direction: column;
   }
-
   .accordion {
     position: sticky;
     top: 80px;
-    z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+    z-index: 100; 
     margin-bottom: 20px;
     margin-right:10px;
   }
-
   .main-content {
-      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+      width: 100%; 
   }
 }
 
@@ -11624,9 +11493,8 @@ body .section-heading .section-heading-lower {
 .toggle-btn, .toggle-btn-2 {
   width: 40px;
   height: 40px;
-  /*transform: translate(-50%, -50%) */
   border-radius: 50%;
-  margin-bottom: 10px;  /* Spacing between the buttons */
+  margin-bottom: 10px;  
 }
 
 
@@ -11778,7 +11646,8 @@ body .section-heading .section-heading-lower {
   transform:rotate(20deg)
 }
 
-@media (max-width: 768px){
+
+@media (max-width: 1000px){
   .navbar-nav > li:nth-child(1) > .nav-link {
     font-size: 1.5rem !important;
     border-bottom: 0.2rem solid black;
@@ -11825,10 +11694,6 @@ figcaption{
   margin-top: 1rem;
 }
 
-figcaption:nth-of-type(2) {
-  
-  margin-left: 13px !important;
-}
 
 .highlight-place {
   color:#f9e8bc;
@@ -11837,8 +11702,8 @@ figcaption:nth-of-type(2) {
   padding: 0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
-
 }
+
 .highlight-place:hover {
   color:black;
   background-color: #f9e8bc;
@@ -11847,7 +11712,6 @@ figcaption:nth-of-type(2) {
   text-transform: uppercase;
   font-family: "SquareFont";
 }
-
 
 .highlight-person {
   color:#f9e8bc;
@@ -11913,7 +11777,7 @@ figcaption:nth-of-type(2) {
 }
 
 .verrocchio {
-  background-image: url('../assets/img/verrocchiofuturista.svg');
+  background-image: url('../assets/img/verrocchiodefault.svg');
   filter: grayscale(80%);
 }
 
@@ -11923,19 +11787,11 @@ figcaption:nth-of-type(2) {
 }
 
 .leonardo {
-  background-image: url('../assets/img/Leonardofuturism.svg');
+  background-image: url('../assets/img/leonardo/leonardo.svg');
   filter: grayscale(80%);
 }
 
-/* Effetto hover */
-.baptism:hover, .adoration:hover, .last-supper:hover, .madonna:hover, .david:hover, .sarcophagus:hover, .judith:hover, .general:hover, .verrocchio:hover, .donatello:hover, .leonardo:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
 
-.verrocchio:hover, .donatello:hover, .leonardo:hover {
-  z-index: 10000;
-}
 
 /* Media queries */
 @media (max-width: 576px) {
@@ -11952,21 +11808,21 @@ figcaption:nth-of-type(2) {
   .adoration {
     width: 20rem;
     height: 25rem;
-      margin-top: 5vw;
+    margin-top: 5vw;
   }
 
   .last-supper {
-    width: 20rem;
-    height: 10rem;
-      margin-top: 3rem;
-      margin-left: 2rem;
+  width: 20rem;
+  height: 10rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
   }
 
   .madonna {
     width: 18rem;
     height: 20rem;
-      margin-top: 10vw;
-      margin-left: 2rem;
+    margin-top: 10rem;
+    margin-left: 2rem;
   }
 
   .sarcophagus {
@@ -11975,11 +11831,17 @@ figcaption:nth-of-type(2) {
   }
 
   .general {
-    width: 20rem;
+    width: 43rem;
     height: 15rem;
   }
 
-  .verrocchio, .donatello, .leonardo {
+
+  .leonardo{
+    width: 25rem;
+    height: 45rem;
+    margin-right: 15rem;  
+  }
+  .verrocchio, .donatello{
       width: 65vw;
       height: 60vw;
       margin-left: 16vw;
@@ -12037,11 +11899,8 @@ figcaption:nth-of-type(2) {
   }
 
   .leonardo {
-      width: 50vw;
-      height: 45vw;
-      margin-top: -15vw;
-      margin-left: 20vw;
-      margin-bottom: 5vw;
+    width: 40rem;
+    height: 35rem;  
   }
 }
 
@@ -12089,11 +11948,9 @@ figcaption:nth-of-type(2) {
   }
 
   .leonardo {
-      width: 50vw;
-      height: 45vw;
-      margin-left: 16vw;
-      margin-bottom: 5vw;
-      margin-top: -10vw;
+    width: 35rem;
+    height: 30rem;  
+    margin-right: 5rem;  
   }
 }
 
@@ -12113,7 +11970,7 @@ figcaption:nth-of-type(2) {
 
   .david, .sarcophagus{
     width: 20rem;
-    height: 30rem;
+    height: 25rem;
   }
   .adoration{
     width: 20rem;
@@ -12138,8 +11995,8 @@ figcaption:nth-of-type(2) {
   .general {
     width: 30rem;
     height: 20rem;
-      margin-top: 4vw;
-      margin-left: 2vw;
+      margin-top: 4rem;
+      margin-left: 2rem;
   }
 
   .verrocchio, .donatello {
@@ -12152,10 +12009,8 @@ figcaption:nth-of-type(2) {
   }
 
   .leonardo {
-      width: 40vw;
-      height: 35vw;
-      margin-left: 16vw;
-      margin-bottom: 8vw;
+      width: 60rem;
+      height: 35rem;    
   }
 }
 .vasaripaint {
@@ -12378,6 +12233,7 @@ figcaption:nth-of-type(2) {
   margin: 0;
   border: none;
   padding: 0;
+  pointer-events: none;
 }
 
 .word1, .word6, .word7 {
@@ -12514,6 +12370,9 @@ background-image: url('/assets/img/cursorefuturismo.svg');
   border: 4px solid #673d86;  
 }
 
+.leaflet-popup-content-wrapper:hover a {
+  color: #673d86;          
+}
 #centerToMarkers{
   margin: 2rem;
   font-family: "Roboto";
@@ -12542,13 +12401,19 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 .leaflet-control-search .search-icon:before {
- 
   font-family: "Roboto";
   color: white;
   border: 2px solid #7cb76c;
   background-color: #673d86;    
 }
 
+.leaflet-popup-content a {
+  color: #7cb76c; 
+}
+
+.leaflet-popup-content a:hover {
+  color: #673d86; 
+}
 
 /* Stile per gli elementi evidenziati */
 .highlight {
