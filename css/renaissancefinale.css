@@ -11504,7 +11504,7 @@ box-shadow:
     position: absolute;
     top: 0; 
     left: 0; 
-    width: 6rem;
+    width: 2rem;
     height: auto;
     display:block;
   }
@@ -11565,7 +11565,9 @@ box-shadow:
 
 @media (max-width: 576px) {
   #miaLettera {
-    width: 16rem;
+    width: 15rem;
+    margin-left:0;
+    
   }
 }
 
@@ -11579,6 +11581,7 @@ box-shadow:
 @media (min-width: 701px) and (max-width: 992px) {
   #miaLettera {
     width: 18rem;
+
   }
 }
 
