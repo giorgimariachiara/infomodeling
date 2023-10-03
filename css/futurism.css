@@ -12412,7 +12412,7 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 
 /* Stile per gli elementi evidenziati */
 .highlight {
-  background-color: yellow !important;
+  background-color: #673d86 !important;
   font-weight: bold !important;
 }
 
