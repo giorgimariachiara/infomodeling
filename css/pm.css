@@ -118,7 +118,6 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-image: url('/assets/img/pmbg2.svg');
 
 }
 
@@ -10981,7 +10980,7 @@ width: 70%;
   }
 }
 body {
-  background-image: url("../assets/img/pmbg.svg");
+  background-image: url("../assets/img/pm/pmbg.svg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -11070,6 +11069,67 @@ margin-right:-10rem;
 
 }
 
+/*immagini titoli issues*/
+
+.verrocchio {
+  position:relative;
+    background-image: url('/assets/img/pm/verrocchiopm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40rem;
+    height: 40rem;
+    margin-left:25rem;   
+    margin-top:-10rem; 
+    z-index: 10;    
+   
+  }
+  .donatello{
+    position:relative;
+    background-image: url('/assets/img/pm/donatellopm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30rem;
+    height: 30rem;
+    margin-left:25rem;   
+    margin-top:-7rem; 
+    z-index: 10;  
+  }
+  .leonardo{
+    position:relative;
+    background-image: url('/assets/img/pm/leonardopm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30rem;
+    height: 30rem;
+    margin-left:25rem;   
+    margin-top:-7rem; 
+    z-index: 10;
+
+    }
+
+
+
+  
+  @media (min-width: 500px){
+    .verrocchio {
+      margin-left:4rem;
+
+    }
+    .donatello {
+      
+      margin-left:5rem;
+    }
+    .leonardo {
+      margin-left:5rem;
+
+    }
+  }
+  
+  
+  
+  @media (min-width: 992px){
+ 
+  }
 
 /*immagini donatello issues*/
 .judith{
@@ -11078,6 +11138,7 @@ margin-right:-10rem;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  margin-left:5rem;    
 }
 .general{
   position:relative;

@@ -11339,18 +11339,13 @@ p {
   position:relative;
     background-image: url('/assets/img/be/verrocchiobe.svg');
     background-repeat: no-repeat;
-    z-index: 100000;
-  
-    
-   
+    z-index: 100000;    
   }
   .donatello{
     position:relative;
     background-image: url('/assets/img/be/Donatellobe.svg');
     background-repeat: no-repeat;
-    z-index: 100000;
-  
-  
+    z-index: 100000;  
   }
   .leonardo{
     position:relative;
