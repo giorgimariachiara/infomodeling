@@ -107,6 +107,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
 }
 
 hr {
@@ -10951,7 +10952,9 @@ p {
   text-transform: uppercase;
   line-height: 1;
   font-family: "Roboto";
-  color: black;
+  margin-left:5rem;
+  margin-right: 5rem;
+  
 }
 
 
@@ -10974,7 +10977,6 @@ p {
   background-color:#eedfb2;
   clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
   z-index: 0; 
-  /*background-image: linear-gradient(to top right, #673D86 45%, #85C06C 45%);*/
 }
 
 .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
@@ -11001,7 +11003,6 @@ p {
 
 .section-heading .section-heading-upper:hover {
     animation: swing 1s ease infinite;
-
 }
 
 .section-heading .section-heading-lower {
@@ -11044,8 +11045,6 @@ body .section-heading .section-heading-lower {
   display: block;
   font-size: 4rem;
   font-weight: 100;
-  margin-top: 40px;
-  
   font-family: "SquareFont";
   transform: rotate(10deg);
   color: #df3a1e;
@@ -11639,7 +11638,7 @@ body .section-heading .section-heading-lower {
 
 /*titolo*/
 
-.site-heading-lower{
+.site-heading-lower {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11650,11 +11649,16 @@ body .section-heading .section-heading-lower {
   margin: 0 2px;
   display: inline-block;
   transform-origin: center;
+  position: relative;
+  text-shadow: 
+      2px 0 rgba(255,255,255,0.4),
+      4px 0 rgba(255,255,255,0.3),
+      6px 0 rgba(255,255,255,0.2);
 }
 
 .site-heading-lower span:nth-child(1) {
   font-size: 2em;
-  transform: rotate(-20deg);
+  transform: rotate(-20deg) skewY(-10deg);
 }
 
 .site-heading-lower span:nth-child(2) {
@@ -11692,60 +11696,40 @@ body .section-heading .section-heading-lower {
   transform: rotate(5deg);
 }
 
+.site-heading-lower span:hover {
+  transform: scale(1.4) rotate(10deg);
+  transition: transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
   .site-heading-lower {
       font-size: 1.2em;
   }
   
   .site-heading-lower span {
-      margin: 0 1px;  /* riduzione dello spazio tra le lettere */
+      margin: 0 1px;
   }
 }
 
 @media (max-width: 576px) {
-  .site-heading-lower{
+  .site-heading-lower {
       font-size: 1em;
   }
   
   .site-heading-lower span {
-      margin: 0 0.5px;  /* ulteriore riduzione dello spazio tra le lettere */
+      margin: 0 0.5px;
   }
-}
-
-/* ombra dietro al titolo */
-
-.site-heading-lower span {
-  position:relative;
-  transform-origin: bottom left;
-  text-shadow: 
-      2px 0 rgba(255,255,255,0.4),
-      4px 0 rgba(255,255,255,0.3),
-      6px 0 rgba(255,255,255,0.2);
-  position: relative;
-}
-
-/* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
-.site-heading-lower span:nth-child(1) {
-  transform: rotate(-20deg) skewY(-10deg);
-}
-
-.site-heading-lower span:hover {
-  transform: scale(1.4) rotate(10deg);
-  transition: transform 0.3s ease;
 }
 
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
 .site-heading-upper {
-   
     font-family:"Roboto";
     font-size: 3rem;
     letter-spacing: 0.1em;
     position: relative;
     text-align: center; /* Cambia da flex a text-align per centrare il testo */
     padding: 0.5em 0;
-    word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
-    margin-left: 10rem;
-    margin-right: 10rem;
+    word-wrap: break-word; 
   }
 
 .overlap {
@@ -12178,10 +12162,8 @@ figcaption:nth-of-type(2) {
   margin-right: 2.5rem;  
   background-repeat: no-repeat;
   background-size: contain;
-  width: 70vw;
-  max-width: 47rem; 
-  height: 80vw;
-  max-height: 54rem; 
+  width: 40rem;  
+  height: 48rem; 
   transform: rotate(10deg);
   background-image: url('../assets/img/vasaripaintfuturism.svg');
 }
@@ -12190,14 +12172,16 @@ figcaption:nth-of-type(2) {
   transform: scale(1.1);
   z-index: 10000; 
 }
+
 @media (max-width: 576px) {
   .intro .vasaripaint {
     width: 75%;
-    margin-left: 5rem;
+    height: 20rem;
+    margin-left: 4rem;
   }
   .intro .intro-text {
-    margin-top:-5rem;
-    width: 100%;
+    width: 95%;
+    margin-top: -3rem;
   }
   .intro .intro-text .intro-button {
     width: 80%; 
@@ -12207,11 +12191,13 @@ figcaption:nth-of-type(2) {
 
 @media (min-width: 577px) and (max-width: 700px) {
   .intro .vasaripaint {
-    width: 75%;
+    width: 85%;
+    height: 25rem;
+    margin-left: 4rem;
   }
   .intro .intro-text {
-    margin-top:-23rem;
-    width: 100%;
+    width: 95%;
+    margin-top: -7rem;
   }
   .intro .intro-text .intro-button {
     width: 100%; 
@@ -12220,12 +12206,14 @@ figcaption:nth-of-type(2) {
 }
 
 @media (min-width: 701px) and (max-width: 991px) {
- .intro .vasaripaint {
+  .intro .vasaripaint {
     width: 75%;
+    height: 30rem;
+    margin-left: 4rem;
   }
   .intro .intro-text {
-    margin-top:-20rem;
-    width: 100%;
+    width: 95%;
+    margin-top: -10rem;
   }
   .intro .intro-text .intro-button {
     width: 100%; 
@@ -12235,13 +12223,14 @@ figcaption:nth-of-type(2) {
 
 @media (min-width: 992px) and (max-width:1199px){
   .intro .vasaripaint {
-    width: 50%;
+    width: 70%;
     float: right;
+    margin-top: 5rem;
   }
   .intro .intro-text {
     left: 0;
-    margin-top: 5rem;
     width: 65%;
+    margin-top: 5rem;
     position: absolute;
   }
   .intro .intro-text .intro-button {
@@ -12266,7 +12255,6 @@ figcaption:nth-of-type(2) {
     width: 100%;
     left: 0;
     position: absolute;
-    
   }
 }
 
@@ -12612,9 +12600,6 @@ background-image: url('/assets/img/cursorefuturismo.svg');
     margin-right: 2rem;
   }
 }
-
-
-
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
