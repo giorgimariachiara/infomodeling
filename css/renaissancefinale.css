@@ -11031,14 +11031,14 @@ p {
 }
 
 .intro .section-heading-upper {
-    visibility: hidden; /* Nasconde il testo originale */
+    visibility: hidden; 
     position: relative;
-    height: 4rem; /* Adatta in base alle tue esigenze */
+    height: 4rem; 
 }
 
 .intro .section-heading-upper::before {
   content: "The\AProject";
-  visibility: visible; /* Mostra il pseudo-elemento */
+  visibility: visible; 
   position: absolute;
   top: 50%;
     left: 50%;
@@ -11049,14 +11049,14 @@ p {
 }
 
 .intro .section-heading-lower {
-  visibility: hidden; /* Nasconde il testo originale */
+  visibility: hidden; 
   position: relative;
-  height: 4rem; /* Adatta in base alle tue esigenze */
+  height: 4rem; 
 }
 
 .intro .section-heading-lower::before {
 content: "What\Ais\A About\A";
-visibility: visible; /* Mostra il pseudo-elemento */
+visibility: visible; 
 position: absolute;
 top: 100%;
   left: 50%;
@@ -11079,15 +11079,15 @@ top: 100%;
    }
    
    .intro .section-heading-upper {
-       visibility: hidden; /* Nasconde il testo originale */
+       visibility: hidden; 
        position: relative;
-       height: 4rem; /* Adatta in base alle tue esigenze */
+       height: 4rem; 
       
    }
    
    .intro .section-heading-upper::before {
      content: "The\AProject";
-     visibility: visible; /* Mostra il pseudo-elemento */
+     visibility: visible; 
      position: absolute;
      font-size: 2rem;
      top: 50%;
@@ -11098,14 +11098,14 @@ top: 100%;
    }
    
    .intro .section-heading-lower {
-     visibility: hidden; /* Nasconde il testo originale */
+     visibility: hidden; 
      position: relative;
-     height: 4rem; /* Adatta in base alle tue esigenze */
+     height: 4rem; 
    }
    
    .intro .section-heading-lower::before {
    content: "What\Ais\A About\A";
-   visibility: visible; /* Mostra il pseudo-elemento */
+   visibility: visible; 
    position: absolute;
    top: 100%;
      left: 50%;
@@ -11128,14 +11128,14 @@ top: 100%;
    }
    
    .intro .section-heading-upper {
-       visibility: hidden; /* Nasconde il testo originale */
+       visibility: hidden; 
        position: relative;
-       height: 4rem; /* Adatta in base alle tue esigenze */
+       height: 4rem; 
    }
    
    .intro .section-heading-upper::before {
      content: "The\AProject";
-     visibility: visible; /* Mostra il pseudo-elemento */
+     visibility: visible; 
      position: absolute;
      font-size: 2rem;
      top: 50%;
@@ -11146,14 +11146,14 @@ top: 100%;
    }
    
    .intro .section-heading-lower {
-     visibility: hidden; /* Nasconde il testo originale */
+     visibility: hidden; 
      position: relative;
-     height: 4rem; /* Adatta in base alle tue esigenze */
+     height: 4rem; 
    }
    
    .intro .section-heading-lower::before {
    content: "What\Ais\A About\A";
-   visibility: visible; /* Mostra il pseudo-elemento */
+   visibility: visible; 
    position: absolute;
    font-size: 2rem;
    top: 100%;
