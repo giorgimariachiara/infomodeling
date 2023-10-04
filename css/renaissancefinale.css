@@ -11595,13 +11595,12 @@ margin-bottom:1rem;
 }
 
 .bg-faded p {
-  overflow: hidden; 
+
   margin-left: 2rem; 
 }
 
  @media (max-width: 576px) {
   .bg-faded p {
-    overflow: hidden; 
       margin-right: 1rem;
       margin-left: 1rem;
   }
@@ -11610,21 +11609,19 @@ margin-bottom:1rem;
 
 @media (min-width: 577px) and (max-width: 700px) {
   .bg-faded p {
-    overflow: hidden; 
       margin-right: 0.5rem;
       margin-left: 0.7rem;
   }
 }
 @media (min-width: 701px) and (max-width: 992px) {
   .bg-faded p {
-    overflow: hidden; 
       margin-right: 1.5rem;
       margin-left: 1.7rem;
   }
 }
 @media (min-width: 993px) {
   .bg-faded p {
-    overflow: hidden; 
+    
     margin-left: 2rem; 
   }
 }
@@ -12167,7 +12164,7 @@ filter: sepia(0.6);
 
 /*search bar*/
 .highlight {
-  background-color: yellow !important;
+  background-color: #3f5b31!important;
   font-weight: bold !important;
 }
 
