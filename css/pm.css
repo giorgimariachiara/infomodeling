@@ -11380,8 +11380,10 @@ margin-right:-10rem;
 
 }
 
-
-figcaption {
+figure{
+  margin-bottom: 25rem;
+}
+.judith figcaption {
   font-family: "Bauhaus", sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -11391,7 +11393,7 @@ figcaption {
   padding: 10px;
   width: 25rem;
   margin-left:10rem;
-
+  margin-top: -25rem!important;
   transform: rotate(90deg);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
