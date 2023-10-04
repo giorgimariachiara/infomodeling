@@ -93,7 +93,7 @@
 
 @font-face {
   font-family: "Tangerine";
-  src: url('../assets/fonts/GriffoClassico.ttf') format('truetype');
+  src: url('../assets/fonts/Tangerine-Regular.ttf') format('truetype');
 }
 
 body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion, .accordion-body, .accordion-button {
