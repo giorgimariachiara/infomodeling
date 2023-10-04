@@ -65,7 +65,7 @@ $(document).ready(function() {
   });
 
     // Load saved stylesheet
-    loadSavedStylesheet();
+    // loadSavedStylesheet();
 
 });
 

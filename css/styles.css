@@ -11063,10 +11063,25 @@ p {
 }
 
 .main-content {
-  flex: 3;  /* Takes 3/4 of the container width */
+  flex: 3;  
 }
 
-@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+@media (min-width: 768px) { 
+  .content-wrapper {
+    display: flex;
+    flex-direction: row; 
+}
+
+.product-item-title .bg-faded{
+  margin-left:20rem;
+  width: 85%;
+}
+.main-content {
+ width: 70%; 
+}
+}
+
+@media (max-width: 768px) { 
   .content-wrapper {
       flex-direction: column;
   }
@@ -11074,72 +11089,15 @@ p {
   .accordion {
       position: sticky;
       top: 60px;
-      z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+      z-index: 100; 
       margin-bottom: 20px;
       margin-right:10px;
   }
 
   .main-content {
-      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+      width: 100%; 
   }
 }
-
-
-/*
-.toggle-btn {
-    position: absolute;  
-    top: 0;  
-    left: 50%; 
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}  */
-
-
-/* Change from sticky to absolute positioning */
-/* Align to the top */
-/* Align to the left at 50% of the container width */
-/* Center the element */
-/*
-.toggle-btn {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
-
- /* Use absolute positioning */
- /* Align it to the right */
- /*
-.toggle-btn {
-    position: sticky; 
-    top: 150px;
-    right: auto;  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-
-.toggle-btn-2 {
-    position: sticky;  
-    top: 15%;  
-    left: 100%;  
-    transform: translate(-50%, -50%);  
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-}
-*/
 
 .button-container {
   position: sticky;
@@ -11150,16 +11108,16 @@ p {
 .toggle-btn, .toggle-btn-2 {
   width: 40px;
   height: 40px;
-  /*transform: translate(-50%, -50%) */
+  
   border-radius: 50%;
-  margin-bottom: 10px;  /* Spacing between the buttons */
+  margin-bottom: 10px;  
 }
 
 
 #mainNav {
   position: sticky;
   top: 0;
-  z-index: 1000;  /* To ensure it stays above other elements */
+  z-index: 1000;  
 }
 .highlight-place {
     background-color: #6caedf;
@@ -11170,31 +11128,31 @@ p {
 .btns-grid-container {
   display: grid;
   position: fixed;
-  right: 10px;  /* Adjust as per requirement */
-  bottom: 10px;  /* Adjust as per requirement */
-  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 5px;  /* Spacing between buttons */
-  z-index: 9999;  /* This will ensure it's on top of most other elements */
+  right: 10px;  
+  bottom: 10px;  
+  grid-template-rows: repeat(8, auto);  
+  gap: 5px;  
+  z-index: 9999; 
 }
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 50px;  /* Adjust width as required */
-  height: 50px;  /* Adjust height as required */
+  width: 50px;  
+  height: 50px;  
   border: none;
-  border-radius: 50%;  /* To make them round */
-  background-color: rgba(47, 23, 15, 0.9);  /* Adjust color as required */
+  border-radius: 50%;  
+  background-color: rgba(47, 23, 15, 0.9);
   color: #fff;
   cursor: pointer;
 }
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #555;  /* Adjust hover color as required */
+  background-color: #555;  
 }
 
 .sub-btn[data-theme] {
   display: none;
 }
 #stylesBtn {
-  width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
-  height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
+  width: 50px;  
+  height: 50px; 
   background-image: url('../assets/img/brush.svg');
   background-size: contain;
   background-position: center;
@@ -11230,39 +11188,45 @@ p {
 }
 
 .sub-btn {
-  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+  position: relative;  
 }
 
 .btn-hover-text {
-  display: none;  /* Inizialmente, il testo non sarà visibile */
+  display: none;  
   position: absolute;
-  top: 0;  /* Posiziona il testo in alto */
+  top: 0;  
   left: 10%;
-  transform: translateX(-100%); /* Centra orizzontalmente il testo */
-  font-size: 1rem;  /* Riduci la dimensione del testo. Modifica come desideri. */
-  background-color: rgba(0,0,0,0.6);  /* Sfondo semi-trasparente */
-  color: white;  /* Colore del testo */
-  padding: 0.1rem 0.3rem;  /* Piccolo padding intorno al testo */
-  border-radius: 0.3rem;  /* Angoli arrotondati */
+  transform: translateX(-100%); 
+  font-size: 1rem;  
+  background-color: rgba(0,0,0,0.6);  
+  color: white; 
+  padding: 0.1rem 0.3rem;  
+  border-radius: 0.3rem;  
 }
 
 .sub-btn:hover .btn-hover-text {
-  display: inline-block;  /* Mostra il testo quando il pulsante è hoverato */
+  display: inline-block;  
 }
 
 /*immagini*/
-
+/*
 .verrocchio {
-  width: 40vw;
-  height: 34vw;
-  margin-left: 20vw;
   background-image: url('../assets/img/verrocchiodefault.svg');
   background-repeat: no-repeat;
   background-size: contain;
   padding: 0;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 576px){
+  .verrocchio {
+    width: 60rem;
+    height: 20rem;
+    margin-top: 3rem;
+    margin-left: 8rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 700px){
   .verrocchio {
     width: 50vw;
     height: 70vw;
@@ -11271,47 +11235,147 @@ p {
   }
 }
 
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .verrocchio {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-top: 8vw;
-    margin-left: 15vw;
-  }
+@media (min-width: 701px) and (max-width: 992px) {
+  .verrocchio{ width: 30rem;
+    height: 30rem;
+    margin-top: 3rem;
+    margin-left: 10rem;}
 }
 
+@media (min-width: 992px) {
+.verrocchio{ width: 30rem;
+  height: 30rem;
+  margin-top: 3rem;
+  margin-left: 17rem;}
+}
+*/
 
+.verrocchio {
+  background-image: url('../assets/img/verrocchiodefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 1rem;
+}
 
+@media (max-width: 576px) {
+  .verrocchio  {
+    width:25rem;
+    height: 25rem;
+    margin-top:1rem;
+    margin-left:2rem;
+    
+  } 
+  }
+
+  @media (min-width: 577px) and (max-width: 700px) {
+    .verrocchio  {
+      width:35rem;
+      height: 35rem;
+      margin-left:4rem;
+    }
+  
+   }
+  
+    @media (min-width: 701px) and (max-width: 992px) {
+      .verrocchio  {
+        width:50rem;
+        height: 25rem;
+        margin-top: 3rem;
+      }
+    
+    }
+    @media (min-width: 992px) {
+      .verrocchio  {
+       width:50rem;
+       height: 25rem;
+       margin-left:8rem;
+       margin-top: 3rem;
+     }
+   }
 .leonardo {
-  width: 60vw;
-  height: 35vw;
-  margin-top: 2vw;
   background-image: url('../assets/img/leonardo/leonardo.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .leonardo {
-    width: 50vw;
-    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-top: 6vw;
-    margin-left: 10vw;
+    width:30rem;
+    height: 25rem;
+    margin-right:15rem;
+  } 
   }
-}
 
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .leonardo{
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-top: 8vw;
-    margin-left: 15vw;
-  }
-}
+  @media (min-width: 577px) and (max-width: 700px) {
+    .leonardo {
+      width:50rem;
+      height: 25rem;
+      margin-right: 10rem;
+    }
+   }
+  
+    @media (min-width: 701px) and (max-width: 992px) {
+      .leonardo {
+        width:50rem;
+        height: 25rem;
+        margin-top: 3rem;
+      }
+    
+    }
+    @media (min-width: 992px) {
+      .leonardo {
+       width:50rem;
+       height: 25rem;
+       margin-left:8rem;
+       margin-top: 3rem;
+     }
+   }
 
+
+   .donatello {
+    background-image: url('../assets/img/donatellodefault.svg');
+    background-repeat: no-repeat;
+    background-size: contain;}
+
+    @media (max-width: 576px) {
+      .donatello{
+        width: 18rem;
+        height: 20rem;
+        margin-left: 16vw;
+        margin-top:2rem;
+        margin-bottom: 1rem;
+    }
+      }
+    
+      @media (min-width: 577px) and (max-width: 700px) {
+        .donatello {
+          width: 22rem;
+          height: 25rem;
+          margin-bottom: 1rem;
+          margin-left:3rem;
+          margin-top:2rem;
+      }
+       }
+      
+        @media (min-width: 701px) and (max-width: 992px) {
+          .donatello {
+            width: 22rem;
+            height: 25rem;
+            margin-left:6rem;
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+        }
+        
+        }
+        @media (min-width: 992px) {
+          .donatello {
+            width: 30rem;
+            height: 30rem;
+            margin-left: 10rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+       }
 .decorative-img{
   display: none;
 }
@@ -11336,19 +11400,19 @@ p {
   margin-right:40px;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 70vw;
-  max-width: 750px;
-  height: 80vw;
-  max-height:860px;
+  width: 60rem;
+  height: 40rem;
 }
 
 .vasaripaint {
-  background-image: url('../assets/img/vasaripaintfuturism.svg');
+  background-image: url('../assets/img/vasaripaintdefault.svg');
 }
+
 @media (min-width: 992px) {
   .intro .vasaripaint {
     width: 75%;
     float: right;
+    
   }
   .intro .intro-text {
     left: 0;
@@ -11376,200 +11440,264 @@ p {
 }
 
 
-.baptism {
-  width: 30vw;
-  height: 34vw;
-  margin-left: 7vw;
-  background-image: url('../assets/img/baptismdefault.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
-  
-}
-
-@media (max-width: 768px) {
-  .baptism {
-    width: 50vw;
-    height: 70vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-top: 6vw;
-    margin-left: 10vw;
-  }
-}
-
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .baptism {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-top: 8vw;
-    margin-left: 5vw;
-  }
-}
-
-
-.adortion {
-  width: 30vw;
-  height: 30vw;
-  margin-left: 7vw;
-  background-image: url('../assets/img/adortiondefault.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .adortion {
-    width: 50vw;
-    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-left: 10vw;
-  }
-}
-
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .adortion {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-left: 5vw;
-  }
-}
-
-
-
-.last-supper {
-  width: 30vw;
-  height: 20vw;
-  margin-left: 7vw;
-  background-image: url('../assets/img/last-supperdefault.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .last-supper {
-    width: 50vw;
-    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-left: 10vw;
-  }
-}
-
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .last-supper {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-left: 5vw;
-  }
-}
-
-
-.madonna {
-  width: 40vw;
-  height: 40vw;
-  margin-left: 7vw;
-  background-image: url('../assets/img/madonnadefault.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .madonna {
-    width: 50vw;
-    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-left: 10vw;
-  }
-}
-
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .madonna {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-left: 5vw;
-  }
-}
-
 .david {
-  width: 40vw;
-  height: 30vw;
-  margin-left: 7vw;
   background-image: url('../assets/img/davidefault.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .david {
-    width: 60vw;
-    height: 50vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-left: 10vw;
-  }
-}
-
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .david {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-left: 5vw;
-  }
+  margin-bottom: 1rem;
 }
 
 .sarcophagus {
-  width: 30vw;
-  height: 40vw;
-  margin-left: 7vw;
   background-image: url('../assets/img/sarcophagudefault.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 0;
+  margin-bottom:1rem;
 }
 
-@media (max-width: 768px) {
-  .sarcophagus {
-    width: 50vw;
-    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-left: 10vw;
+/* Media queries */
+@media (max-width: 576px) {
+  .david {
+    width: 20rem;
+    height: 25rem;
+    margin-left:4rem;
   }
-}
-
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
   .sarcophagus {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-left: 5vw;
+    width: 15rem;
+    height: 20rem;
+    margin-left:4rem;
   }
+
 }
 
-.judith {
-  width: 30vw;
-  height: 40vw;
-  margin-left: 7vw;
-  background-image: url('../assets/img/judithdefault.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
+@media (min-width: 577px) and (max-width: 700px) {
+  .david {
+    width: 17rem;
+    height: 20rem;
+    margin-left:6rem;
+  }
+
+  .sarcophagus {
+    width: 15rem;
+    height: 20rem;
+    margin-left:5rem;
+  }
+
+ 
+}
+
+@media (min-width: 701px) and (max-width: 1150px) {
+   .david, .sarcophagus {
+    width: 20rem;
+    height: 25rem;
+    margin-left:5rem;
+  }
+
+}
+
+@media (min-width: 1151px) {
+
+  .david, .sarcophagus{
+    width: 20rem;
+    height: 25rem;
+    margin-left:10rem;
+  }
   
 }
 
-@media (max-width: 768px) {
+
+.judith {
+  background-image: url('../assets/img/judithdefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 1rem;
+}
+
+.general{
+  background-image: url('../assets/img/generaldefault.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
   .judith {
-    width: 50vw;
-    height: 56vw; /* Ho modificato questo valore per mantenere le proporzioni */
-    margin-left: 10vw;
+    width: 18rem;
+    height: 25rem;
+    margin-left:4rem;
+  } 
+  .general {
+    width: 20rem;
+    height: 15rem;
+    margin-left:2rem;
+  }}
+
+  @media (min-width: 577px) and (max-width: 700px) {
+    .judith {
+      width: 17rem;
+      height: 20rem;
+      margin-left:8rem;
+    }
+  
+    .general {
+      width: 25rem;
+      height: 15rem;
+      margin-left:3rem;
+    }}
+  
+    @media (min-width: 701px) and (max-width: 992px) {
+      .judith {
+        width: 18rem;
+        height: 25rem;
+        margin-left:8rem;
+      }
+      .general {
+        width: 20rem;
+        height: 15rem;
+        margin-left:3rem;
+      }
+    
+    }
+    @media (min-width: 992px) {
+      .judith {
+       width: 15rem;
+       height: 30rem;
+       margin-left:10rem;
+     }
+     .general {
+      width: 25rem;
+      height: 20rem;
+        margin-left:6rem;
+    }}
+
+
+    .baptism, .adoration, .last-supper, .madonna {
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: auto;
+      margin-right: auto;   
+      margin-bottom: 1rem;
+    }
+
+    .baptism {
+      background-image: url('../assets/img/baptismdefault.svg');
+    }
+    
+    .adoration {
+      background-image: url('../assets/img/adorationfuturism.svg');
+    }
+    
+    .last-supper {
+      background-image: url('../assets/img/last-supperfuturismo.svg');
+    }
+    
+    .madonna {
+      background-image: url('../assets/img/madonnadefault.svg');
+    }
+
+    
+@media (max-width: 576px) {
+  .baptism {
+      width: 17rem;
+      height: 21rem;
+      margin-top: 3rem;
+  }
+
+  .adoration {
+    width: 18rem;
+    height: 18rem;
+    margin-top: 6vw;
+}
+  .last-supper {
+      width: 15rem;
+      height: 8rem;
+      margin-top: 2rem;
+     
+  }
+  .madonna {
+      width: 18rem;
+      height: 25rem;
+      margin-top: 2rem;
+   
   }
 }
 
-/* Media query per schermi di dimensioni molto piccole (ad esempio, smartphone in modalità portrait) */
-@media (max-width: 480px) {
-  .judith {
-    width: 80vw;  /* Ridotto per adattarsi meglio a schermi molto piccoli */
-    height: 112vw; /* Proporzionalmente ridotto */
-    margin-left: 5vw;
+@media (min-width: 577px) and (max-width: 700px) {
+  .baptism{
+      width: 18rem;
+      height: 22rem;
+      margin-top: 6vw;
+      
+  }
+
+  .adoration {
+    width: 18rem;
+    height: 18rem;
+    margin-top: 6vw;
+    
+}
+  .last-supper {
+      width: 20rem;
+      height: 10rem;
+      margin-top: 2rem;
+  
+  }
+  .madonna {
+      width: 18rem;
+      height: 25rem;
+      margin-top: 2rem;    
+  }
+
+}
+
+@media (min-width: 701px) and (max-width: 992px) {
+  .baptism {
+      width: 20rem;
+      height: 25rem;
+      margin-top: 6vw;
+  }
+
+  .adoration {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 6vw;
+    
+}
+  .last-supper {
+      width: 20rem;
+      height: 10rem;
+      margin-top: 2rem;
+    
+  }
+  .madonna {
+      width: 20rem;
+      height: 25rem;
+      margin-top: 2rem;
+   
+      
+  }
+}
+
+@media (min-width: 992px) {
+  .baptism {
+      width: 20rem;
+      height: 23rem;
+     
+  }
+
+  .adoration {
+    width: 22rem;
+    height: 20rem;
+   
+}
+  .last-supper {
+      width: 22rem;
+      height: 10rem;
+      margin-top: 3rem;
+  }
+  .madonna {
+      width: 25rem;
+      height: 30rem;
+      margin-top: 4rem;
   }
 }
 
@@ -11624,10 +11752,7 @@ p {
 
 }
 .custom-marker {
-
-/* Specifica l'immagine SVG personalizzata come sfondo */
 background-image: url('/assets/img/my-costum-icon.svg');
-/* Specifica l'ancoraggio dell'icona (opzionale) */
  background-repeat: no-repeat;
  background-position-x: center;
  background-position-y: center;
@@ -11653,13 +11778,6 @@ background-image: url('/assets/img/my-costum-icon.svg');
 }
 /* Ends Styles for PopUp */
 
- /* Stile per la barra di ricerca */
- .searchBar{
-  margin-left: 50rem;
-  margin-top:-30rem;
-  position:fixed;
-  z-index: 10000;
-}
 #search-input {
 float: right;
 margin-top: 10px;
