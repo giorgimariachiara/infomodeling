@@ -92,14 +92,14 @@
 }
 
 @font-face {
-  font-family: "AquilineTwo";
-  src: url('./assets/fonts/AquilineTwo.ttf') format('truetype');
+  font-family: "Tangerine";
+  src: url('./assets/fonts/Tangerine-Regular.ttf') format('truetype');
 }
 
 body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion, .accordion-body, .accordion-button {
   cursor: url('../assets/img/cursorerinascimento.svg') 0 0, auto;
-  
 }
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -10885,7 +10885,7 @@ p {
   display: block;
   font-size: 2rem;
   font-weight: 800;
-  font-family: "AquilineTwo";}
+  font-family: "Tangerine";}
 
 .page-section {
   margin-top: 5rem;
@@ -11637,9 +11637,9 @@ box-shadow:
 .highlight-person {
   font-family: 'Cinzel', serif;
   color: var(--bs-gold);
+  font-size: 1rem;
   background-color: #92302b; 
   text-align: center;
-  padding: 0.125rem;
   position: relative;
   border: 0.1875rem solid var(--bs-gold); 
   box-shadow: 0 0 0 0.1875rem #2e2e2e;  
@@ -11649,18 +11649,20 @@ box-shadow:
 .highlight-place {
   font-family: 'Cinzel', serif;
   color: var(--bs-gold);
+  font-size: 1rem;
   background-color: #92302b; 
   text-align: center;
-  padding: 0.125rem; 
   position: relative;
   border: 0.1875rem solid var(--bs-gold); 
   box-shadow: 0 0 0 0.1875rem #2e2e2e;  
 }
 
 p {
-  font-family: 'AquilineTwo', serif;
+  font-family: 'Tangerine', serif;
   text-align: justify;
-  font-size: 1.25rem; 
+  font-size: 2rem; 
+  line-height: 1;
+  color:#6a604e;
   margin-right: 4rem; 
   margin-left: 4rem; 
   position: relative;
@@ -11681,7 +11683,7 @@ p {
 }
 
 .sarcophagus {
-  background-image: url('../assets/img/sarcophagusrenaissance.svg');
+  background-image: url('../assets/img/sarcofagorinascimento2.svg');
 }
 
 @media (max-width: 576px) {
@@ -11747,10 +11749,10 @@ p {
   filter: saturate(150%);
 }
 
-.baptism { background-image: url('../assets/img/baptismrenaissance.svg'); }
-.adoration { background-image: url('../assets/img/adortionrenaissance.svg'); }
-.last-supper { background-image: url('../assets/img/last-supperrenaissance.svg'); }
-.madonna { background-image: url('../assets/img/madonnarenaissace.svg'); }
+.baptism { background-image: url('../assets/img/baptismrenaissance2.svg'); }
+.adoration { background-image: url('../assets/img/adortionrenaissance2.svg'); }
+.last-supper { background-image: url('../assets/img/last-supperrenaissance2.svg'); }
+.madonna { background-image: url('../assets/img/madonnarenaissace2.svg'); }
 
 @media (max-width: 576px) {
   .baptism {
@@ -11766,7 +11768,7 @@ p {
     margin-bottom: 1rem;
 }
   .last-supper {
-      width: 16rem;
+      width: 15rem;
       height: 8rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
