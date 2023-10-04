@@ -4545,13 +4545,20 @@ textarea.form-control-lg {
   z-index: 1;
 }
 
-@media (min-width: 700px) { 
+
+
+@media (min-width: 500px) { 
   .content-wrapper {
     display: flex;
-    flex-direction: row !important; 
+    flex-direction: column !important; 
 }
 .accordion {
-  flex: 1; 
+  position: sticky !important;
+  top: 10rem !important;
+  z-index: 100 !important; /* Assicurati che sia sopra gli altri contenuti */
+  margin-bottom: 20px !important;
+  margin-right:10px !important;
+  flex:1;
 }
 .product-item-title .bg-faded{
   margin-top:-50px;
@@ -4560,53 +4567,129 @@ textarea.form-control-lg {
   padding-bottom:-100px;
   margin-left:50px;
   background: 
-   linear-gradient(to right, magenta, yellow 50%, blue); /* Sfondo con sfumatura */
+  linear-gradient(to right, magenta, yellow 50%, blue); /* Sfondo con sfumatura */
   width: 70%;
-
   }
-
   .product-item-description .bg-faded{
+    width: 30%;
     height: 100%;
-    width: 99%;
+    margin-left:2rem;
+    
   }
-.main-content {
-flex:1;
- width: 70% !important; /* Occupa l'intera larghezza sotto l'accordion */
-}
-
-}
-
-
-@media (max-width: 700px) { /* Puoi regolare questo breakpoint come necessario */
-  .content-wrapper {
-    display: flex;
-    flex-direction: column !important; 
-  }
-
-  .accordion {
-    position: sticky !important;
-    top: 10rem !important;
-    z-index: 100 !important; /* Assicurati che sia sopra gli altri contenuti */
-    margin-bottom: 20px !important;
-    margin-right:10px !important;
-    flex:1;
-  }
+  
 #accordionExample{
   margin-left:1rem;
 }
   .main-content {
-      width: 100% !important; /* Occupa l'intera larghezza sotto l'accordion */
+    flex: 1;
+      width: 90% !important; /* Occupa l'intera larghezza sotto l'accordion */
   }
-  .product-item-title .bg-faded{
-    margin-top:-50px;
-    margin-bottom: 50px;
-    padding-top: -100px;
-    padding-bottom:-100px;
-    background: 
-     linear-gradient(to right, magenta, yellow 50%, blue); /* Sfondo con sfumatura */
-    width: 100%;
-    }
+  
 }
+
+
+
+@media (min-width: 700px) {
+    .content-wrapper {
+    display: flex;
+    flex-direction: row!important;
+    width: 100%;
+  }
+    .main-content {
+    flex:1;
+     width: 60% !important; /* Occupa l'intera larghezza sotto l'accordion */
+    }
+    
+   .product-item-description .bg-faded{
+    width: 20%;
+    height: 100%;
+   }
+  .accordion {
+   
+    width: 0%;
+    overflow: visible;
+    margin-left:-12rem!important;
+  }
+
+  .product-item-description .bg-faded{
+  height: 100%;
+  width:100%;
+  margin-left:5rem;
+  }
+
+}
+
+.product-item-description p {
+  /* Imposta la larghezza massima per i paragrafi */
+  max-width: 100%;
+  /* Utilizza colonne, suddividendo i paragrafi in due colonne */
+  column-count: 3;
+  /* Aggiungi spazio tra le colonne se lo desideri */
+  column-gap: 20px; /* Modifica il valore a tuo piacimento */
+  font-family: "OTP" !important;
+  text-align: justify;
+}
+
+.product-item-description .fut{
+ letter-spacing: 10px;
+ font-weight: bolder;
+ color:#00FFFF;
+}
+
+
+.product-item-description .bg-faded p:nth-of-type(1) , 
+.product-item-description .bg-faded p:nth-of-type(15) ,
+.product-item-description .bg-faded p:nth-of-type(8)  {
+  text-align: left;
+}
+.product-item-description .bg-faded p:nth-of-type(11), 
+.product-item-description .bg-faded p:nth-of-type(12) , 
+.product-item-description .bg-faded p:nth-of-type(3) ,
+.product-item-description .bg-faded p:nth-of-type(14)  {
+  text-align: justify;
+}
+
+.product-item-description .bg-faded p:nth-of-type(2), 
+.product-item-description .bg-faded p:nth-of-type(4) , 
+.product-item-description .bg-faded p:nth-of-type(5) ,
+.product-item-description .bg-faded p:nth-of-type(6) {
+  text-align: right;
+}
+.product-item-description .bg-faded p:nth-of-type(9) , 
+.product-item-description .bg-faded p:nth-of-type(18),
+.product-item-description .bg-faded p:nth-of-type(16)  {
+  text-align: center;
+}
+
+
+
+
+.product-item-description .bg-faded p:nth-of-type(1) .fut, 
+.product-item-description .bg-faded p:nth-of-type(4) .fut, 
+.product-item-description .bg-faded p:nth-of-type(8) .fut, 
+.product-item-description .bg-faded p:nth-of-type(11) .fut, 
+.product-item-description .bg-faded p:nth-of-type(18) .fut,
+.product-item-description .bg-faded p:nth-of-type(3) .fut,
+.product-item-description .bg-faded p:nth-of-type(14) .fut  {
+  letter-spacing: 10px;
+  font-weight: bolder;
+  color:#00FFFF;
+}
+
+.product-item-description .bg-faded p:nth-of-type(2) .fut, 
+.product-item-description .bg-faded p:nth-of-type(5) .fut,
+.product-item-description .bg-faded p:nth-of-type(6) .fut 
+.product-item-description .bg-faded p:nth-of-type(9) .fut, 
+.product-item-description .bg-faded p:nth-of-type(12) .fut, 
+.product-item-description .bg-faded p:nth-of-type(15) .fut,
+.product-item-description .bg-faded p:nth-of-type(16) .fut {
+  letter-spacing: 5px;
+  color:#0047AB;
+  font-size:2rem;
+}
+
+
+
 
 .bg-faded .aquilineta {
 text-align: right;
@@ -11383,7 +11466,7 @@ margin-right:-10rem;
 figure{
   margin-bottom: 25rem;
 }
-.judith figcaption {
+figcaption {
   font-family: "Bauhaus", sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -11393,7 +11476,7 @@ figure{
   padding: 10px;
   width: 25rem;
   margin-left:10rem;
-  margin-top: -25rem!important;
+  margin-top: -5rem!important;
   transform: rotate(90deg);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
