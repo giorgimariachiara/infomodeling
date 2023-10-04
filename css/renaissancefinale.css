@@ -11115,7 +11115,7 @@ top: 100%;
      color:#a3852d;
    }
    
-   .intro .mb-3{margin-top:4rem;
+   .intro .mb-3{margin-top:5rem;
     margin-left:3rem;
      color:#92302b;
    }
@@ -11163,7 +11163,7 @@ top: 100%;
      color:#a3852d;
    }
    
-   .intro .mb-3{margin-top:3rem;
+   .intro .mb-3{margin-top:5rem;
    margin-left: 4rem;
      color:#92302b;
    }
@@ -11496,6 +11496,7 @@ box-shadow:
   width: 5.625rem;
   height: auto;
   display:block;
+  filter: saturate(120%);
 }
 
 
@@ -11561,12 +11562,14 @@ box-shadow:
   height: auto;
   margin-right: 1rem;
   display: block;
+  filter: saturate(120%);
 }
 
 @media (max-width: 576px) {
   #miaLettera {
     width: 15rem;
     margin-left:0; 
+    margin-bottom: 1rem;
   }
 }
 
@@ -11579,14 +11582,15 @@ box-shadow:
 @media (min-width: 701px) and (max-width: 992px) {
   #miaLettera {
     width: 18rem;
-
+margin-bottom:1rem;
   }
 }
 
 @media (min-width: 993px) {
   #miaLettera {
-    width: 20rem;
+    width: 18rem;
     margin-left: 0.3rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -11676,6 +11680,7 @@ p {
   background-size: contain;
   margin-left: auto;
   margin-right: auto;
+  filter: saturate(150%);
 }
 
 .david {
@@ -11871,10 +11876,11 @@ p {
   background-size: contain;
   margin-left: auto;
   margin-right: auto;
+  filter: saturate(150%);
 }
 
-.judith { background-image: url('../assets/img/judithrinascimento.svg'); }
-.general { background-image: url('../assets/img/generaldefault.svg'); }
+.judith { background-image: url('../assets/img/judithrinascimento2.svg'); }
+.general { background-image: url('../assets/img/generaldefault2.svg'); }
 
 @media (max-width: 576px) {
  
@@ -11955,18 +11961,18 @@ p {
   margin-right:40px;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 70vw;
-  max-width: 750px;
-  height: 50vw;
-  max-height:940px;
+  width: 60rem;
+  height: 40rem;
   background-image: url('../assets/img/vasaripaintrenaissance.svg');
   padding: 0;
+  filter: saturate(120%);
 }
 
 @media (max-width: 576px) {
   .intro .vasaripaint {
     width: 75%;
-    margin-left: 6rem;
+    height:20rem;
+    margin-left: 4rem;
   }
   .intro .intro-text {
     
@@ -11979,9 +11985,10 @@ p {
   }
 }
 
-@media (min-width: 577px) and (max-width: 700px) {
+@media (min-width: 577px) and (max-width: 799px) {
   .intro .vasaripaint {
     width: 75%;
+    height: 20rem;
     margin-left: 5rem;
   }
   .intro .intro-text {
@@ -11995,10 +12002,11 @@ p {
   }
 }
 
-@media (min-width: 701px) and (max-width: 991px) {
+@media (min-width: 800px) and (max-width: 991px) {
  .intro .vasaripaint {
     width: 80%;
-    margin-left: 5rem;
+    margin-left: 8rem;
+    height: 25rem;
   }
   .intro .intro-text {
    
@@ -12017,6 +12025,7 @@ p {
   .intro .vasaripaint {
     width: 50%;
     float: right;
+    
     margin-top: -2rem;
   }
   .intro .intro-text {
